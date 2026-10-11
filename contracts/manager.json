@@ -1,0 +1,21 @@
+{
+  "schema": "braink.agent.manager-contract.v1",
+  "project": "BRAINK_AGENT",
+  "repository": "Keddeh1/BRAINK-AGENT",
+  "rootIdentity": "system://braink",
+  "memoryIdentity": "volume://braink/il-llm/sovereign-v1",
+  "artifactIdentity": "volume://kex/ssd",
+  "teamIdentity": "native UUIDv5(instance key + immutable template closure digest)",
+  "states": {
+    "worker": ["PENDING", "RUNNING", "PRODUCED", "VERIFIED", "FAILED"],
+    "remote": ["DISPATCH_INTENT", "ACTOR_RETURNED", "UNCERTAIN_RECONCILE_REQUIRED"],
+    "expertise": ["REQUIRES_APPLIED_QUALIFICATION"],
+    "assessmentReceipt": null
+  },
+  "limits": {"inputBytes": 16384, "artifactBytes": 65536, "jobsPerTeam": 64, "attempts": 3, "leaseSeconds": [0.05,30], "workerWallSeconds": 12, "cloudTimeoutSeconds": 15, "cloudResponseBytes": 2097152},
+  "axes": ["technicalSector", "applicationSector", "function", "foundry", "marketBottleneck"],
+  "foundries": {"expectedIndependentCount": 18, "mapping": "SOURCE_REGISTER_REQUIRED", "inventedAliases": false},
+  "technicalSectors": {"existingRange": "S01-S29", "mapping": "SOURCE_REGISTER_REQUIRED"},
+  "credentials": "Existing owner bindings only; no credential generation or namespace tenancy claim",
+  "cloudEndpoint": "https://keddeh-systems-runtime.aboudy65097.chatgpt.site/mcp"
+}

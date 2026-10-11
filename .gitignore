@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.state/
+.env*
+*.sqlite*
+*.token
+*.key
+dist/
+node_modules/
+.venv/
+evidence/local/

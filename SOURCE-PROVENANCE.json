@@ -1,0 +1,189 @@
+{
+  "repository": "Keddeh1/KEDDEH--",
+  "commit": "800cc656eab27bbd031048bb57d78150868137a2",
+  "visibility_observed": "public",
+  "files": [
+    {
+      "path": "vendor/native_teams/ingestion_adapter.py",
+      "source_path": "nested-vfs-teams/ingestion_adapter.py",
+      "sha256": "ec1afb32aef6f6fd3e974ef0a41e36883eccad7a38ef5122e4ffba4b9f79bc13"
+    },
+    {
+      "path": "vendor/native_teams/runtime.py",
+      "source_path": "nested-vfs-teams/runtime.py",
+      "sha256": "d8a0bf03fec85832aa2e75dd655b20ed30dfbdf8bed51f2961a96ce66bd1b34c"
+    },
+    {
+      "path": "vendor/native_teams/process_runner.py",
+      "source_path": "nested-vfs-teams/process_runner.py",
+      "sha256": "2c1b49ba85252b77b338a4ba1ef22196adfb0740a4b25c38b10ac5fe05f2d5ff"
+    },
+    {
+      "path": "vendor/native_teams/verifier.py",
+      "source_path": "nested-vfs-teams/verifier.py",
+      "sha256": "d45e4dffa48cb0bc4a17a098acd07595a1ed553b18bb8e8002dd63db3c34f712"
+    },
+    {
+      "path": "vendor/native_teams/canary.py",
+      "source_path": "nested-vfs-teams/canary.py",
+      "sha256": "6872f1ba4b0cd61578401f9c5ee3563d54aec564443e03b5f56cd51143566ac1"
+    },
+    {
+      "path": "vendor/native_teams/observer.py",
+      "source_path": "nested-vfs-teams/observer.py",
+      "sha256": "1544f9553c2ebf3fa7334a0ded4e098336f3d68a79819c8266a89159d8e6e0de"
+    },
+    {
+      "path": "vendor/native_teams/validate.py",
+      "source_path": "nested-vfs-teams/validate.py",
+      "sha256": "219d09fa325dd8f50d3e096dbb9e1745c057df31b29dbed21454b0fba6bf8d7d"
+    },
+    {
+      "path": "vendor/native_teams/manager.py",
+      "source_path": "nested-vfs-teams/manager.py",
+      "sha256": "1158327d259cf5ead4c63e0c258c7b34299eba527f64dfa27af0097c801f16cb"
+    },
+    {
+      "path": "vendor/native_teams/storage.py",
+      "source_path": "nested-vfs-teams/storage.py",
+      "sha256": "885ab15f85e1484a2cb0d490f139f3987c869c54a7e7a99cc98549a9ee51434d"
+    },
+    {
+      "path": "vendor/native_teams/integration_roundtrip.py",
+      "source_path": "nested-vfs-teams/integration_roundtrip.py",
+      "sha256": "0b14a311597c0ece355ab2cca4815776199ba4aa44b9ef25efc7464a99b11387"
+    },
+    {
+      "path": "vendor/native_teams/worker.py",
+      "source_path": "nested-vfs-teams/worker.py",
+      "sha256": "63039f4c975c7801790f7b50ac92a293a1ff0ae14f719a0f20b18b8872cd20d2"
+    },
+    {
+      "path": "vendor/native_teams/templates/specialist.json",
+      "source_path": "nested-vfs-teams/templates/specialist.json",
+      "sha256": "bb6e7995c3e1d3a990636cf3a87033ac1713e4733c7d701132dd4c1a23847779"
+    },
+    {
+      "path": "vendor/native_teams/templates/verification.json",
+      "source_path": "nested-vfs-teams/templates/verification.json",
+      "sha256": "b264848c4600965853205ecf3a6beb7c933ac34450e85e78bc55e5da7df0acd8"
+    },
+    {
+      "path": "vendor/native_teams/templates/manager.json",
+      "source_path": "nested-vfs-teams/templates/manager.json",
+      "sha256": "de160174bdf0a10ec1ae1080643d726f7954e64490fc21e8697347e619208509"
+    },
+    {
+      "path": "vendor/native_teams/templates/team.json",
+      "source_path": "nested-vfs-teams/templates/team.json",
+      "sha256": "905cd1b0e8fd02531a2a88824694bd8c03ee057c5c61f85d953df7c3627e4809"
+    },
+    {
+      "path": "vendor/native_teams/templates/production.json",
+      "source_path": "nested-vfs-teams/templates/production.json",
+      "sha256": "7ba8b33811caf38aaa98d0985bd7df1a19b2be8d2e481e9fc63bd3311e9fef09"
+    },
+    {
+      "path": "vendor/native_teams/templates/administration.json",
+      "source_path": "nested-vfs-teams/templates/administration.json",
+      "sha256": "8384274a0f86f4d74f8199aa7843f6465f224a1edbb1fda0bc8acd848c761831"
+    },
+    {
+      "path": "vendor/native_teams/schemas/worker-template.schema.json",
+      "source_path": "nested-vfs-teams/schemas/worker-template.schema.json",
+      "sha256": "3a7452bb5ca6f15305a0e2f5901b4c86ad6ee11b5753bfd8a05efa5eef0e3008"
+    },
+    {
+      "path": "vendor/native_teams/schemas/team-template.schema.json",
+      "source_path": "nested-vfs-teams/schemas/team-template.schema.json",
+      "sha256": "90bce7c5a2e602f4cf5bd0cfd3645c4c9cf0c51ee70305e4508fef544720ea39"
+    },
+    {
+      "path": "vendor/native_teams/schemas/team-instance.schema.json",
+      "source_path": "nested-vfs-teams/schemas/team-instance.schema.json",
+      "sha256": "1561f6b12a6e9f16207647c92fb03851be2b5cebf8ded775a99cb71b7172a2b2"
+    },
+    {
+      "path": "vendor/native_teams/vendor/native_vfs/__init__.py",
+      "source_path": "nested-vfs-teams/vendor/native_vfs/__init__.py",
+      "sha256": "5cbb3716711d74f598f6da85c792b5a19006014192e968ccf432841b323bac20"
+    },
+    {
+      "path": "vendor/native_teams/vendor/native_vfs/model.py",
+      "source_path": "nested-vfs-teams/vendor/native_vfs/model.py",
+      "sha256": "ba76419f50a341b20f2d140787485fe5fa5ca7ea443e796a9939c08195853864"
+    },
+    {
+      "path": "vendor/native_teams/vendor/native_vfs/store.py",
+      "source_path": "nested-vfs-teams/vendor/native_vfs/store.py",
+      "sha256": "b1aeedf1dc655ec9e99646cf342ccbb5b6e954170a8194da164c6025526bc5ad"
+    },
+    {
+      "path": "vendor/native_teams/vendor/provenance.json",
+      "source_path": "nested-vfs-teams/vendor/provenance.json",
+      "sha256": "534445e51e1dfac168a12629faad9f898673df1638e4772085ccd9f9c06abe60"
+    },
+    {
+      "path": "vendor/tot/common.mjs",
+      "source_path": "runtime/engineering/common.mjs",
+      "sha256": "72a873a5bad754e40619afd826b9f7fd18592e9a7daceb37431143aed4f77810"
+    },
+    {
+      "path": "vendor/tot/tot-safety-kernel.mjs",
+      "source_path": "runtime/engineering/tot-safety-kernel.mjs",
+      "sha256": "c20db2e97e26a86600f335d2eb922a330ab252f80997377f8a724e57d420df46"
+    },
+    {
+      "path": "vendor/tot/tot-node-supervisor.mjs",
+      "source_path": "runtime/engineering/tot-node-supervisor.mjs",
+      "sha256": "4d1e92b0ebba1bfad70e31d2ed1d0754d2f4e9650ec62c32381caa727d0b41fe"
+    },
+    {
+      "path": "runtime/braink_family.py",
+      "source_path": "runtime/braink_family.py",
+      "sha256": "f093c53bb6ed8d2c3a300165f94c12e3224a19d6b2b74c3a9898ab077dd5e21f"
+    },
+    {
+      "path": "runtime/component-sources.json",
+      "source_path": "runtime/component-sources.json",
+      "sha256": "b2d8ecc8715b0d602a4d1f93147b71b45f907fe1a9d33ed6b2d059078aba3a60"
+    },
+    {
+      "path": "runtime/quantum_statevector.py",
+      "source_path": "runtime/quantum_statevector.py",
+      "sha256": "751424d10b7de92cfa20bfe5d3006ad83d70cafd84903d54c2763197ae200558"
+    },
+    {
+      "path": "runtime/tensor_shell.py",
+      "source_path": "runtime/tensor_shell.py",
+      "sha256": "8cfffb028233fa2cc129dda57a235cca5cabb4f39435a2f784ccc5f2383535fc"
+    },
+    {
+      "path": "runtime/shells/tetrahedron.json",
+      "source_path": "runtime/shells/tetrahedron.json",
+      "sha256": "1fb237cbd8ee6c10d912a1dfbaffc0ec4e784931645e9516ef9344b12e672cae"
+    },
+    {
+      "path": "runtime/circuits/bell.json",
+      "source_path": "runtime/circuits/bell.json",
+      "sha256": "f4e1bb6d8d0ff129e145a65bca2e2a65ded8d7ffc21097d651bee1e5cc20c388"
+    },
+    {
+      "path": "tests/braink-family.test.py",
+      "source_path": "tests/braink-family.test.py",
+      "sha256": "63b3339eca7de7c0adf5c45c6e31bb87a2e7ea65a8c801df7f9def1958b7fcca"
+    }
+  ],
+  "scope": "Selected unchanged runtime files only; no private deployment-queue or Site source included.",
+  "resident": {
+    "repository": "aboudykeddeh276-stack/BRAINK-Sovereign-Virtual-Brain-Console",
+    "commit": "cfbee37c3c3a984201ce36f4c1d943ea395a63a3",
+    "role": "braink-family-runtime",
+    "entrypoint": "KEX_SUBSTRATE_CORE/keddeh_enterprise_runtime.py",
+    "files": {
+      "KEX_SUBSTRATE_CORE/keddeh_enterprise_runtime.py": "d8bb94d6b75199f839b4a919976ab12ff360d0c0b153d89b38efb493d30120ce",
+      "KEX_SUBSTRATE_CORE/config/product_registry.json": "bca30e3dea6449ca5535e17dad123e2927e5b9659b3e11fcff215c7ba6b7eff5",
+      "KEX_SUBSTRATE_CORE/core/bilateral_auth.py": "1e0fb6fdf4f6b0aeee7bcd4ced75a9cade743ae327bc6a81569a60bb0133035e"
+    }
+  }
+}

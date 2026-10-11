@@ -1,0 +1,166 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:keddeh:team-instance:v1",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "team_template_id",
+    "team_template_digest",
+    "closure_digest",
+    "team_instance_id",
+    "instance_key",
+    "members",
+    "permissions",
+    "vfs_root",
+    "evidence_state",
+    "jobs",
+    "transport_binding",
+    "native_dispatch_mapping"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "keddeh.team-instance.v1"
+    },
+    "team_template_id": {
+      "type": "string"
+    },
+    "team_template_digest": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "closure_digest": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "team_instance_id": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
+    },
+    "instance_key": {
+      "type": "string"
+    },
+    "members": {
+      "type": "array",
+      "minItems": 5,
+      "maxItems": 5,
+      "items": {
+        "type": "object",
+        "required": [
+          "member_id",
+          "worker_template_id",
+          "template_digest",
+          "role",
+          "permissions",
+          "adapter",
+          "model_binding",
+          "vfs_root"
+        ],
+        "properties": {
+          "member_id": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
+          },
+          "worker_template_id": {
+            "type": "string"
+          },
+          "template_digest": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "role": {
+            "enum": [
+              "manager",
+              "administration",
+              "production",
+              "specialist",
+              "verification"
+            ]
+          },
+          "permissions": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {
+              "enum": [
+                "schedule",
+                "inspect",
+                "write:self",
+                "verify:members"
+              ]
+            }
+          },
+          "adapter": {
+            "type": "string"
+          },
+          "model_binding": {
+            "type": "null"
+          },
+          "vfs_root": {
+            "type": "string",
+            "pattern": "^teams/[0-9a-f-]+/members/[0-9a-f-]+/vfs$"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "permissions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "vfs_root": {
+      "type": "string",
+      "pattern": "^teams/[0-9a-f-]+$"
+    },
+    "evidence_state": {
+      "enum": [
+        "INSTANTIATED_NOT_EXECUTED",
+        "INCOMPLETE",
+        "LOCAL_VERIFIED"
+      ]
+    },
+    "jobs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "state",
+          "result"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
+          },
+          "state": {
+            "enum": [
+              "PENDING",
+              "RUNNING",
+              "PRODUCED",
+              "VERIFIED",
+              "FAILED"
+            ]
+          },
+          "result": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "transport_binding": {
+      "const": "local-process"
+    },
+    "native_dispatch_mapping": {
+      "type": "null"
+    },
+    "native_identity_mapping": {
+      "type": "null"
+    }
+  },
+  "additionalProperties": false
+}

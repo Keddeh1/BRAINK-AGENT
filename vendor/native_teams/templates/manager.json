@@ -1,0 +1,19 @@
+{
+  "schema_version": "keddeh.worker-template.v1",
+  "worker_template_id": "keddeh.worker.manager.v1",
+  "version": 1,
+  "role": "manager",
+  "permissions": [
+    "schedule"
+  ],
+  "adapter": "local.manager.v1",
+  "expertise": {
+    "declared": "manager",
+    "measured": "local artifact canary only",
+    "model_binding": null
+  },
+  "limits": {
+    "max_artifact_bytes": 65536,
+    "max_attempts": 3
+  }
+}

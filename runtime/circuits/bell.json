@@ -1,0 +1,8 @@
+{
+  "schema": "keddeh.quantum.circuit.v1",
+  "qubits": 2,
+  "gates": [
+    {"gate": "H", "target": 1},
+    {"gate": "CX", "control": 1, "target": 2}
+  ]
+}

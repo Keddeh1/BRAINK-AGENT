@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "worker_template_id",
+    "version",
+    "role",
+    "permissions",
+    "adapter",
+    "expertise",
+    "limits"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "keddeh.worker-template.v1"
+    },
+    "worker_template_id": {
+      "type": "string"
+    },
+    "version": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "role": {
+      "enum": [
+        "manager",
+        "administration",
+        "production",
+        "specialist",
+        "verification"
+      ]
+    },
+    "permissions": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "schedule",
+          "inspect",
+          "write:self",
+          "verify:members"
+        ]
+      }
+    },
+    "adapter": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "expertise": {
+      "type": "object"
+    },
+    "limits": {
+      "type": "object"
+    }
+  },
+  "additionalProperties": false
+}

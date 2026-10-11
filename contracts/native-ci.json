@@ -1,0 +1,15 @@
+{
+  "schema": "braink.agent.native-ci.v1",
+  "entrypoint": ["python3", "scripts/native-ci.py"],
+  "workingDirectory": "repository-root",
+  "runtimes": ["Python >=3.12 on Linux", "Node.js >=20"],
+  "outputs": ["evidence/local/ci.json"],
+  "networkRequired": false,
+  "provider": "owner-selected Keddeh native execution host",
+  "hostAdmission": "EXISTING_AUTHORISED_HOST_REQUIRED",
+  "hostRegistration": "NOT_PERFORMED",
+  "publicationGate": "PASS plus independent review plus public-source provenance review",
+  "productionBundleGate": "Extract actual package, verify source hashes, execute family birth and worker/readback in extracted tree",
+  "workflowSubstitution": false,
+  "assessmentReceipt": null
+}

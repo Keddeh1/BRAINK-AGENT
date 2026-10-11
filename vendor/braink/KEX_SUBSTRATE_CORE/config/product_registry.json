@@ -1,0 +1,230 @@
+{
+  "schema": "kex.keddeh.registry.v1",
+  "version": "1.0.0",
+  "products": [
+    {
+      "id": "system://braink",
+      "name": "BRAINK Autonomous System Controller",
+      "capabilities": ["continuations", "capability_resolution", "autonomous_control"],
+      "routes": ["/api/braink", "/api/continuations"],
+      "operations": ["start_continuation", "advance_continuation", "resolve_capability", "status"],
+      "proof_boundary": "LOCAL_SUBSTRATE"
+    },
+    {
+      "id": "volume://braink/il-llm/sovereign-v1",
+      "name": "BRAINK IL-LLM Sovereign Memory Volume",
+      "capabilities": ["claims", "relations", "evidence_resolution"],
+      "routes": ["/api/claims", "/api/relations"],
+      "operations": ["register_claim", "relate", "resolve_claim", "status"],
+      "proof_boundary": "LOCAL_SUBSTRATE"
+    },
+    {
+      "id": "runtime://kex/core",
+      "name": "KEX Core Active State Runtime",
+      "capabilities": ["active_corridor", "state_transition", "topological_distance"],
+      "routes": ["/api/kex/core"],
+      "operations": ["transition", "apply_state", "status"],
+      "proof_boundary": "LOCAL_SUBSTRATE"
+    },
+    {
+      "id": "app://kex/active-state",
+      "name": "KEX Active State App",
+      "capabilities": ["active_state_mapping", "topological_algebra"],
+      "routes": ["/api/kex/active-state"],
+      "operations": ["transition", "apply_state", "status"],
+      "proof_boundary": "LOCAL_SUBSTRATE"
+    },
+    {
+      "id": "app://kex-one",
+      "name": "KEX-1 Origin Mapping Engine",
+      "capabilities": ["origin_mapping", "inverse_origin"],
+      "routes": ["/api/kex-one"],
+      "operations": ["map_origin", "inverse_origin", "status"],
+      "proof_boundary": "LOCAL_SUBSTRATE"
+    },
+    {
+      "id": "volume://kex/ssd",
+      "name": "KEX Virtual SSD VFS Volume",
+      "capabilities": ["virtual_filesystem", "vfs_read_write", "mount_volume"],
+      "routes": ["/api/vfs"],
+      "operations": ["mount_volume", "write_file", "read_file", "list_files", "status"],
+      "proof_boundary": "LOCAL_SUBSTRATE"
+    },
+    {
+      "id": "app://braink/workbook",
+      "name": "BRAINK Workbook & Sheet Runtime",
+      "capabilities": ["linguistic_coding", "sheet_executor", "cell_read_write"],
+      "routes": ["/api/workbook"],
+      "operations": ["create_sheet", "write_cell", "read_cell", "status"],
+      "proof_boundary": "LOCAL_SUBSTRATE"
+    },
+    {
+      "id": "app://casepath",
+      "name": "CasePath Legal & Workflow Engine",
+      "capabilities": ["casepath", "matter_management", "gap_assessment", "section79_asset_division", "parenting_schedules", "affidavit_evidence_sealing"],
+      "routes": ["/api/casepath"],
+      "operations": ["create_matter", "append_story", "answer_field", "assess_gaps", "select_package", "update_section79_pool", "record_parenting_matrix", "generate_affidavit_evidence_bundle", "status"],
+      "proof_boundary": "LOCAL_SUBSTRATE"
+    },
+    {
+      "id": "app://claimpath",
+      "name": "ClaimPath Claims & Evidence Resolver",
+      "capabilities": ["claimpath", "claims_management", "evidence_collection"],
+      "routes": ["/api/claimpath"],
+      "operations": ["create_claim", "append_story", "add_evidence", "assess_gaps", "select_service", "status"],
+      "proof_boundary": "LOCAL_SUBSTRATE"
+    },
+    {
+      "id": "cloud://keddeh/k-cloud",
+      "name": "K-Cloud Distributed Cloud Infrastructure",
+      "capabilities": ["cloud_nodes", "kapp_deployment", "deployment_status"],
+      "routes": ["/api/cloud"],
+      "operations": ["register_node", "deploy_kapp", "deployment_status", "status"],
+      "proof_boundary": "DISTRIBUTED_MESH"
+    },
+    {
+      "id": "mesh://keddeh/software-nodes",
+      "name": "KEDDEH Software Mesh Nodes",
+      "capabilities": ["mesh_networking", "node_gossip", "edge_connectivity"],
+      "routes": ["/api/mesh"],
+      "operations": ["register_node", "connect_nodes", "gossip", "status"],
+      "proof_boundary": "DISTRIBUTED_MESH"
+    },
+    {
+      "id": "domain://keddeh/space",
+      "name": "KEDDEH Space Domain Resolution Service",
+      "capabilities": ["dns_resolution", "zone_definition", "route_binding"],
+      "routes": ["/api/domain"],
+      "operations": ["define_zone", "set_record", "bind_route", "resolve_name", "status"],
+      "proof_boundary": "LOCAL_SUBSTRATE"
+    },
+    {
+      "id": "runtime://braink/agent-skill-fabric",
+      "name": "BRAINK Agent Skill Fabric",
+      "capabilities": ["skill_registration", "task_creation", "task_capability_resolution"],
+      "routes": ["/api/skills"],
+      "operations": ["register_skill", "create_task", "resolve_task_capability", "status"],
+      "proof_boundary": "LOCAL_SUBSTRATE"
+    },
+    {
+      "id": "runtime://braink/self-reflection",
+      "name": "BRAINK Self-Reflection & Linguistic Linter",
+      "capabilities": ["rule_enforcement", "text_scanning", "linguistic_correction"],
+      "routes": ["/api/reflection"],
+      "operations": ["register_rule", "scan_text", "status"],
+      "proof_boundary": "LOCAL_SUBSTRATE"
+    },
+    {
+      "id": "runtime://keddeh/quantum-computer",
+      "name": "KEDDEH Quantum Simulator Core",
+      "capabilities": ["quantum_amplitudes", "hadamard_transform", "vector_normalization"],
+      "routes": ["/api/quantum"],
+      "operations": ["normalise_vector", "hadamard_1q", "status"],
+      "proof_boundary": "LOCAL_SUBSTRATE"
+    },
+    {
+      "id": "runtime://keddeh/quantum-matrix",
+      "name": "KEDDEH Quantum Relational Matrix",
+      "capabilities": ["matrix_storage", "object_relations", "state_matrix"],
+      "routes": ["/api/matrix"],
+      "operations": ["matrix_put", "matrix_relate", "status"],
+      "proof_boundary": "LOCAL_SUBSTRATE"
+    },
+    {
+      "id": "runtime://keddeh/algebra-cores",
+      "name": "KEDDEH Corridor Algebra Cores",
+      "capabilities": ["corridor_algebra", "topological_distance", "typed_zero_cancellation"],
+      "routes": ["/api/algebra"],
+      "operations": ["distance", "corridor_add", "status"],
+      "proof_boundary": "LOCAL_SUBSTRATE"
+    },
+    {
+      "id": "runtime://keddeh/identity",
+      "name": "KEDDEH Sovereign Identity & Scopes",
+      "capabilities": ["principal_management", "scope_granting", "scope_verification"],
+      "routes": ["/api/identity"],
+      "operations": ["create_principal", "grant_scope", "check_scope", "status"],
+      "proof_boundary": "LOCAL_SUBSTRATE"
+    },
+    {
+      "id": "runtime://keddeh/governance-proof",
+      "name": "KEDDEH Governance Proof & Property Promotion",
+      "capabilities": ["evidence_ledger", "property_promotion", "qualification_gating"],
+      "routes": ["/api/governance"],
+      "operations": ["append_evidence", "promote_property", "status"],
+      "proof_boundary": "LOCAL_SUBSTRATE"
+    },
+    {
+      "id": "runtime://k-app/packager",
+      "name": "K-App Hermetic Packager",
+      "capabilities": ["kapp_packaging", "manifest_integrity", "sha256_verification"],
+      "routes": ["/api/packager"],
+      "operations": ["package_product", "status"],
+      "proof_boundary": "LOCAL_SUBSTRATE"
+    },
+    {
+      "id": "os://keddeh/k-os",
+      "name": "K-OS Kernel & Process Scheduler",
+      "capabilities": ["process_management", "state_checkpoint", "checkpoint_restore"],
+      "routes": ["/api/os/k-os"],
+      "operations": ["register_process", "process_list", "checkpoint", "restore_checkpoint", "service_graph", "status"],
+      "proof_boundary": "LOCAL_SUBSTRATE"
+    },
+    {
+      "id": "os://keddeh/bos",
+      "name": "B-OS Substrate Operating System",
+      "capabilities": ["process_management", "state_checkpoint", "checkpoint_restore"],
+      "routes": ["/api/os/bos"],
+      "operations": ["register_process", "process_list", "checkpoint", "restore_checkpoint", "service_graph", "status"],
+      "proof_boundary": "LOCAL_SUBSTRATE"
+    },
+    {
+      "id": "os://keddeh/hybrid",
+      "name": "Hybrid OS Bridge",
+      "capabilities": ["hybrid_process_orchestration", "cross_runtime_checkpoint"],
+      "routes": ["/api/os/hybrid"],
+      "operations": ["register_process", "process_list", "checkpoint", "restore_checkpoint", "service_graph", "status"],
+      "proof_boundary": "LOCAL_SUBSTRATE"
+    },
+    {
+      "id": "runtime://keddeh/recovery",
+      "name": "KEDDEH Substrate Recovery & Rehydration",
+      "capabilities": ["recovery_manager", "state_rehydration", "checkpoint_rollback"],
+      "routes": ["/api/recovery"],
+      "operations": ["register_process", "process_list", "checkpoint", "restore_checkpoint", "service_graph", "status"],
+      "proof_boundary": "LOCAL_SUBSTRATE"
+    },
+    {
+      "id": "server://keddeh/global-presence",
+      "name": "KEDDEH Global Presence Routing Mesh",
+      "capabilities": ["global_routing", "host_adapter_routing"],
+      "routes": ["/api/presence"],
+      "operations": ["route", "status"],
+      "proof_boundary": "DISTRIBUTED_MESH"
+    },
+    {
+      "id": "runtime://keddeh/api-bridge",
+      "name": "KEDDEH API Bridge Adapter",
+      "capabilities": ["api_bridging", "protocol_translation"],
+      "routes": ["/api/bridge"],
+      "operations": ["route", "status"],
+      "proof_boundary": "LOCAL_SUBSTRATE"
+    },
+    {
+      "id": "app://kex/computer",
+      "name": "KEX Sovereign Virtual Computer",
+      "capabilities": ["workspace_management", "virtual_hardware"],
+      "routes": ["/api/computer"],
+      "operations": ["workspace_status", "spawn_workspace", "status"],
+      "proof_boundary": "LOCAL_SUBSTRATE"
+    },
+    {
+      "id": "runtime://kex/btc/mainnet/resident-v1",
+      "name": "KEX BTC Mainnet Resident Substrate",
+      "capabilities": ["btc_consensus", "btc_routing", "resident_utxo_binding", "stratum_v1_compute", "vector_accelerated_mining"],
+      "routes": ["/api/btc", "/api/compute/stratum"],
+      "operations": ["btc_status", "btc_route", "start_worker", "execute_batch", "submit_stats", "stop_worker", "status"],
+      "proof_boundary": "LOCAL_SUBSTRATE"
+    }
+  ]
+}

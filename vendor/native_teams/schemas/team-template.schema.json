@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "team_template_id",
+    "version",
+    "permissions",
+    "members",
+    "transport"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "keddeh.team-template.v1"
+    },
+    "team_template_id": {
+      "type": "string"
+    },
+    "version": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "permissions": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "schedule",
+          "inspect",
+          "write:self",
+          "verify:members"
+        ]
+      }
+    },
+    "members": {
+      "type": "array",
+      "minItems": 5,
+      "items": {
+        "type": "object",
+        "required": [
+          "slot",
+          "worker_template_file"
+        ],
+        "properties": {
+          "slot": {
+            "enum": [
+              "manager",
+              "administration",
+              "production",
+              "specialist",
+              "verification"
+            ]
+          },
+          "worker_template_file": {
+            "type": "string",
+            "pattern": "^[a-z]+\\.json$"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "transport": {
+      "type": "object"
+    }
+  },
+  "additionalProperties": false
+}

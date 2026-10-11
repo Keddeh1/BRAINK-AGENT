@@ -1,0 +1,17 @@
+{
+  "schema": "braink.agent.cloud-services.v1",
+  "services": [{
+    "id": "service://keddeh/native-mcp",
+    "endpoint": "https://keddeh-systems-runtime.aboudy65097.chatgpt.site/mcp",
+    "authentication": "existing managed owner OAuth or explicitly supplied existing owner binding",
+    "tools": ["agent_registry", "development_status", "agent_dispatch", "command_status", "outbound_connection_catalogue", "outbound_connection_request", "outbound_connection_status", "vfs_put", "vfs_read", "vfs_commit_status"],
+    "namespaceBoundary": "state partition; same owner authority",
+    "retryRule": "Persist dispatch intent before transport. Uncertain writes require command_status; never automatic write replay.",
+    "newCredentialGeneration": false,
+    "publicCredentialExposure": false
+  }],
+  "nativeTeamSkills": ["skill://teams/local.manager.v1", "skill://teams/local.inspector.v1", "skill://teams/utf8.uppercase.v1", "skill://teams/utf8.wordcount.v1", "skill://teams/sha256.readback.v1"],
+  "scope": "These five deterministic handlers are a bounded integration path, not the entire Keddeh estate.",
+  "modelBinding": null,
+  "qualification": "The live managed connector was exercised separately; repository HTTP transport requires its own existing credential binding."
+}

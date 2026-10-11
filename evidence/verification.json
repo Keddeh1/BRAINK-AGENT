@@ -1,0 +1,42 @@
+{
+  "schema": "braink.agent.verification.v1",
+  "date": "2026-10-11",
+  "sourceFilesHashVerified": 37,
+  "managerSecurityPackageTests": 20,
+  "nativeFamilyTests": 10,
+  "nativeTeamCanaryAssertions": 60,
+  "nativeCanaryJobs": {
+    "verified": 11,
+    "intentionalFailure": 1
+  },
+  "browserChecks": [
+    "public services",
+    "owner unlock",
+    "native birth",
+    "enqueue",
+    "worker",
+    "separate observer",
+    "responsive layout",
+    "owner lock",
+    "no localStorage credentials",
+    "no page errors"
+  ],
+  "localMcpProtocolTests": 1,
+  "documentationPagesRenderedAndInspected": 11,
+  "independentReview": {
+    "report": "independent-review.md",
+    "reproducedFindings": 4,
+    "remainingReproducedFindings": 0,
+    "packagedTests": 30,
+    "packagedSourceFilesVerified": 37
+  },
+  "actorExecution": "PASSED_FOR_RECORDED_LOCAL_TESTS",
+  "durableReadback": "REPRODUCED",
+  "independentModelAssessmentReceipt": null,
+  "cloud": "See live-boundary.json; no repository standalone credential binding tested",
+  "limits": [
+    "Research Library ZIP downloads failed through supported helper; no supplied research bytes copied.",
+    "Detailed formal publishing reference and layout asset unavailable; no layout-template conformance claim.",
+    "Public storage app fetch returned HTTP403; no source admission inferred."
+  ]
+}

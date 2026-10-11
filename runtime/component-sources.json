@@ -1,0 +1,48 @@
+{
+  "schema": "kex.component_sources.v1",
+  "selection": "repository heads observed during discovery; no claim of undiscovered private repositories",
+  "runtime_package": {
+    "name": "keddeh-sovereign-namespace-runtime",
+    "version": "0.2.0"
+  },
+  "components": [
+    {
+      "repository": "Keddeh1/KEDDEH-SOVEREIGN-NAMESPACE-RUNTIME",
+      "commit": "3300e02e4c025a167fde414263f5344c5eecd70d",
+      "role": "runtime"
+    },
+    {
+      "repository": "aboudykeddeh276-stack/KEDDEH_SOFTWARE_NODES",
+      "commit": "767a04fb0e8dffdf032bf4dd0628b44cb8de1309",
+      "role": "kex-source"
+    },
+    {
+      "repository": "aboudykeddeh276-stack/KEDDEH-ALGEBRA-CORES",
+      "commit": "a850d4f0cc06c91ae9ac1b9c27b22189988d8853",
+      "role": "reference"
+    },
+    {
+      "repository": "Keddeh1/SERVERSPACE",
+      "commit": "735f5c4924ba46d7f271110e6afb1ff78ca61387",
+      "role": "reference"
+    },
+    {
+      "repository": "aboudykeddeh276-stack/BRAINK-Sovereign-Virtual-Brain-Console",
+      "commit": "cfbee37c3c3a984201ce36f4c1d943ea395a63a3",
+      "role": "braink-family-runtime",
+      "entrypoint": "KEX_SUBSTRATE_CORE/keddeh_enterprise_runtime.py",
+      "files": {
+        "KEX_SUBSTRATE_CORE/keddeh_enterprise_runtime.py": "d8bb94d6b75199f839b4a919976ab12ff360d0c0b153d89b38efb493d30120ce",
+        "KEX_SUBSTRATE_CORE/config/product_registry.json": "bca30e3dea6449ca5535e17dad123e2927e5b9659b3e11fcff215c7ba6b7eff5",
+        "KEX_SUBSTRATE_CORE/core/bilateral_auth.py": "1e0fb6fdf4f6b0aeee7bcd4ced75a9cade743ae327bc6a81569a60bb0133035e"
+      }
+    }
+  ],
+  "derived_files": [
+    {
+      "path": "src/core/kex/kex.ts",
+      "source": "KEDDEH_SOFTWARE_NODES/src/lib/kex.ts",
+      "sha256": "0df9ac5cf65e60c6dcaa074f501a46c920bac91b6bec3f584ab7da0880d5f33e"
+    }
+  ]
+}

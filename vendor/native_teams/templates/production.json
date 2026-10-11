@@ -1,0 +1,19 @@
+{
+  "schema_version": "keddeh.worker-template.v1",
+  "worker_template_id": "keddeh.worker.production.v1",
+  "version": 1,
+  "role": "production",
+  "permissions": [
+    "write:self"
+  ],
+  "adapter": "utf8.uppercase.v1",
+  "expertise": {
+    "declared": "production",
+    "measured": "local artifact canary only",
+    "model_binding": null
+  },
+  "limits": {
+    "max_artifact_bytes": 65536,
+    "max_attempts": 3
+  }
+}

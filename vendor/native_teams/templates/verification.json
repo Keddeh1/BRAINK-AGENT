@@ -1,0 +1,19 @@
+{
+  "schema_version": "keddeh.worker-template.v1",
+  "worker_template_id": "keddeh.worker.verification.v1",
+  "version": 1,
+  "role": "verification",
+  "permissions": [
+    "verify:members"
+  ],
+  "adapter": "sha256.readback.v1",
+  "expertise": {
+    "declared": "verification",
+    "measured": "local artifact canary only",
+    "model_binding": null
+  },
+  "limits": {
+    "max_artifact_bytes": 65536,
+    "max_attempts": 3
+  }
+}

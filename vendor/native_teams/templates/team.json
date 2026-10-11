@@ -1,0 +1,39 @@
+{
+  "schema_version": "keddeh.team-template.v1",
+  "team_template_id": "keddeh.team.artifact-canary.v1",
+  "version": 1,
+  "permissions": [
+    "schedule",
+    "inspect",
+    "write:self",
+    "verify:members"
+  ],
+  "members": [
+    {
+      "slot": "manager",
+      "worker_template_file": "manager.json"
+    },
+    {
+      "slot": "administration",
+      "worker_template_file": "administration.json"
+    },
+    {
+      "slot": "production",
+      "worker_template_file": "production.json"
+    },
+    {
+      "slot": "specialist",
+      "worker_template_file": "specialist.json"
+    },
+    {
+      "slot": "verification",
+      "worker_template_file": "verification.json"
+    }
+  ],
+  "transport": {
+    "schema_version": "keddeh.team-transport-adapter.v1",
+    "binding": "local-process",
+    "native_dispatch_mapping": null,
+    "tl2_wire_compatible": false
+  }
+}
