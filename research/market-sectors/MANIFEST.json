@@ -1,0 +1,78 @@
+{
+  "edition": "public-research-1.0",
+  "date": "2026-10-11",
+  "status": "SCREENED_PUBLIC_RESEARCH_DRAFT_NOT_YET_PUBLISHED",
+  "files": [
+    {
+      "path": "PUBLICATION_REVIEW.json",
+      "bytes": 2984,
+      "sha256": "9cc023f52935b1d7b95d131dedfd5f0f2a81338c92630110424e13966e3176b9"
+    },
+    {
+      "path": "README.md",
+      "bytes": 3099,
+      "sha256": "2c62de493bc33df4a5a8f5d527173f672b7370500cfe50ff842e23f62053336c"
+    },
+    {
+      "path": "market-bottlenecks-ai-data.json",
+      "bytes": 124811,
+      "sha256": "aa7625e0b4f27e6a851e13dbf0692b05d31b04dc070dfbe4c24bdcb00e873a8f"
+    },
+    {
+      "path": "market-bottlenecks-ai-data.txt",
+      "bytes": 110792,
+      "sha256": "31ffc29e32688e0a108832814c09ccb7a6dbb06e5e48074d8d41bad22988be10"
+    },
+    {
+      "path": "market-bottlenecks-compute-services.json",
+      "bytes": 178287,
+      "sha256": "c6ba2d37ab838299907483336db4efab382204cd7544639298906f725d0782d6"
+    },
+    {
+      "path": "market-bottlenecks-compute-services.txt",
+      "bytes": 160773,
+      "sha256": "81de803b3a7e2faf406771a0c8d51dc88f59d2c053c2bf651c6349d76053aa77"
+    },
+    {
+      "path": "market-bottlenecks-edge-adoption.json",
+      "bytes": 109005,
+      "sha256": "a4a2339c00115ad84052b6247287d05394479dfc7519d01bb3b1a25bdfe02688"
+    },
+    {
+      "path": "market-bottlenecks-edge-adoption.txt",
+      "bytes": 97171,
+      "sha256": "4b53fff51db66b4ac32a817194f9029fe8e8a268963d8ef2a4e5eb4831f7bda1"
+    },
+    {
+      "path": "market-sector-independent-review.json",
+      "bytes": 35985,
+      "sha256": "3168a0d8d9c1039d8218b3aa734f7706a2bfe0f589493d3831739bcf7868edf8"
+    },
+    {
+      "path": "market-sector-independent-review.txt",
+      "bytes": 32790,
+      "sha256": "9cfd19dfb6d74fd626308891e882e4d251b57fdcc421762d0444737736e48766"
+    },
+    {
+      "path": "market-sector-review-crosswalk.json",
+      "bytes": 216873,
+      "sha256": "a31d0039b2668521e27bd22b6254260380765b820f0d3f7b9615168c24d7bf65"
+    },
+    {
+      "path": "market-sector-review-crosswalk.txt",
+      "bytes": 194802,
+      "sha256": "9621323a04cd9e90f1c3aa716a5d81f318b84226b14a592f9a6e4e9f5f98d7f3"
+    },
+    {
+      "path": "public-source-index.json",
+      "bytes": 63317,
+      "sha256": "43ee675d6bdeabf050a4f79560301cab7d29f57e29ce644147407d7a34478e89"
+    }
+  ],
+  "file_count_excluding_manifest": 13,
+  "candidate_rows": 93,
+  "proposed_team_ids": 186,
+  "public_source_records": 94,
+  "exclusions": "Private originals, local build helpers, source extracts and code are intentionally absent.",
+  "hash_scope": "Hashes cover exact UTF-8 file bytes; manifest does not hash itself."
+}

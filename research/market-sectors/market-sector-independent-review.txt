@@ -1,0 +1,508 @@
+KEDDEH SYSTEMS | ENGINEER · AUTOMATE · SCALE
+PUBLIC RESEARCH DRAFT | ALL RIGHTS RESERVED FOR ORIGINAL COMPILATION
+Third-party sources retain their own rights. No implementation or scientific qualification is implied.
+
+document control:
+  header: KEDDEH SYSTEMS | ENGINEER · AUTOMATE · SCALE
+  title: Independent process review of bottleneck registers and agent-birth synthesis
+  document id: KEDDEH-REVIEW-MARKET-SECTORS-20261011
+  version: 0.3.2-public.1
+  prepared on: 2026-10-11
+  author: Separate OpenAI-assisted review run
+  contribution: Artifact inspection, primary-source spot checks, canonical taxonomy readback, local counterexample and extracted-expression tests
+  publisher: Keddeh Systems, draft
+  rights holder: Original-source rights retained; owner to confirm compilation rights
+  licence profile: Reserved rights; no licence granted
+  classification: Public repository research draft; hypotheses and unadopted mappings; no production or publication-quality qualification
+  status: CONDITIONAL_RESEARCH_ACCEPTANCE; PUBLIC_CONTENT_DERIVATIVE; NOT_IMPLEMENTATION_APPROVAL
+  independent assessment boundary: Separate process from authors, potentially correlated model/source; no external scientific qualification.
+  formal template status: Document metadata and research controls are recorded. Exact formal publishing-template conformity and final paginated-layout inspection remain unverified; this is a research draft.
+  public edition: 1.0
+review scope:
+  market entries reviewed: 93
+  source counts:
+    compute: 42
+    ai data: 26
+    edge adoption: 26
+    total market source records: 94
+    unique market source urls: 94
+  external source spotchecks: 18
+  edge annex status: 23 rows reviewed; exact keys, evidence references and 46 separate delivery/analyst IDs validated.
+  not performed:
+    - Customer interviews or market sizing
+    - Every public claim reverified
+    - Native runtime/API execution
+    - Scientific or regulatory qualification
+    - External state mutation
+    - Rights transfer or publication approval
+  public source spotcheck attempts: 18
+  public evidence boundary: Public citations are included. Earlier native-source inspections and synthetic test summaries are reviewer-reported prior observations; private source artifacts and implementation code are not redistributed in this research-only bundle, so those checks are not independently rerunnable from this bundle alone.
+verdict: Suitable as bounded research proposals, subject to correction/closure gates below. Not evidence that sectors/teams are created, experts qualified, bottlenecks solved, or the market inventory exhaustive.
+artifact provenance:
+  1.
+    file: market-bottlenecks-compute-services.json
+    sha256: c6ba2d37ab838299907483336db4efab382204cd7544639298906f725d0782d6
+  2.
+    file: market-bottlenecks-ai-data.json
+    sha256: aa7625e0b4f27e6a851e13dbf0692b05d31b04dc070dfbe4c24bdcb00e873a8f
+  3.
+    file: market-bottlenecks-edge-adoption.json
+    sha256: a4a2339c00115ad84052b6247287d05394479dfc7519d01bb3b1a25bdfe02688
+  4.
+    file: market-sector-review-crosswalk.json
+    sha256: a31d0039b2668521e27bd22b6254260380765b820f0d3f7b9615168c24d7bf65
+  5.
+    file: public-source-index.json
+    sha256: 43ee675d6bdeabf050a4f79560301cab7d29f57e29ce644147407d7a34478e89
+positive controls:
+  - 93/93 entries have evidence references and distinct candidate problem/sector IDs; all have distinct delivery versus analyst team IDs (186 candidate team IDs total).
+  - Mechanisms, existing alternatives, proposed integration hypotheses, buyers and falsifiable pilot outcomes are present.
+  - Proposals are clearly separated from deployed capability, customer proof and expert qualification.
+  - Dated empirical sources are generally not generalized into current universal failure rates.
+  - Native identity, protected memory and correlated-assessor limitations are source-faithful in the previously inspected owner-supplied context; underlying private material is not reproduced here.
+  - Edge source claims explicitly distinguish standards/guidance existence from market prevalence and Keddeh effectiveness.
+  - Physical/OT work includes lab, actuation, credential and safety prerequisites; no safety-critical deployment or regulated professional qualification is inferred.
+findings:
+  1.
+    id: REV-01
+    severity: HIGH_INTEGRATION_GATE
+    status: OPEN_OWNER_RECONCILIATION
+    scope:
+      - all market rows
+    finding: Candidate problem-sector and team keys are unique within each annex, but the research annexes do not contain an adopted canonical crosswalk. Compute leaves all canonical_sector_id values null; AI/data uses shortened foundry labels. Edge has 23 additional proposed sector/team keys with no native mapping. The reviewer appendix supplies 93 non-adopted proposals, including application gaps rather than forced matches.
+    evidence:
+      - compute canonical_taxonomy_reconciliation and all bottlenecks[*].canonical_sector_id
+      - AI normalisation and entries[*].parent_foundries
+      - Owner-supplied canonical or native context; underlying private document not redistributed
+    required correction: Reconcile each candidate to exact canonical technical sectors, application names, independent foundries and separately resolved function IDs. Use reviewer appendix only as a proposal; record accountable mapping owner, source dossier, rationale and approval. Do not renumber S01–S29 or replace 18 foundries.
+    closure test: Every admitted sector/team references resolved registry identities and preserved provenance; ambiguous mapping remains explicitly pending.
+  2.
+    id: REV-02
+    severity: HIGH_ADMISSION_GATE
+    status: LOCAL_STRUCTURAL_AND_SNAPSHOT_CORRECTION_VERIFIED; LIVE_ADMISSION_OPEN
+    scope:
+      - braink-agent-birth-schema.json
+    finding: The initial schema accepted ACTIVE_FOR_SCOPE with APPLY, UNASSESSED qualification, empty mandatory gates/evidence, null birth receipt/admission and whitespace capability. A schema-valid transport record is not execution admission. The research already specifies stronger semantic validators, but the initial deliverable did not execute them.
+    evidence:
+      - Prior reviewer source/expression or synthetic-artifact inspection; underlying source, private artifacts and implementation code are not redistributed in this research-only bundle.
+    required correction: Add representable fail-closed conditionals/nonblank identifiers and executable semantic admission checks. Verify current authority/expiry, exact registered gate coverage, all mandatory PASS results, matching immutable source/execution fingerprints, real qualified assessor, verified birth receipt/readback and store-resolved identity. Do not represent these as proven by JSON Schema alone.
+    closure test: Counterexample and hostile lifecycle/binding/receipt variants reject; valid unqualified candidate records remain representable; real runtime admission tested independently.
+    resolution: Author revised schema to v0.2.0, supplied executable offline snapshot validator, and 72/72 synthetic tests passed on reviewer rerun. Additional 30 reviewer probes pass, including exact original counterexample rejection. The validator always reports execution_authorization_granted=false. No live runtime/store/resolver or permission integration was verified.
+    remaining gate: Qualify real authenticated resolver, scoped authority, transactional store and deployed admission enforcement; neither offline validator nor JSON Schema grants execution.
+    public evidence status: REPORTED_PRIOR_REVIEW_OBSERVATION_NOT_RERUNNABLE_FROM_THIS_BUNDLE
+  3.
+    id: REV-03
+    severity: HIGH_RUNTIME_QUALIFICATION_GATE
+    status: CONFIRMED_SOURCE_DEFECT_UNFIXED_IN_REVIEWED_REVISION
+    scope:
+      - braink-agent-birth-research.json F02
+    finding: Independent source inspection confirms create_task defaults required_capability to empty and routing uses substring membership. The provided pure-expression reproducer independently returned all nonempty capability lists for blank requirement, and both clinical and non-clinical labels for clinical. This verifies the extracted-expression behavior, not a live authorization exploit.
+    evidence:
+      - Prior reviewer source/expression or synthetic-artifact inspection; underlying source, private artifacts and implementation code are not redistributed in this research-only bundle.
+    required correction: Reject blank requirements and exact-match registered nonblank capability IDs with explicitly reviewed aliases. Bind routing to current qualification, owner/team/sector scope and authority; re-test actual deployed revision.
+    closure test: Blank, whitespace, unknown, partial, expired and cross-scope routes fail closed in deployed admission path.
+    public evidence status: REPORTED_PRIOR_REVIEW_OBSERVATION_NOT_RERUNNABLE_FROM_THIS_BUNDLE
+  4.
+    id: REV-04
+    severity: MEDIUM_PILOT_DESIGN_GATE
+    status: OPEN_BEFORE_PILOT
+    scope:
+      - all proposed_acceptance_test / falsifiable_acceptance_metric records
+    finding: Acceptance criteria are usefully falsifiable and marked illustrative/proposed. Most compute criteria do not yet specify sample sizes, confidence bounds, measurement intervals or workload strata. Zero observed violations in a finite test does not prove zero deployment risk.
+    evidence:
+      - compute bottlenecks[*].proposed_acceptance_test and acceptance_test_status
+      - AI entries[*].falsifiable_acceptance_metric
+    required correction: Preregister workload scope, comparator, trial count/power, repeated-run variance, risk-weighted strata, statistical decision rule, acceptable residual risk, fault matrix, cost accounting and stop conditions with buyer and analyst. Keep percentage thresholds labelled pilot choices, never source-derived guarantees.
+    closure test: Independent analyst can run the frozen protocol and produce PASS/FAIL/NOT_RUN with uncertainty from retained raw data.
+  5.
+    id: REV-05
+    severity: MEDIUM_COMMERCIAL_VALIDATION_GATE
+    status: OPEN_AND_CORRECTLY_DISCLOSED
+    scope:
+      - all market rows
+    finding: Primary sources support mechanisms, observed samples or standards. They do not establish Keddeh implementation advantage, customer willingness to pay, obtainable market size or absence of competitors. The annexes correctly disclose that distinction.
+    evidence:
+      - compute definitions and required_customer_evidence
+      - AI commercial_evidence and existing_alternatives
+      - Owner-supplied canonical or native context; underlying private document not redistributed
+    required correction: Before product/market promotion, identify buyer and procurement owner, customer-specific baseline severity, existing paid/free alternatives, switching and support cost, authorized data availability, safety/regulatory boundary and tested economic value. Do not turn counts of candidate sectors into a market-size claim.
+    closure test: Each launched pilot has a customer-approved problem/outcome and fully loaded comparator; each commercial claim cites customer evidence.
+  6.
+    id: REV-06
+    severity: MEDIUM_PROVENANCE_GATE
+    status: OPEN_FOR_REPRODUCIBLE_PUBLICATION
+    scope:
+      - public-source index and private native-source references
+    finding: Source URLs, dates and limitations are recorded; most living documentation lacks a pinned revision/content digest or precise supporting locator. Dated benchmark summaries are well bounded. A dynamic HELM page yielded no readable content during this independent review, so its two numerical scores remain author-reported rather than independently rechecked.
+    evidence:
+      - AI-E21 https://crfm.stanford.edu/helm/arabic-enterprise/latest/
+      - compute sources with publication_date null
+      - AI sources[*].publication_or_update_date
+    required correction: Retain an authorized dated source extract or content hash, immutable version/commit when available, relevant section/table/page, observation period and source-update date separately. For HELM, preserve exact release/config/model/task weighting and original table snapshot before publishing numerical comparisons.
+    closure test: Another permitted reader can reconstruct each material source claim at the recorded version without relying on a moving latest page.
+  7.
+    id: REV-07
+    severity: LOW_FACT_PRECISION
+    status: CORRECTION_VERIFIED_CLOSED
+    scope:
+      - AI-E20 reported_evidence and any copied denominator
+    finding: The survey has 1,780 valid overall responses, but the PDF-issues question totals 1,754 responses. Saying 85.6% of 1,780 respondents conflates the overall sample and item denominator. The 85.6% result itself is correct.
+    evidence:
+      - https://webaim.org/projects/screenreadersurvey11/ (Introduction and PDF Document Issues)
+      - PDF responses: 819+683+126+65+61=1754; (819+683)/1754=85.63%
+    required correction: Use: In a survey with 1,780 valid responses, 85.6% of the 1,754 respondents answering the PDF question reported likely accessibility issues. Retain voluntary-sample caveat.
+    closure test: Item denominator and overall sample are separately stated wherever used.
+    resolution: Read back AI/data v0.1.1: AI-E20 now separates 1,780 overall valid survey responses from 1,754 PDF-item respondents. Reviewer independently checked source item counts: 1,502/1,754 rounds to 85.6%. Corresponding document-accessibility problem wording corrected. SHA-256 matches author handoff.
+    resolution evidence:
+      - market-bottlenecks-ai-data.json metadata.version=0.1.1
+      - market-bottlenecks-ai-data.json sources[AI-E20].reported_evidence
+      - market-bottlenecks-ai-data.json entries[hci-document-accessibility].measured_problem
+  8.
+    id: REV-08
+    severity: MEDIUM_PUBLICATION_RIGHTS_GATE
+    status: PUBLIC_DERIVATIVE_CONTENT_SCREENED; FORMAL_PUBLICATION_QUALIFICATION_OPEN
+    scope:
+      - public research derivative and source reuse
+    finding: Original owner-review files included private source-document references. This public edition preserves newly authored research, taxonomy identifiers/names, review findings and material limitations while excluding private source locations, private document extracts, native implementation code and production metadata. No credentials or customer/person records were found in the included research.
+    evidence:
+      - PUBLICATION_REVIEW.json
+      - Public source index and content manifest
+    required correction: Keep public distribution limited to the screened derivative and owner-authorized repository. Do not add omitted private source material without authorization. Preserve third-party rights and complete exact formal-template and final-layout review before claiming publication-quality approval.
+    closure test: Public files match screened hashes; original private materials remain excluded; no scientific, legal or runtime qualification inferred.
+  9.
+    id: REV-09
+    severity: MEDIUM_INDEPENDENCE_GATE
+    status: OPEN_AT_QUALIFICATION
+    scope:
+      - all delivery and analyst charters
+      - this review
+    finding: Separate team IDs, write scopes and mandates establish proposed process separation. They do not establish different models, corpora, methods, personnel or external replication. This review is a separate AI-assisted inspection, with potential model/source correlation; it is not external scientific qualification.
+    evidence:
+      - Market register team charters and publicly included review limitations
+      - Owner-supplied governance requires correlation and scoped assessment; underlying private context not redistributed.
+    required correction: Record roster, model/corpus/tool origins, assessor authority, conflicts and independent observer/method paths. Preserve separate delivery/analyst memories and decision rights. For consequential scientific/regulated claims, use appropriately independent qualified assessment.
+    closure test: Every qualified result has a scoped assessor and documented correlation/independence boundary; correlated consensus is never labelled external replication.
+  10.
+    id: REV-10
+    severity: MEDIUM_SCOPE_AND_DEDUP_GATE
+    status: REVIEWED_PROPOSAL_RELATIONSHIPS; OWNER_DECISIONS_PENDING
+    scope:
+      - combined market register
+    finding: Within the 93 reviewed entries, no exact duplicate ID or identical delivery/analyst ID was found, and closely related mechanisms generally have distinct acceptance tests. Completeness remains a scoped discovery claim, not an exhaustive proof of every market bottleneck. Cross-annex overlaps require explicit dependency links to prevent duplicated teams, evidence and economic impact.
+    evidence:
+      - counts and uniqueness validation
+      - cross-annex boundary pairs in review appendix
+    required correction: Preserve distinct problem IDs where buyer outcome or failure mechanism differs, record parent/child/dependency relationships and shared evidence. Never add economic benefits across overlapping rows without attribution controls. Maintain a coverage/gap register and a merge/split decision log. Semiconductor fabrication/advanced packaging/HBM supply and several newly encountered application domains are still outside the dedicated entry coverage; preserve them as unassessed gaps rather than assume another annex solved them.
+    closure test: Combined inventory has unique keys, evidence/relationship referential integrity, explicit scope and documented decisions for overlap candidates.
+  11.
+    id: REV-11
+    severity: MEDIUM_EVIDENCE_INTEGRATION_GATE
+    status: PUBLIC_COMPOSITE_INDEX_PREPARED; RUNTIME_IMPORT_ENFORCEMENT_OPEN
+    scope:
+      - combined sources and claim ledgers
+    finding: Edge source IDs S01–S26 overlap with canonical technical-sector IDs S01–S29 and with IDs used in a separately maintained native research register. Bare IDs are ambiguous across artifact/type boundaries. This public bundle therefore provides composite public source IDs while preserving original annex-local IDs.
+    evidence:
+      - public-source-index.json composite IDs
+      - Market annex source namespaces
+      - market-sector-review-crosswalk.json technical_sector namespace
+    required correction: Preserve original IDs inside their source artifact namespaces. Use composite IDs or distinct edge-source, birth-source and sector namespaces in any compiled store; retain exact links and reverse mapping. Never resolve bare S01 without type and artifact context.
+    closure test: All combined claim references resolve to exactly one typed source and all sector references resolve only in the sector registry.
+  12.
+    id: REV-12
+    severity: LOW_REGULATORY_SCOPE_PRECISION
+    status: WORDING_CORRECTION_VERIFIED; LEGAL_IMPLEMENTATION_SCOPE_OPEN
+    scope:
+      - edge sources.S19 and any battery-passport summary
+    finding: The phrase EV, LMT and industrial batteries above 2 kWh is grammatically ambiguous. The Commission states that the capacity threshold applies to industrial batteries; EV and LMT batteries are separately covered. Main date and 71-data-point statement are supported.
+    evidence:
+      - https://single-market-economy.ec.europa.eu/news/guidance-support-preparations-digital-batteries-passport-2026-08-21_en
+    required correction: Specify EV batteries, LMT batteries, and industrial batteries with capacity greater than 2 kWh, within the applicable market scope, from 18 February 2027. Keep guidance nonbinding and recheck consolidated legal text before implementation. Also record CRA guidance publication date 2026-07-27 where known.
+    closure test: Threshold cannot be misread as excluding sub-2kWh EV/LMT categories; legal-use scope verified separately.
+    resolution: Author clarified EV and LMT versus industrial >2kWh scope, set CRA source date to 2026-07-27, and recorded reviewer GSMA homepage verification. Reviewer read back the revised JSON. Qualified consolidated-law assessment still required before legal reliance.
+spotchecks:
+  1.
+    source id: CS06
+    url: https://www.iea.org/reports/electricity-2026/grids
+    result: PASS_BOUNDED
+    observation: Grid/centre lead-time mismatch and mixed-project queues supported; site-specific constraint and nonadditivity caveats matter.
+    reviewed on: 2026-10-11
+  2.
+    source id: CS11
+    url: https://arxiv.org/abs/2603.09927
+    result: PASS_BOUNDED
+    observation: Title, v3 date 2026-03-18, PVLDB author note and workload-specific SSD result supported. Initial submission was 2026-03-10; publication_date is actually revision date.
+    reviewed on: 2026-10-11
+  3.
+    source id: CS18
+    url: https://data.finops.org/
+    result: PASS_BOUNDED
+    observation: 1,192 respondents and $83bn+ annual cloud spend verified; community survey cannot establish population incidence.
+    reviewed on: 2026-10-11
+  4.
+    source id: CS37
+    url: https://www.postgresql.org/docs/current/sql-altertable.html
+    result: PASS_BOUNDED
+    observation: Current page identifies PostgreSQL 18, with operation-dependent locks; pin /docs/18/ for later reproduction.
+    reviewed on: 2026-10-11
+  5.
+    source id: AI-E01
+    url: https://deepmind.google/blog/facts-benchmark-suite-systematically-evaluating-the-factuality-of-large-language-models/
+    result: PASS_BOUNDED
+    observation: 15-model historical suite and all overall scores below 70% supported; no current-model inference.
+    reviewed on: 2026-10-11
+  6.
+    source id: AI-E02
+    url: https://metr.org/time-horizons/
+    result: PASS_BOUNDED
+    observation: Sep 8 2026 no-longer-updated notice, >16-hour unreliability and task-difficulty interpretation supported.
+    reviewed on: 2026-10-11
+  7.
+    source id: AI-E05
+    url: https://www.nist.gov/news-events/news/2026/09/comments-software-and-agentic-ai-identity-concept-paper
+    result: PASS_BOUNDED
+    observation: Sep 29 2026, more than 600 commenters and planned first DevSecOps use case supported; not deployed standard proof.
+    reviewed on: 2026-10-11
+  8.
+    source id: AI-E06
+    url: https://metr.org/blog/2026-02-24-uplift-update/
+    result: PASS_BOUNDED
+    observation: Historical 19% slowdown and later selection/time-measurement limitations supported.
+    reviewed on: 2026-10-11
+  9.
+    source id: AI-E14
+    url: https://www.verizon.com/about/news/breach-industry-wide-dbir-finds
+    result: PASS_BOUNDED
+    observation: Publisher supports 2026 vulnerability/third-party figures; retain contributor-data denominator limits.
+    reviewed on: 2026-10-11
+  10.
+    source id: AI-E20
+    url: https://webaim.org/projects/screenreadersurvey11/
+    result: PASS_CORRECTION_VERIFIED
+    observation: 85.6%, 70.3%, update date and overall 1,780 supported; PDF-item denominator 1,754 is now explicitly separated in author v0.1.1. Reviewer arithmetic confirms 1,502/1,754 rounds to 85.6%.
+    reviewed on: 2026-10-11
+  11.
+    source id: AI-E21
+    url: https://crfm.stanford.edu/helm/arabic-enterprise/latest/
+    result: NOT_INDEPENDENTLY_VERIFIED
+    observation: Dynamic page returned no readable table to this reviewer; no assertion that its reported numbers are false.
+    reviewed on: 2026-10-11
+  12.
+    source id: AI-E23
+    url: https://www.cos.io/score
+    result: PASS_BOUNDED
+    observation: Reproduction, robustness and new-data replication summaries supported with social/behavioral scope.
+    reviewed on: 2026-10-11
+  13.
+    source id: EDGE-S02
+    url: https://csrc.nist.gov/pubs/sp/800/82/r3/final
+    result: PASS_BOUNDED
+    observation: Rev.3 final date and September 21 2026 Rev.4 draft note supported; performance/reliability/safety scope retained.
+    reviewed on: 2026-10-11
+  14.
+    source id: EDGE-S07
+    url: https://digital-strategy.ec.europa.eu/en/library/commission-publishes-new-guidance-support-timely-cyber-resilience-act-implementation
+    result: PASS_BOUNDED
+    observation: CRA main/reporting dates supported. Page gives publication 27 July 2026; nonbinding guidance does not replace scoped legal assessment.
+    reviewed on: 2026-10-11
+  15.
+    source id: EDGE-S19
+    url: https://single-market-economy.ec.europa.eu/news/guidance-support-preparations-digital-batteries-passport-2026-08-21_en
+    result: PASS_WITH_SCOPE_CLARIFICATION
+    observation: 71 data points and February 18 2027 date supported; >2kWh threshold applies to industrial batteries.
+    reviewed on: 2026-10-11
+  16.
+    source id: EDGE-S21
+    url: https://www.gsma.com/somic/
+    result: PASS_OFFICIAL_PAGE
+    observation: Reviewer direct fetch succeeded; 4.8bn end-2025 users and 38% population usage gap supported. Full report methodology not reviewed.
+    reviewed on: 2026-10-11
+  17.
+    source id: EDGE-S23
+    url: https://interoperable-europe.ec.europa.eu/guidelines-chapter-2-when-interoperability-assessment-legally-required
+    result: NOT_INDEPENDENTLY_VERIFIED
+    observation: Reviewer fetch timed out. Treat exact legal-scope summary as author-reported pending successful independent text review.
+    reviewed on: 2026-10-11
+  18.
+    source id: EDGE-S25
+    url: https://csa-iot.org/newsroom/matter-1-5-1-enhancing-camera-performance-and-expanding-device-flexibility/
+    result: PASS_BOUNDED
+    observation: March 31 2026 release and camera/streaming changes supported; product-level conformance cannot be inferred.
+    reviewed on: 2026-10-11
+overlap review:
+  1.
+    a: CMP-MEM-BANDWIDTH
+    b: CMP-MEM-CAPACITY
+    decision: KEEP_DISTINCT
+    reason: Bytes/sec versus working-set fit.
+  2.
+    a: CMP-MEM-TIERING
+    b: CMP-NUMA-LOCALITY
+    decision: KEEP_DISTINCT
+    reason: Tier migration versus topology placement.
+  3.
+    a: STO-GPU-INGEST
+    b: NET-COLLECTIVE-SCALING
+    decision: KEEP_DISTINCT
+    reason: Dataset loading versus interworker collectives.
+  4.
+    a: NET-TELEMETRY-LOSS
+    b: REL-TELEMETRY-ECONOMICS
+    decision: KEEP_DISTINCT_WITH_DEPENDENCY
+    reason: Telemetry transport completeness versus storage/cardinality economics.
+  5.
+    a: CLD-RIGHTSIZING
+    b: CLD-COST-ATTRIBUTION
+    decision: KEEP_DISTINCT
+    reason: Operational efficiency versus spend-accounting ownership.
+  6.
+    a: CLD-COMMITMENT-FORECAST
+    b: CLD-PREDEPLOY-COST
+    decision: KEEP_DISTINCT
+    reason: Purchased commitment exposure versus architecture forecast.
+  7.
+    a: DST-END-TO-END-IDEMPOTENCY
+    b: ai-long-workflow-reliability
+    decision: DEPENDENCY_NOT_DUPLICATE
+    reason: Idempotent effects are one workflow reliability control; agent continuation is broader.
+  8.
+    a: DST-CROSS-SERVICE-ATOMICITY
+    b: ai-long-workflow-reliability
+    decision: DEPENDENCY_NOT_DUPLICATE
+    reason: Business compensation and agent task-state recovery have different terminal criteria.
+  9.
+    a: REL-CHANGE-CONTAINMENT
+    b: ai-production-drift
+    decision: KEEP_DISTINCT_WITH_DEPENDENCY
+    reason: Software/configuration blast radius versus model/data behavior drift.
+  10.
+    a: DEV-HERMETIC-ENVIRONMENTS
+    b: verification-computational-reproduction
+    decision: DEPENDENCY_NOT_DUPLICATE
+    reason: Hermetic environment helps rerun science but does not establish scientific reproducibility alone.
+  11.
+    a: DEV-SCHEMA-EVOLUTION
+    b: data-semantic-interoperability
+    decision: KEEP_DISTINCT_WITH_DEPENDENCY
+    reason: Online compatibility migration versus meaning-preserving domain exchange.
+  12.
+    a: REL-RESTORE-VALIDATION
+    b: data-retention-removal
+    decision: RELATED_WITH_CONFLICT
+    reason: Recovery retention and authorized deletion may conflict; disclose backup/legal-retention scope.
+  13.
+    a: ai-grounded-factuality
+    b: verification-evaluation-validity
+    decision: DEPENDENCY_NOT_DUPLICATE
+    reason: Answer behavior versus validity of the measuring method.
+  14.
+    a: verification-computational-reproduction
+    b: verification-analytical-robustness
+    decision: KEEP_DISTINCT
+    reason: Same analysis replay versus justified alternative analyses.
+  15.
+    a: verification-analytical-robustness
+    b: verification-independent-replication
+    decision: KEEP_DISTINCT
+    reason: Same-data sensitivity versus new-data test.
+  16.
+    a: ai-delegated-identity
+    b: security-identity-recovery
+    decision: KEEP_DISTINCT
+    reason: Agent permission/delegation versus human/account recovery resistance.
+  17.
+    a: data-lineage-provenance
+    b: data-rights-transparency
+    decision: KEEP_DISTINCT_WITH_DEPENDENCY
+    reason: Origin/transformation provenance is not permission to reuse.
+  18.
+    a: hci-web-accessibility
+    b: hci-document-accessibility
+    decision: KEEP_DISTINCT
+    reason: Web journey/device interactions versus document semantics/reading order.
+  19.
+    a: KED-PROP-EDGE-SEMANTICS
+    b: data-semantic-interoperability
+    decision: SPECIALIZED_CHILD_OR_DISTINCT_VERTICAL_PENDING
+    reason: Physical equipment meaning is a specialization of semantic interoperability. Separate buyer/OT tests can justify a vertical; share base schema/adapter capability rather than double count horizontal tooling.
+  20.
+    a: KED-PROP-EDGE-OFFLINE
+    b: DST-END-TO-END-IDEMPOTENCY
+    decision: APPLICATION_DEPENDENCY
+    reason: Disconnected workflow relies on idempotency but additionally owns expiration, local user work and reconnect conflicts.
+  21.
+    a: KED-PROP-EDGE-RECOVERY
+    b: REL-RESTORE-VALIDATION
+    decision: SPECIALIZED_CHILD_OR_DISTINCT_VERTICAL_PENDING
+    reason: OT controller/physical-process validation adds safety-specific tests. Preserve explicit vertical relationship to general recovery.
+  22.
+    a: KED-PROP-EDGE-OT-OBS
+    b: REL-TELEMETRY-ECONOMICS
+    decision: KEEP_DISTINCT_WITH_DEPENDENCY
+    reason: Passive physical-control safety and asset visibility versus telemetry cost/cardinality.
+  23.
+    a: KED-PROP-EDGE-OTA
+    b: REL-CHANGE-CONTAINMENT
+    decision: SPECIALIZED_CHILD_OR_DISTINCT_VERTICAL_PENDING
+    reason: Firmware hardware revision and power-failure recovery are specific containment requirements.
+  24.
+    a: KED-PROP-HW-PROVENANCE
+    b: data-lineage-provenance
+    decision: PHYSICAL_SPECIALIZATION
+    reason: Hardware composition/obsolescence is distinct evidence but shares lineage infrastructure.
+  25.
+    a: KED-PROP-HW-SEC-METRICS
+    b: security-third-party-exposure
+    decision: KEEP_DISTINCT_WITH_DEPENDENCY
+    reason: Physical weakness experiments versus supplier/software exposure mapping.
+  26.
+    a: KED-PROP-EDGE-CALIBRATION
+    b: data-quality-contracts
+    decision: PHYSICAL_SPECIALIZATION
+    reason: Unit/uncertainty/calibration authority adds metrological evidence that generic data checks cannot supply.
+  27.
+    a: KED-PROP-EDGE-TWIN
+    b: verification-evaluation-validity
+    decision: KEEP_DISTINCT_WITH_DEPENDENCY
+    reason: Physical-model uncertainty and validation require field measurements beyond generic model evaluation.
+  28.
+    a: KED-PROP-EDGE-ENERGY
+    b: CMP-GRID-CAPACITY
+    decision: KEEP_DISTINCT
+    reason: Endpoint joules/task and battery projection versus facility grid capacity.
+  29.
+    a: KED-PROP-CIRC-DISPOSITION
+    b: data-retention-removal
+    decision: KEEP_DISTINCT_WITH_DEPENDENCY
+    reason: Physical custody/reuse plus media sanitization is not a generic logical-deletion claim.
+  30.
+    a: KED-PROP-ADOPT-INTEGRATION
+    b: CLD-SEMANTIC-PORTABILITY
+    decision: KEEP_DISTINCT_WITH_DEPENDENCY
+    reason: SME end-to-end business migration versus managed-cloud contract compatibility.
+  31.
+    a: KED-PROP-ADOPT-CAPABILITY
+    b: hci-human-ai-oversight
+    decision: KEEP_DISTINCT
+    reason: Retained operator practice versus interface effects on AI-error detection.
+  32.
+    a: KED-PROP-ADOPT-LOWDATA
+    b: hci-web-accessibility
+    decision: KEEP_DISTINCT_WITH_DEPENDENCY
+    reason: Bandwidth/device affordability access and assisted adoption versus disability/AT journey barriers.
+  33.
+    a: KED-PROP-CIRC-PASSPORT
+    b: KED-PROP-SUPPLY-EVENTS
+    decision: KEEP_DISTINCT_WITH_SHARED_IDENTIFIERS
+    reason: Product master/compliance data versus time-stamped physical custody events.
+appendices:
+  proposed crosswalk: market-sector-review-crosswalk.json
+  public source index: public-source-index.json
+  content audit: PUBLICATION_REVIEW.json
+  limitations: Native source extracts, native implementation code, test fixtures and private provenance are excluded from this research-only edition. Reported prior tests are summaries, not bundled rerun evidence.
+release conditions:
+  - Resolve schema/admission issue before runtime use.
+  - Reconcile and admit exact native identities rather than silently adopting proposed crosswalk.
+  - Freeze buyer-approved and independently assessable pilot protocols.
+  - Distribute only this screened derivative to the authorized public repository; full formal publication qualification remains unverified.
+
+END OF PUBLIC RESEARCH DRAFT

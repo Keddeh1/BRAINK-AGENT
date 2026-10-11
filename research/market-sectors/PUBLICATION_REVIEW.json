@@ -1,0 +1,44 @@
+{
+  "audit_version": "1.0",
+  "prepared_on": "2026-10-11",
+  "intended_destination": "Public GitHub repository Keddeh1/BRAINK-AGENT, separate handoff branch coordinated by owner",
+  "scope": "Content-screening assessment for the owner-requested 93-sector research; no repository write performed.",
+  "content_safety_verdict": "PUBLIC_READY_DERIVATIVE_WITH_STATED_LIMITATIONS",
+  "authorization_basis": "Prepared for the explicit owner-requested public repository and sector-research scope. The publication operator must verify that authorization before pushing. This content assessment does not authorize an unrelated audience or private-source publication.",
+  "substantive_market_rows_preserved": {
+    "compute": 43,
+    "ai_data": 27,
+    "edge_adoption": 23,
+    "structured_data_comparison": "PASS: all substantive entry objects exactly equal reviewed source objects"
+  },
+  "included": [
+    "Newly authored public-source market research and citations",
+    "Owner-supplied canonical taxonomy identifiers/names needed for requested sector map",
+    "Proposed crosswalk, unresolved mappings, review findings and source limitations",
+    "Reported prior synthetic/source checks, explicitly not rerunnable evidence in this research-only bundle"
+  ],
+  "excluded": [
+    "Private document links and identifiers",
+    "Private document full text and source extracts",
+    "Native implementation source code and copied code snippets",
+    "Private repository locations and source blob metadata",
+    "Credentials, authentication data and customer/person records",
+    "Internal production metadata and local operational paths"
+  ],
+  "transformations": [
+    "Classifications explicitly changed to public research-draft derivatives without claiming implementation or formal publication approval.",
+    "Private provenance replaced by owner-supplied taxonomy or reported-prior-review boundary; substantive findings and limitations retained.",
+    "Readable companions regenerated from complete screened JSON data.",
+    "Composite public source index added to distinguish source and technical-sector ID namespaces."
+  ],
+  "rights": "Reserved rights for original compilation; third-party rights retained. No new licence or rights assignment inferred.",
+  "remaining_limits": [
+    "Canonical mappings are proposals, not adopted registry changes.",
+    "No native runtime, team deployment, professional/scientific qualification or exhaustive market proof.",
+    "No customer demand, market-size or economic advantage established.",
+    "Dynamic/temporarily inaccessible source limitations remain in review.",
+    "Exact formal publishing-template conformity and final pagination are unverified."
+  ],
+  "additional_publication_permission_required_for_this_derivative": false,
+  "additional_permission_boundary": "Publishing excluded private documents, source extracts, source code or personal/customer data would require separately identified permission. This folder contains none."
+}

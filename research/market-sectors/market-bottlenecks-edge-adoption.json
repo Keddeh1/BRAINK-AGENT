@@ -1,0 +1,2160 @@
+{
+  "metadata": {
+    "title": "Keddeh Systems: Edge, Hardware, Circularity and Adoption Bottleneck Register",
+    "documentID": "KED-RESEARCH-EDGE-ADOPTION-2026-10-11",
+    "version": "0.1",
+    "status": "Public research draft; no sectors or teams provisioned",
+    "preparedAsOf": "2026-10-11",
+    "author": "OpenAI research assistant supporting Keddeh Systems",
+    "contributions": "Primary-source research, proposed sector design, acceptance-test design and coverage analysis",
+    "intendedPublisher": "Keddeh Systems; public research-draft edition",
+    "rightsHolder": "Original compilation rights reserved; owner to confirm legal rights holder. Third-party sources retain their rights.",
+    "licenceProfile": "Reserved rights; no open licence granted",
+    "classification": "Public repository research draft; hypotheses and unadopted mappings; no production or publication-quality qualification",
+    "approval": "No independent analyst approval or external publication claimed",
+    "publishingStandardStatus": "Document metadata and research controls are recorded. Exact formal publishing-template conformity and final paginated-layout inspection remain unverified; this is a research draft.",
+    "sourcePolicy": "Primary authoritative sources only. Source dates and observation periods are explicit. Specification existence supports a bounded engineering problem, not prevalence or market size.",
+    "exhaustiveness": "Broad structured coverage within the assigned domain, not proof that every technology bottleneck worldwide has been enumerated.",
+    "acceptancePolicy": "All numeric pilot targets are proposed falsifiable acceptance criteria, not measured Keddeh results or universal industry benchmarks.",
+    "teamPolicy": "Every sector has a proposed BRAINK delivery team and a separate independent analyst team. They have distinct IDs and mandates; no live team creation occurred.",
+    "legalPolicy": "Regulatory findings are scoped research signals, not legal advice. Qualified review and current consolidated instruments are needed before reliance.",
+    "publicEdition": "1.0",
+    "sourceNamespace": "edge_adoption",
+    "publication_scope": "Newly authored 93-candidate market research prepared for the owner-requested public Keddeh1/BRAINK-AGENT repository. No private customer data, credentials, private document text or copied native implementation code is included."
+  },
+  "executiveFindings": [
+    "23 proposed sectors with separately scoped delivery and analyst teams.",
+    "Near-term work is mostly evidence-backed integration of existing standards, tools and customer processes, not invention of replacement standards.",
+    "Critical infrastructure requires isolated testing, domain-authorized change control and human operational authority.",
+    "Regulatory dates create specific evidence needs but do not establish customer demand, market size or implementation readiness."
+  ],
+  "sources": {
+    "S01": {
+      "title": "OPC UA Companion Specifications",
+      "publisher": "OPC Foundation",
+      "date": "undated; accessed 2026-10-11",
+      "url": "https://opcfoundation.org/about/opc-technologies/opc-ua/ua-companion-specifications/",
+      "type": "standards-body explanation",
+      "finding": "Companion specifications supply industry information models and semantic interoperability; transport connectivity alone does not establish shared meaning.",
+      "accessedAt": "2026-10-11",
+      "primarySource": true
+    },
+    "S02": {
+      "title": "Guide to Operational Technology Security, SP 800-82 Rev. 3",
+      "publisher": "NIST",
+      "date": "2023-09-28; planning note 2026-09-21",
+      "url": "https://csrc.nist.gov/pubs/sp/800/82/r3/final",
+      "type": "final technical guidance",
+      "finding": "OT security must preserve distinctive performance, reliability and safety requirements. Revision 4 was a draft, not the final baseline, at this review date.",
+      "accessedAt": "2026-10-11",
+      "primarySource": true
+    },
+    "S03": {
+      "title": "Bundle Protocol Version 7, RFC 9171",
+      "publisher": "IETF / RFC Editor",
+      "date": "2022-01",
+      "url": "https://www.rfc-editor.org/rfc/rfc9171.html",
+      "type": "standards-track specification",
+      "finding": "Delay-tolerant networking explicitly accommodates intermittent connectivity, variable delay and high error rates using store-carry-forward communication.",
+      "accessedAt": "2026-10-11",
+      "primarySource": true
+    },
+    "S04": {
+      "title": "FIDO Device Onboard Specifications",
+      "publisher": "FIDO Alliance",
+      "date": "current index accessed 2026-10-11; v1.1 2022-04-19",
+      "url": "https://fidoalliance.org/specifications/download-iot-specifications/",
+      "type": "standards-body specification index",
+      "finding": "FDO provides automated device onboarding and late binding to management platforms. The index lists v1.1 and v2.0 as proposed standards; deployment support must be checked.",
+      "accessedAt": "2026-10-11",
+      "primarySource": true
+    },
+    "S05": {
+      "title": "A Firmware Update Architecture for Internet of Things, RFC 9019",
+      "publisher": "IETF / RFC Editor",
+      "date": "2021-04",
+      "url": "https://datatracker.ietf.org/doc/rfc9019/",
+      "type": "informational RFC",
+      "finding": "Resource-constrained, long-lived and remotely deployed IoT devices need authenticated firmware updates. The document defines a transport-agnostic update architecture, not a complete fleet product.",
+      "accessedAt": "2026-10-11",
+      "primarySource": true
+    },
+    "S06": {
+      "title": "Platform Firmware Resiliency Guidelines, SP 800-193",
+      "publisher": "NIST",
+      "date": "2018-05-04",
+      "url": "https://csrc.nist.gov/pubs/sp/800/193/final",
+      "type": "final technical guidance",
+      "finding": "Firmware resilience requires protection, detection and recovery. Corrupted firmware can render a platform inoperable; component resilience does not automatically establish whole-platform resilience.",
+      "accessedAt": "2026-10-11",
+      "primarySource": true
+    },
+    "S07": {
+      "title": "Commission guidance to support timely Cyber Resilience Act implementation",
+      "publisher": "European Commission",
+      "date": "2026-07-27",
+      "url": "https://digital-strategy.ec.europa.eu/en/library/commission-publishes-new-guidance-support-timely-cyber-resilience-act-implementation",
+      "type": "official implementation guidance",
+      "finding": "CRA reporting obligations began 11 September 2026; principal obligations apply from 11 December 2027. Product scope and exceptions require separate assessment.",
+      "accessedAt": "2026-10-11",
+      "primarySource": true
+    },
+    "S08": {
+      "title": "OT Backup Quick Start Guide, SP 1339",
+      "publisher": "NIST",
+      "date": "2026-06-17",
+      "url": "https://csrc.nist.gov/pubs/sp/1339/final",
+      "type": "final technical guidance",
+      "finding": "OT backups should be incorporated into change management, tested regularly and reviewed during recovery exercises; possession of a backup is insufficient evidence of recoverability.",
+      "accessedAt": "2026-10-11",
+      "primarySource": true
+    },
+    "S09": {
+      "title": "Hardware Bill of Materials Framework for Supply Chain Risk Management",
+      "publisher": "CISA ICT Supply Chain Risk Management Task Force",
+      "date": "2023-09",
+      "url": "https://www.cisa.gov/sites/default/files/2023-09/A%20Hardware%20Bill%20of%20Materials%20Framework%20for%20Supply%20Chain%20Risk%20Management%20%28508%29.pdf",
+      "type": "voluntary government-industry framework",
+      "finding": "HBOM fields and nesting improve communication between suppliers and purchasers for compliance, security and availability risks. An HBOM is evidence disclosure, not proof of physical authenticity.",
+      "accessedAt": "2026-10-11",
+      "primarySource": true
+    },
+    "S10": {
+      "title": "Portable Test and Stimulus Standard 3.0 release",
+      "publisher": "Accellera Systems Initiative",
+      "date": "2024-08-29",
+      "url": "https://accellera.com/news/press-releases/402-accellera-unveils-portable-test-and-stimulus-standard-3-0-ushering-in-a-new-era-of-verification-efficiency",
+      "type": "standards-body release",
+      "finding": "PSS captures test intent in one representation for simulation, emulation, FPGA prototypes and post-silicon tests; version 3.0 adds behavioral coverage.",
+      "accessedAt": "2026-10-11",
+      "primarySource": true
+    },
+    "S11": {
+      "title": "Metrics and Methodology for Hardware Security Constructs",
+      "publisher": "NIST",
+      "date": "2025-06-05",
+      "url": "https://www.nist.gov/publications/metrics-and-methodology-hardware-security-constructs",
+      "type": "research methodology",
+      "finding": "Hardware can contain design and implementation weaknesses. Proposed threat and sensitivity metrics connect weaknesses with attack classes, supporting scoped security-cost trade-off analysis.",
+      "accessedAt": "2026-10-11",
+      "primarySource": true
+    },
+    "S12": {
+      "title": "International Roadmap for Devices and Systems 2024 Metrology",
+      "publisher": "NIST / IRDS",
+      "date": "2025-07-09",
+      "url": "https://www.nist.gov/publications/international-roadmap-devices-and-systems-tm-2024-metrology",
+      "type": "research roadmap",
+      "finding": "New materials, devices, integration and process control introduce measurement-science challenges that need characterization methods, tools and infrastructure.",
+      "accessedAt": "2026-10-11",
+      "primarySource": true
+    },
+    "S13": {
+      "title": "Digital Twins for Advanced Manufacturing",
+      "publisher": "NIST",
+      "date": "undated current programme; accessed 2026-10-11",
+      "url": "https://www.nist.gov/programs-projects/digital-twins-advanced-manufacturing",
+      "type": "official research programme",
+      "finding": "Manufacturing twins face gaps in vocabulary, interoperability, trustworthiness and validation. NIST is developing verification, validation and uncertainty quantification methods and reference implementations.",
+      "accessedAt": "2026-10-11",
+      "primarySource": true
+    },
+    "S14": {
+      "title": "Digital Calibration Certificate",
+      "publisher": "Physikalisch-Technische Bundesanstalt (PTB)",
+      "date": "current guidance; news updated 2026-02-11",
+      "url": "https://www.ptb.de/cms/en/metrological-services/dkd/dkd-dcc.html",
+      "type": "national-metrology-institute guidance",
+      "finding": "DCC XML makes calibration data machine-readable, but universal interpretation also requires harmonized terminology and refTypes. Schema validity alone is not semantic sufficiency.",
+      "accessedAt": "2026-10-11",
+      "primarySource": true
+    },
+    "S15": {
+      "title": "ULPMark benchmark suite",
+      "publisher": "EEMBC",
+      "date": "undated; accessed 2026-10-11",
+      "url": "https://www.eembc.org/ulpmark/",
+      "type": "benchmark specification overview",
+      "finding": "MCU energy varies across sleep, peripheral transfer and active computation. Multiple operational profiles are required instead of a single datasheet power figure.",
+      "accessedAt": "2026-10-11",
+      "primarySource": true
+    },
+    "S16": {
+      "title": "New EU rules for durable, energy-efficient and repairable smartphones and tablets",
+      "publisher": "European Commission",
+      "date": "2025-06-20",
+      "url": "https://single-market-economy.ec.europa.eu/news/new-eu-rules-durable-energy-efficient-and-repairable-smartphones-and-tablets-start-applying-2025-06-20_en",
+      "type": "official regulatory implementation announcement",
+      "finding": "Covered devices face battery durability and repair obligations: at least 800 cycles retaining 80% initial capacity and specified spare parts within 5–10 working days for seven years after model sales end.",
+      "accessedAt": "2026-10-11",
+      "primarySource": true
+    },
+    "S17": {
+      "title": "Global E-waste Monitor 2024",
+      "publisher": "ITU / UNITAR",
+      "date": "2024; measurements refer to 2022",
+      "url": "https://www.itu.int/dms_pub/itu-d/opb/gen/D-GEN-E_WASTE.01-2024-PDF-E.pdf",
+      "type": "global statistical report",
+      "finding": "The report estimates 62 billion kg of e-waste in 2022 and a 22.3% documented formal collection and recycling rate. This is not a measurement of any one enterprise fleet.",
+      "accessedAt": "2026-10-11",
+      "primarySource": true
+    },
+    "S18": {
+      "title": "Guidelines for Media Sanitization, SP 800-88 Rev. 2",
+      "publisher": "NIST",
+      "date": "2025-09-26",
+      "url": "https://csrc.nist.gov/pubs/sp/800/88/r2/final",
+      "type": "final technical guidance",
+      "finding": "Organizations need a sanitization programme with techniques and controls selected for information sensitivity. Rev. 2 supersedes Rev. 1.",
+      "accessedAt": "2026-10-11",
+      "primarySource": true
+    },
+    "S19": {
+      "title": "Guidance to support preparations for the Digital Batteries Passport",
+      "publisher": "European Commission",
+      "date": "2026-08-21",
+      "url": "https://single-market-economy.ec.europa.eu/news/guidance-support-preparations-digital-batteries-passport-2026-08-21_en",
+      "type": "official nonbinding implementation guidance",
+      "finding": "The guidance consolidates 71 data points with category-specific applicability. Passport requirements start 18 February 2027 for each covered EV battery, each covered LMT battery, and each covered industrial battery with capacity above 2 kWh. The capacity threshold qualifies industrial batteries only.",
+      "accessedAt": "2026-10-11",
+      "primarySource": true
+    },
+    "S20": {
+      "title": "Empowering SMEs in the age of AI: 2026 OECD D4SME Survey",
+      "publisher": "OECD",
+      "date": "2026-04-13",
+      "url": "https://www.oecd.org/en/publications/empowering-smes-in-the-age-of-ai_bf5a9816-en.html",
+      "type": "nonrepresentative survey of over 2,000 SMEs in 12 OECD countries",
+      "finding": "The survey identifies maintenance costs, time and skills gaps as barriers to effective digital implementation; its sample must not be treated as representative of national SME populations.",
+      "detailURL": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2026/04/empowering-smes-in-the-age-of-ai_7f58652c/bf5a9816-en.pdf",
+      "accessedAt": "2026-10-11",
+      "primarySource": true
+    },
+    "S21": {
+      "title": "The State of Mobile Internet Connectivity 2026",
+      "publisher": "GSMA",
+      "date": "2026; estimates at end-2025",
+      "url": "https://www.gsma.com/somic/",
+      "type": "industry-body research; official homepage independently retrieved",
+      "finding": "GSMA reports 4.8 billion people using mobile internet and 38% of the population living within coverage but not using it. Researcher direct fetch returned 403; the independent reviewer subsequently retrieved the official homepage and confirmed these figures. Full report methodology was not read.",
+      "accessedAt": "2026-10-11",
+      "primarySource": true
+    },
+    "S22": {
+      "title": "Measuring Digital Development: Facts and Figures 2025",
+      "publisher": "ITU",
+      "date": "2025-11-17",
+      "url": "https://www.itu.int/en/mediacentre/Pages/PR-2025-11-17-facts-and-figures.aspx",
+      "type": "official global statistical estimates",
+      "finding": "ITU estimates six billion people online and 2.2 billion offline in 2025, with persistent affordability and quality differences. Its internet-user definition differs from GSMA mobile-subscriber measures.",
+      "accessedAt": "2026-10-11",
+      "primarySource": true
+    },
+    "S23": {
+      "title": "When is an interoperability assessment legally required?",
+      "publisher": "European Commission, Interoperable Europe",
+      "date": "current guidance; obligation from 2025-01-12",
+      "url": "https://interoperable-europe.ec.europa.eu/guidelines-chapter-2-when-interoperability-assessment-legally-required",
+      "type": "official scope and assessment guidance",
+      "finding": "Certain new or revised binding requirements affecting trans-European digital public services require interoperability assessment; routine maintenance and ordinary equipment procurement usually do not trigger it.",
+      "accessedAt": "2026-10-11",
+      "primarySource": true
+    },
+    "S24": {
+      "title": "EPCIS & CBV and EPCIS standard archive",
+      "publisher": "GS1",
+      "date": "EPCIS 2.0.1 published 2025-07-01",
+      "url": "https://ref.gs1.org/standards/epcis/archive",
+      "type": "standards-body specification history",
+      "finding": "EPCIS provides common supply-chain event semantics; 2.x supports sensor observations and certification information. The archive identifies 2.0.1 as current.",
+      "detailURL": "https://www.gs1.org/standards/epcis",
+      "accessedAt": "2026-10-11",
+      "primarySource": true
+    },
+    "S25": {
+      "title": "Matter 1.5.1: Enhancing Camera Performance and Expanding Device Flexibility",
+      "publisher": "Connectivity Standards Alliance",
+      "date": "2026-03-31",
+      "url": "https://csa-iot.org/newsroom/matter-1-5-1-enhancing-camera-performance-and-expanding-device-flexibility/",
+      "type": "standards-body release",
+      "finding": "Matter 1.5.1 improves camera multi-stream behavior and installation flexibility. A specification release does not establish support in every device, firmware or controller.",
+      "accessedAt": "2026-10-11",
+      "primarySource": true
+    },
+    "S26": {
+      "title": "Digital Product Passport",
+      "publisher": "European Commission",
+      "date": "undated; accessed 2026-10-11",
+      "url": "https://single-market-economy.ec.europa.eu/single-market/digital-product-passport_en",
+      "type": "official programme overview",
+      "finding": "DPPs organize product, component and material information for sustainability, circularity and compliance. Requirements are product- and instrument-specific, not one universal present deadline.",
+      "accessedAt": "2026-10-11",
+      "primarySource": true
+    }
+  },
+  "sectors": [
+    {
+      "sectorID": "KED-PROP-EDGE-SEMANTICS",
+      "name": "Industrial semantic interoperability",
+      "family": "edge-industrial",
+      "status": "proposed_research_sector_not_provisioned",
+      "claimType": "integration_hypothesis",
+      "affectedUsersAndBuyers": [
+        "Factory IT/OT leads",
+        "Machine builders",
+        "Manufacturing integrators"
+      ],
+      "bottleneck": "Multi-vendor machines may exchange bytes while disagreeing on asset identity, units, event meanings and model versions. Bespoke tag maps create per-line onboarding and maintenance work.",
+      "evidence": {
+        "claimType": "standards_defined_integration_problem",
+        "sourceIDs": [
+          "S01"
+        ],
+        "sourceURLs": [
+          "https://opcfoundation.org/about/opc-technologies/opc-ua/ua-companion-specifications/"
+        ],
+        "sourceDates": [
+          "undated; accessed 2026-10-11"
+        ],
+        "measurement": {
+          "observedMarketRate": null,
+          "customerBaselineRequired": [
+            "engineer-hours per device family",
+            "unmapped required tags",
+            "unit/semantic conversion defects"
+          ]
+        },
+        "limitation": "Source support establishes the issue or baseline described; it does not establish Keddeh efficacy, a market size, or a local customer baseline."
+      },
+      "existingAlternatives": [
+        "OPC UA Companion Specifications and certified stacks",
+        "Vendor gateways and historians",
+        "Custom PLC-to-MES adapters"
+      ],
+      "keddehIntegrationHypothesis": "Package version-pinned adapters, reusable information-model mappings and semantic contract tests as BRAINK-reviewed connector bundles; retain vendor protocols rather than replacing controllers.",
+      "brainkDeliveryTeam": {
+        "teamID": "BRAINK-PROP-EDGE-SEMANTICS-DELIVERY",
+        "status": "proposed_not_provisioned",
+        "expertise": [
+          "OPC UA information modelling",
+          "PLC/MES integration",
+          "Industrial data engineering",
+          "Conformance test engineering"
+        ],
+        "mandate": "Build a bounded integration or experiment and record versioned artifacts, inputs, run logs and failure cases."
+      },
+      "independentAnalystTeam": {
+        "teamID": "BRAINK-PROP-EDGE-SEMANTICS-ANALYST",
+        "status": "proposed_not_provisioned",
+        "expertise": [
+          "Independent industrial automation reviewer",
+          "Semantic interoperability analyst",
+          "Manufacturing operations economist",
+          "Measurement and sampling analyst"
+        ],
+        "mandate": "Independently reproduce evidence, test alternatives and challenge the acceptance claim; delivery cannot self-approve."
+      },
+      "falsifiableAcceptanceMetric": "On a predeclared three-vendor laboratory set, map 100% of required signals with unit and identity provenance, pass every agreed semantic contract, and reduce second-family integration hours by at least 30% versus recorded bespoke baseline.",
+      "dependencies": [
+        "Customer-approved signal catalogue",
+        "Supported vendor interfaces",
+        "Applicable companion specifications",
+        "Representative hardware or simulators"
+      ],
+      "safetyBoundaries": [
+        "Read-only first",
+        "No writes to PLCs or safety systems without separate engineering approval",
+        "Stop on ambiguous units or stale values"
+      ],
+      "discoveryPriority": "P0",
+      "distinctScopeBoundary": "Owns physical-equipment meaning; general data catalogue and API infrastructure belong to other sectors.",
+      "promotionGate": "Promote only after buyer discovery, permissions, baseline capture, viable alternatives comparison and independent analyst acceptance. Failed or inconclusive tests remain recorded."
+    },
+    {
+      "sectorID": "KED-PROP-EDGE-OT-OBS",
+      "name": "Safe legacy OT observability",
+      "family": "edge-industrial",
+      "status": "proposed_research_sector_not_provisioned",
+      "claimType": "integration_hypothesis",
+      "affectedUsersAndBuyers": [
+        "Plant operators",
+        "Water and wastewater operators",
+        "Building and transport facility engineers"
+      ],
+      "bottleneck": "Legacy OT estates lack consistent inventory and health telemetry, but ordinary IT scans and agents can disturb timing-sensitive or unsupported devices.",
+      "evidence": {
+        "claimType": "authoritative_risk_guidance",
+        "sourceIDs": [
+          "S02"
+        ],
+        "sourceURLs": [
+          "https://csrc.nist.gov/pubs/sp/800/82/r3/final"
+        ],
+        "sourceDates": [
+          "2023-09-28; planning note 2026-09-21"
+        ],
+        "measurement": {
+          "observedMarketRate": null,
+          "customerBaselineRequired": [
+            "known versus verified assets",
+            "telemetry completeness",
+            "scan-induced control disruption"
+          ]
+        },
+        "limitation": "Source support establishes the issue or baseline described; it does not establish Keddeh efficacy, a market size, or a local customer baseline."
+      },
+      "existingAlternatives": [
+        "Passive OT monitoring",
+        "Vendor engineering tools",
+        "Manual asset audits"
+      ],
+      "keddehIntegrationHypothesis": "Unify approved passive telemetry and vendor-exported inventories with freshness and confidence labels, then produce a reviewable evidence view of blind spots.",
+      "brainkDeliveryTeam": {
+        "teamID": "BRAINK-PROP-EDGE-OT-OBS-DELIVERY",
+        "status": "proposed_not_provisioned",
+        "expertise": [
+          "OT network instrumentation",
+          "Industrial protocol parsing",
+          "Asset inventory integration",
+          "Safety-aware test engineering"
+        ],
+        "mandate": "Build a bounded integration or experiment and record versioned artifacts, inputs, run logs and failure cases."
+      },
+      "independentAnalystTeam": {
+        "teamID": "BRAINK-PROP-EDGE-OT-OBS-ANALYST",
+        "status": "proposed_not_provisioned",
+        "expertise": [
+          "Independent OT safety specialist",
+          "Asset inventory assurance analyst",
+          "Reliability analyst",
+          "Operational risk reviewer"
+        ],
+        "mandate": "Independently reproduce evidence, test alternatives and challenge the acceptance claim; delivery cannot self-approve."
+      },
+      "falsifiableAcceptanceMetric": "In an isolated representative testbed identify at least 95% of seeded assets, label all inferred fields, and observe zero control traffic changes from passive collection; production promotion requires plant-defined latency and availability limits.",
+      "dependencies": [
+        "Network-owner permission",
+        "Passive capture points or exports",
+        "Vendor documentation",
+        "Plant safety review"
+      ],
+      "safetyBoundaries": [
+        "No active scans by default",
+        "No exploitation, set-point changes or bypass of interlocks",
+        "Operator retains emergency stop and isolation authority"
+      ],
+      "discoveryPriority": "P0",
+      "distinctScopeBoundary": "Owns safe evidence collection in physical operations; cyber detection and incident response remain security-sector dependencies.",
+      "promotionGate": "Promote only after buyer discovery, permissions, baseline capture, viable alternatives comparison and independent analyst acceptance. Failed or inconclusive tests remain recorded."
+    },
+    {
+      "sectorID": "KED-PROP-EDGE-OFFLINE",
+      "name": "Disconnected edge workflow continuity",
+      "family": "edge-industrial",
+      "status": "proposed_research_sector_not_provisioned",
+      "claimType": "integration_hypothesis",
+      "affectedUsersAndBuyers": [
+        "Remote site operators",
+        "Field-service organisations",
+        "Agriculture and logistics operators"
+      ],
+      "bottleneck": "Intermittent links break cloud-dependent workflows and create missing, duplicated or stale records when devices reconnect.",
+      "evidence": {
+        "claimType": "standards_defined_integration_problem",
+        "sourceIDs": [
+          "S03"
+        ],
+        "sourceURLs": [
+          "https://www.rfc-editor.org/rfc/rfc9171.html"
+        ],
+        "sourceDates": [
+          "2022-01"
+        ],
+        "measurement": {
+          "observedMarketRate": null,
+          "customerBaselineRequired": [
+            "hours of offline continuity",
+            "lost or duplicated accepted events",
+            "reconciliation time",
+            "stale-command rejection rate"
+          ]
+        },
+        "limitation": "Source support establishes the issue or baseline described; it does not establish Keddeh efficacy, a market size, or a local customer baseline."
+      },
+      "existingAlternatives": [
+        "Local queues and databases",
+        "Store-and-forward gateways",
+        "DTN Bundle Protocol where suitable",
+        "Paper fallback"
+      ],
+      "keddehIntegrationHypothesis": "Integrate local durable event logs, resumable transfer, deduplication and explicit conflict rules into bounded edge workflows with replayable outage tests.",
+      "brainkDeliveryTeam": {
+        "teamID": "BRAINK-PROP-EDGE-OFFLINE-DELIVERY",
+        "status": "proposed_not_provisioned",
+        "expertise": [
+          "Embedded distributed systems",
+          "Offline data synchronization",
+          "Field UX integration",
+          "Fault-injection testing"
+        ],
+        "mandate": "Build a bounded integration or experiment and record versioned artifacts, inputs, run logs and failure cases."
+      },
+      "independentAnalystTeam": {
+        "teamID": "BRAINK-PROP-EDGE-OFFLINE-ANALYST",
+        "status": "proposed_not_provisioned",
+        "expertise": [
+          "Distributed-systems correctness analyst",
+          "Field operations analyst",
+          "Data-integrity auditor",
+          "Reliability statistician"
+        ],
+        "mandate": "Independently reproduce evidence, test alternatives and challenge the acceptance claim; delivery cannot self-approve."
+      },
+      "falsifiableAcceptanceMetric": "Across predeclared 24-hour outage and reconnect scenarios, lose zero acknowledged durable events, create zero duplicate business effects and reject every expired command; report sync completion p95 against the agreed site bandwidth budget.",
+      "dependencies": [
+        "Local storage budget",
+        "Defined conflict ownership",
+        "Clock uncertainty model",
+        "Site connectivity traces"
+      ],
+      "safetyBoundaries": [
+        "Never replay expired actuator commands automatically",
+        "Explicit degraded-mode indicators",
+        "Separate human safety procedures from data synchronization"
+      ],
+      "discoveryPriority": "P0",
+      "distinctScopeBoundary": "Owns edge application continuity; carrier build-out and general network transport optimization are out of scope.",
+      "promotionGate": "Promote only after buyer discovery, permissions, baseline capture, viable alternatives comparison and independent analyst acceptance. Failed or inconclusive tests remain recorded."
+    },
+    {
+      "sectorID": "KED-PROP-EDGE-ONBOARD",
+      "name": "Portable device onboarding and ownership",
+      "family": "edge-industrial",
+      "status": "proposed_research_sector_not_provisioned",
+      "claimType": "integration_hypothesis",
+      "affectedUsersAndBuyers": [
+        "IoT fleet operators",
+        "Device OEMs",
+        "System integrators"
+      ],
+      "bottleneck": "Manual provisioning and platform-specific enrollment consume deployment time and leave unclear ownership or inconsistent configuration across fleets.",
+      "evidence": {
+        "claimType": "standards_defined_integration_problem",
+        "sourceIDs": [
+          "S04"
+        ],
+        "sourceURLs": [
+          "https://fidoalliance.org/specifications/download-iot-specifications/"
+        ],
+        "sourceDates": [
+          "current index accessed 2026-10-11; v1.1 2022-04-19"
+        ],
+        "measurement": {
+          "observedMarketRate": null,
+          "customerBaselineRequired": [
+            "minutes per device enrollment",
+            "first-pass enrollment rate",
+            "unknown-owner devices",
+            "ownership-transfer failures"
+          ]
+        },
+        "limitation": "Source support establishes the issue or baseline described; it does not establish Keddeh efficacy, a market size, or a local customer baseline."
+      },
+      "existingAlternatives": [
+        "FIDO Device Onboard",
+        "Vendor zero-touch provisioning",
+        "Manual enrollment and certificate operations"
+      ],
+      "keddehIntegrationHypothesis": "Build FDO-compatible onboarding adapters and evidence receipts for supported hardware, keeping ownership transfer and configuration policy separately reviewable.",
+      "brainkDeliveryTeam": {
+        "teamID": "BRAINK-PROP-EDGE-ONBOARD-DELIVERY",
+        "status": "proposed_not_provisioned",
+        "expertise": [
+          "FDO protocol implementation",
+          "Device manufacturing integration",
+          "PKI and secure-element integration",
+          "Fleet lifecycle engineering"
+        ],
+        "mandate": "Build a bounded integration or experiment and record versioned artifacts, inputs, run logs and failure cases."
+      },
+      "independentAnalystTeam": {
+        "teamID": "BRAINK-PROP-EDGE-ONBOARD-ANALYST",
+        "status": "proposed_not_provisioned",
+        "expertise": [
+          "Independent identity assurance reviewer",
+          "Supply-chain operations analyst",
+          "Interoperability tester",
+          "Provisioning cost analyst"
+        ],
+        "mandate": "Independently reproduce evidence, test alternatives and challenge the acceptance claim; delivery cannot self-approve."
+      },
+      "falsifiableAcceptanceMetric": "For 100 authorized test enrollments across two supported device classes, achieve at least 99 successful authorized enrollments, reject all invalid-owner test cases and cut median operator time by 50% from baseline; test transfer and revocation separately.",
+      "dependencies": [
+        "FDO-capable devices or approved integration route",
+        "Ownership vouchers",
+        "Approved credential custody",
+        "Supported rendezvous architecture"
+      ],
+      "safetyBoundaries": [
+        "No credential creation or persistent-access expansion without action-specific authorization",
+        "Never log private keys",
+        "Proof of ownership does not prove hardware authenticity"
+      ],
+      "discoveryPriority": "P1",
+      "distinctScopeBoundary": "Owns physical device enrollment and transfer; enterprise IAM remains a dependency.",
+      "promotionGate": "Promote only after buyer discovery, permissions, baseline capture, viable alternatives comparison and independent analyst acceptance. Failed or inconclusive tests remain recorded."
+    },
+    {
+      "sectorID": "KED-PROP-EDGE-OTA",
+      "name": "Failure-safe embedded firmware delivery",
+      "family": "embedded-lifecycle",
+      "status": "proposed_research_sector_not_provisioned",
+      "claimType": "integration_hypothesis",
+      "affectedUsersAndBuyers": [
+        "Device OEMs",
+        "Remote equipment maintainers",
+        "Embedded platform teams"
+      ],
+      "bottleneck": "Firmware updates must tolerate constrained memory, interrupted power and broken connectivity while retaining authenticity and a tested recovery route.",
+      "evidence": {
+        "claimType": "authoritative_architecture_and_resilience_guidance",
+        "sourceIDs": [
+          "S05",
+          "S06"
+        ],
+        "sourceURLs": [
+          "https://datatracker.ietf.org/doc/rfc9019/",
+          "https://csrc.nist.gov/pubs/sp/800/193/final"
+        ],
+        "sourceDates": [
+          "2021-04",
+          "2018-05-04"
+        ],
+        "measurement": {
+          "observedMarketRate": null,
+          "customerBaselineRequired": [
+            "unrecoverable devices per update trial",
+            "update completion time",
+            "rollback/recovery coverage",
+            "unsupported hardware variants"
+          ]
+        },
+        "limitation": "Source support establishes the issue or baseline described; it does not establish Keddeh efficacy, a market size, or a local customer baseline."
+      },
+      "existingAlternatives": [
+        "Vendor OTA stacks",
+        "SUIT-style manifests",
+        "A/B firmware slots and bootloader recovery",
+        "On-site reflash"
+      ],
+      "keddehIntegrationHypothesis": "Combine existing bootloaders and update services with versioned compatibility manifests, staged rollout policies and a reproducible power-failure test matrix.",
+      "brainkDeliveryTeam": {
+        "teamID": "BRAINK-PROP-EDGE-OTA-DELIVERY",
+        "status": "proposed_not_provisioned",
+        "expertise": [
+          "Bootloaders and RTOS",
+          "Firmware signing integration",
+          "Embedded test automation",
+          "Hardware-in-loop engineering"
+        ],
+        "mandate": "Build a bounded integration or experiment and record versioned artifacts, inputs, run logs and failure cases."
+      },
+      "independentAnalystTeam": {
+        "teamID": "BRAINK-PROP-EDGE-OTA-ANALYST",
+        "status": "proposed_not_provisioned",
+        "expertise": [
+          "Independent firmware security reviewer",
+          "Reliability engineer",
+          "Compatibility analyst",
+          "Safety assurance specialist"
+        ],
+        "mandate": "Independently reproduce evidence, test alternatives and challenge the acceptance claim; delivery cannot self-approve."
+      },
+      "falsifiableAcceptanceMetric": "On every supported hardware revision, complete 1,000 seeded interruption trials with zero unrecoverable devices, reject all invalid-signature fixtures and demonstrate the documented rollback or recovery path. This does not prove zero field risk.",
+      "dependencies": [
+        "Recoverable boot chain",
+        "Vendor signing authority",
+        "Hardware test bench",
+        "Power-cut instrumentation"
+      ],
+      "safetyBoundaries": [
+        "No production rollout without owner approval and recovery readiness",
+        "Anti-rollback policy must not strand recovery",
+        "Do not claim all devices can support A/B updates"
+      ],
+      "discoveryPriority": "P0",
+      "distinctScopeBoundary": "Owns device-specific update safety; generic CI/CD and software supply-chain signing are dependencies.",
+      "promotionGate": "Promote only after buyer discovery, permissions, baseline capture, viable alternatives comparison and independent analyst acceptance. Failed or inconclusive tests remain recorded."
+    },
+    {
+      "sectorID": "KED-PROP-EDGE-SUPPORT",
+      "name": "Connected-product support lifecycle evidence",
+      "family": "embedded-lifecycle",
+      "status": "proposed_research_sector_not_provisioned",
+      "claimType": "integration_hypothesis",
+      "affectedUsersAndBuyers": [
+        "OEM product security teams",
+        "Product managers",
+        "Enterprise device purchasers"
+      ],
+      "bottleneck": "Device models, component versions, support promises and vulnerability decisions are often tracked separately, making end-of-support and update obligations hard to demonstrate.",
+      "evidence": {
+        "claimType": "dated_regulatory_implementation_milestone",
+        "sourceIDs": [
+          "S07"
+        ],
+        "sourceURLs": [
+          "https://digital-strategy.ec.europa.eu/en/library/commission-publishes-new-guidance-support-timely-cyber-resilience-act-implementation"
+        ],
+        "sourceDates": [
+          "2026-07-27"
+        ],
+        "measurement": {
+          "observedMarketRate": null,
+          "externalDates": {
+            "CRAReporting": "2026-09-11",
+            "CRAMainObligations": "2027-12-11"
+          },
+          "customerBaselineRequired": [
+            "products with verified support end dates",
+            "triage completion time",
+            "missing lifecycle records"
+          ]
+        },
+        "limitation": "Source support establishes the issue or baseline described; it does not establish Keddeh efficacy, a market size, or a local customer baseline."
+      },
+      "existingAlternatives": [
+        "Product lifecycle management systems",
+        "PSIRT workflows",
+        "Vendor support portals",
+        "Manual compliance registers"
+      ],
+      "keddehIntegrationHypothesis": "Link product variants, component inventories, support dates, update evidence and triage decisions into a reviewable lifecycle register with jurisdiction-specific rule versions.",
+      "brainkDeliveryTeam": {
+        "teamID": "BRAINK-PROP-EDGE-SUPPORT-DELIVERY",
+        "status": "proposed_not_provisioned",
+        "expertise": [
+          "Embedded product lifecycle engineering",
+          "PSIRT process integration",
+          "Product data modelling",
+          "Evidence automation"
+        ],
+        "mandate": "Build a bounded integration or experiment and record versioned artifacts, inputs, run logs and failure cases."
+      },
+      "independentAnalystTeam": {
+        "teamID": "BRAINK-PROP-EDGE-SUPPORT-ANALYST",
+        "status": "proposed_not_provisioned",
+        "expertise": [
+          "Independent product compliance analyst",
+          "Vulnerability lifecycle reviewer",
+          "Procurement analyst",
+          "Legal subject-matter reviewer"
+        ],
+        "mandate": "Independently reproduce evidence, test alternatives and challenge the acceptance claim; delivery cannot self-approve."
+      },
+      "falsifiableAcceptanceMetric": "For a scoped portfolio, trace 100% of active models to an owner, versioned support policy and latest triage evidence; correctly classify all independently prepared scope/deadline fixtures and flag missing records instead of inferring compliance.",
+      "dependencies": [
+        "Accurate model and sales records",
+        "Support commitments",
+        "Supplier information",
+        "Qualified legal interpretation"
+      ],
+      "safetyBoundaries": [
+        "No legal-compliance guarantee",
+        "No automatic regulator or customer notifications",
+        "Do not turn policy checks into unapproved production updates"
+      ],
+      "discoveryPriority": "P0",
+      "distinctScopeBoundary": "Owns physical-product support evidence; broad cybersecurity governance is a separate sector.",
+      "promotionGate": "Promote only after buyer discovery, permissions, baseline capture, viable alternatives comparison and independent analyst acceptance. Failed or inconclusive tests remain recorded."
+    },
+    {
+      "sectorID": "KED-PROP-EDGE-RECOVERY",
+      "name": "OT configuration recovery assurance",
+      "family": "embedded-lifecycle",
+      "status": "proposed_research_sector_not_provisioned",
+      "claimType": "integration_hypothesis",
+      "affectedUsersAndBuyers": [
+        "Plant continuity teams",
+        "Industrial engineering departments",
+        "Critical-infrastructure operators"
+      ],
+      "bottleneck": "Backup files may omit controller logic, recipes, firmware dependencies or restoration instructions, so a nominal backup can fail when equipment must actually recover.",
+      "evidence": {
+        "claimType": "current_authoritative_operational_guidance",
+        "sourceIDs": [
+          "S08"
+        ],
+        "sourceURLs": [
+          "https://csrc.nist.gov/pubs/sp/1339/final"
+        ],
+        "sourceDates": [
+          "2026-06-17"
+        ],
+        "measurement": {
+          "observedMarketRate": null,
+          "customerBaselineRequired": [
+            "assets with verified restorable backups",
+            "recovery time",
+            "configuration drift",
+            "restore test pass rate"
+          ]
+        },
+        "limitation": "Source support establishes the issue or baseline described; it does not establish Keddeh efficacy, a market size, or a local customer baseline."
+      },
+      "existingAlternatives": [
+        "Vendor engineering backups",
+        "Offline vaults",
+        "Manual disaster-recovery drills",
+        "Industrial configuration-management products"
+      ],
+      "keddehIntegrationHypothesis": "Index approved backups, dependency manifests and restoration procedures; schedule evidence checks and isolated restore rehearsals that analysts can independently replay.",
+      "brainkDeliveryTeam": {
+        "teamID": "BRAINK-PROP-EDGE-RECOVERY-DELIVERY",
+        "status": "proposed_not_provisioned",
+        "expertise": [
+          "PLC and HMI configuration management",
+          "OT backup integration",
+          "Recovery test engineering",
+          "Plant change management"
+        ],
+        "mandate": "Build a bounded integration or experiment and record versioned artifacts, inputs, run logs and failure cases."
+      },
+      "independentAnalystTeam": {
+        "teamID": "BRAINK-PROP-EDGE-RECOVERY-ANALYST",
+        "status": "proposed_not_provisioned",
+        "expertise": [
+          "Independent recovery assessor",
+          "Business continuity analyst",
+          "OT safety reviewer",
+          "Evidence integrity auditor"
+        ],
+        "mandate": "Independently reproduce evidence, test alternatives and challenge the acceptance claim; delivery cannot self-approve."
+      },
+      "falsifiableAcceptanceMetric": "Restore every critical asset in an agreed laboratory sample from the documented package within its plant-approved RTO; demonstrate matching approved logic/configuration and record every missing dependency before production readiness.",
+      "dependencies": [
+        "Vendor tools and licences",
+        "Compatible spare hardware",
+        "Offline recovery environment",
+        "Approved RTO/RPO"
+      ],
+      "safetyBoundaries": [
+        "Production restore is separate authorized work",
+        "No overwrite of live control logic",
+        "Emergency procedures remain operator-owned"
+      ],
+      "discoveryPriority": "P0",
+      "distinctScopeBoundary": "Distinct from generic cloud backup: controller logic, physical process sequencing and safety validation are required.",
+      "promotionGate": "Promote only after buyer discovery, permissions, baseline capture, viable alternatives comparison and independent analyst acceptance. Failed or inconclusive tests remain recorded."
+    },
+    {
+      "sectorID": "KED-PROP-HW-PROVENANCE",
+      "name": "Hardware provenance and obsolescence intelligence",
+      "family": "hardware-assurance",
+      "status": "proposed_research_sector_not_provisioned",
+      "claimType": "integration_hypothesis",
+      "affectedUsersAndBuyers": [
+        "Electronics purchasers",
+        "OEM supply-chain teams",
+        "Fleet asset managers"
+      ],
+      "bottleneck": "Inconsistent component identifiers and nested supplier disclosures obstruct impact analysis for part substitutions, end-of-life notices and suspect-origin components.",
+      "evidence": {
+        "claimType": "government_industry_framework_gap",
+        "sourceIDs": [
+          "S09"
+        ],
+        "sourceURLs": [
+          "https://www.cisa.gov/sites/default/files/2023-09/A%20Hardware%20Bill%20of%20Materials%20Framework%20for%20Supply%20Chain%20Risk%20Management%20%28508%29.pdf"
+        ],
+        "sourceDates": [
+          "2023-09"
+        ],
+        "measurement": {
+          "observedMarketRate": null,
+          "customerBaselineRequired": [
+            "critical components with provenance evidence",
+            "unresolved part aliases",
+            "time to find affected assemblies",
+            "undisclosed subcomponents"
+          ]
+        },
+        "limitation": "Source support establishes the issue or baseline described; it does not establish Keddeh efficacy, a market size, or a local customer baseline."
+      },
+      "existingAlternatives": [
+        "CISA HBOM framework",
+        "ERP/PLM bills of materials",
+        "Authorized distributor records",
+        "Supplier questionnaires"
+      ],
+      "keddehIntegrationHypothesis": "Normalize HBOM hierarchies and link disclosed components to supplier attestations, purchase lots and obsolescence events, preserving unknowns and evidence quality.",
+      "brainkDeliveryTeam": {
+        "teamID": "BRAINK-PROP-HW-PROVENANCE-DELIVERY",
+        "status": "proposed_not_provisioned",
+        "expertise": [
+          "Electronics BOM engineering",
+          "Supply-chain data integration",
+          "Entity resolution",
+          "Procurement workflow engineering"
+        ],
+        "mandate": "Build a bounded integration or experiment and record versioned artifacts, inputs, run logs and failure cases."
+      },
+      "independentAnalystTeam": {
+        "teamID": "BRAINK-PROP-HW-PROVENANCE-ANALYST",
+        "status": "proposed_not_provisioned",
+        "expertise": [
+          "Independent component-risk analyst",
+          "Supply-chain provenance auditor",
+          "Obsolescence specialist",
+          "Procurement economics analyst"
+        ],
+        "mandate": "Independently reproduce evidence, test alternatives and challenge the acceptance claim; delivery cannot self-approve."
+      },
+      "falsifiableAcceptanceMetric": "For an independently selected BOM sample, reconcile at least 95% of critical part identifiers without silent merges and answer seeded component-impact queries with 100% recall against known test assemblies; label every unverifiable origin.",
+      "dependencies": [
+        "Supplier disclosures",
+        "Lawful access to part and lot records",
+        "Part identifier policy",
+        "Contractual disclosure rights"
+      ],
+      "safetyBoundaries": [
+        "Documents do not authenticate silicon",
+        "Do not accuse suppliers without corroboration",
+        "Protect commercially sensitive sourcing information"
+      ],
+      "discoveryPriority": "P0",
+      "distinctScopeBoundary": "Owns hardware composition and lifecycle provenance; software SBOM infrastructure is a dependency.",
+      "promotionGate": "Promote only after buyer discovery, permissions, baseline capture, viable alternatives comparison and independent analyst acceptance. Failed or inconclusive tests remain recorded."
+    },
+    {
+      "sectorID": "KED-PROP-HW-VERIFY",
+      "name": "Portable hardware verification evidence",
+      "family": "hardware-assurance",
+      "status": "proposed_research_sector_not_provisioned",
+      "claimType": "integration_hypothesis",
+      "affectedUsersAndBuyers": [
+        "ASIC and FPGA teams",
+        "IP vendors",
+        "Embedded product companies"
+      ],
+      "bottleneck": "Test intent is repeatedly rewritten across simulation, emulation and boards, while mismatched coverage reports make sign-off evidence difficult to compare.",
+      "evidence": {
+        "claimType": "standards_defined_engineering_problem",
+        "sourceIDs": [
+          "S10"
+        ],
+        "sourceURLs": [
+          "https://accellera.com/news/press-releases/402-accellera-unveils-portable-test-and-stimulus-standard-3-0-ushering-in-a-new-era-of-verification-efficiency"
+        ],
+        "sourceDates": [
+          "2024-08-29"
+        ],
+        "measurement": {
+          "observedMarketRate": null,
+          "customerBaselineRequired": [
+            "test-porting engineering hours",
+            "shared scenario coverage",
+            "cross-platform behavioral mismatches"
+          ]
+        },
+        "limitation": "Source support establishes the issue or baseline described; it does not establish Keddeh efficacy, a market size, or a local customer baseline."
+      },
+      "existingAlternatives": [
+        "Accellera PSS",
+        "UVM testbenches",
+        "Formal verification tools",
+        "Vendor emulators and board test suites"
+      ],
+      "keddehIntegrationHypothesis": "Integrate existing PSS/test tooling with reusable scenario libraries, requirements-to-test links and normalized run receipts rather than claiming a new universal verification engine.",
+      "brainkDeliveryTeam": {
+        "teamID": "BRAINK-PROP-HW-VERIFY-DELIVERY",
+        "status": "proposed_not_provisioned",
+        "expertise": [
+          "SystemVerilog/UVM verification",
+          "PSS modelling",
+          "FPGA and post-silicon test",
+          "Coverage instrumentation"
+        ],
+        "mandate": "Build a bounded integration or experiment and record versioned artifacts, inputs, run logs and failure cases."
+      },
+      "independentAnalystTeam": {
+        "teamID": "BRAINK-PROP-HW-VERIFY-ANALYST",
+        "status": "proposed_not_provisioned",
+        "expertise": [
+          "Independent verification architect",
+          "Coverage analyst",
+          "Requirements assurance reviewer",
+          "Engineering productivity analyst"
+        ],
+        "mandate": "Independently reproduce evidence, test alternatives and challenge the acceptance claim; delivery cannot self-approve."
+      },
+      "falsifiableAcceptanceMetric": "Run the same 20 independently selected scenarios across simulation and a hardware target, detect all seeded cross-platform discrepancies and reduce test-porting time by 30%; publish uncovered requirements and exclusions.",
+      "dependencies": [
+        "EDA licences",
+        "Design and IP permissions",
+        "Comparable execution targets",
+        "Agreed verification plan"
+      ],
+      "safetyBoundaries": [
+        "Passing tests is not exhaustive proof",
+        "No tape-out or safety sign-off without authorized domain review",
+        "Respect IP and export-control restrictions"
+      ],
+      "discoveryPriority": "P1",
+      "distinctScopeBoundary": "Owns portability and evidence across hardware verification tools; chip design itself is not assumed solved.",
+      "promotionGate": "Promote only after buyer discovery, permissions, baseline capture, viable alternatives comparison and independent analyst acceptance. Failed or inconclusive tests remain recorded."
+    },
+    {
+      "sectorID": "KED-PROP-HW-SEC-METRICS",
+      "name": "Hardware security measurement and validation",
+      "family": "hardware-assurance",
+      "status": "proposed_research_sector_not_provisioned",
+      "claimType": "integration_hypothesis",
+      "affectedUsersAndBuyers": [
+        "Secure device OEMs",
+        "Hardware assurance laboratories",
+        "Critical hardware buyers"
+      ],
+      "bottleneck": "Hardware assurance claims often lack explicit threat models and comparable weakness/attack coverage, leaving buyers unable to evaluate residual risk.",
+      "evidence": {
+        "claimType": "research_methodology_gap",
+        "sourceIDs": [
+          "S11"
+        ],
+        "sourceURLs": [
+          "https://www.nist.gov/publications/metrics-and-methodology-hardware-security-constructs"
+        ],
+        "sourceDates": [
+          "2025-06-05"
+        ],
+        "measurement": {
+          "observedMarketRate": null,
+          "customerBaselineRequired": [
+            "threat classes mapped to tests",
+            "reproducible assessment coverage",
+            "unexamined assumptions"
+          ]
+        },
+        "limitation": "Source support establishes the issue or baseline described; it does not establish Keddeh efficacy, a market size, or a local customer baseline."
+      },
+      "existingAlternatives": [
+        "NIST hardware-security methodology",
+        "Accredited lab assessments",
+        "Formal information-flow checks",
+        "Vendor security evaluations"
+      ],
+      "keddehIntegrationHypothesis": "Build a bounded test-and-evidence harness that connects documented threat models, hardware weaknesses and authorized lab results to independently reviewed assurance claims.",
+      "brainkDeliveryTeam": {
+        "teamID": "BRAINK-PROP-HW-SEC-METRICS-DELIVERY",
+        "status": "proposed_not_provisioned",
+        "expertise": [
+          "Hardware security engineering",
+          "Side-channel measurement in authorized labs",
+          "Secure boot and debug analysis",
+          "Evidence harness engineering"
+        ],
+        "mandate": "Build a bounded integration or experiment and record versioned artifacts, inputs, run logs and failure cases."
+      },
+      "independentAnalystTeam": {
+        "teamID": "BRAINK-PROP-HW-SEC-METRICS-ANALYST",
+        "status": "proposed_not_provisioned",
+        "expertise": [
+          "Independent hardware security evaluator",
+          "Threat-model analyst",
+          "Measurement statistician",
+          "Assurance-case reviewer"
+        ],
+        "mandate": "Independently reproduce evidence, test alternatives and challenge the acceptance claim; delivery cannot self-approve."
+      },
+      "falsifiableAcceptanceMetric": "For a predeclared set of non-destructive lab tests, reproduce every reported result from raw traces, detect all seeded benchmark weaknesses and disclose attack classes not assessed; do not report a universal security score.",
+      "dependencies": [
+        "Authorized devices and lab access",
+        "Threat model",
+        "Calibrated equipment",
+        "Responsible disclosure process"
+      ],
+      "safetyBoundaries": [
+        "Only owner-authorized defensive testing",
+        "No exploitation of third-party systems",
+        "No physical or cryptographic security guarantee from software-only evidence"
+      ],
+      "discoveryPriority": "P2",
+      "distinctScopeBoundary": "Owns hardware assurance measurements; enterprise cybersecurity operations are outside this sector.",
+      "promotionGate": "Promote only after buyer discovery, permissions, baseline capture, viable alternatives comparison and independent analyst acceptance. Failed or inconclusive tests remain recorded."
+    },
+    {
+      "sectorID": "KED-PROP-HW-METROLOGY",
+      "name": "Semiconductor measurement workflow interoperability",
+      "family": "hardware-assurance",
+      "status": "proposed_research_sector_not_provisioned",
+      "claimType": "integration_hypothesis",
+      "affectedUsersAndBuyers": [
+        "Semiconductor laboratories",
+        "Advanced-packaging teams",
+        "Metrology equipment users"
+      ],
+      "bottleneck": "Novel materials and integration demand comparable measurements, provenance and uncertainty across instruments; data harmonization cannot replace missing measurement physics.",
+      "evidence": {
+        "claimType": "research_roadmap_gap",
+        "sourceIDs": [
+          "S12"
+        ],
+        "sourceURLs": [
+          "https://www.nist.gov/publications/international-roadmap-devices-and-systems-tm-2024-metrology"
+        ],
+        "sourceDates": [
+          "2025-07-09"
+        ],
+        "measurement": {
+          "observedMarketRate": null,
+          "customerBaselineRequired": [
+            "measurement records with uncertainty metadata",
+            "instrument-to-analysis handoff time",
+            "reference-sample reproducibility"
+          ]
+        },
+        "limitation": "Source support establishes the issue or baseline described; it does not establish Keddeh efficacy, a market size, or a local customer baseline."
+      },
+      "existingAlternatives": [
+        "Vendor metrology software",
+        "Laboratory information systems",
+        "NIST/IRDS methods",
+        "Accredited external labs"
+      ],
+      "keddehIntegrationHypothesis": "Integrate instrument exports, calibration records and uncertainty metadata into reproducible analysis workflows; partner with laboratories for physical characterization capabilities.",
+      "brainkDeliveryTeam": {
+        "teamID": "BRAINK-PROP-HW-METROLOGY-DELIVERY",
+        "status": "proposed_not_provisioned",
+        "expertise": [
+          "Semiconductor metrology",
+          "Instrument data engineering",
+          "Uncertainty propagation",
+          "Laboratory workflow integration"
+        ],
+        "mandate": "Build a bounded integration or experiment and record versioned artifacts, inputs, run logs and failure cases."
+      },
+      "independentAnalystTeam": {
+        "teamID": "BRAINK-PROP-HW-METROLOGY-ANALYST",
+        "status": "proposed_not_provisioned",
+        "expertise": [
+          "Independent metrologist",
+          "Statistical process-control analyst",
+          "Materials expert",
+          "Research reproducibility reviewer"
+        ],
+        "mandate": "Independently reproduce evidence, test alternatives and challenge the acceptance claim; delivery cannot self-approve."
+      },
+      "falsifiableAcceptanceMetric": "On one explicitly defined measurement modality and reference sample set, retain 100% of mandatory calibration/uncertainty fields and reproduce results within the laboratory-agreed uncertainty bounds; report any cross-instrument bias.",
+      "dependencies": [
+        "Physical reference samples",
+        "Instrument access",
+        "Domain-specific uncertainty budget",
+        "Lab partnership"
+      ],
+      "safetyBoundaries": [
+        "No claim that an integration platform creates new measurement resolution",
+        "No manufacturing control actions",
+        "No fabrication/yield promises without experiments"
+      ],
+      "discoveryPriority": "P2",
+      "distinctScopeBoundary": "Research partnership sector; substantial physical infrastructure is required before delivery claims.",
+      "promotionGate": "Promote only after buyer discovery, permissions, baseline capture, viable alternatives comparison and independent analyst acceptance. Failed or inconclusive tests remain recorded."
+    },
+    {
+      "sectorID": "KED-PROP-EDGE-TWIN",
+      "name": "Validated industrial digital twins",
+      "family": "edge-industrial",
+      "status": "proposed_research_sector_not_provisioned",
+      "claimType": "integration_hypothesis",
+      "affectedUsersAndBuyers": [
+        "Manufacturing process owners",
+        "Maintenance teams",
+        "Industrial simulation suppliers"
+      ],
+      "bottleneck": "A visually convincing twin can lack validated model boundaries, uncertainty estimates or traceability to physical measurements, making operational decisions unreliable.",
+      "evidence": {
+        "claimType": "authoritative_research_programme_gap",
+        "sourceIDs": [
+          "S13"
+        ],
+        "sourceURLs": [
+          "https://www.nist.gov/programs-projects/digital-twins-advanced-manufacturing"
+        ],
+        "sourceDates": [
+          "undated current programme; accessed 2026-10-11"
+        ],
+        "measurement": {
+          "observedMarketRate": null,
+          "customerBaselineRequired": [
+            "prediction error on held-out operating regimes",
+            "uncertainty calibration",
+            "model freshness",
+            "unvalidated control regions"
+          ]
+        },
+        "limitation": "Source support establishes the issue or baseline described; it does not establish Keddeh efficacy, a market size, or a local customer baseline."
+      },
+      "existingAlternatives": [
+        "ISO 23247-oriented twin architectures",
+        "Physics-based simulation",
+        "Vendor digital twin platforms",
+        "Conventional plant models"
+      ],
+      "keddehIntegrationHypothesis": "Wrap existing twin models with explicit operating envelopes, data lineage, versioned validation sets and BRAINK analyst checks before recommendations are exposed to operators.",
+      "brainkDeliveryTeam": {
+        "teamID": "BRAINK-PROP-EDGE-TWIN-DELIVERY",
+        "status": "proposed_not_provisioned",
+        "expertise": [
+          "Industrial modelling and simulation",
+          "Digital-thread integration",
+          "Sensor data engineering",
+          "VVUQ engineering"
+        ],
+        "mandate": "Build a bounded integration or experiment and record versioned artifacts, inputs, run logs and failure cases."
+      },
+      "independentAnalystTeam": {
+        "teamID": "BRAINK-PROP-EDGE-TWIN-ANALYST",
+        "status": "proposed_not_provisioned",
+        "expertise": [
+          "Independent VVUQ specialist",
+          "Process-domain engineer",
+          "Statistical validation analyst",
+          "Safety-case reviewer"
+        ],
+        "mandate": "Independently reproduce evidence, test alternatives and challenge the acceptance claim; delivery cannot self-approve."
+      },
+      "falsifiableAcceptanceMetric": "Pre-register one use case and error tolerance; pass the agreed held-out physical validation set, achieve declared uncertainty coverage and reject all out-of-envelope test inputs. No closed-loop control approval follows automatically.",
+      "dependencies": [
+        "Ground-truth measurements",
+        "Representative operating regimes",
+        "Model access",
+        "Plant expert review"
+      ],
+      "safetyBoundaries": [
+        "Decision support initially",
+        "No autonomous actuator control",
+        "Separate simulation results from physically reproduced evidence"
+      ],
+      "discoveryPriority": "P1",
+      "distinctScopeBoundary": "Owns physical-model credibility; generic AI evaluation and data lineage are dependencies.",
+      "promotionGate": "Promote only after buyer discovery, permissions, baseline capture, viable alternatives comparison and independent analyst acceptance. Failed or inconclusive tests remain recorded."
+    },
+    {
+      "sectorID": "KED-PROP-EDGE-CALIBRATION",
+      "name": "Machine-interpretable sensor calibration",
+      "family": "edge-industrial",
+      "status": "proposed_research_sector_not_provisioned",
+      "claimType": "integration_hypothesis",
+      "affectedUsersAndBuyers": [
+        "Calibration laboratories",
+        "Quality managers",
+        "Instrument and sensor fleet owners"
+      ],
+      "bottleneck": "Calibration PDFs and inconsistent units or terminology require manual transcription and can leave telemetry detached from valid calibration and uncertainty records.",
+      "evidence": {
+        "claimType": "national_metrology_guidance_gap",
+        "sourceIDs": [
+          "S14"
+        ],
+        "sourceURLs": [
+          "https://www.ptb.de/cms/en/metrological-services/dkd/dkd-dcc.html"
+        ],
+        "sourceDates": [
+          "current guidance; news updated 2026-02-11"
+        ],
+        "measurement": {
+          "observedMarketRate": null,
+          "customerBaselineRequired": [
+            "manual minutes per certificate",
+            "semantic field error rate",
+            "measurements linked to valid calibration",
+            "expired certificates missed"
+          ]
+        },
+        "limitation": "Source support establishes the issue or baseline described; it does not establish Keddeh efficacy, a market size, or a local customer baseline."
+      },
+      "existingAlternatives": [
+        "PTB Digital Calibration Certificates",
+        "LIMS/QMS systems",
+        "Manual certificate review",
+        "Instrument vendor services"
+      ],
+      "keddehIntegrationHypothesis": "Integrate DCC schema and agreed refTypes with asset registries and measurement pipelines, preserving uncertainty, units, validity and human-readable review.",
+      "brainkDeliveryTeam": {
+        "teamID": "BRAINK-PROP-EDGE-CALIBRATION-DELIVERY",
+        "status": "proposed_not_provisioned",
+        "expertise": [
+          "Digital metrology",
+          "XML/DCC schema integration",
+          "Instrument identity management",
+          "Quality-system engineering"
+        ],
+        "mandate": "Build a bounded integration or experiment and record versioned artifacts, inputs, run logs and failure cases."
+      },
+      "independentAnalystTeam": {
+        "teamID": "BRAINK-PROP-EDGE-CALIBRATION-ANALYST",
+        "status": "proposed_not_provisioned",
+        "expertise": [
+          "Independent calibration specialist",
+          "Uncertainty analyst",
+          "Semantic validation reviewer",
+          "Quality process auditor"
+        ],
+        "mandate": "Independently reproduce evidence, test alternatives and challenge the acceptance claim; delivery cannot self-approve."
+      },
+      "falsifiableAcceptanceMetric": "Import 100 independently checked certificates across two measurands with zero silent unit or uncertainty-field errors, flag every seeded expired/mismatched certificate and halve median manual processing time.",
+      "dependencies": [
+        "Authentic lab-issued certificates",
+        "Agreed measurand vocabulary",
+        "Stable instrument identifiers",
+        "Qualified calibration partners"
+      ],
+      "safetyBoundaries": [
+        "Schema validity does not certify measurement accuracy",
+        "No modification of signed calibration results",
+        "Physical recalibration remains a qualified laboratory activity"
+      ],
+      "discoveryPriority": "P1",
+      "distinctScopeBoundary": "Owns calibration semantics, distinct from generic data quality or digital-twin modelling.",
+      "promotionGate": "Promote only after buyer discovery, permissions, baseline capture, viable alternatives comparison and independent analyst acceptance. Failed or inconclusive tests remain recorded."
+    },
+    {
+      "sectorID": "KED-PROP-EDGE-ENERGY",
+      "name": "Embedded energy and battery-life verification",
+      "family": "energy-circularity",
+      "status": "proposed_research_sector_not_provisioned",
+      "claimType": "integration_hypothesis",
+      "affectedUsersAndBuyers": [
+        "Battery-powered device OEMs",
+        "Sensor fleet operators",
+        "Embedded procurement teams"
+      ],
+      "bottleneck": "Single power figures obscure sleep, wakeup, radio and peripheral costs; projected battery life can miss real workloads, retries and aging assumptions.",
+      "evidence": {
+        "claimType": "benchmark_defined_measurement_problem",
+        "sourceIDs": [
+          "S15"
+        ],
+        "sourceURLs": [
+          "https://www.eembc.org/ulpmark/"
+        ],
+        "sourceDates": [
+          "undated; accessed 2026-10-11"
+        ],
+        "measurement": {
+          "observedMarketRate": null,
+          "customerBaselineRequired": [
+            "joules per completed operation",
+            "sleep/wake/radio energy",
+            "retransmission burden",
+            "prediction error versus measured duty cycle"
+          ]
+        },
+        "limitation": "Source support establishes the issue or baseline described; it does not establish Keddeh efficacy, a market size, or a local customer baseline."
+      },
+      "existingAlternatives": [
+        "EEMBC ULPMark and IoTMark",
+        "Vendor profiling tools",
+        "Bench power analyzers",
+        "Conservative battery budgeting"
+      ],
+      "keddehIntegrationHypothesis": "Combine reproducible device workload profiles and calibrated energy measurements with fleet duty-cycle traces; expose trade-offs rather than optimizing one headline score.",
+      "brainkDeliveryTeam": {
+        "teamID": "BRAINK-PROP-EDGE-ENERGY-DELIVERY",
+        "status": "proposed_not_provisioned",
+        "expertise": [
+          "Low-power embedded engineering",
+          "Energy instrumentation",
+          "Firmware profiling",
+          "Fleet workload modelling"
+        ],
+        "mandate": "Build a bounded integration or experiment and record versioned artifacts, inputs, run logs and failure cases."
+      },
+      "independentAnalystTeam": {
+        "teamID": "BRAINK-PROP-EDGE-ENERGY-ANALYST",
+        "status": "proposed_not_provisioned",
+        "expertise": [
+          "Independent power measurement specialist",
+          "Battery-domain reviewer",
+          "Statistical experiment designer",
+          "Lifecycle-cost analyst"
+        ],
+        "mandate": "Independently reproduce evidence, test alternatives and challenge the acceptance claim; delivery cannot self-approve."
+      },
+      "falsifiableAcceptanceMetric": "On a fixed hardware and workload set, repeat energy measurements within a predeclared 5% band and demonstrate at least 15% lower joules per completed task without breaching latency/reliability limits; validate battery projections separately.",
+      "dependencies": [
+        "Calibrated power instrumentation",
+        "Representative duty cycles",
+        "Battery chemistry and temperature assumptions",
+        "Benchmark licences where required"
+      ],
+      "safetyBoundaries": [
+        "No unsupported multi-year battery guarantee",
+        "No battery safety limits bypass",
+        "Include radio and sensor energy in whole-device claims"
+      ],
+      "discoveryPriority": "P1",
+      "distinctScopeBoundary": "Endpoint and fleet energy only; datacenter energy and model training optimization are excluded.",
+      "promotionGate": "Promote only after buyer discovery, permissions, baseline capture, viable alternatives comparison and independent analyst acceptance. Failed or inconclusive tests remain recorded."
+    },
+    {
+      "sectorID": "KED-PROP-CIRC-REPAIR",
+      "name": "Device repairability and service-life operations",
+      "family": "energy-circularity",
+      "status": "proposed_research_sector_not_provisioned",
+      "claimType": "integration_hypothesis",
+      "affectedUsersAndBuyers": [
+        "Device manufacturers",
+        "Enterprise endpoint fleet buyers",
+        "Authorized repair networks"
+      ],
+      "bottleneck": "Repair decisions depend on compatible parts, manuals, support dates and battery condition that may be scattered across suppliers and asset systems.",
+      "evidence": {
+        "claimType": "regulatory_requirements_with_quantified_thresholds",
+        "sourceIDs": [
+          "S16"
+        ],
+        "sourceURLs": [
+          "https://single-market-economy.ec.europa.eu/news/new-eu-rules-durable-energy-efficient-and-repairable-smartphones-and-tablets-start-applying-2025-06-20_en"
+        ],
+        "sourceDates": [
+          "2025-06-20"
+        ],
+        "measurement": {
+          "externalRequirements": {
+            "coveredBatteryCycles": 800,
+            "retainedCapacityPercent": 80,
+            "specifiedPartsAvailabilityYearsAfterEndOfSales": 7,
+            "specifiedPartsDeliveryWorkingDays": "5–10"
+          },
+          "customerBaselineRequired": [
+            "repair turnaround",
+            "repair versus replace cost",
+            "parts fulfilment success"
+          ]
+        },
+        "limitation": "Source support establishes the issue or baseline described; it does not establish Keddeh efficacy, a market size, or a local customer baseline."
+      },
+      "existingAlternatives": [
+        "OEM repair portals",
+        "EPREL information",
+        "IT asset-management systems",
+        "Authorized repair services"
+      ],
+      "keddehIntegrationHypothesis": "Unify device model identity, support coverage and authorized parts/service information to generate evidence-backed repair-versus-replace options and measurable service workflows.",
+      "brainkDeliveryTeam": {
+        "teamID": "BRAINK-PROP-CIRC-REPAIR-DELIVERY",
+        "status": "proposed_not_provisioned",
+        "expertise": [
+          "Electronics service engineering",
+          "Parts compatibility integration",
+          "Asset lifecycle software",
+          "Repair workflow design"
+        ],
+        "mandate": "Build a bounded integration or experiment and record versioned artifacts, inputs, run logs and failure cases."
+      },
+      "independentAnalystTeam": {
+        "teamID": "BRAINK-PROP-CIRC-REPAIR-ANALYST",
+        "status": "proposed_not_provisioned",
+        "expertise": [
+          "Independent repairability specialist",
+          "Lifecycle cost analyst",
+          "Product compliance reviewer",
+          "Environmental measurement analyst"
+        ],
+        "mandate": "Independently reproduce evidence, test alternatives and challenge the acceptance claim; delivery cannot self-approve."
+      },
+      "falsifiableAcceptanceMetric": "For a 50-device sample, resolve every required part and support constraint or explicitly flag unknowns; reduce median repair quote preparation time by 30% and verify all completed repair records against technician evidence.",
+      "dependencies": [
+        "OEM service data",
+        "Qualified repair partners",
+        "Battery condition measurement",
+        "Customer-approved cost assumptions"
+      ],
+      "safetyBoundaries": [
+        "No hazardous battery repairs by unqualified agents",
+        "Do not claim legal compliance from a checklist",
+        "Preserve device data and customer authorization"
+      ],
+      "discoveryPriority": "P1",
+      "distinctScopeBoundary": "Owns service and repair decisions; device design and environmental footprint certification are separate.",
+      "promotionGate": "Promote only after buyer discovery, permissions, baseline capture, viable alternatives comparison and independent analyst acceptance. Failed or inconclusive tests remain recorded."
+    },
+    {
+      "sectorID": "KED-PROP-CIRC-DISPOSITION",
+      "name": "Verifiable circular IT asset disposition",
+      "family": "energy-circularity",
+      "status": "proposed_research_sector_not_provisioned",
+      "claimType": "integration_hypothesis",
+      "affectedUsersAndBuyers": [
+        "Enterprise IT asset teams",
+        "Refurbishers",
+        "Auditors and recycling partners"
+      ],
+      "bottleneck": "Reuse and recycling chains lose asset, data-sanitization and downstream custody evidence, making secure retirement and circularity claims difficult to verify.",
+      "evidence": {
+        "claimType": "global_statistic_plus_operational_guidance",
+        "sourceIDs": [
+          "S17",
+          "S18"
+        ],
+        "sourceURLs": [
+          "https://www.itu.int/dms_pub/itu-d/opb/gen/D-GEN-E_WASTE.01-2024-PDF-E.pdf",
+          "https://csrc.nist.gov/pubs/sp/800/88/r2/final"
+        ],
+        "sourceDates": [
+          "2024; measurements refer to 2022",
+          "2025-09-26"
+        ],
+        "measurement": {
+          "externalObservation": {
+            "year": 2022,
+            "eWasteBillionKg": 62,
+            "documentedFormalCollectionRecyclingPercent": 22.3
+          },
+          "customerBaselineRequired": [
+            "retired assets with full custody trail",
+            "verified sanitization records",
+            "reuse/refurbish/recycle disposition rates"
+          ]
+        },
+        "limitation": "Source support establishes the issue or baseline described; it does not establish Keddeh efficacy, a market size, or a local customer baseline."
+      },
+      "existingAlternatives": [
+        "Certified ITAD providers",
+        "NIST-aligned sanitization programmes",
+        "Asset manifests and recycler receipts",
+        "Manual audit sampling"
+      ],
+      "keddehIntegrationHypothesis": "Integrate asset IDs, approved sanitization results, transfer records and disposition receipts into an auditable chain with explicit gaps and no inferred recycling outcomes.",
+      "brainkDeliveryTeam": {
+        "teamID": "BRAINK-PROP-CIRC-DISPOSITION-DELIVERY",
+        "status": "proposed_not_provisioned",
+        "expertise": [
+          "IT asset lifecycle integration",
+          "Sanitization evidence engineering",
+          "Reverse logistics",
+          "Custody record design"
+        ],
+        "mandate": "Build a bounded integration or experiment and record versioned artifacts, inputs, run logs and failure cases."
+      },
+      "independentAnalystTeam": {
+        "teamID": "BRAINK-PROP-CIRC-DISPOSITION-ANALYST",
+        "status": "proposed_not_provisioned",
+        "expertise": [
+          "Independent ITAD auditor",
+          "Privacy/security assessor",
+          "Circularity measurement analyst",
+          "Supply-chain verification analyst"
+        ],
+        "mandate": "Independently reproduce evidence, test alternatives and challenge the acceptance claim; delivery cannot self-approve."
+      },
+      "falsifiableAcceptanceMetric": "For 100 retired assets, account for 100% of transfers and require verified sanitization evidence before reuse release; reconcile all masses/counts and label unknown downstream outcomes rather than counting them as recycled.",
+      "dependencies": [
+        "Authorized ITAD partners",
+        "Serial/asset ID quality",
+        "Approved retention and erasure policy",
+        "Transfer and downstream receipts"
+      ],
+      "safetyBoundaries": [
+        "Erasure and destruction require specific authorization",
+        "No irreversible deletion in this research",
+        "No environmental benefit claim without a defined baseline and verified downstream data"
+      ],
+      "discoveryPriority": "P0",
+      "distinctScopeBoundary": "Owns physical retirement and evidence; generic storage security is a dependency.",
+      "promotionGate": "Promote only after buyer discovery, permissions, baseline capture, viable alternatives comparison and independent analyst acceptance. Failed or inconclusive tests remain recorded."
+    },
+    {
+      "sectorID": "KED-PROP-CIRC-PASSPORT",
+      "name": "Battery and product passport interoperability",
+      "family": "energy-circularity",
+      "status": "proposed_research_sector_not_provisioned",
+      "claimType": "integration_hypothesis",
+      "affectedUsersAndBuyers": [
+        "Battery manufacturers and importers",
+        "EV/LMT suppliers",
+        "Industrial battery operators"
+      ],
+      "bottleneck": "Product information spans suppliers, testing labs and lifecycle systems with different identifiers, access rights and applicability rules; a QR code alone cannot establish reliable passport evidence.",
+      "evidence": {
+        "claimType": "dated_regulatory_preparation_requirement",
+        "sourceIDs": [
+          "S19",
+          "S26"
+        ],
+        "sourceURLs": [
+          "https://single-market-economy.ec.europa.eu/news/guidance-support-preparations-digital-batteries-passport-2026-08-21_en",
+          "https://single-market-economy.ec.europa.eu/single-market/digital-product-passport_en"
+        ],
+        "sourceDates": [
+          "2026-08-21",
+          "undated; accessed 2026-10-11"
+        ],
+        "measurement": {
+          "externalMilestone": "2027-02-18 for covered battery categories",
+          "guidanceDataPoints": 71,
+          "customerBaselineRequired": [
+            "applicable fields with source evidence",
+            "supplier handoff errors",
+            "access-policy test pass rate"
+          ]
+        },
+        "limitation": "Source support establishes the issue or baseline described; it does not establish Keddeh efficacy, a market size, or a local customer baseline."
+      },
+      "existingAlternatives": [
+        "Existing DPP and battery-passport platforms",
+        "PLM/ERP product records",
+        "Industry passport pilots",
+        "Manual compliance datasets"
+      ],
+      "keddehIntegrationHypothesis": "Create standards-aligned connectors and field-level provenance checks that reconcile supplier evidence with category-specific passport requirements and role-appropriate disclosure.",
+      "brainkDeliveryTeam": {
+        "teamID": "BRAINK-PROP-CIRC-PASSPORT-DELIVERY",
+        "status": "proposed_not_provisioned",
+        "expertise": [
+          "Product data integration",
+          "Battery domain engineering",
+          "Identity and access modelling",
+          "Interoperability test engineering"
+        ],
+        "mandate": "Build a bounded integration or experiment and record versioned artifacts, inputs, run logs and failure cases."
+      },
+      "independentAnalystTeam": {
+        "teamID": "BRAINK-PROP-CIRC-PASSPORT-ANALYST",
+        "status": "proposed_not_provisioned",
+        "expertise": [
+          "Independent battery regulation analyst",
+          "Product provenance reviewer",
+          "Data quality analyst",
+          "Privacy and commercial confidentiality reviewer"
+        ],
+        "mandate": "Independently reproduce evidence, test alternatives and challenge the acceptance claim; delivery cannot self-approve."
+      },
+      "falsifiableAcceptanceMetric": "For one scoped battery category, map all applicable guidance fields to evidence or an explicit gap, pass 100% of authorized/unauthorized access fixtures and round-trip the agreed export format without identifier or unit loss.",
+      "dependencies": [
+        "Battery category and jurisdiction assessment",
+        "Supplier data agreements",
+        "Current delegated/implementing acts",
+        "Measured product data"
+      ],
+      "safetyBoundaries": [
+        "Guidance is nonbinding and category-specific",
+        "No fabricated sustainability or performance values",
+        "No universal DPP compliance date claimed"
+      ],
+      "discoveryPriority": "P0",
+      "distinctScopeBoundary": "Battery passport is the first bounded use case; broader product passports require separate product-specific research.",
+      "promotionGate": "Promote only after buyer discovery, permissions, baseline capture, viable alternatives comparison and independent analyst acceptance. Failed or inconclusive tests remain recorded."
+    },
+    {
+      "sectorID": "KED-PROP-ADOPT-INTEGRATION",
+      "name": "SME workflow integration and migration",
+      "family": "adoption-integration",
+      "status": "proposed_research_sector_not_provisioned",
+      "claimType": "integration_hypothesis",
+      "affectedUsersAndBuyers": [
+        "Small and medium businesses",
+        "Accountants and managed service providers",
+        "SME software implementers"
+      ],
+      "bottleneck": "Adopting applications does not ensure coherent order, invoice, inventory and reporting workflows; maintenance cost and fragmented processes can erase the expected benefit.",
+      "evidence": {
+        "claimType": "nonrepresentative_survey_signal",
+        "sourceIDs": [
+          "S20"
+        ],
+        "sourceURLs": [
+          "https://www.oecd.org/en/publications/empowering-smes-in-the-age-of-ai_bf5a9816-en.html"
+        ],
+        "sourceDates": [
+          "2026-04-13"
+        ],
+        "measurement": {
+          "surveyMaintenanceCostBarrierPercent": 39,
+          "sampleScope": "over 2,000 SMEs in 12 OECD countries; nonrepresentative",
+          "customerBaselineRequired": [
+            "manual re-entry hours",
+            "reconciliation exceptions",
+            "workflow cost per transaction"
+          ]
+        },
+        "limitation": "Source support establishes the issue or baseline described; it does not establish Keddeh efficacy, a market size, or a local customer baseline."
+      },
+      "existingAlternatives": [
+        "ERP/CRM/accounting suites",
+        "iPaaS and native connectors",
+        "Managed integration providers",
+        "Spreadsheet workflows"
+      ],
+      "keddehIntegrationHypothesis": "Offer bounded, reversible integrations for a specific business workflow, with data-contract checks, migration rehearsals and a customer-owned export/exit plan.",
+      "brainkDeliveryTeam": {
+        "teamID": "BRAINK-PROP-ADOPT-INTEGRATION-DELIVERY",
+        "status": "proposed_not_provisioned",
+        "expertise": [
+          "Business process analysis",
+          "SaaS/API integration",
+          "Data migration",
+          "SME systems operations"
+        ],
+        "mandate": "Build a bounded integration or experiment and record versioned artifacts, inputs, run logs and failure cases."
+      },
+      "independentAnalystTeam": {
+        "teamID": "BRAINK-PROP-ADOPT-INTEGRATION-ANALYST",
+        "status": "proposed_not_provisioned",
+        "expertise": [
+          "Independent workflow auditor",
+          "SME economics analyst",
+          "Migration quality reviewer",
+          "Vendor/alternative comparison analyst"
+        ],
+        "mandate": "Independently reproduce evidence, test alternatives and challenge the acceptance claim; delivery cannot self-approve."
+      },
+      "falsifiableAcceptanceMetric": "For one customer-approved workflow, eliminate at least 50% of duplicate entry, preserve 100% of reconciled control totals across migration and demonstrate an export/rollback rehearsal; measure operating cost for 30 days.",
+      "dependencies": [
+        "Customer process owner",
+        "API/export rights",
+        "Clean baseline records",
+        "Business acceptance test dataset"
+      ],
+      "safetyBoundaries": [
+        "No automatic payments, filings or customer messages without authorization",
+        "Minimize personal data",
+        "No claimed ROI before measured customer pilot"
+      ],
+      "discoveryPriority": "P0",
+      "distinctScopeBoundary": "Owns bounded business process integration; generic integration-platform infrastructure belongs elsewhere.",
+      "promotionGate": "Promote only after buyer discovery, permissions, baseline capture, viable alternatives comparison and independent analyst acceptance. Failed or inconclusive tests remain recorded."
+    },
+    {
+      "sectorID": "KED-PROP-ADOPT-CAPABILITY",
+      "name": "Digital adoption and operator capability",
+      "family": "adoption-integration",
+      "status": "proposed_research_sector_not_provisioned",
+      "claimType": "integration_hypothesis",
+      "affectedUsersAndBuyers": [
+        "SME owners and employees",
+        "Training providers",
+        "Public SME-support programmes"
+      ],
+      "bottleneck": "New tools fail to become reliable working practices when teams lack training time, task-specific skills and confidence in exception handling.",
+      "evidence": {
+        "claimType": "nonrepresentative_survey_signal",
+        "sourceIDs": [
+          "S20"
+        ],
+        "sourceURLs": [
+          "https://www.oecd.org/en/publications/empowering-smes-in-the-age-of-ai_bf5a9816-en.html"
+        ],
+        "sourceDates": [
+          "2026-04-13"
+        ],
+        "measurement": {
+          "surveyLackOfTrainingTimeBarrierPercent": 38,
+          "sampleScope": "over 2,000 SMEs in 12 OECD countries; nonrepresentative",
+          "customerBaselineRequired": [
+            "task completion rate",
+            "time to independent proficiency",
+            "30-day retained usage",
+            "support escalation burden"
+          ]
+        },
+        "limitation": "Source support establishes the issue or baseline described; it does not establish Keddeh efficacy, a market size, or a local customer baseline."
+      },
+      "existingAlternatives": [
+        "Vendor training",
+        "Local advisers and consultants",
+        "Peer learning",
+        "Digital skills programmes"
+      ],
+      "keddehIntegrationHypothesis": "Pair each integration with short role-specific practice tasks, observable proficiency checks and exception playbooks; use feedback to simplify the workflow instead of counting licences as adoption.",
+      "brainkDeliveryTeam": {
+        "teamID": "BRAINK-PROP-ADOPT-CAPABILITY-DELIVERY",
+        "status": "proposed_not_provisioned",
+        "expertise": [
+          "Instructional design",
+          "Workflow implementation",
+          "User support operations",
+          "Product analytics"
+        ],
+        "mandate": "Build a bounded integration or experiment and record versioned artifacts, inputs, run logs and failure cases."
+      },
+      "independentAnalystTeam": {
+        "teamID": "BRAINK-PROP-ADOPT-CAPABILITY-ANALYST",
+        "status": "proposed_not_provisioned",
+        "expertise": [
+          "Independent training evaluator",
+          "Organizational adoption researcher",
+          "SME operations analyst",
+          "Accessibility/inclusion reviewer"
+        ],
+        "mandate": "Independently reproduce evidence, test alternatives and challenge the acceptance claim; delivery cannot self-approve."
+      },
+      "falsifiableAcceptanceMetric": "In a consented pilot with baseline and follow-up, at least 80% of participants complete the agreed task and recover from a seeded exception unaided after two weeks; retained usage and support burden must be reported at day 30.",
+      "dependencies": [
+        "Participant consent",
+        "Protected training time",
+        "Relevant task environment",
+        "Accessible materials and language support"
+      ],
+      "safetyBoundaries": [
+        "Do not rank employees for employment decisions",
+        "Do not infer ability from protected traits",
+        "No manipulative nudges or covert worker surveillance"
+      ],
+      "discoveryPriority": "P0",
+      "distinctScopeBoundary": "Owns implementation capability and sustained practice; general HCI/accessibility technology remains a dependency.",
+      "promotionGate": "Promote only after buyer discovery, permissions, baseline capture, viable alternatives comparison and independent analyst acceptance. Failed or inconclusive tests remain recorded."
+    },
+    {
+      "sectorID": "KED-PROP-ADOPT-LOWDATA",
+      "name": "Low-data and assisted digital service access",
+      "family": "adoption-integration",
+      "status": "proposed_research_sector_not_provisioned",
+      "claimType": "integration_hypothesis",
+      "affectedUsersAndBuyers": [
+        "Public service delivery teams",
+        "NGOs and mobile-service providers",
+        "Users with constrained devices or connectivity"
+      ],
+      "bottleneck": "Coverage alone leaves people unable or unwilling to use digital services because devices, data, skills and relevant workflows remain barriers.",
+      "evidence": {
+        "claimType": "global_estimate_with_definition_caveat",
+        "sourceIDs": [
+          "S21",
+          "S22"
+        ],
+        "sourceURLs": [
+          "https://www.gsma.com/somic/",
+          "https://www.itu.int/en/mediacentre/Pages/PR-2025-11-17-facts-and-figures.aspx"
+        ],
+        "sourceDates": [
+          "2026; estimates at end-2025",
+          "2025-11-17"
+        ],
+        "measurement": {
+          "gsmaEnd2025MobileUsageGapPercent": 38,
+          "itu2025PeopleOfflineBillion": 2.2,
+          "comparisonCaveat": "Different populations and definitions; do not subtract or combine these counts.",
+          "customerBaselineRequired": [
+            "completion on low-end devices",
+            "data bytes per completed journey",
+            "assisted completion and abandonment"
+          ]
+        },
+        "limitation": "Source support establishes the issue or baseline described; it does not establish Keddeh efficacy, a market size, or a local customer baseline."
+      },
+      "existingAlternatives": [
+        "Progressive web apps and offline forms",
+        "SMS/USSD where supported",
+        "Assisted service centres",
+        "Existing mobile inclusion programmes"
+      ],
+      "keddehIntegrationHypothesis": "Design a bounded service journey with low-data forms, resumable submission and a verified assisted route; benchmark on actual target devices and real connectivity constraints.",
+      "brainkDeliveryTeam": {
+        "teamID": "BRAINK-PROP-ADOPT-LOWDATA-DELIVERY",
+        "status": "proposed_not_provisioned",
+        "expertise": [
+          "Low-bandwidth web/mobile engineering",
+          "Offline workflow design",
+          "Assisted service operations",
+          "Localization integration"
+        ],
+        "mandate": "Build a bounded integration or experiment and record versioned artifacts, inputs, run logs and failure cases."
+      },
+      "independentAnalystTeam": {
+        "teamID": "BRAINK-PROP-ADOPT-LOWDATA-ANALYST",
+        "status": "proposed_not_provisioned",
+        "expertise": [
+          "Independent digital inclusion researcher",
+          "Service completion analyst",
+          "Affordability researcher",
+          "Privacy and accessibility reviewer"
+        ],
+        "mandate": "Independently reproduce evidence, test alternatives and challenge the acceptance claim; delivery cannot self-approve."
+      },
+      "falsifiableAcceptanceMetric": "On predefined target phones and constrained-network profiles, reduce data transferred per completed journey by 50% while maintaining at least 95% completion in the agreed test set; independently evaluate assisted users and report exclusions.",
+      "dependencies": [
+        "Target population research",
+        "Device/network access",
+        "Consent for field testing",
+        "Accessible human support channel"
+      ],
+      "safetyBoundaries": [
+        "No digital-only exclusion from essential services",
+        "Protect shared-device privacy",
+        "No assumption that an offline population is an addressable customer market"
+      ],
+      "discoveryPriority": "P1",
+      "distinctScopeBoundary": "Application access and adoption only; radio deployment, carrier pricing and general HCI research are outside this sector.",
+      "promotionGate": "Promote only after buyer discovery, permissions, baseline capture, viable alternatives comparison and independent analyst acceptance. Failed or inconclusive tests remain recorded."
+    },
+    {
+      "sectorID": "KED-PROP-ADOPT-PUBLIC-INTEROP",
+      "name": "Cross-agency public-service interoperability",
+      "family": "adoption-integration",
+      "status": "proposed_research_sector_not_provisioned",
+      "claimType": "integration_hypothesis",
+      "affectedUsersAndBuyers": [
+        "Public-sector digital teams",
+        "Cross-border service owners",
+        "Public procurement and policy teams"
+      ],
+      "bottleneck": "Digital services cross legal, organizational, semantic and technical boundaries; technical APIs alone cannot resolve mismatched requirements or responsibilities.",
+      "evidence": {
+        "claimType": "official_scope_specific_governance_requirement",
+        "sourceIDs": [
+          "S23"
+        ],
+        "sourceURLs": [
+          "https://interoperable-europe.ec.europa.eu/guidelines-chapter-2-when-interoperability-assessment-legally-required"
+        ],
+        "sourceDates": [
+          "current guidance; obligation from 2025-01-12"
+        ],
+        "measurement": {
+          "externalMilestone": "2025-01-12 for qualifying binding requirements",
+          "customerBaselineRequired": [
+            "cross-agency handoff failures",
+            "unresolved semantic/legal dependencies",
+            "time to complete the service journey"
+          ]
+        },
+        "limitation": "Source support establishes the issue or baseline described; it does not establish Keddeh efficacy, a market size, or a local customer baseline."
+      },
+      "existingAlternatives": [
+        "Interoperable Europe assessment guidance",
+        "Existing government interoperability frameworks",
+        "Shared public-service components",
+        "Bilateral interface agreements"
+      ],
+      "keddehIntegrationHypothesis": "Create a versioned requirement-to-interface map and assessment evidence pack, then validate a narrow cross-agency journey using authorized test data and independent review.",
+      "brainkDeliveryTeam": {
+        "teamID": "BRAINK-PROP-ADOPT-PUBLIC-INTEROP-DELIVERY",
+        "status": "proposed_not_provisioned",
+        "expertise": [
+          "Government service architecture",
+          "Cross-agency data integration",
+          "Semantic modelling",
+          "Requirements and procurement engineering"
+        ],
+        "mandate": "Build a bounded integration or experiment and record versioned artifacts, inputs, run logs and failure cases."
+      },
+      "independentAnalystTeam": {
+        "teamID": "BRAINK-PROP-ADOPT-PUBLIC-INTEROP-ANALYST",
+        "status": "proposed_not_provisioned",
+        "expertise": [
+          "Independent public-administration analyst",
+          "Legal interoperability reviewer",
+          "Service performance analyst",
+          "Privacy and rights reviewer"
+        ],
+        "mandate": "Independently reproduce evidence, test alternatives and challenge the acceptance claim; delivery cannot self-approve."
+      },
+      "falsifiableAcceptanceMetric": "For one pre-scoped journey, identify owners and legal bases for every exchange, resolve or explicitly block all critical interoperability gaps, and pass the jointly agreed end-to-end test without unapproved personal-data transfer.",
+      "dependencies": [
+        "Participating agencies",
+        "Legal scope determination",
+        "Data-sharing agreements",
+        "Representative test fixtures"
+      ],
+      "safetyBoundaries": [
+        "No eligibility or benefit decisions by the integration layer",
+        "No assumption that all public procurements require assessment",
+        "Human agency authority retains final approval"
+      ],
+      "discoveryPriority": "P1",
+      "distinctScopeBoundary": "Owns cross-organizational governance integration; generic APIs and identity infrastructure are dependencies.",
+      "promotionGate": "Promote only after buyer discovery, permissions, baseline capture, viable alternatives comparison and independent analyst acceptance. Failed or inconclusive tests remain recorded."
+    },
+    {
+      "sectorID": "KED-PROP-SUPPLY-EVENTS",
+      "name": "Cross-partner physical event traceability",
+      "family": "edge-industrial",
+      "status": "proposed_research_sector_not_provisioned",
+      "claimType": "integration_hypothesis",
+      "affectedUsersAndBuyers": [
+        "Manufacturers and logistics providers",
+        "Cold-chain operators",
+        "Retail supply-chain teams"
+      ],
+      "bottleneck": "Trading partners use inconsistent identifiers and event semantics, making custody, condition excursions and recall tracing difficult to reconcile across systems.",
+      "evidence": {
+        "claimType": "standards_defined_interoperability_problem",
+        "sourceIDs": [
+          "S24"
+        ],
+        "sourceURLs": [
+          "https://ref.gs1.org/standards/epcis/archive"
+        ],
+        "sourceDates": [
+          "EPCIS 2.0.1 published 2025-07-01"
+        ],
+        "measurement": {
+          "observedMarketRate": null,
+          "customerBaselineRequired": [
+            "events with resolvable asset and location identity",
+            "partner event completeness",
+            "time to trace a seeded lot"
+          ]
+        },
+        "limitation": "Source support establishes the issue or baseline described; it does not establish Keddeh efficacy, a market size, or a local customer baseline."
+      },
+      "existingAlternatives": [
+        "GS1 EPCIS/CBV",
+        "EDI and partner portals",
+        "Warehouse/transport-management systems",
+        "Manual traceability exercises"
+      ],
+      "keddehIntegrationHypothesis": "Provide EPCIS-compatible adapters with schema and semantic validation, calibration links and event provenance; preserve raw evidence outside summarized business events where appropriate.",
+      "brainkDeliveryTeam": {
+        "teamID": "BRAINK-PROP-SUPPLY-EVENTS-DELIVERY",
+        "status": "proposed_not_provisioned",
+        "expertise": [
+          "GS1 standards integration",
+          "Logistics data engineering",
+          "IoT sensor/event integration",
+          "Cross-partner API implementation"
+        ],
+        "mandate": "Build a bounded integration or experiment and record versioned artifacts, inputs, run logs and failure cases."
+      },
+      "independentAnalystTeam": {
+        "teamID": "BRAINK-PROP-SUPPLY-EVENTS-ANALYST",
+        "status": "proposed_not_provisioned",
+        "expertise": [
+          "Independent traceability auditor",
+          "Supply-chain operations analyst",
+          "Data quality specialist",
+          "Condition-monitoring domain reviewer"
+        ],
+        "mandate": "Independently reproduce evidence, test alternatives and challenge the acceptance claim; delivery cannot self-approve."
+      },
+      "falsifiableAcceptanceMetric": "Across three consenting partner test systems, trace every seeded affected lot with 100% recall, reject malformed/unknown-identity events and meet the agreed trace-time target; record missing handoffs rather than filling them in.",
+      "dependencies": [
+        "Partner participation",
+        "Shared identifier policy",
+        "Event retention agreements",
+        "Sensor calibration where condition data matters"
+      ],
+      "safetyBoundaries": [
+        "Traceability is not proof of product safety",
+        "No autonomous release/recall decisions",
+        "Protect commercially sensitive movement and customer information"
+      ],
+      "discoveryPriority": "P1",
+      "distinctScopeBoundary": "Owns time-stamped custody and condition events; passport/product master records are a distinct connected sector.",
+      "promotionGate": "Promote only after buyer discovery, permissions, baseline capture, viable alternatives comparison and independent analyst acceptance. Failed or inconclusive tests remain recorded."
+    },
+    {
+      "sectorID": "KED-PROP-EDGE-HOME",
+      "name": "Connected-home compatibility assurance",
+      "family": "edge-industrial",
+      "status": "proposed_research_sector_not_provisioned",
+      "claimType": "integration_hypothesis",
+      "affectedUsersAndBuyers": [
+        "Smart-home device makers",
+        "Installers",
+        "Property technology operators"
+      ],
+      "bottleneck": "An evolving interoperability standard does not guarantee that a specific device, firmware and controller combination supports the same features or handles outages consistently.",
+      "evidence": {
+        "claimType": "standards_release_and_integration_hypothesis",
+        "sourceIDs": [
+          "S25"
+        ],
+        "sourceURLs": [
+          "https://csa-iot.org/newsroom/matter-1-5-1-enhancing-camera-performance-and-expanding-device-flexibility/"
+        ],
+        "sourceDates": [
+          "2026-03-31"
+        ],
+        "measurement": {
+          "observedMarketRate": null,
+          "customerBaselineRequired": [
+            "cross-controller scenario pass rate",
+            "setup time",
+            "post-update regressions",
+            "local operation during internet loss"
+          ]
+        },
+        "limitation": "Source support establishes the issue or baseline described; it does not establish Keddeh efficacy, a market size, or a local customer baseline."
+      },
+      "existingAlternatives": [
+        "Matter-certified devices and ecosystems",
+        "Vendor applications",
+        "Bridges and local hubs",
+        "Installer compatibility matrices"
+      ],
+      "keddehIntegrationHypothesis": "Maintain a versioned, test-backed compatibility matrix and reproducible scenario packs for supported device/controller combinations, initially avoiding safety-critical actuators.",
+      "brainkDeliveryTeam": {
+        "teamID": "BRAINK-PROP-EDGE-HOME-DELIVERY",
+        "status": "proposed_not_provisioned",
+        "expertise": [
+          "Matter/Thread/Wi-Fi integration",
+          "Consumer-device test automation",
+          "Local network diagnostics",
+          "Installer workflow design"
+        ],
+        "mandate": "Build a bounded integration or experiment and record versioned artifacts, inputs, run logs and failure cases."
+      },
+      "independentAnalystTeam": {
+        "teamID": "BRAINK-PROP-EDGE-HOME-ANALYST",
+        "status": "proposed_not_provisioned",
+        "expertise": [
+          "Independent interoperability tester",
+          "Consumer reliability analyst",
+          "Privacy reviewer",
+          "Support-cost analyst"
+        ],
+        "mandate": "Independently reproduce evidence, test alternatives and challenge the acceptance claim; delivery cannot self-approve."
+      },
+      "falsifiableAcceptanceMetric": "Run 50 predeclared setup, update and outage scenarios across three device brands and two controllers; publish exact versions and failures, reproduce every claimed supported feature and flag unsupported combinations before installation.",
+      "dependencies": [
+        "Physical device/controller lab",
+        "Current certification records",
+        "Firmware version access",
+        "Owner-approved testing"
+      ],
+      "safetyBoundaries": [
+        "Exclude locks, alarms and life-safety actuation from autonomous testing",
+        "No camera/microphone collection without consent",
+        "Certification is not universal compatibility"
+      ],
+      "discoveryPriority": "P1",
+      "distinctScopeBoundary": "Distinct consumer commissioning and support sector; industrial real-time control is excluded.",
+      "promotionGate": "Promote only after buyer discovery, permissions, baseline capture, viable alternatives comparison and independent analyst acceptance. Failed or inconclusive tests remain recorded."
+    }
+  ],
+  "coverage": {
+    "included": [
+      "Industrial and consumer edge interoperability",
+      "Disconnected operations and fleet provisioning",
+      "Embedded update, support and OT recovery",
+      "Hardware provenance, verification and measurement",
+      "Physical digital twins and calibration",
+      "Endpoint energy, repair, disposition and passports",
+      "SME and public-service integration and adoption"
+    ],
+    "excludedToAvoidDuplication": [
+      "Core cloud, datacenter compute, network build-out, storage and generic DevOps",
+      "Generic AI/data platforms, enterprise cybersecurity and general HCI",
+      "Cloud energy optimization and general IAM"
+    ],
+    "gaps": [
+      "No local customer interviews, installed-base inventory, budget validation or measured Keddeh pilot",
+      "No comprehensive country-by-country regulatory mapping",
+      "No claim of validated medical, aviation, nuclear, automotive functional-safety or defence delivery; each requires separate regulated-domain work",
+      "Not a semiconductor fabrication, battery chemistry or new-sensor-physics solution",
+      "No independent source triangulation of market prevalence for standards-defined bottlenecks",
+      "Procurement constraints, licence costs, integration rights and physical lab access remain unverified",
+      "Geographic adoption evidence is globally broad or OECD-weighted, not a localized demand estimate",
+      "GSMA current official homepage and headline statistics were independently verified; full 2026 methodology requires follow-up before precision market use"
+    ],
+    "nextResearch": [
+      "Select three buyer-backed pilots with measurable pain and authorized datasets",
+      "Prioritize reversible integration pilots: industrial semantics, SME workflow integration, asset-disposition evidence",
+      "Perform physical laboratory feasibility review before firmware recovery, hardware measurement or industrial control work",
+      "Obtain independent analyst selection and approval criteria before promoting any delivery claim"
+    ]
+  }
+}

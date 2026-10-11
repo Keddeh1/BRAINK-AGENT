@@ -1,0 +1,1336 @@
+{
+  "status": "PUBLIC_PRIMARY_SOURCE_INDEX; SOURCES_NOT_ENDORSEMENTS",
+  "source_records": 94,
+  "unique_source_urls": 94,
+  "reference_rule": "Resolve source IDs with artifact namespace. technical_sector:S01 is never a source ID. Original annex IDs are retained within their own namespace.",
+  "sources": [
+    {
+      "composite_source_id": "compute:CS01",
+      "artifact_source_namespace": "compute",
+      "original_source_id": "CS01",
+      "source": {
+        "title": "GPU Performance Background User Guide",
+        "url": "https://docs.nvidia.com/deeplearning/performance/dl-performance-gpu-background/index.html",
+        "publication_date": null,
+        "accessed": "2026-10-11",
+        "kind": "primary technical documentation",
+        "limitations": "Established roofline mechanism; hardware examples are older and are not current product specifications."
+      }
+    },
+    {
+      "composite_source_id": "compute:CS02",
+      "artifact_source_namespace": "compute",
+      "original_source_id": "CS02",
+      "source": {
+        "title": "PyTorch fully_shard / FSDP2 documentation",
+        "url": "https://docs.pytorch.org/docs/stable/distributed.fsdp.fully_shard.html",
+        "publication_date": null,
+        "accessed": "2026-10-11",
+        "kind": "primary technical documentation",
+        "limitations": "Living documentation; no verified publication date."
+      }
+    },
+    {
+      "composite_source_id": "compute:CS03",
+      "artifact_source_namespace": "compute",
+      "original_source_id": "CS03",
+      "source": {
+        "title": "Nomad: Non-Exclusive Memory Tiering via Transactional Page Migration",
+        "url": "https://www.usenix.org/conference/osdi24/presentation/xiang",
+        "publication_date": "2024-07",
+        "accessed": "2026-10-11",
+        "kind": "primary peer-reviewed systems research",
+        "limitations": "Reported experimental results are configuration-specific; no Keddeh reproduction."
+      }
+    },
+    {
+      "composite_source_id": "compute:CS04",
+      "artifact_source_namespace": "compute",
+      "original_source_id": "CS04",
+      "source": {
+        "title": "Kubernetes Schedule GPUs",
+        "url": "https://kubernetes.io/docs/tasks/manage-gpus/scheduling-gpus/",
+        "publication_date": null,
+        "accessed": "2026-10-11",
+        "kind": "primary technical documentation",
+        "limitations": "Living documentation; no verified publication date."
+      }
+    },
+    {
+      "composite_source_id": "compute:CS05",
+      "artifact_source_namespace": "compute",
+      "original_source_id": "CS05",
+      "source": {
+        "title": "Kubernetes Topology Manager policies",
+        "url": "https://kubernetes.io/docs/tasks/administer-cluster/topology-manager/",
+        "publication_date": null,
+        "accessed": "2026-10-11",
+        "kind": "primary technical documentation",
+        "limitations": "Living documentation; no verified publication date."
+      }
+    },
+    {
+      "composite_source_id": "compute:CS06",
+      "artifact_source_namespace": "compute",
+      "original_source_id": "CS06",
+      "source": {
+        "title": "Electricity 2026: Grids",
+        "url": "https://www.iea.org/reports/electricity-2026/grids",
+        "publication_date": "2026",
+        "accessed": "2026-10-11",
+        "kind": "primary international-agency analysis",
+        "limitations": "Grid timelines and queue estimates are global context; a site-specific connection study is required."
+      }
+    },
+    {
+      "composite_source_id": "compute:CS07",
+      "artifact_source_namespace": "compute",
+      "original_source_id": "CS07",
+      "source": {
+        "title": "DGX SuperPOD architecture with DGX GB200",
+        "url": "https://docs.nvidia.com/dgx-superpod/reference-architecture-scalable-infrastructure-gb200/latest/dgx-superpod-architecture.html",
+        "publication_date": null,
+        "accessed": "2026-10-11",
+        "kind": "primary technical documentation",
+        "limitations": "Vendor reference architecture; thermal design requirements are specific to the equipment and facility."
+      }
+    },
+    {
+      "composite_source_id": "compute:CS08",
+      "artifact_source_namespace": "compute",
+      "original_source_id": "CS08",
+      "source": {
+        "title": "What is HIP?",
+        "url": "https://rocmdocs.amd.com/projects/HIP/en/latest/what_is_hip.html",
+        "publication_date": null,
+        "accessed": "2026-10-11",
+        "kind": "primary technical documentation",
+        "limitations": "Living documentation; no verified publication date."
+      }
+    },
+    {
+      "composite_source_id": "compute:CS09",
+      "artifact_source_namespace": "compute",
+      "original_source_id": "CS09",
+      "source": {
+        "title": "GPUDirect Storage Overview",
+        "url": "https://docs.nvidia.com/gpudirect-storage/overview-guide/",
+        "publication_date": null,
+        "accessed": "2026-10-11",
+        "kind": "primary technical documentation",
+        "limitations": "Vendor documentation describes eligible direct paths; gains require I/O to be the workload bottleneck."
+      }
+    },
+    {
+      "composite_source_id": "compute:CS10",
+      "artifact_source_namespace": "compute",
+      "original_source_id": "CS10",
+      "source": {
+        "title": "Amazon S3 performance best practices",
+        "url": "https://docs.aws.amazon.com/AmazonS3/latest/userguide/optimizing-performance.html",
+        "publication_date": null,
+        "accessed": "2026-10-11",
+        "kind": "primary technical documentation",
+        "limitations": "Stated per-prefix rates are at least achievable rates, not universal fixed ceilings; S3 Express differs."
+      }
+    },
+    {
+      "composite_source_id": "compute:CS11",
+      "artifact_source_namespace": "compute",
+      "original_source_id": "CS11",
+      "source": {
+        "title": "How to Write to SSDs",
+        "url": "https://arxiv.org/abs/2603.09927",
+        "publication_date": "2026-03-18",
+        "accessed": "2026-10-11",
+        "kind": "primary research, arXiv v3; author notes PVLDB 2026 acceptance",
+        "limitations": "Benchmark results are research-system and workload-specific, not universal SSD gains."
+      }
+    },
+    {
+      "composite_source_id": "compute:CS12",
+      "artifact_source_namespace": "compute",
+      "original_source_id": "CS12",
+      "source": {
+        "title": "S3 archive retrieval options",
+        "url": "https://docs.aws.amazon.com/AmazonS3/latest/userguide/restoring-objects-retrieval-options.html",
+        "publication_date": null,
+        "accessed": "2026-10-11",
+        "kind": "primary technical documentation",
+        "limitations": "Living documentation; no verified publication date."
+      }
+    },
+    {
+      "composite_source_id": "compute:CS13",
+      "artifact_source_namespace": "compute",
+      "original_source_id": "CS13",
+      "source": {
+        "title": "ByteCheckpoint",
+        "url": "https://www.usenix.org/conference/nsdi25/presentation/wan-borui",
+        "publication_date": "2025-04",
+        "accessed": "2026-10-11",
+        "kind": "primary peer-reviewed systems research",
+        "limitations": "Performance numbers are authors’ experiments; no independent Keddeh reproduction."
+      }
+    },
+    {
+      "composite_source_id": "compute:CS14",
+      "artifact_source_namespace": "compute",
+      "original_source_id": "CS14",
+      "source": {
+        "title": "NCCL troubleshooting",
+        "url": "https://docs.nvidia.com/deeplearning/nccl/user-guide/docs/troubleshooting.html",
+        "publication_date": null,
+        "accessed": "2026-10-11",
+        "kind": "primary technical documentation",
+        "limitations": "Living documentation; no verified publication date."
+      }
+    },
+    {
+      "composite_source_id": "compute:CS15",
+      "artifact_source_namespace": "compute",
+      "original_source_id": "CS15",
+      "source": {
+        "title": "The Tail at Scale",
+        "url": "https://research.google/pubs/the-tail-at-scale/",
+        "publication_date": "2013",
+        "accessed": "2026-10-11",
+        "kind": "primary systems research",
+        "limitations": "Foundational mechanism, not a 2026 market-prevalence survey."
+      }
+    },
+    {
+      "composite_source_id": "compute:CS16",
+      "artifact_source_namespace": "compute",
+      "original_source_id": "CS16",
+      "source": {
+        "title": "Spanner regional and multi-region configurations",
+        "url": "https://docs.cloud.google.com/spanner/docs/instance-configurations?hl=en",
+        "publication_date": null,
+        "accessed": "2026-10-11",
+        "kind": "primary technical documentation",
+        "limitations": "Living documentation; no verified publication date."
+      }
+    },
+    {
+      "composite_source_id": "compute:CS17",
+      "artifact_source_namespace": "compute",
+      "original_source_id": "CS17",
+      "source": {
+        "title": "AWS DynamoDB US-EAST-1 disruption summary",
+        "url": "https://aws.amazon.com/message/101925/",
+        "publication_date": "2025-10",
+        "accessed": "2026-10-11",
+        "kind": "primary provider postmortem",
+        "limitations": "Event occurred 2025-10-19/20; publication day not verified; one incident does not estimate population failure rates."
+      }
+    },
+    {
+      "composite_source_id": "compute:CS18",
+      "artifact_source_namespace": "compute",
+      "original_source_id": "CS18",
+      "source": {
+        "title": "State of FinOps 2026",
+        "url": "https://data.finops.org/",
+        "publication_date": "2026",
+        "accessed": "2026-10-11",
+        "kind": "primary practitioner survey",
+        "limitations": "1,192 respondents, representing $83bn+ annual cloud spend; self-selected community sample. Avoid population-wide percentages."
+      }
+    },
+    {
+      "composite_source_id": "compute:CS19",
+      "artifact_source_namespace": "compute",
+      "original_source_id": "CS19",
+      "source": {
+        "title": "FOCUS: What is FOCUS?",
+        "url": "https://focus.finops.org/what-is-focus/",
+        "publication_date": null,
+        "accessed": "2026-10-11",
+        "kind": "primary technical documentation",
+        "limitations": "Standardization is an existing alternative, not proof of a greenfield market. Version support differs by provider."
+      }
+    },
+    {
+      "composite_source_id": "compute:CS20",
+      "artifact_source_namespace": "compute",
+      "original_source_id": "CS20",
+      "source": {
+        "title": "AWS Savings Plans purchase analysis calculations",
+        "url": "https://docs.aws.amazon.com/savingsplans/latest/userguide/sp-purchase-analysis-calculations.html",
+        "publication_date": null,
+        "accessed": "2026-10-11",
+        "kind": "primary technical documentation",
+        "limitations": "Living documentation; no verified publication date."
+      }
+    },
+    {
+      "composite_source_id": "compute:CS21",
+      "artifact_source_namespace": "compute",
+      "original_source_id": "CS21",
+      "source": {
+        "title": "CMA Cloud services final decision report",
+        "url": "https://assets.publishing.service.gov.uk/media/688b8891fdde2b8f73469544/final_decision_report_31.7.25.pdf",
+        "publication_date": "2025-07-31",
+        "accessed": "2026-10-11",
+        "kind": "primary regulator market investigation",
+        "limitations": "UK market findings; provider objections and customer heterogeneity are discussed. Current tariffs and legal status must be rechecked before advice."
+      }
+    },
+    {
+      "composite_source_id": "compute:CS22",
+      "artifact_source_namespace": "compute",
+      "original_source_id": "CS22",
+      "source": {
+        "title": "Troubleshoot EC2 launch issues",
+        "url": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/troubleshooting-launch.html",
+        "publication_date": null,
+        "accessed": "2026-10-11",
+        "kind": "primary technical documentation",
+        "limitations": "Living documentation; no verified publication date."
+      }
+    },
+    {
+      "composite_source_id": "compute:CS23",
+      "artifact_source_namespace": "compute",
+      "original_source_id": "CS23",
+      "source": {
+        "title": "etcd v3.6 failure modes",
+        "url": "https://etcd.io/docs/v3.6/op-guide/failures/",
+        "publication_date": "2023-02-20",
+        "accessed": "2026-10-11",
+        "kind": "primary technical documentation",
+        "limitations": "Page records a 2023 edit; documents stable quorum behavior, not latest version prevalence."
+      }
+    },
+    {
+      "composite_source_id": "compute:CS24",
+      "artifact_source_namespace": "compute",
+      "original_source_id": "CS24",
+      "source": {
+        "title": "Apache Kafka 4.1 design",
+        "url": "https://kafka.apache.org/41/design/design/",
+        "publication_date": null,
+        "accessed": "2026-10-11",
+        "kind": "primary technical documentation",
+        "limitations": "Living documentation; no verified publication date."
+      }
+    },
+    {
+      "composite_source_id": "compute:CS25",
+      "artifact_source_namespace": "compute",
+      "original_source_id": "CS25",
+      "source": {
+        "title": "Google SRE: Handling Overload",
+        "url": "https://sre.google/sre-book/handling-overload/",
+        "publication_date": "2016",
+        "accessed": "2026-10-11",
+        "kind": "primary operator technical guidance",
+        "limitations": "Foundational operational practice, not a contemporary market survey."
+      }
+    },
+    {
+      "composite_source_id": "compute:CS26",
+      "artifact_source_namespace": "compute",
+      "original_source_id": "CS26",
+      "source": {
+        "title": "Spanner TrueTime and external consistency",
+        "url": "https://docs.cloud.google.com/spanner/docs/true-time-external-consistency",
+        "publication_date": null,
+        "accessed": "2026-10-11",
+        "kind": "primary technical documentation",
+        "limitations": "Living documentation; no verified publication date."
+      }
+    },
+    {
+      "composite_source_id": "compute:CS27",
+      "artifact_source_namespace": "compute",
+      "original_source_id": "CS27",
+      "source": {
+        "title": "AWS Saga orchestration pattern",
+        "url": "https://docs.aws.amazon.com/en_en/prescriptive-guidance/latest/cloud-design-patterns/saga-orchestration.html",
+        "publication_date": null,
+        "accessed": "2026-10-11",
+        "kind": "primary technical documentation",
+        "limitations": "Use for heterogeneous-store compensation design; do not generalize that all relational transactions use 2PC or that all cross-store 2PC is impossible."
+      }
+    },
+    {
+      "composite_source_id": "compute:CS28",
+      "artifact_source_namespace": "compute",
+      "original_source_id": "CS28",
+      "source": {
+        "title": "Redis client-side caching",
+        "url": "https://redis.io/docs/latest/develop/clients/client-side-caching/",
+        "publication_date": null,
+        "accessed": "2026-10-11",
+        "kind": "primary technical documentation",
+        "limitations": "Living documentation; no verified publication date."
+      }
+    },
+    {
+      "composite_source_id": "compute:CS29",
+      "artifact_source_namespace": "compute",
+      "original_source_id": "CS29",
+      "source": {
+        "title": "AWS Backup restore testing and validation",
+        "url": "https://docs.aws.amazon.com/aws-backup/latest/devguide/restore-testing.html",
+        "publication_date": null,
+        "accessed": "2026-10-11",
+        "kind": "primary technical documentation",
+        "limitations": "Living documentation; no verified publication date."
+      }
+    },
+    {
+      "composite_source_id": "compute:CS30",
+      "artifact_source_namespace": "compute",
+      "original_source_id": "CS30",
+      "source": {
+        "title": "OpenTelemetry metrics SDK",
+        "url": "https://opentelemetry.io/docs/specs/otel/metrics/sdk/",
+        "publication_date": null,
+        "accessed": "2026-10-11",
+        "kind": "primary technical documentation",
+        "limitations": "Living documentation; no verified publication date."
+      }
+    },
+    {
+      "composite_source_id": "compute:CS31",
+      "artifact_source_namespace": "compute",
+      "original_source_id": "CS31",
+      "source": {
+        "title": "OpenTelemetry tracing SDK",
+        "url": "https://opentelemetry.io/docs/specs/otel/trace/sdk/",
+        "publication_date": null,
+        "accessed": "2026-10-11",
+        "kind": "primary technical documentation",
+        "limitations": "Living documentation; no verified publication date."
+      }
+    },
+    {
+      "composite_source_id": "compute:CS32",
+      "artifact_source_namespace": "compute",
+      "original_source_id": "CS32",
+      "source": {
+        "title": "Cloudflare: Fail Small resilience plan",
+        "url": "https://blog.cloudflare.com/fail-small-resilience-plan/",
+        "publication_date": "2025-12-19",
+        "accessed": "2026-10-11",
+        "kind": "primary provider postmortem and remediation plan",
+        "limitations": "Provider-reported incidents and planned controls; do not treat plans as independently verified deployments."
+      }
+    },
+    {
+      "composite_source_id": "compute:CS33",
+      "artifact_source_namespace": "compute",
+      "original_source_id": "CS33",
+      "source": {
+        "title": "Bazel remote caching",
+        "url": "https://bazel.build/versions/7.1.0/remote/caching?hl=en",
+        "publication_date": null,
+        "accessed": "2026-10-11",
+        "kind": "primary technical documentation",
+        "limitations": "Version-pinned documentation; reproducibility prerequisites still require project-specific checks."
+      }
+    },
+    {
+      "composite_source_id": "compute:CS34",
+      "artifact_source_namespace": "compute",
+      "original_source_id": "CS34",
+      "source": {
+        "title": "Bazel hermeticity",
+        "url": "https://bazel.build/basics/hermeticity",
+        "publication_date": null,
+        "accessed": "2026-10-11",
+        "kind": "primary technical documentation",
+        "limitations": "Living documentation; no verified publication date."
+      }
+    },
+    {
+      "composite_source_id": "compute:CS35",
+      "artifact_source_namespace": "compute",
+      "original_source_id": "CS35",
+      "source": {
+        "title": "230,439 Test Failures Later: Flaky Failure Classifiers",
+        "url": "https://arxiv.org/abs/2401.15788",
+        "publication_date": "2024-01-28",
+        "accessed": "2026-10-11",
+        "kind": "primary empirical research",
+        "limitations": "498 flaky tests across 22 open-source Java projects; cross-language generalization unproven."
+      }
+    },
+    {
+      "composite_source_id": "compute:CS36",
+      "artifact_source_namespace": "compute",
+      "original_source_id": "CS36",
+      "source": {
+        "title": "Terraform drift detection and policy",
+        "url": "https://developer.hashicorp.com/terraform/tutorials/cloud/drift-and-policy",
+        "publication_date": null,
+        "accessed": "2026-10-11",
+        "kind": "primary technical documentation",
+        "limitations": "Living documentation; no verified publication date."
+      }
+    },
+    {
+      "composite_source_id": "compute:CS37",
+      "artifact_source_namespace": "compute",
+      "original_source_id": "CS37",
+      "source": {
+        "title": "PostgreSQL 18 ALTER TABLE",
+        "url": "https://www.postgresql.org/docs/current/sql-altertable.html",
+        "publication_date": null,
+        "accessed": "2026-10-11",
+        "kind": "primary technical documentation",
+        "limitations": "Living documentation; no verified publication date."
+      }
+    },
+    {
+      "composite_source_id": "compute:CS38",
+      "artifact_source_namespace": "compute",
+      "original_source_id": "CS38",
+      "source": {
+        "title": "DORA platform engineering capability",
+        "url": "https://dora.dev/capabilities/platform-engineering/",
+        "publication_date": "2025 evidence, page undated",
+        "accessed": "2026-10-11",
+        "kind": "primary research-program synthesis",
+        "limitations": "Reported associations are not proof of causality or guaranteed gains from platform adoption."
+      }
+    },
+    {
+      "composite_source_id": "compute:CS39",
+      "artifact_source_namespace": "compute",
+      "original_source_id": "CS39",
+      "source": {
+        "title": "Google SRE Workbook: Eliminating Toil",
+        "url": "https://sre.google/workbook/eliminating-toil/",
+        "publication_date": "2018",
+        "accessed": "2026-10-11",
+        "kind": "primary operator technical guidance",
+        "limitations": "Google’s 50% operational-work cap is an organizational example, not a universal customer target."
+      }
+    },
+    {
+      "composite_source_id": "compute:CS40",
+      "artifact_source_namespace": "compute",
+      "original_source_id": "CS40",
+      "source": {
+        "title": "InvisiFlow: Silent Telemetry Data Transmission",
+        "url": "https://www.usenix.org/conference/nsdi25/presentation/zhang-yinda",
+        "publication_date": "2025-04",
+        "accessed": "2026-10-11",
+        "kind": "primary peer-reviewed systems research",
+        "limitations": "Programmable-network research evaluated under particular topologies and loads; product readiness unverified."
+      }
+    },
+    {
+      "composite_source_id": "compute:CS41",
+      "artifact_source_namespace": "compute",
+      "original_source_id": "CS41",
+      "source": {
+        "title": "Google SRE: Effective Troubleshooting",
+        "url": "https://sre.google/sre-book/effective-troubleshooting/",
+        "publication_date": "2016",
+        "accessed": "2026-10-11",
+        "kind": "primary operator technical guidance",
+        "limitations": "Foundational methodology; no quantitative market-prevalence claim."
+      }
+    },
+    {
+      "composite_source_id": "compute:CS42",
+      "artifact_source_namespace": "compute",
+      "original_source_id": "CS42",
+      "source": {
+        "title": "Kubernetes version skew policy",
+        "url": "https://kubernetes.io/releases/version-skew-policy/",
+        "publication_date": null,
+        "accessed": "2026-10-11",
+        "kind": "primary technical documentation",
+        "limitations": "Moving policy page. Use a pinned policy/version matrix for any real upgrade; this register avoids asserting latest release numbers."
+      }
+    },
+    {
+      "composite_source_id": "ai_data:AI-E01",
+      "artifact_source_namespace": "ai_data",
+      "original_source_id": "AI-E01",
+      "source": {
+        "id": "AI-E01",
+        "title": "FACTS Benchmark Suite",
+        "url": "https://deepmind.google/blog/facts-benchmark-suite-systematically-evaluating-the-factuality-of-large-language-models/",
+        "publication_or_update_date": "2025-12-09",
+        "accessed_date": "2026-10-11",
+        "source_type": "primary benchmark by model developer",
+        "reported_evidence": "Across 15 evaluated models, overall factuality scores were below 70%; the suite separates grounding, search, parametric knowledge and multimodal tasks.",
+        "limitations": "Historical benchmark snapshot, not October 2026 model rankings or enterprise failure prevalence; developer-origin benchmark and automated grading require scrutiny."
+      }
+    },
+    {
+      "composite_source_id": "ai_data:AI-E02",
+      "artifact_source_namespace": "ai_data",
+      "original_source_id": "AI-E02",
+      "source": {
+        "id": "AI-E02",
+        "title": "METR task-completion time horizons",
+        "url": "https://metr.org/time-horizons/",
+        "publication_or_update_date": "2026-09-08",
+        "accessed_date": "2026-10-11",
+        "source_type": "primary evaluation program",
+        "reported_evidence": "Over 100 software-oriented tasks support 50% and 80% task-success horizons; measurements above 16 human-expert hours are marked unreliable.",
+        "limitations": "Page no longer actively updated; clean software/ML/security tasks are not all jobs, and a time horizon is task difficulty rather than autonomous elapsed runtime."
+      }
+    },
+    {
+      "composite_source_id": "ai_data:AI-E03",
+      "artifact_source_namespace": "ai_data",
+      "original_source_id": "AI-E03",
+      "source": {
+        "id": "AI-E03",
+        "title": "Mitigating prompt injection in browser use",
+        "url": "https://www.anthropic.com/research/prompt-injection-defenses",
+        "publication_or_update_date": "2025-11-24",
+        "accessed_date": "2026-10-11",
+        "source_type": "primary vendor adversarial evaluation",
+        "reported_evidence": "An adaptive attacker received 100 attempts per environment; the report discusses residual 1% attack success despite improved defenses.",
+        "limitations": "Vendor-specific internal test; not a universal failure probability and not evidence of immunity."
+      }
+    },
+    {
+      "composite_source_id": "ai_data:AI-E04",
+      "artifact_source_namespace": "ai_data",
+      "original_source_id": "AI-E04",
+      "source": {
+        "id": "AI-E04",
+        "title": "Agent identity foundations",
+        "url": "https://www.nist.gov/blogs/cybersecurity-insights/back-future-why-agentic-ai-needs-strong-identity-foundation",
+        "publication_or_update_date": "2026-08-27",
+        "accessed_date": "2026-10-11",
+        "source_type": "primary government technical analysis",
+        "reported_evidence": "NIST identifies credential sharing, long-lived tokens and agent delegation/accountability gaps; modern OAuth and workload identity offer existing building blocks.",
+        "limitations": "Qualitative engineering diagnosis, without population prevalence or product qualification."
+      }
+    },
+    {
+      "composite_source_id": "ai_data:AI-E05",
+      "artifact_source_namespace": "ai_data",
+      "original_source_id": "AI-E05",
+      "source": {
+        "id": "AI-E05",
+        "title": "Agent identity project comments",
+        "url": "https://www.nist.gov/news-events/news/2026/09/comments-software-and-agentic-ai-identity-concept-paper",
+        "publication_or_update_date": "2026-09-29",
+        "accessed_date": "2026-10-11",
+        "source_type": "primary government project update",
+        "reported_evidence": "More than 600 commenters responded; a DevSecOps environment will be the first implementation use case.",
+        "limitations": "Engagement demonstrates attention, not customer demand or an implemented standard."
+      }
+    },
+    {
+      "composite_source_id": "ai_data:AI-E06",
+      "artifact_source_namespace": "ai_data",
+      "original_source_id": "AI-E06",
+      "source": {
+        "id": "AI-E06",
+        "title": "METR productivity experiment redesign",
+        "url": "https://metr.org/blog/2026-02-24-uplift-update/",
+        "publication_or_update_date": "2026-02-24",
+        "accessed_date": "2026-10-11",
+        "source_type": "primary experimental follow-up",
+        "reported_evidence": "Early-2025 tasks took 19% longer with AI; later results suggested speedups but selection effects and concurrent-agent time measurement made the current effect unreliable.",
+        "limitations": "Do not generalize the old slowdown to current tools or present the biased later estimates as causal proof."
+      }
+    },
+    {
+      "composite_source_id": "ai_data:AI-E07",
+      "artifact_source_namespace": "ai_data",
+      "original_source_id": "AI-E07",
+      "source": {
+        "id": "AI-E07",
+        "title": "NIST Generative AI Profile",
+        "url": "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf",
+        "publication_or_update_date": "2024-07-26",
+        "accessed_date": "2026-10-11",
+        "source_type": "primary risk-management guidance",
+        "reported_evidence": "Identifies confabulation, privacy, harmful bias, human-AI configuration and value-chain risks; supports lifecycle measurement and governance.",
+        "limitations": "Taxonomy and guidance, not an incidence survey, certification or evidence that any mitigation eliminates risk."
+      }
+    },
+    {
+      "composite_source_id": "ai_data:AI-E08",
+      "artifact_source_namespace": "ai_data",
+      "original_source_id": "AI-E08",
+      "source": {
+        "id": "AI-E08",
+        "title": "GAO data quality and AI-enabled fraud detection",
+        "url": "https://www.gao.gov/products/gao-25-108412",
+        "publication_or_update_date": "2025-04-09",
+        "accessed_date": "2026-10-11",
+        "source_type": "primary government oversight",
+        "reported_evidence": "GAO identifies data quality and skilled-workforce constraints on reliable AI-enabled fraud detection.",
+        "limitations": "Does not quantify the share of losses caused by poor data or establish AI remediation savings."
+      }
+    },
+    {
+      "composite_source_id": "ai_data:AI-E09",
+      "artifact_source_namespace": "ai_data",
+      "original_source_id": "AI-E09",
+      "source": {
+        "id": "AI-E09",
+        "title": "Interoperable exchange among US hospitals",
+        "url": "https://healthit.gov/data/data-briefs/interoperable-exchange-patient-health-information-among-us-hospitals-2023/",
+        "publication_or_update_date": "2024-05",
+        "accessed_date": "2026-10-11",
+        "source_type": "primary national survey analysis",
+        "reported_evidence": "In 2023, 43% of non-federal acute-care hospitals routinely engaged in all four exchange domains; 71% had routine outside information access, versus 42% reporting routine clinical use.",
+        "limitations": "Lagged, sector-specific self-report; not current global enterprise interoperability prevalence."
+      }
+    },
+    {
+      "composite_source_id": "ai_data:AI-E10",
+      "artifact_source_namespace": "ai_data",
+      "original_source_id": "AI-E10",
+      "source": {
+        "id": "AI-E10",
+        "title": "DCAT 3",
+        "url": "https://www.w3.org/TR/2024/REC-vocab-dcat-3-20240822/",
+        "publication_or_update_date": "2024-08-22",
+        "accessed_date": "2026-10-11",
+        "source_type": "primary technical recommendation",
+        "reported_evidence": "Standard metadata supports federated catalog discovery, dataset versions, series and checksums.",
+        "limitations": "A catalog vocabulary does not by itself resolve domain semantics, clean source records or prove correctness."
+      }
+    },
+    {
+      "composite_source_id": "ai_data:AI-E11",
+      "artifact_source_namespace": "ai_data",
+      "original_source_id": "AI-E11",
+      "source": {
+        "id": "AI-E11",
+        "title": "Foundation Model Transparency Index 2025",
+        "url": "https://crfm.stanford.edu/fmti/December-2025/index.html",
+        "publication_or_update_date": "2025-12",
+        "accessed_date": "2026-10-11",
+        "source_type": "primary transparency assessment",
+        "reported_evidence": "Thirteen developers were assessed on 100 indicators; mean transparency was about 41/100, with major information gaps.",
+        "limitations": "Indicators changed since 2024; disclosure is not equivalent to safety, licensing clearance or model quality."
+      }
+    },
+    {
+      "composite_source_id": "ai_data:AI-E12",
+      "artifact_source_namespace": "ai_data",
+      "original_source_id": "AI-E12",
+      "source": {
+        "id": "AI-E12",
+        "title": "GAO AI privacy-related gaps",
+        "url": "https://files.gao.gov/reports/GAO-26-107681/index.html",
+        "publication_or_update_date": "2026-03-26",
+        "accessed_date": "2026-10-11",
+        "source_type": "primary government audit and expert panel",
+        "reported_evidence": "Experts identified persistence, re-identification and secondary-use risks. OMB guidance fully addressed two of ten selected challenges and partially addressed eight.",
+        "limitations": "Federal-guidance audit, not a universal legal determination or an empirical rate of privacy incidents."
+      }
+    },
+    {
+      "composite_source_id": "ai_data:AI-E13",
+      "artifact_source_namespace": "ai_data",
+      "original_source_id": "AI-E13",
+      "source": {
+        "id": "AI-E13",
+        "title": "NIST SP 800-226 differential privacy guarantees",
+        "url": "https://csrc.nist.gov/pubs/sp/800/226/final",
+        "publication_or_update_date": "2025-03-06",
+        "accessed_date": "2026-10-11",
+        "source_type": "primary technical guidance",
+        "reported_evidence": "Describes differential privacy evaluation and practical hazards when translating mathematical guarantees into systems.",
+        "limitations": "No universal epsilon, error or privacy setting; synthetic data alone is not a privacy guarantee."
+      }
+    },
+    {
+      "composite_source_id": "ai_data:AI-E14",
+      "artifact_source_namespace": "ai_data",
+      "original_source_id": "AI-E14",
+      "source": {
+        "id": "AI-E14",
+        "title": "Verizon DBIR 2026",
+        "url": "https://www.verizon.com/about/news/breach-industry-wide-dbir-finds",
+        "publication_or_update_date": "2026-05-19",
+        "accessed_date": "2026-10-11",
+        "source_type": "primary incident-data report publisher",
+        "reported_evidence": "The report attributes 31% of breach entry to vulnerability exploitation and 48% of breaches to third-party involvement.",
+        "limitations": "Contributor dataset and context-specific telemetry are not a random population sample; third-party involvement is broader than compromised dependencies; shadow-AI usage is not a breach rate."
+      }
+    },
+    {
+      "composite_source_id": "ai_data:AI-E15",
+      "artifact_source_namespace": "ai_data",
+      "original_source_id": "AI-E15",
+      "source": {
+        "id": "AI-E15",
+        "title": "CISA 2026 SBOM minimum-elements release",
+        "url": "https://content.govdelivery.com/accounts/USDHSCISA/bulletins/422a7eb",
+        "publication_or_update_date": "2026-07-29",
+        "accessed_date": "2026-10-11",
+        "source_type": "primary government bulletin",
+        "reported_evidence": "CISA and partner agencies released updated SBOM minimum elements to improve software-component and supply-chain visibility.",
+        "limitations": "An SBOM supports inventory and response; its existence does not prove exploitability or security."
+      }
+    },
+    {
+      "composite_source_id": "ai_data:AI-E16",
+      "artifact_source_namespace": "ai_data",
+      "original_source_id": "AI-E16",
+      "source": {
+        "id": "AI-E16",
+        "title": "Scattered Spider joint advisory",
+        "url": "https://www.ic3.gov/CSA/2025/250729.pdf",
+        "publication_or_update_date": "2025-07-29",
+        "accessed_date": "2026-10-11",
+        "source_type": "primary multi-agency threat advisory",
+        "reported_evidence": "Documents social engineering and identity-focused intrusions and recommends stronger authentication, help-desk controls and defensive resilience.",
+        "limitations": "Threat-group observations, not an identity-compromise base rate; defensive testing requires permission."
+      }
+    },
+    {
+      "composite_source_id": "ai_data:AI-E17",
+      "artifact_source_namespace": "ai_data",
+      "original_source_id": "AI-E17",
+      "source": {
+        "id": "AI-E17",
+        "title": "Eliminating buffer overflow vulnerabilities",
+        "url": "https://www.cisa.gov/sites/default/files/2025-02/secure-by-design-alert-eliminating-buffer-overflow-vulnerabilities-508c.pdf",
+        "publication_or_update_date": "2025-02-11",
+        "accessed_date": "2026-10-11",
+        "source_type": "primary government defensive guidance",
+        "reported_evidence": "CISA calls for memory-safe development, prioritized migration, fuzzing and adversarial product testing against persistent buffer-overflow defects.",
+        "limitations": "No measured business ROI; memory-safe languages do not eliminate logic, dependency or unsafe-interface bugs."
+      }
+    },
+    {
+      "composite_source_id": "ai_data:AI-E18",
+      "artifact_source_namespace": "ai_data",
+      "original_source_id": "AI-E18",
+      "source": {
+        "id": "AI-E18",
+        "title": "NIST PQC migration FAQ",
+        "url": "https://pages.nist.gov/nccoe-migration-post-quantum-cryptography/",
+        "publication_or_update_date": null,
+        "accessed_date": "2026-10-11",
+        "source_type": "primary government technical migration resource",
+        "reported_evidence": "NIST describes standardized post-quantum algorithms and interoperability/performance migration testing.",
+        "limitations": "Living resource; no prediction of a cryptographically relevant quantum computer date, nor evidence all products are validated."
+      }
+    },
+    {
+      "composite_source_id": "ai_data:AI-E19",
+      "artifact_source_namespace": "ai_data",
+      "original_source_id": "AI-E19",
+      "source": {
+        "id": "AI-E19",
+        "title": "WebAIM Million 2026",
+        "url": "https://webaim.org/projects/million/",
+        "publication_or_update_date": "2026-02 (measurement period)",
+        "accessed_date": "2026-10-11",
+        "source_type": "primary automated web evaluation",
+        "reported_evidence": "95.9% of one million sampled homepages had detected WCAG failures; mean errors were 56.1/page. Six common categories accounted for 96% of detected errors.",
+        "limitations": "Automatic detection covers only part of accessibility; homepage sampling cannot establish whole-site or legal conformance."
+      }
+    },
+    {
+      "composite_source_id": "ai_data:AI-E20",
+      "artifact_source_namespace": "ai_data",
+      "original_source_id": "AI-E20",
+      "source": {
+        "id": "AI-E20",
+        "title": "WebAIM Screen Reader Survey 11",
+        "url": "https://webaim.org/projects/screenreadersurvey11/",
+        "publication_or_update_date": "2026-09-29",
+        "accessed_date": "2026-10-11",
+        "source_type": "primary user survey",
+        "reported_evidence": "The survey had 1,780 valid responses overall. Among the 1,754 respondents answering the PDF question, 85.6% reported that PDF documents were very or somewhat likely to pose significant accessibility issues. Separately, 70.3% reported using multiple desktop screen readers.",
+        "limitations": "Uncontrolled voluntary sample and self-reported experience; not a representative population prevalence estimate."
+      }
+    },
+    {
+      "composite_source_id": "ai_data:AI-E21",
+      "artifact_source_namespace": "ai_data",
+      "original_source_id": "AI-E21",
+      "source": {
+        "id": "AI-E21",
+        "title": "HELM Arabic Enterprise",
+        "url": "https://crfm.stanford.edu/helm/arabic-enterprise/latest/",
+        "publication_or_update_date": null,
+        "accessed_date": "2026-10-11",
+        "source_type": "primary evaluation leaderboard",
+        "reported_evidence": "Six enterprise Arabic tasks assess content, finance and legal QA; the retrieved table includes mean scores of 0.826 for LLM-X Preview and 0.767 for GPT-5.4.",
+        "limitations": "Living snapshot, not language-wide ability or legal/financial suitability; collaboration with Arabic.AI and task weighting matter."
+      }
+    },
+    {
+      "composite_source_id": "ai_data:AI-E22",
+      "artifact_source_namespace": "ai_data",
+      "original_source_id": "AI-E22",
+      "source": {
+        "id": "AI-E22",
+        "title": "Generative AI and critical thinking survey",
+        "url": "https://www.microsoft.com/en-us/research/publication/the-impact-of-generative-ai-on-critical-thinking-self-reported-reductions-in-cognitive-effort-and-confidence-effects-from-a-survey-of-knowledge-workers/",
+        "publication_or_update_date": "2025-04 (CHI 2025)",
+        "accessed_date": "2026-10-11",
+        "source_type": "primary research study",
+        "reported_evidence": "Surveyed 319 knowledge workers about perceived critical thinking effort and confidence when using generative AI.",
+        "limitations": "Self-report and association do not prove cognitive decline, causality or the effectiveness of a proposed interface."
+      }
+    },
+    {
+      "composite_source_id": "ai_data:AI-E23",
+      "artifact_source_namespace": "ai_data",
+      "original_source_id": "AI-E23",
+      "source": {
+        "id": "AI-E23",
+        "title": "SCORE research outcomes",
+        "url": "https://www.cos.io/score",
+        "publication_or_update_date": "2026 (outcome release; exact date not stated)",
+        "accessed_date": "2026-10-11",
+        "source_type": "primary research-program summary",
+        "reported_evidence": "About half of assessed claims reproduced precisely, around three-quarters approximately; roughly one-third of reanalyses matched within narrow tolerance; about half replicated with the same significant pattern.",
+        "limitations": "Social/behavioral studies only; distinct substudies have different samples and outcomes. These are not failure rates for all science."
+      }
+    },
+    {
+      "composite_source_id": "ai_data:AI-E24",
+      "artifact_source_namespace": "ai_data",
+      "original_source_id": "AI-E24",
+      "source": {
+        "id": "AI-E24",
+        "title": "Leakage in connectome-based machine learning",
+        "url": "https://www.nature.com/articles/s41467-024-46150-w",
+        "publication_or_update_date": "2024-02-28",
+        "accessed_date": "2026-10-11",
+        "source_type": "primary peer-reviewed empirical study",
+        "reported_evidence": "Compared leaky feature selection, site correction, covariate regression, family leakage and subject leakage against non-leaky evaluation pipelines.",
+        "limitations": "Specific datasets and pipelines; effect size depends on the task and leakage mechanism."
+      }
+    },
+    {
+      "composite_source_id": "ai_data:AI-E26",
+      "artifact_source_namespace": "ai_data",
+      "original_source_id": "AI-E26",
+      "source": {
+        "id": "AI-E26",
+        "title": "Verizon DBIR 2026: AI data-loss context",
+        "url": "https://www.verizon.com/business/resources/T1e0/reports/2026-dbir-data-breach-investigations-report.pdf",
+        "publication_or_update_date": "2026-05-19",
+        "accessed_date": "2026-10-11",
+        "source_type": "primary incident and telemetry report",
+        "reported_evidence": "Page 13 distinguishes regular AI use on corporate devices (45%, authorized or not), non-corporate account use (67%), and shadow AI as the third most common non-malicious insider action in its DLP data.",
+        "limitations": "Different denominators and telemetry sources must not be mixed; these figures are not the share of all workers leaking data or breaches caused by AI."
+      }
+    },
+    {
+      "composite_source_id": "ai_data:AI-E25",
+      "artifact_source_namespace": "ai_data",
+      "original_source_id": "AI-E25",
+      "source": {
+        "id": "AI-E25",
+        "title": "NIST adversarial ML taxonomy",
+        "url": "https://www.nist.gov/publications/adversarial-machine-learning-taxonomy-and-terminology-attacks-and-mitigations-0",
+        "publication_or_update_date": "2025-03",
+        "accessed_date": "2026-10-11",
+        "source_type": "primary technical taxonomy",
+        "reported_evidence": "Distinguishes evasion, poisoning, privacy and abuse attacks and their mitigations across AI lifecycles.",
+        "limitations": "Taxonomy identifies mechanisms, not prevalence or assurance that particular defenses work."
+      }
+    },
+    {
+      "composite_source_id": "edge_adoption:S01",
+      "artifact_source_namespace": "edge_adoption",
+      "original_source_id": "S01",
+      "source": {
+        "title": "OPC UA Companion Specifications",
+        "publisher": "OPC Foundation",
+        "date": "undated; accessed 2026-10-11",
+        "url": "https://opcfoundation.org/about/opc-technologies/opc-ua/ua-companion-specifications/",
+        "type": "standards-body explanation",
+        "finding": "Companion specifications supply industry information models and semantic interoperability; transport connectivity alone does not establish shared meaning.",
+        "accessedAt": "2026-10-11",
+        "primarySource": true
+      }
+    },
+    {
+      "composite_source_id": "edge_adoption:S02",
+      "artifact_source_namespace": "edge_adoption",
+      "original_source_id": "S02",
+      "source": {
+        "title": "Guide to Operational Technology Security, SP 800-82 Rev. 3",
+        "publisher": "NIST",
+        "date": "2023-09-28; planning note 2026-09-21",
+        "url": "https://csrc.nist.gov/pubs/sp/800/82/r3/final",
+        "type": "final technical guidance",
+        "finding": "OT security must preserve distinctive performance, reliability and safety requirements. Revision 4 was a draft, not the final baseline, at this review date.",
+        "accessedAt": "2026-10-11",
+        "primarySource": true
+      }
+    },
+    {
+      "composite_source_id": "edge_adoption:S03",
+      "artifact_source_namespace": "edge_adoption",
+      "original_source_id": "S03",
+      "source": {
+        "title": "Bundle Protocol Version 7, RFC 9171",
+        "publisher": "IETF / RFC Editor",
+        "date": "2022-01",
+        "url": "https://www.rfc-editor.org/rfc/rfc9171.html",
+        "type": "standards-track specification",
+        "finding": "Delay-tolerant networking explicitly accommodates intermittent connectivity, variable delay and high error rates using store-carry-forward communication.",
+        "accessedAt": "2026-10-11",
+        "primarySource": true
+      }
+    },
+    {
+      "composite_source_id": "edge_adoption:S04",
+      "artifact_source_namespace": "edge_adoption",
+      "original_source_id": "S04",
+      "source": {
+        "title": "FIDO Device Onboard Specifications",
+        "publisher": "FIDO Alliance",
+        "date": "current index accessed 2026-10-11; v1.1 2022-04-19",
+        "url": "https://fidoalliance.org/specifications/download-iot-specifications/",
+        "type": "standards-body specification index",
+        "finding": "FDO provides automated device onboarding and late binding to management platforms. The index lists v1.1 and v2.0 as proposed standards; deployment support must be checked.",
+        "accessedAt": "2026-10-11",
+        "primarySource": true
+      }
+    },
+    {
+      "composite_source_id": "edge_adoption:S05",
+      "artifact_source_namespace": "edge_adoption",
+      "original_source_id": "S05",
+      "source": {
+        "title": "A Firmware Update Architecture for Internet of Things, RFC 9019",
+        "publisher": "IETF / RFC Editor",
+        "date": "2021-04",
+        "url": "https://datatracker.ietf.org/doc/rfc9019/",
+        "type": "informational RFC",
+        "finding": "Resource-constrained, long-lived and remotely deployed IoT devices need authenticated firmware updates. The document defines a transport-agnostic update architecture, not a complete fleet product.",
+        "accessedAt": "2026-10-11",
+        "primarySource": true
+      }
+    },
+    {
+      "composite_source_id": "edge_adoption:S06",
+      "artifact_source_namespace": "edge_adoption",
+      "original_source_id": "S06",
+      "source": {
+        "title": "Platform Firmware Resiliency Guidelines, SP 800-193",
+        "publisher": "NIST",
+        "date": "2018-05-04",
+        "url": "https://csrc.nist.gov/pubs/sp/800/193/final",
+        "type": "final technical guidance",
+        "finding": "Firmware resilience requires protection, detection and recovery. Corrupted firmware can render a platform inoperable; component resilience does not automatically establish whole-platform resilience.",
+        "accessedAt": "2026-10-11",
+        "primarySource": true
+      }
+    },
+    {
+      "composite_source_id": "edge_adoption:S07",
+      "artifact_source_namespace": "edge_adoption",
+      "original_source_id": "S07",
+      "source": {
+        "title": "Commission guidance to support timely Cyber Resilience Act implementation",
+        "publisher": "European Commission",
+        "date": "2026-07-27",
+        "url": "https://digital-strategy.ec.europa.eu/en/library/commission-publishes-new-guidance-support-timely-cyber-resilience-act-implementation",
+        "type": "official implementation guidance",
+        "finding": "CRA reporting obligations began 11 September 2026; principal obligations apply from 11 December 2027. Product scope and exceptions require separate assessment.",
+        "accessedAt": "2026-10-11",
+        "primarySource": true
+      }
+    },
+    {
+      "composite_source_id": "edge_adoption:S08",
+      "artifact_source_namespace": "edge_adoption",
+      "original_source_id": "S08",
+      "source": {
+        "title": "OT Backup Quick Start Guide, SP 1339",
+        "publisher": "NIST",
+        "date": "2026-06-17",
+        "url": "https://csrc.nist.gov/pubs/sp/1339/final",
+        "type": "final technical guidance",
+        "finding": "OT backups should be incorporated into change management, tested regularly and reviewed during recovery exercises; possession of a backup is insufficient evidence of recoverability.",
+        "accessedAt": "2026-10-11",
+        "primarySource": true
+      }
+    },
+    {
+      "composite_source_id": "edge_adoption:S09",
+      "artifact_source_namespace": "edge_adoption",
+      "original_source_id": "S09",
+      "source": {
+        "title": "Hardware Bill of Materials Framework for Supply Chain Risk Management",
+        "publisher": "CISA ICT Supply Chain Risk Management Task Force",
+        "date": "2023-09",
+        "url": "https://www.cisa.gov/sites/default/files/2023-09/A%20Hardware%20Bill%20of%20Materials%20Framework%20for%20Supply%20Chain%20Risk%20Management%20%28508%29.pdf",
+        "type": "voluntary government-industry framework",
+        "finding": "HBOM fields and nesting improve communication between suppliers and purchasers for compliance, security and availability risks. An HBOM is evidence disclosure, not proof of physical authenticity.",
+        "accessedAt": "2026-10-11",
+        "primarySource": true
+      }
+    },
+    {
+      "composite_source_id": "edge_adoption:S10",
+      "artifact_source_namespace": "edge_adoption",
+      "original_source_id": "S10",
+      "source": {
+        "title": "Portable Test and Stimulus Standard 3.0 release",
+        "publisher": "Accellera Systems Initiative",
+        "date": "2024-08-29",
+        "url": "https://accellera.com/news/press-releases/402-accellera-unveils-portable-test-and-stimulus-standard-3-0-ushering-in-a-new-era-of-verification-efficiency",
+        "type": "standards-body release",
+        "finding": "PSS captures test intent in one representation for simulation, emulation, FPGA prototypes and post-silicon tests; version 3.0 adds behavioral coverage.",
+        "accessedAt": "2026-10-11",
+        "primarySource": true
+      }
+    },
+    {
+      "composite_source_id": "edge_adoption:S11",
+      "artifact_source_namespace": "edge_adoption",
+      "original_source_id": "S11",
+      "source": {
+        "title": "Metrics and Methodology for Hardware Security Constructs",
+        "publisher": "NIST",
+        "date": "2025-06-05",
+        "url": "https://www.nist.gov/publications/metrics-and-methodology-hardware-security-constructs",
+        "type": "research methodology",
+        "finding": "Hardware can contain design and implementation weaknesses. Proposed threat and sensitivity metrics connect weaknesses with attack classes, supporting scoped security-cost trade-off analysis.",
+        "accessedAt": "2026-10-11",
+        "primarySource": true
+      }
+    },
+    {
+      "composite_source_id": "edge_adoption:S12",
+      "artifact_source_namespace": "edge_adoption",
+      "original_source_id": "S12",
+      "source": {
+        "title": "International Roadmap for Devices and Systems 2024 Metrology",
+        "publisher": "NIST / IRDS",
+        "date": "2025-07-09",
+        "url": "https://www.nist.gov/publications/international-roadmap-devices-and-systems-tm-2024-metrology",
+        "type": "research roadmap",
+        "finding": "New materials, devices, integration and process control introduce measurement-science challenges that need characterization methods, tools and infrastructure.",
+        "accessedAt": "2026-10-11",
+        "primarySource": true
+      }
+    },
+    {
+      "composite_source_id": "edge_adoption:S13",
+      "artifact_source_namespace": "edge_adoption",
+      "original_source_id": "S13",
+      "source": {
+        "title": "Digital Twins for Advanced Manufacturing",
+        "publisher": "NIST",
+        "date": "undated current programme; accessed 2026-10-11",
+        "url": "https://www.nist.gov/programs-projects/digital-twins-advanced-manufacturing",
+        "type": "official research programme",
+        "finding": "Manufacturing twins face gaps in vocabulary, interoperability, trustworthiness and validation. NIST is developing verification, validation and uncertainty quantification methods and reference implementations.",
+        "accessedAt": "2026-10-11",
+        "primarySource": true
+      }
+    },
+    {
+      "composite_source_id": "edge_adoption:S14",
+      "artifact_source_namespace": "edge_adoption",
+      "original_source_id": "S14",
+      "source": {
+        "title": "Digital Calibration Certificate",
+        "publisher": "Physikalisch-Technische Bundesanstalt (PTB)",
+        "date": "current guidance; news updated 2026-02-11",
+        "url": "https://www.ptb.de/cms/en/metrological-services/dkd/dkd-dcc.html",
+        "type": "national-metrology-institute guidance",
+        "finding": "DCC XML makes calibration data machine-readable, but universal interpretation also requires harmonized terminology and refTypes. Schema validity alone is not semantic sufficiency.",
+        "accessedAt": "2026-10-11",
+        "primarySource": true
+      }
+    },
+    {
+      "composite_source_id": "edge_adoption:S15",
+      "artifact_source_namespace": "edge_adoption",
+      "original_source_id": "S15",
+      "source": {
+        "title": "ULPMark benchmark suite",
+        "publisher": "EEMBC",
+        "date": "undated; accessed 2026-10-11",
+        "url": "https://www.eembc.org/ulpmark/",
+        "type": "benchmark specification overview",
+        "finding": "MCU energy varies across sleep, peripheral transfer and active computation. Multiple operational profiles are required instead of a single datasheet power figure.",
+        "accessedAt": "2026-10-11",
+        "primarySource": true
+      }
+    },
+    {
+      "composite_source_id": "edge_adoption:S16",
+      "artifact_source_namespace": "edge_adoption",
+      "original_source_id": "S16",
+      "source": {
+        "title": "New EU rules for durable, energy-efficient and repairable smartphones and tablets",
+        "publisher": "European Commission",
+        "date": "2025-06-20",
+        "url": "https://single-market-economy.ec.europa.eu/news/new-eu-rules-durable-energy-efficient-and-repairable-smartphones-and-tablets-start-applying-2025-06-20_en",
+        "type": "official regulatory implementation announcement",
+        "finding": "Covered devices face battery durability and repair obligations: at least 800 cycles retaining 80% initial capacity and specified spare parts within 5–10 working days for seven years after model sales end.",
+        "accessedAt": "2026-10-11",
+        "primarySource": true
+      }
+    },
+    {
+      "composite_source_id": "edge_adoption:S17",
+      "artifact_source_namespace": "edge_adoption",
+      "original_source_id": "S17",
+      "source": {
+        "title": "Global E-waste Monitor 2024",
+        "publisher": "ITU / UNITAR",
+        "date": "2024; measurements refer to 2022",
+        "url": "https://www.itu.int/dms_pub/itu-d/opb/gen/D-GEN-E_WASTE.01-2024-PDF-E.pdf",
+        "type": "global statistical report",
+        "finding": "The report estimates 62 billion kg of e-waste in 2022 and a 22.3% documented formal collection and recycling rate. This is not a measurement of any one enterprise fleet.",
+        "accessedAt": "2026-10-11",
+        "primarySource": true
+      }
+    },
+    {
+      "composite_source_id": "edge_adoption:S18",
+      "artifact_source_namespace": "edge_adoption",
+      "original_source_id": "S18",
+      "source": {
+        "title": "Guidelines for Media Sanitization, SP 800-88 Rev. 2",
+        "publisher": "NIST",
+        "date": "2025-09-26",
+        "url": "https://csrc.nist.gov/pubs/sp/800/88/r2/final",
+        "type": "final technical guidance",
+        "finding": "Organizations need a sanitization programme with techniques and controls selected for information sensitivity. Rev. 2 supersedes Rev. 1.",
+        "accessedAt": "2026-10-11",
+        "primarySource": true
+      }
+    },
+    {
+      "composite_source_id": "edge_adoption:S19",
+      "artifact_source_namespace": "edge_adoption",
+      "original_source_id": "S19",
+      "source": {
+        "title": "Guidance to support preparations for the Digital Batteries Passport",
+        "publisher": "European Commission",
+        "date": "2026-08-21",
+        "url": "https://single-market-economy.ec.europa.eu/news/guidance-support-preparations-digital-batteries-passport-2026-08-21_en",
+        "type": "official nonbinding implementation guidance",
+        "finding": "The guidance consolidates 71 data points with category-specific applicability. Passport requirements start 18 February 2027 for each covered EV battery, each covered LMT battery, and each covered industrial battery with capacity above 2 kWh. The capacity threshold qualifies industrial batteries only.",
+        "accessedAt": "2026-10-11",
+        "primarySource": true
+      }
+    },
+    {
+      "composite_source_id": "edge_adoption:S20",
+      "artifact_source_namespace": "edge_adoption",
+      "original_source_id": "S20",
+      "source": {
+        "title": "Empowering SMEs in the age of AI: 2026 OECD D4SME Survey",
+        "publisher": "OECD",
+        "date": "2026-04-13",
+        "url": "https://www.oecd.org/en/publications/empowering-smes-in-the-age-of-ai_bf5a9816-en.html",
+        "type": "nonrepresentative survey of over 2,000 SMEs in 12 OECD countries",
+        "finding": "The survey identifies maintenance costs, time and skills gaps as barriers to effective digital implementation; its sample must not be treated as representative of national SME populations.",
+        "detailURL": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2026/04/empowering-smes-in-the-age-of-ai_7f58652c/bf5a9816-en.pdf",
+        "accessedAt": "2026-10-11",
+        "primarySource": true
+      }
+    },
+    {
+      "composite_source_id": "edge_adoption:S21",
+      "artifact_source_namespace": "edge_adoption",
+      "original_source_id": "S21",
+      "source": {
+        "title": "The State of Mobile Internet Connectivity 2026",
+        "publisher": "GSMA",
+        "date": "2026; estimates at end-2025",
+        "url": "https://www.gsma.com/somic/",
+        "type": "industry-body research; official homepage independently retrieved",
+        "finding": "GSMA reports 4.8 billion people using mobile internet and 38% of the population living within coverage but not using it. Researcher direct fetch returned 403; the independent reviewer subsequently retrieved the official homepage and confirmed these figures. Full report methodology was not read.",
+        "accessedAt": "2026-10-11",
+        "primarySource": true
+      }
+    },
+    {
+      "composite_source_id": "edge_adoption:S22",
+      "artifact_source_namespace": "edge_adoption",
+      "original_source_id": "S22",
+      "source": {
+        "title": "Measuring Digital Development: Facts and Figures 2025",
+        "publisher": "ITU",
+        "date": "2025-11-17",
+        "url": "https://www.itu.int/en/mediacentre/Pages/PR-2025-11-17-facts-and-figures.aspx",
+        "type": "official global statistical estimates",
+        "finding": "ITU estimates six billion people online and 2.2 billion offline in 2025, with persistent affordability and quality differences. Its internet-user definition differs from GSMA mobile-subscriber measures.",
+        "accessedAt": "2026-10-11",
+        "primarySource": true
+      }
+    },
+    {
+      "composite_source_id": "edge_adoption:S23",
+      "artifact_source_namespace": "edge_adoption",
+      "original_source_id": "S23",
+      "source": {
+        "title": "When is an interoperability assessment legally required?",
+        "publisher": "European Commission, Interoperable Europe",
+        "date": "current guidance; obligation from 2025-01-12",
+        "url": "https://interoperable-europe.ec.europa.eu/guidelines-chapter-2-when-interoperability-assessment-legally-required",
+        "type": "official scope and assessment guidance",
+        "finding": "Certain new or revised binding requirements affecting trans-European digital public services require interoperability assessment; routine maintenance and ordinary equipment procurement usually do not trigger it.",
+        "accessedAt": "2026-10-11",
+        "primarySource": true
+      }
+    },
+    {
+      "composite_source_id": "edge_adoption:S24",
+      "artifact_source_namespace": "edge_adoption",
+      "original_source_id": "S24",
+      "source": {
+        "title": "EPCIS & CBV and EPCIS standard archive",
+        "publisher": "GS1",
+        "date": "EPCIS 2.0.1 published 2025-07-01",
+        "url": "https://ref.gs1.org/standards/epcis/archive",
+        "type": "standards-body specification history",
+        "finding": "EPCIS provides common supply-chain event semantics; 2.x supports sensor observations and certification information. The archive identifies 2.0.1 as current.",
+        "detailURL": "https://www.gs1.org/standards/epcis",
+        "accessedAt": "2026-10-11",
+        "primarySource": true
+      }
+    },
+    {
+      "composite_source_id": "edge_adoption:S25",
+      "artifact_source_namespace": "edge_adoption",
+      "original_source_id": "S25",
+      "source": {
+        "title": "Matter 1.5.1: Enhancing Camera Performance and Expanding Device Flexibility",
+        "publisher": "Connectivity Standards Alliance",
+        "date": "2026-03-31",
+        "url": "https://csa-iot.org/newsroom/matter-1-5-1-enhancing-camera-performance-and-expanding-device-flexibility/",
+        "type": "standards-body release",
+        "finding": "Matter 1.5.1 improves camera multi-stream behavior and installation flexibility. A specification release does not establish support in every device, firmware or controller.",
+        "accessedAt": "2026-10-11",
+        "primarySource": true
+      }
+    },
+    {
+      "composite_source_id": "edge_adoption:S26",
+      "artifact_source_namespace": "edge_adoption",
+      "original_source_id": "S26",
+      "source": {
+        "title": "Digital Product Passport",
+        "publisher": "European Commission",
+        "date": "undated; accessed 2026-10-11",
+        "url": "https://single-market-economy.ec.europa.eu/single-market/digital-product-passport_en",
+        "type": "official programme overview",
+        "finding": "DPPs organize product, component and material information for sustainability, circularity and compliance. Requirements are product- and instrument-specific, not one universal present deadline.",
+        "accessedAt": "2026-10-11",
+        "primarySource": true
+      }
+    }
+  ]
+}
