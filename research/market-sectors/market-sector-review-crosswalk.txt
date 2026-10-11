@@ -1,0 +1,4068 @@
+KEDDEH SYSTEMS | ENGINEER · AUTOMATE · SCALE
+PUBLIC RESEARCH DRAFT | ALL RIGHTS RESERVED FOR ORIGINAL COMPILATION
+Third-party sources retain their own rights. No implementation or scientific qualification is implied.
+
+document control:
+  title: Reviewer appendix: proposed bottleneck-to-canonical-taxonomy crosswalk
+  version: 0.2.0
+  status: REVIEWER_INFERENCE_NOT_ADOPTED; PUBLIC_RESEARCH_DRAFT
+  classification: Public repository research draft; hypotheses and unadopted mappings; no production or publication-quality qualification
+  author: Separate OpenAI-assisted review run
+  publisher: Keddeh Systems, draft
+  rights holder: Unchanged from source rights; owner to confirm original-compilation rights
+  licence profile: Reserved rights; no permission granted
+  approval: Not recorded
+  public edition: 1.0
+canonical source:
+  title: Owner-supplied Keddeh canonical taxonomy
+  version: KEDDEH-REG-RESEARCH-001 v1.0 Draft
+  source type: Owner-provided taxonomy identifiers and names
+  public source url: unknown / not provided
+  access boundary: Underlying private document and document identifiers are not redistributed. Included taxonomy names/IDs support the owner-requested public sector research.
+  mapping adoption: No inferred mapping is adopted by inclusion.
+constraints:
+  - All rows are provisional reviewer proposals, not registry mutations, staffing or capability qualification.
+  - Canonical technical disciplines, market/problem candidates, application sectors, functions and foundries are separate axes.
+  - Canonical register assigns S01–S29 IDs. It supplies exact names for 18 foundries and 18 application sectors, but does not give them numerical or URI IDs; none are invented here.
+  - No function registry was present in the canonical source. Exact function-ID reconciliation remains blocked pending that source.
+  - No inference that a KEX/BRAINK discipline already implements or resolves a physical/commercial bottleneck.
+  - Primary and supporting responsibilities are intentionally not assigned without owner implementation review.
+  - Public edition omits private source-document locations and full source text. Exact names/IDs, unresolved function mapping, ambiguous relationships and application gaps are retained.
+technical sectors:
+  1.
+    id: S01
+    canonical name: BRAINK Core Runtime
+  2.
+    id: S02
+    canonical name: KEX Algebra and Typed State
+  3.
+    id: S03
+    canonical name: IL-LLM Learning and Knowledge
+  4.
+    id: S04
+    canonical name: KERA Server, Network, and DNS
+  5.
+    id: S05
+    canonical name: Workbook OS, KDRIVE, and Web4
+  6.
+    id: S06
+    canonical name: Bilateral Polygon and Mirror Learning
+  7.
+    id: S07
+    canonical name: KCPU Routing, Software Nodes, and Update Lanes
+  8.
+    id: S08
+    canonical name: Governance, Proof, and Constraints
+  9.
+    id: S09
+    canonical name: Security, Hardgate, and Identity
+  10.
+    id: S10
+    canonical name: UI, Dashboard, and AI Shell
+  11.
+    id: S11
+    canonical name: Backend, API, and Service Runtime
+  12.
+    id: S12
+    canonical name: Virtual Memory and Sparse Storage
+  13.
+    id: S13
+    canonical name: Cloud, Mesh, and Deployment
+  14.
+    id: S14
+    canonical name: Thermodynamic Ledger, TER, and Hardware
+  15.
+    id: S15
+    canonical name: Quantum, Matrix, and Simulation
+  16.
+    id: S16
+    canonical name: Mining, Compute, and Economics
+  17.
+    id: S17
+    canonical name: Linguistic Process and Ethics
+  18.
+    id: S18
+    canonical name: Research, Proof, and Publication
+  19.
+    id: S19
+    canonical name: Agent CLI and Codex Fleet
+  20.
+    id: S20
+    canonical name: Cross-Sector Synthesis and Global Ledger
+  21.
+    id: S21
+    canonical name: Cosmology and Planetary Models
+  22.
+    id: S22
+    canonical name: Heliosphere and Hidden-Layer Models
+  23.
+    id: S23
+    canonical name: Ledger, Economy, and Civilisation
+  24.
+    id: S24
+    canonical name: Cultural and Language Decode
+  25.
+    id: S25
+    canonical name: News, Events, and Pressure Ledger
+  26.
+    id: S26
+    canonical name: BRAINK Substrate Generality and Multi-Domain Realisation
+  27.
+    id: S27
+    canonical name: IL-LLM Recurrent Mathematics and Machine-Description Closure
+  28.
+    id: S28
+    canonical name: KEX Self-Representation, Data Evolution and Definition Evolution
+  29.
+    id: S29
+    canonical name: Formal Computational Universality and Refinement Proof
+independent foundries:
+  1.
+    canonical name: Frontage Foundry
+    canonical id: unknown / not provided
+  2.
+    canonical name: Service Foundry
+    canonical id: unknown / not provided
+  3.
+    canonical name: Growing Mesh Foundry
+    canonical id: unknown / not provided
+  4.
+    canonical name: Website Foundry
+    canonical id: unknown / not provided
+  5.
+    canonical name: Domain Mastery
+    canonical id: unknown / not provided
+  6.
+    canonical name: Process Mastery
+    canonical id: unknown / not provided
+  7.
+    canonical name: Research Mastery
+    canonical id: unknown / not provided
+  8.
+    canonical name: Publishing Mastery
+    canonical id: unknown / not provided
+  9.
+    canonical name: Agentics Foundry
+    canonical id: unknown / not provided
+  10.
+    canonical name: HR & Team Services Foundry
+    canonical id: unknown / not provided
+  11.
+    canonical name: Business & Enterprise Structure Foundry
+    canonical id: unknown / not provided
+  12.
+    canonical name: Server Foundry
+    canonical id: unknown / not provided
+  13.
+    canonical name: Usable Software Foundry
+    canonical id: unknown / not provided
+  14.
+    canonical name: HCI Foundry
+    canonical id: unknown / not provided
+  15.
+    canonical name: Landing Page Foundry
+    canonical id: unknown / not provided
+  16.
+    canonical name: Workspace Foundry
+    canonical id: unknown / not provided
+  17.
+    canonical name: File System Foundry
+    canonical id: unknown / not provided
+  18.
+    canonical name: Customer File Base Software Foundry
+    canonical id: unknown / not provided
+application sectors:
+  1.
+    canonical name: Enterprise software and SaaS
+    canonical id: unknown / not provided
+  2.
+    canonical name: AI agents and developer tooling
+    canonical id: unknown / not provided
+  3.
+    canonical name: Cloud hosting and DevOps
+    canonical id: unknown / not provided
+  4.
+    canonical name: Cybersecurity and identity
+    canonical id: unknown / not provided
+  5.
+    canonical name: Telecommunications and DNS services
+    canonical id: unknown / not provided
+  6.
+    canonical name: Industrial automation and robotics
+    canonical id: unknown / not provided
+  7.
+    canonical name: Embedded electronics and CANBUS
+    canonical id: unknown / not provided
+  8.
+    canonical name: Healthcare equipment and hospital infrastructure
+    canonical id: unknown / not provided
+  9.
+    canonical name: Critical infrastructure and emergency continuity
+    canonical id: unknown / not provided
+  10.
+    canonical name: Insurance and claim management
+    canonical id: unknown / not provided
+  11.
+    canonical name: Legal evidence and dispute workflows
+    canonical id: unknown / not provided
+  12.
+    canonical name: Finance and payments operations
+    canonical id: unknown / not provided
+  13.
+    canonical name: Research computing and scientific simulation
+    canonical id: unknown / not provided
+  14.
+    canonical name: Education and technical publishing
+    canonical id: unknown / not provided
+  15.
+    canonical name: Mining and distributed compute
+    canonical id: unknown / not provided
+  16.
+    canonical name: Workspace operations and HR
+    canonical id: unknown / not provided
+  17.
+    canonical name: Customer support and service fulfilment
+    canonical id: unknown / not provided
+  18.
+    canonical name: Market frontage and digital commerce
+    canonical id: unknown / not provided
+rows:
+  1.
+    bottleneck id: CMP-MEM-BANDWIDTH
+    title: Accelerator memory-bandwidth saturation
+    annex: compute-services
+    candidate problem sector id: KEDDEH-CMP-MEM-BANDWIDTH
+    technical sector candidates:
+      1.
+        id: S14
+        canonical name: Thermodynamic Ledger, TER, and Hardware
+      2.
+        id: S16
+        canonical name: Mining, Compute, and Economics
+      3.
+        id: S12
+        canonical name: Virtual Memory and Sparse Storage
+    application sector candidates:
+      1.
+        canonical name: Research computing and scientific simulation
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+      2.
+        canonical name: Mining and distributed compute
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+    foundry candidates:
+      1.
+        canonical name: Server Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      2.
+        canonical name: Usable Software Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+    function id: unknown / not provided
+    function mapping status: UNRESOLVED: canonical source contains no function registry. Delivery and analyst are team roles, not inferred canonical function IDs.
+    mapping basis: Physical accelerator data movement; S12 only if virtual-memory behavior is actually involved.
+    mapping status: REVIEWER_INFERENCE_NOT_ADOPTED
+    ambiguity: Multiple candidates are nonexclusive dependencies; implementation owner must choose lead/accountable scope after reading the relevant sector dossier. No unique mapping forced.
+    taxonomy reference: Owner-supplied taxonomy tables in this file
+    technical sector namespace: technical_sector
+    source artifact namespace: compute
+  2.
+    bottleneck id: CMP-MEM-CAPACITY
+    title: Accelerator working-set capacity
+    annex: compute-services
+    candidate problem sector id: KEDDEH-CMP-MEM-CAPACITY
+    technical sector candidates:
+      1.
+        id: S12
+        canonical name: Virtual Memory and Sparse Storage
+      2.
+        id: S14
+        canonical name: Thermodynamic Ledger, TER, and Hardware
+      3.
+        id: S16
+        canonical name: Mining, Compute, and Economics
+    application sector candidates:
+      1.
+        canonical name: Research computing and scientific simulation
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+      2.
+        canonical name: Mining and distributed compute
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+    foundry candidates:
+      1.
+        canonical name: Server Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      2.
+        canonical name: Usable Software Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+    function id: unknown / not provided
+    function mapping status: UNRESOLVED: canonical source contains no function registry. Delivery and analyst are team roles, not inferred canonical function IDs.
+    mapping basis: Physical working-set fit and memory management; hardware and virtual-memory claims require different tests.
+    mapping status: REVIEWER_INFERENCE_NOT_ADOPTED
+    ambiguity: Multiple candidates are nonexclusive dependencies; implementation owner must choose lead/accountable scope after reading the relevant sector dossier. No unique mapping forced.
+    taxonomy reference: Owner-supplied taxonomy tables in this file
+    technical sector namespace: technical_sector
+    source artifact namespace: compute
+  3.
+    bottleneck id: CMP-MEM-TIERING
+    title: Tiered-memory thrashing and placement
+    annex: compute-services
+    candidate problem sector id: KEDDEH-CMP-MEM-TIERING
+    technical sector candidates:
+      1.
+        id: S12
+        canonical name: Virtual Memory and Sparse Storage
+      2.
+        id: S14
+        canonical name: Thermodynamic Ledger, TER, and Hardware
+    application sector candidates:
+      1.
+        canonical name: Enterprise software and SaaS
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+      2.
+        canonical name: Research computing and scientific simulation
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+    foundry candidates:
+      1.
+        canonical name: Server Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      2.
+        canonical name: Usable Software Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+    function id: unknown / not provided
+    function mapping status: UNRESOLVED: canonical source contains no function registry. Delivery and analyst are team roles, not inferred canonical function IDs.
+    mapping basis: Tier placement crosses memory subsystem and physical hardware.
+    mapping status: REVIEWER_INFERENCE_NOT_ADOPTED
+    ambiguity: Multiple candidates are nonexclusive dependencies; implementation owner must choose lead/accountable scope after reading the relevant sector dossier. No unique mapping forced.
+    taxonomy reference: Owner-supplied taxonomy tables in this file
+    technical sector namespace: technical_sector
+    source artifact namespace: compute
+  4.
+    bottleneck id: CMP-NUMA-LOCALITY
+    title: CPU memory and device topology mismatch
+    annex: compute-services
+    candidate problem sector id: KEDDEH-CMP-NUMA-LOCALITY
+    technical sector candidates:
+      1.
+        id: S07
+        canonical name: KCPU Routing, Software Nodes, and Update Lanes
+      2.
+        id: S14
+        canonical name: Thermodynamic Ledger, TER, and Hardware
+    application sector candidates:
+      1.
+        canonical name: Cloud hosting and DevOps
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+      2.
+        canonical name: Research computing and scientific simulation
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+    foundry candidates:
+      1.
+        canonical name: Server Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      2.
+        canonical name: Usable Software Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+    function id: unknown / not provided
+    function mapping status: UNRESOLVED: canonical source contains no function registry. Delivery and analyst are team roles, not inferred canonical function IDs.
+    mapping basis: Routing/topology placement is a candidate bridge; KCPU mapping does not prove NUMA implementation.
+    mapping status: REVIEWER_INFERENCE_NOT_ADOPTED
+    ambiguity: Multiple candidates are nonexclusive dependencies; implementation owner must choose lead/accountable scope after reading the relevant sector dossier. No unique mapping forced.
+    taxonomy reference: Owner-supplied taxonomy tables in this file
+    technical sector namespace: technical_sector
+    source artifact namespace: compute
+  5.
+    bottleneck id: CMP-GPU-SCHEDULING
+    title: Accelerator allocation fragmentation
+    annex: compute-services
+    candidate problem sector id: KEDDEH-CMP-GPU-SCHEDULING
+    technical sector candidates:
+      1.
+        id: S07
+        canonical name: KCPU Routing, Software Nodes, and Update Lanes
+      2.
+        id: S13
+        canonical name: Cloud, Mesh, and Deployment
+      3.
+        id: S16
+        canonical name: Mining, Compute, and Economics
+    application sector candidates:
+      1.
+        canonical name: Cloud hosting and DevOps
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+      2.
+        canonical name: Mining and distributed compute
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+    foundry candidates:
+      1.
+        canonical name: Server Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      2.
+        canonical name: Growing Mesh Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+    function id: unknown / not provided
+    function mapping status: UNRESOLVED: canonical source contains no function registry. Delivery and analyst are team roles, not inferred canonical function IDs.
+    mapping basis: Resource allocation, cloud deployment and compute economics have separate criteria.
+    mapping status: REVIEWER_INFERENCE_NOT_ADOPTED
+    ambiguity: Multiple candidates are nonexclusive dependencies; implementation owner must choose lead/accountable scope after reading the relevant sector dossier. No unique mapping forced.
+    taxonomy reference: Owner-supplied taxonomy tables in this file
+    technical sector namespace: technical_sector
+    source artifact namespace: compute
+  6.
+    bottleneck id: CMP-GRID-CAPACITY
+    title: Power-constrained compute deployment
+    annex: compute-services
+    candidate problem sector id: KEDDEH-CMP-GRID-CAPACITY
+    technical sector candidates:
+      1.
+        id: S14
+        canonical name: Thermodynamic Ledger, TER, and Hardware
+      2.
+        id: S16
+        canonical name: Mining, Compute, and Economics
+    application sector candidates:
+      1.
+        canonical name: Cloud hosting and DevOps
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+      2.
+        canonical name: Mining and distributed compute
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+      3.
+        canonical name: Critical infrastructure and emergency continuity
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+    foundry candidates:
+      1.
+        canonical name: Server Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      2.
+        canonical name: Business & Enterprise Structure Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+    function id: unknown / not provided
+    function mapping status: UNRESOLVED: canonical source contains no function registry. Delivery and analyst are team roles, not inferred canonical function IDs.
+    mapping basis: Hardware/power and compute economics; utility connection authority remains external.
+    mapping status: REVIEWER_INFERENCE_NOT_ADOPTED
+    ambiguity: Multiple candidates are nonexclusive dependencies; implementation owner must choose lead/accountable scope after reading the relevant sector dossier. No unique mapping forced.
+    taxonomy reference: Owner-supplied taxonomy tables in this file
+    technical sector namespace: technical_sector
+    source artifact namespace: compute
+  7.
+    bottleneck id: CMP-THERMAL-DENSITY
+    title: High-density cooling compatibility
+    annex: compute-services
+    candidate problem sector id: KEDDEH-CMP-THERMAL-DENSITY
+    technical sector candidates:
+      1.
+        id: S14
+        canonical name: Thermodynamic Ledger, TER, and Hardware
+    application sector candidates:
+      1.
+        canonical name: Cloud hosting and DevOps
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+      2.
+        canonical name: Embedded electronics and CANBUS
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+    foundry candidates:
+      1.
+        canonical name: Server Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      2.
+        canonical name: Domain Mastery
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+    function id: unknown / not provided
+    function mapping status: UNRESOLVED: canonical source contains no function registry. Delivery and analyst are team roles, not inferred canonical function IDs.
+    mapping basis: Physical thermal/facility envelope; no claim that software eliminates heat constraints.
+    mapping status: REVIEWER_INFERENCE_NOT_ADOPTED
+    ambiguity: Multiple candidates are nonexclusive dependencies; implementation owner must choose lead/accountable scope after reading the relevant sector dossier. No unique mapping forced.
+    taxonomy reference: Owner-supplied taxonomy tables in this file
+    technical sector namespace: technical_sector
+    source artifact namespace: compute
+  8.
+    bottleneck id: CMP-KERNEL-PORTABILITY
+    title: Accelerator software portability and retuning
+    annex: compute-services
+    candidate problem sector id: KEDDEH-CMP-KERNEL-PORTABILITY
+    technical sector candidates:
+      1.
+        id: S14
+        canonical name: Thermodynamic Ledger, TER, and Hardware
+      2.
+        id: S19
+        canonical name: Agent CLI and Codex Fleet
+      3.
+        id: S26
+        canonical name: BRAINK Substrate Generality and Multi-Domain Realisation
+    application sector candidates:
+      1.
+        canonical name: AI agents and developer tooling
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+      2.
+        canonical name: Research computing and scientific simulation
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+    foundry candidates:
+      1.
+        canonical name: Usable Software Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      2.
+        canonical name: Agentics Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+    function id: unknown / not provided
+    function mapping status: UNRESOLVED: canonical source contains no function registry. Delivery and analyst are team roles, not inferred canonical function IDs.
+    mapping basis: Hardware/toolchain mapping; S26 is only a cross-domain realization candidate, not evidence of portability.
+    mapping status: REVIEWER_INFERENCE_NOT_ADOPTED
+    ambiguity: Multiple candidates are nonexclusive dependencies; implementation owner must choose lead/accountable scope after reading the relevant sector dossier. No unique mapping forced.
+    taxonomy reference: Owner-supplied taxonomy tables in this file
+    technical sector namespace: technical_sector
+    source artifact namespace: compute
+  9.
+    bottleneck id: STO-GPU-INGEST
+    title: Storage-to-accelerator data-path stalls
+    annex: compute-services
+    candidate problem sector id: KEDDEH-STO-GPU-INGEST
+    technical sector candidates:
+      1.
+        id: S12
+        canonical name: Virtual Memory and Sparse Storage
+      2.
+        id: S14
+        canonical name: Thermodynamic Ledger, TER, and Hardware
+      3.
+        id: S16
+        canonical name: Mining, Compute, and Economics
+    application sector candidates:
+      1.
+        canonical name: Research computing and scientific simulation
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+      2.
+        canonical name: Mining and distributed compute
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+    foundry candidates:
+      1.
+        canonical name: Server Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      2.
+        canonical name: File System Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+    function id: unknown / not provided
+    function mapping status: UNRESOLVED: canonical source contains no function registry. Delivery and analyst are team roles, not inferred canonical function IDs.
+    mapping basis: Storage-to-device path spans distinct storage and hardware responsibilities.
+    mapping status: REVIEWER_INFERENCE_NOT_ADOPTED
+    ambiguity: Multiple candidates are nonexclusive dependencies; implementation owner must choose lead/accountable scope after reading the relevant sector dossier. No unique mapping forced.
+    taxonomy reference: Owner-supplied taxonomy tables in this file
+    technical sector namespace: technical_sector
+    source artifact namespace: compute
+  10.
+    bottleneck id: STO-OBJECT-REQUESTS
+    title: Small-object request and metadata overhead
+    annex: compute-services
+    candidate problem sector id: KEDDEH-STO-OBJECT-REQUESTS
+    technical sector candidates:
+      1.
+        id: S12
+        canonical name: Virtual Memory and Sparse Storage
+      2.
+        id: S11
+        canonical name: Backend, API, and Service Runtime
+      3.
+        id: S13
+        canonical name: Cloud, Mesh, and Deployment
+    application sector candidates:
+      1.
+        canonical name: Enterprise software and SaaS
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+      2.
+        canonical name: Cloud hosting and DevOps
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+    foundry candidates:
+      1.
+        canonical name: File System Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      2.
+        canonical name: Server Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+    function id: unknown / not provided
+    function mapping status: UNRESOLVED: canonical source contains no function registry. Delivery and analyst are team roles, not inferred canonical function IDs.
+    mapping basis: Storage request mechanics and service/cloud interface.
+    mapping status: REVIEWER_INFERENCE_NOT_ADOPTED
+    ambiguity: Multiple candidates are nonexclusive dependencies; implementation owner must choose lead/accountable scope after reading the relevant sector dossier. No unique mapping forced.
+    taxonomy reference: Owner-supplied taxonomy tables in this file
+    technical sector namespace: technical_sector
+    source artifact namespace: compute
+  11.
+    bottleneck id: STO-WRITE-AMPLIFICATION
+    title: Flash and database write amplification
+    annex: compute-services
+    candidate problem sector id: KEDDEH-STO-WRITE-AMPLIFICATION
+    technical sector candidates:
+      1.
+        id: S12
+        canonical name: Virtual Memory and Sparse Storage
+      2.
+        id: S14
+        canonical name: Thermodynamic Ledger, TER, and Hardware
+    application sector candidates:
+      1.
+        canonical name: Enterprise software and SaaS
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+      2.
+        canonical name: Cloud hosting and DevOps
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+    foundry candidates:
+      1.
+        canonical name: File System Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      2.
+        canonical name: Server Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+    function id: unknown / not provided
+    function mapping status: UNRESOLVED: canonical source contains no function registry. Delivery and analyst are team roles, not inferred canonical function IDs.
+    mapping basis: Host/storage algorithms and physical NAND effects must remain separately measured.
+    mapping status: REVIEWER_INFERENCE_NOT_ADOPTED
+    ambiguity: Multiple candidates are nonexclusive dependencies; implementation owner must choose lead/accountable scope after reading the relevant sector dossier. No unique mapping forced.
+    taxonomy reference: Owner-supplied taxonomy tables in this file
+    technical sector namespace: technical_sector
+    source artifact namespace: compute
+  12.
+    bottleneck id: STO-ARCHIVE-RECOVERY
+    title: Archive-cost versus retrieval-time mismatch
+    annex: compute-services
+    candidate problem sector id: KEDDEH-STO-ARCHIVE-RECOVERY
+    technical sector candidates:
+      1.
+        id: S12
+        canonical name: Virtual Memory and Sparse Storage
+      2.
+        id: S13
+        canonical name: Cloud, Mesh, and Deployment
+      3.
+        id: S08
+        canonical name: Governance, Proof, and Constraints
+    application sector candidates:
+      1.
+        canonical name: Enterprise software and SaaS
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+      2.
+        canonical name: Critical infrastructure and emergency continuity
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+    foundry candidates:
+      1.
+        canonical name: File System Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      2.
+        canonical name: Server Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+    function id: unknown / not provided
+    function mapping status: UNRESOLVED: canonical source contains no function registry. Delivery and analyst are team roles, not inferred canonical function IDs.
+    mapping basis: Storage/service restoration plus recovery proof.
+    mapping status: REVIEWER_INFERENCE_NOT_ADOPTED
+    ambiguity: Multiple candidates are nonexclusive dependencies; implementation owner must choose lead/accountable scope after reading the relevant sector dossier. No unique mapping forced.
+    taxonomy reference: Owner-supplied taxonomy tables in this file
+    technical sector namespace: technical_sector
+    source artifact namespace: compute
+  13.
+    bottleneck id: STO-CHECKPOINT-RESHARD
+    title: Checkpoint stalls and resharding friction
+    annex: compute-services
+    candidate problem sector id: KEDDEH-STO-CHECKPOINT-RESHARD
+    technical sector candidates:
+      1.
+        id: S12
+        canonical name: Virtual Memory and Sparse Storage
+      2.
+        id: S03
+        canonical name: IL-LLM Learning and Knowledge
+      3.
+        id: S13
+        canonical name: Cloud, Mesh, and Deployment
+    application sector candidates:
+      1.
+        canonical name: AI agents and developer tooling
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+      2.
+        canonical name: Research computing and scientific simulation
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+    foundry candidates:
+      1.
+        canonical name: File System Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      2.
+        canonical name: Agentics Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      3.
+        canonical name: Server Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+    function id: unknown / not provided
+    function mapping status: UNRESOLVED: canonical source contains no function registry. Delivery and analyst are team roles, not inferred canonical function IDs.
+    mapping basis: Persistence and ML resource-layout migration; do not infer learning expertise from checkpoint handling.
+    mapping status: REVIEWER_INFERENCE_NOT_ADOPTED
+    ambiguity: Multiple candidates are nonexclusive dependencies; implementation owner must choose lead/accountable scope after reading the relevant sector dossier. No unique mapping forced.
+    taxonomy reference: Owner-supplied taxonomy tables in this file
+    technical sector namespace: technical_sector
+    source artifact namespace: compute
+  14.
+    bottleneck id: NET-COLLECTIVE-SCALING
+    title: Collective communication scaling loss
+    annex: compute-services
+    candidate problem sector id: KEDDEH-NET-COLLECTIVE-SCALING
+    technical sector candidates:
+      1.
+        id: S04
+        canonical name: KERA Server, Network, and DNS
+      2.
+        id: S13
+        canonical name: Cloud, Mesh, and Deployment
+      3.
+        id: S16
+        canonical name: Mining, Compute, and Economics
+    application sector candidates:
+      1.
+        canonical name: Research computing and scientific simulation
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+      2.
+        canonical name: Mining and distributed compute
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+    foundry candidates:
+      1.
+        canonical name: Growing Mesh Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      2.
+        canonical name: Server Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+    function id: unknown / not provided
+    function mapping status: UNRESOLVED: canonical source contains no function registry. Delivery and analyst are team roles, not inferred canonical function IDs.
+    mapping basis: Network, multi-node deployment and compute scaling.
+    mapping status: REVIEWER_INFERENCE_NOT_ADOPTED
+    ambiguity: Multiple candidates are nonexclusive dependencies; implementation owner must choose lead/accountable scope after reading the relevant sector dossier. No unique mapping forced.
+    taxonomy reference: Owner-supplied taxonomy tables in this file
+    technical sector namespace: technical_sector
+    source artifact namespace: compute
+  15.
+    bottleneck id: NET-TAIL-LATENCY
+    title: Fan-out and congestion tail latency
+    annex: compute-services
+    candidate problem sector id: KEDDEH-NET-TAIL-LATENCY
+    technical sector candidates:
+      1.
+        id: S04
+        canonical name: KERA Server, Network, and DNS
+      2.
+        id: S11
+        canonical name: Backend, API, and Service Runtime
+    application sector candidates:
+      1.
+        canonical name: Enterprise software and SaaS
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+      2.
+        canonical name: Telecommunications and DNS services
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+    foundry candidates:
+      1.
+        canonical name: Growing Mesh Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      2.
+        canonical name: Service Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      3.
+        canonical name: Server Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+    function id: unknown / not provided
+    function mapping status: UNRESOLVED: canonical source contains no function registry. Delivery and analyst are team roles, not inferred canonical function IDs.
+    mapping basis: Network queues and service fan-out have related but separable mechanisms.
+    mapping status: REVIEWER_INFERENCE_NOT_ADOPTED
+    ambiguity: Multiple candidates are nonexclusive dependencies; implementation owner must choose lead/accountable scope after reading the relevant sector dossier. No unique mapping forced.
+    taxonomy reference: Owner-supplied taxonomy tables in this file
+    technical sector namespace: technical_sector
+    source artifact namespace: compute
+  16.
+    bottleneck id: NET-GEO-LATENCY
+    title: Geographic replication latency trade-offs
+    annex: compute-services
+    candidate problem sector id: KEDDEH-NET-GEO-LATENCY
+    technical sector candidates:
+      1.
+        id: S04
+        canonical name: KERA Server, Network, and DNS
+      2.
+        id: S11
+        canonical name: Backend, API, and Service Runtime
+      3.
+        id: S13
+        canonical name: Cloud, Mesh, and Deployment
+    application sector candidates:
+      1.
+        canonical name: Enterprise software and SaaS
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+      2.
+        canonical name: Telecommunications and DNS services
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+    foundry candidates:
+      1.
+        canonical name: Growing Mesh Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      2.
+        canonical name: Server Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+    function id: unknown / not provided
+    function mapping status: UNRESOLVED: canonical source contains no function registry. Delivery and analyst are team roles, not inferred canonical function IDs.
+    mapping basis: Geographic service/replication deployment.
+    mapping status: REVIEWER_INFERENCE_NOT_ADOPTED
+    ambiguity: Multiple candidates are nonexclusive dependencies; implementation owner must choose lead/accountable scope after reading the relevant sector dossier. No unique mapping forced.
+    taxonomy reference: Owner-supplied taxonomy tables in this file
+    technical sector namespace: technical_sector
+    source artifact namespace: compute
+  17.
+    bottleneck id: NET-TELEMETRY-LOSS
+    title: Network telemetry overhead and loss under load
+    annex: compute-services
+    candidate problem sector id: KEDDEH-NET-TELEMETRY-LOSS
+    technical sector candidates:
+      1.
+        id: S04
+        canonical name: KERA Server, Network, and DNS
+      2.
+        id: S08
+        canonical name: Governance, Proof, and Constraints
+    application sector candidates:
+      1.
+        canonical name: Telecommunications and DNS services
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+      2.
+        canonical name: Critical infrastructure and emergency continuity
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+    foundry candidates:
+      1.
+        canonical name: Growing Mesh Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      2.
+        canonical name: Server Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+    function id: unknown / not provided
+    function mapping status: UNRESOLVED: canonical source contains no function registry. Delivery and analyst are team roles, not inferred canonical function IDs.
+    mapping basis: Network evidence delivery rather than general telemetry cost allocation.
+    mapping status: REVIEWER_INFERENCE_NOT_ADOPTED
+    ambiguity: Multiple candidates are nonexclusive dependencies; implementation owner must choose lead/accountable scope after reading the relevant sector dossier. No unique mapping forced.
+    taxonomy reference: Owner-supplied taxonomy tables in this file
+    technical sector namespace: technical_sector
+    source artifact namespace: compute
+  18.
+    bottleneck id: CLD-RIGHTSIZING
+    title: Safe workload rightsizing and waste removal
+    annex: compute-services
+    candidate problem sector id: KEDDEH-CLD-RIGHTSIZING
+    technical sector candidates:
+      1.
+        id: S13
+        canonical name: Cloud, Mesh, and Deployment
+      2.
+        id: S16
+        canonical name: Mining, Compute, and Economics
+    application sector candidates:
+      1.
+        canonical name: Cloud hosting and DevOps
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+      2.
+        canonical name: Mining and distributed compute
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+    foundry candidates:
+      1.
+        canonical name: Server Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      2.
+        canonical name: Business & Enterprise Structure Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+    function id: unknown / not provided
+    function mapping status: UNRESOLVED: canonical source contains no function registry. Delivery and analyst are team roles, not inferred canonical function IDs.
+    mapping basis: Cloud resource efficiency and verified unit economics.
+    mapping status: REVIEWER_INFERENCE_NOT_ADOPTED
+    ambiguity: Multiple candidates are nonexclusive dependencies; implementation owner must choose lead/accountable scope after reading the relevant sector dossier. No unique mapping forced.
+    taxonomy reference: Owner-supplied taxonomy tables in this file
+    technical sector namespace: technical_sector
+    source artifact namespace: compute
+  19.
+    bottleneck id: CLD-COST-ATTRIBUTION
+    title: Cross-service cost allocation gaps
+    annex: compute-services
+    candidate problem sector id: KEDDEH-CLD-COST-ATTRIBUTION
+    technical sector candidates:
+      1.
+        id: S13
+        canonical name: Cloud, Mesh, and Deployment
+      2.
+        id: S16
+        canonical name: Mining, Compute, and Economics
+      3.
+        id: S23
+        canonical name: Ledger, Economy, and Civilisation
+    application sector candidates:
+      1.
+        canonical name: Cloud hosting and DevOps
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+      2.
+        canonical name: Finance and payments operations
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+    foundry candidates:
+      1.
+        canonical name: Business & Enterprise Structure Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      2.
+        canonical name: Server Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+    function id: unknown / not provided
+    function mapping status: UNRESOLVED: canonical source contains no function registry. Delivery and analyst are team roles, not inferred canonical function IDs.
+    mapping basis: Shared spend attribution; S23 is a ledger/economy candidate, not financial qualification.
+    mapping status: REVIEWER_INFERENCE_NOT_ADOPTED
+    ambiguity: Multiple candidates are nonexclusive dependencies; implementation owner must choose lead/accountable scope after reading the relevant sector dossier. No unique mapping forced.
+    taxonomy reference: Owner-supplied taxonomy tables in this file
+    technical sector namespace: technical_sector
+    source artifact namespace: compute
+  20.
+    bottleneck id: CLD-COMMITMENT-FORECAST
+    title: Commitment and demand forecasting mismatch
+    annex: compute-services
+    candidate problem sector id: KEDDEH-CLD-COMMITMENT-FORECAST
+    technical sector candidates:
+      1.
+        id: S13
+        canonical name: Cloud, Mesh, and Deployment
+      2.
+        id: S16
+        canonical name: Mining, Compute, and Economics
+    application sector candidates:
+      1.
+        canonical name: Cloud hosting and DevOps
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+    foundry candidates:
+      1.
+        canonical name: Business & Enterprise Structure Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      2.
+        canonical name: Server Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+    function id: unknown / not provided
+    function mapping status: UNRESOLVED: canonical source contains no function registry. Delivery and analyst are team roles, not inferred canonical function IDs.
+    mapping basis: Cloud demand economics and downside budget.
+    mapping status: REVIEWER_INFERENCE_NOT_ADOPTED
+    ambiguity: Multiple candidates are nonexclusive dependencies; implementation owner must choose lead/accountable scope after reading the relevant sector dossier. No unique mapping forced.
+    taxonomy reference: Owner-supplied taxonomy tables in this file
+    technical sector namespace: technical_sector
+    source artifact namespace: compute
+  21.
+    bottleneck id: CLD-EGRESS-ECONOMICS
+    title: Data movement cost and exit friction
+    annex: compute-services
+    candidate problem sector id: KEDDEH-CLD-EGRESS-ECONOMICS
+    technical sector candidates:
+      1.
+        id: S04
+        canonical name: KERA Server, Network, and DNS
+      2.
+        id: S13
+        canonical name: Cloud, Mesh, and Deployment
+      3.
+        id: S16
+        canonical name: Mining, Compute, and Economics
+    application sector candidates:
+      1.
+        canonical name: Cloud hosting and DevOps
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+      2.
+        canonical name: Telecommunications and DNS services
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+    foundry candidates:
+      1.
+        canonical name: Growing Mesh Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      2.
+        canonical name: Server Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      3.
+        canonical name: Business & Enterprise Structure Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+    function id: unknown / not provided
+    function mapping status: UNRESOLVED: canonical source contains no function registry. Delivery and analyst are team roles, not inferred canonical function IDs.
+    mapping basis: Transfer cost, topology and hosting economics.
+    mapping status: REVIEWER_INFERENCE_NOT_ADOPTED
+    ambiguity: Multiple candidates are nonexclusive dependencies; implementation owner must choose lead/accountable scope after reading the relevant sector dossier. No unique mapping forced.
+    taxonomy reference: Owner-supplied taxonomy tables in this file
+    technical sector namespace: technical_sector
+    source artifact namespace: compute
+  22.
+    bottleneck id: CLD-SEMANTIC-PORTABILITY
+    title: Managed-service semantic portability
+    annex: compute-services
+    candidate problem sector id: KEDDEH-CLD-SEMANTIC-PORTABILITY
+    technical sector candidates:
+      1.
+        id: S11
+        canonical name: Backend, API, and Service Runtime
+      2.
+        id: S13
+        canonical name: Cloud, Mesh, and Deployment
+      3.
+        id: S05
+        canonical name: Workbook OS, KDRIVE, and Web4
+    application sector candidates:
+      1.
+        canonical name: Enterprise software and SaaS
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+      2.
+        canonical name: Cloud hosting and DevOps
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+    foundry candidates:
+      1.
+        canonical name: Server Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      2.
+        canonical name: Usable Software Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      3.
+        canonical name: File System Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+    function id: unknown / not provided
+    function mapping status: UNRESOLVED: canonical source contains no function registry. Delivery and analyst are team roles, not inferred canonical function IDs.
+    mapping basis: Managed-service contracts and data/application movement.
+    mapping status: REVIEWER_INFERENCE_NOT_ADOPTED
+    ambiguity: Multiple candidates are nonexclusive dependencies; implementation owner must choose lead/accountable scope after reading the relevant sector dossier. No unique mapping forced.
+    taxonomy reference: Owner-supplied taxonomy tables in this file
+    technical sector namespace: technical_sector
+    source artifact namespace: compute
+  23.
+    bottleneck id: CLD-CAPACITY-ADMISSION
+    title: Cloud quota and capacity admission failures
+    annex: compute-services
+    candidate problem sector id: KEDDEH-CLD-CAPACITY-ADMISSION
+    technical sector candidates:
+      1.
+        id: S07
+        canonical name: KCPU Routing, Software Nodes, and Update Lanes
+      2.
+        id: S13
+        canonical name: Cloud, Mesh, and Deployment
+    application sector candidates:
+      1.
+        canonical name: Cloud hosting and DevOps
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+    foundry candidates:
+      1.
+        canonical name: Server Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      2.
+        canonical name: Growing Mesh Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+    function id: unknown / not provided
+    function mapping status: UNRESOLVED: canonical source contains no function registry. Delivery and analyst are team roles, not inferred canonical function IDs.
+    mapping basis: Scheduling and external cloud-admission dependencies.
+    mapping status: REVIEWER_INFERENCE_NOT_ADOPTED
+    ambiguity: Multiple candidates are nonexclusive dependencies; implementation owner must choose lead/accountable scope after reading the relevant sector dossier. No unique mapping forced.
+    taxonomy reference: Owner-supplied taxonomy tables in this file
+    technical sector namespace: technical_sector
+    source artifact namespace: compute
+  24.
+    bottleneck id: CLD-PREDEPLOY-COST
+    title: Pre-deployment architecture cost uncertainty
+    annex: compute-services
+    candidate problem sector id: KEDDEH-CLD-PREDEPLOY-COST
+    technical sector candidates:
+      1.
+        id: S13
+        canonical name: Cloud, Mesh, and Deployment
+      2.
+        id: S16
+        canonical name: Mining, Compute, and Economics
+    application sector candidates:
+      1.
+        canonical name: Cloud hosting and DevOps
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+    foundry candidates:
+      1.
+        canonical name: Business & Enterprise Structure Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      2.
+        canonical name: Server Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+    function id: unknown / not provided
+    function mapping status: UNRESOLVED: canonical source contains no function registry. Delivery and analyst are team roles, not inferred canonical function IDs.
+    mapping basis: Architecture cost forecast; distinguish it from observed cost attribution.
+    mapping status: REVIEWER_INFERENCE_NOT_ADOPTED
+    ambiguity: Multiple candidates are nonexclusive dependencies; implementation owner must choose lead/accountable scope after reading the relevant sector dossier. No unique mapping forced.
+    taxonomy reference: Owner-supplied taxonomy tables in this file
+    technical sector namespace: technical_sector
+    source artifact namespace: compute
+  25.
+    bottleneck id: DST-QUORUM-SAFETY
+    title: Partition and quorum safety trade-offs
+    annex: compute-services
+    candidate problem sector id: KEDDEH-DST-QUORUM-SAFETY
+    technical sector candidates:
+      1.
+        id: S08
+        canonical name: Governance, Proof, and Constraints
+      2.
+        id: S13
+        canonical name: Cloud, Mesh, and Deployment
+      3.
+        id: S11
+        canonical name: Backend, API, and Service Runtime
+    application sector candidates:
+      1.
+        canonical name: Enterprise software and SaaS
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+      2.
+        canonical name: Critical infrastructure and emergency continuity
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+    foundry candidates:
+      1.
+        canonical name: Server Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      2.
+        canonical name: Growing Mesh Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+    function id: unknown / not provided
+    function mapping status: UNRESOLVED: canonical source contains no function registry. Delivery and analyst are team roles, not inferred canonical function IDs.
+    mapping basis: Distributed state safety and deployment topology; preserve quorum availability trade-off.
+    mapping status: REVIEWER_INFERENCE_NOT_ADOPTED
+    ambiguity: Multiple candidates are nonexclusive dependencies; implementation owner must choose lead/accountable scope after reading the relevant sector dossier. No unique mapping forced.
+    taxonomy reference: Owner-supplied taxonomy tables in this file
+    technical sector namespace: technical_sector
+    source artifact namespace: compute
+  26.
+    bottleneck id: DST-END-TO-END-IDEMPOTENCY
+    title: Duplicate side effects across message boundaries
+    annex: compute-services
+    candidate problem sector id: KEDDEH-DST-END-TO-END-IDEMPOTENCY
+    technical sector candidates:
+      1.
+        id: S11
+        canonical name: Backend, API, and Service Runtime
+      2.
+        id: S08
+        canonical name: Governance, Proof, and Constraints
+    application sector candidates:
+      1.
+        canonical name: Enterprise software and SaaS
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+      2.
+        canonical name: Finance and payments operations
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+    foundry candidates:
+      1.
+        canonical name: Service Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      2.
+        canonical name: Process Mastery
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+    function id: unknown / not provided
+    function mapping status: UNRESOLVED: canonical source contains no function registry. Delivery and analyst are team roles, not inferred canonical function IDs.
+    mapping basis: Business-effect atomicity and evidence; not merely broker deduplication.
+    mapping status: REVIEWER_INFERENCE_NOT_ADOPTED
+    ambiguity: Multiple candidates are nonexclusive dependencies; implementation owner must choose lead/accountable scope after reading the relevant sector dossier. No unique mapping forced.
+    taxonomy reference: Owner-supplied taxonomy tables in this file
+    technical sector namespace: technical_sector
+    source artifact namespace: compute
+  27.
+    bottleneck id: DST-OVERLOAD-CASCADES
+    title: Retry and concurrency overload cascades
+    annex: compute-services
+    candidate problem sector id: KEDDEH-DST-OVERLOAD-CASCADES
+    technical sector candidates:
+      1.
+        id: S11
+        canonical name: Backend, API, and Service Runtime
+      2.
+        id: S07
+        canonical name: KCPU Routing, Software Nodes, and Update Lanes
+      3.
+        id: S04
+        canonical name: KERA Server, Network, and DNS
+    application sector candidates:
+      1.
+        canonical name: Enterprise software and SaaS
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+      2.
+        canonical name: Telecommunications and DNS services
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+    foundry candidates:
+      1.
+        canonical name: Server Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      2.
+        canonical name: Service Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+    function id: unknown / not provided
+    function mapping status: UNRESOLVED: canonical source contains no function registry. Delivery and analyst are team roles, not inferred canonical function IDs.
+    mapping basis: Service admission/concurrency and network overload.
+    mapping status: REVIEWER_INFERENCE_NOT_ADOPTED
+    ambiguity: Multiple candidates are nonexclusive dependencies; implementation owner must choose lead/accountable scope after reading the relevant sector dossier. No unique mapping forced.
+    taxonomy reference: Owner-supplied taxonomy tables in this file
+    technical sector namespace: technical_sector
+    source artifact namespace: compute
+  28.
+    bottleneck id: DST-TIME-ORDERING
+    title: Clock and event-ordering assumptions
+    annex: compute-services
+    candidate problem sector id: KEDDEH-DST-TIME-ORDERING
+    technical sector candidates:
+      1.
+        id: S08
+        canonical name: Governance, Proof, and Constraints
+      2.
+        id: S11
+        canonical name: Backend, API, and Service Runtime
+      3.
+        id: S13
+        canonical name: Cloud, Mesh, and Deployment
+    application sector candidates:
+      1.
+        canonical name: Enterprise software and SaaS
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+      2.
+        canonical name: Critical infrastructure and emergency continuity
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+    foundry candidates:
+      1.
+        canonical name: Server Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      2.
+        canonical name: Growing Mesh Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+    function id: unknown / not provided
+    function mapping status: UNRESOLVED: canonical source contains no function registry. Delivery and analyst are team roles, not inferred canonical function IDs.
+    mapping basis: Temporal consistency contracts across distributed services.
+    mapping status: REVIEWER_INFERENCE_NOT_ADOPTED
+    ambiguity: Multiple candidates are nonexclusive dependencies; implementation owner must choose lead/accountable scope after reading the relevant sector dossier. No unique mapping forced.
+    taxonomy reference: Owner-supplied taxonomy tables in this file
+    technical sector namespace: technical_sector
+    source artifact namespace: compute
+  29.
+    bottleneck id: DST-CROSS-SERVICE-ATOMICITY
+    title: Cross-service transaction compensation
+    annex: compute-services
+    candidate problem sector id: KEDDEH-DST-CROSS-SERVICE-ATOMICITY
+    technical sector candidates:
+      1.
+        id: S11
+        canonical name: Backend, API, and Service Runtime
+      2.
+        id: S08
+        canonical name: Governance, Proof, and Constraints
+    application sector candidates:
+      1.
+        canonical name: Enterprise software and SaaS
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+      2.
+        canonical name: Finance and payments operations
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+    foundry candidates:
+      1.
+        canonical name: Service Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      2.
+        canonical name: Process Mastery
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+    function id: unknown / not provided
+    function mapping status: UNRESOLVED: canonical source contains no function registry. Delivery and analyst are team roles, not inferred canonical function IDs.
+    mapping basis: Saga/business compensation is a workflow boundary separate from message idempotency.
+    mapping status: REVIEWER_INFERENCE_NOT_ADOPTED
+    ambiguity: Multiple candidates are nonexclusive dependencies; implementation owner must choose lead/accountable scope after reading the relevant sector dossier. No unique mapping forced.
+    taxonomy reference: Owner-supplied taxonomy tables in this file
+    technical sector namespace: technical_sector
+    source artifact namespace: compute
+  30.
+    bottleneck id: DST-CACHE-COHERENCE
+    title: Cache invalidation and stale-result control
+    annex: compute-services
+    candidate problem sector id: KEDDEH-DST-CACHE-COHERENCE
+    technical sector candidates:
+      1.
+        id: S12
+        canonical name: Virtual Memory and Sparse Storage
+      2.
+        id: S11
+        canonical name: Backend, API, and Service Runtime
+    application sector candidates:
+      1.
+        canonical name: Enterprise software and SaaS
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+    foundry candidates:
+      1.
+        canonical name: File System Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      2.
+        canonical name: Service Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+    function id: unknown / not provided
+    function mapping status: UNRESOLVED: canonical source contains no function registry. Delivery and analyst are team roles, not inferred canonical function IDs.
+    mapping basis: Storage/cache freshness versus service latency.
+    mapping status: REVIEWER_INFERENCE_NOT_ADOPTED
+    ambiguity: Multiple candidates are nonexclusive dependencies; implementation owner must choose lead/accountable scope after reading the relevant sector dossier. No unique mapping forced.
+    taxonomy reference: Owner-supplied taxonomy tables in this file
+    technical sector namespace: technical_sector
+    source artifact namespace: compute
+  31.
+    bottleneck id: REL-CONTROL-DEPENDENCIES
+    title: Hidden control-plane recovery dependencies
+    annex: compute-services
+    candidate problem sector id: KEDDEH-REL-CONTROL-DEPENDENCIES
+    technical sector candidates:
+      1.
+        id: S04
+        canonical name: KERA Server, Network, and DNS
+      2.
+        id: S09
+        canonical name: Security, Hardgate, and Identity
+      3.
+        id: S13
+        canonical name: Cloud, Mesh, and Deployment
+    application sector candidates:
+      1.
+        canonical name: Cloud hosting and DevOps
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+      2.
+        canonical name: Critical infrastructure and emergency continuity
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+    foundry candidates:
+      1.
+        canonical name: Server Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      2.
+        canonical name: Growing Mesh Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+    function id: unknown / not provided
+    function mapping status: UNRESOLVED: canonical source contains no function registry. Delivery and analyst are team roles, not inferred canonical function IDs.
+    mapping basis: DNS, identity and provisioning dependency recovery.
+    mapping status: REVIEWER_INFERENCE_NOT_ADOPTED
+    ambiguity: Multiple candidates are nonexclusive dependencies; implementation owner must choose lead/accountable scope after reading the relevant sector dossier. No unique mapping forced.
+    taxonomy reference: Owner-supplied taxonomy tables in this file
+    technical sector namespace: technical_sector
+    source artifact namespace: compute
+  32.
+    bottleneck id: REL-RESTORE-VALIDATION
+    title: Backup success without application recoverability
+    annex: compute-services
+    candidate problem sector id: KEDDEH-REL-RESTORE-VALIDATION
+    technical sector candidates:
+      1.
+        id: S12
+        canonical name: Virtual Memory and Sparse Storage
+      2.
+        id: S13
+        canonical name: Cloud, Mesh, and Deployment
+      3.
+        id: S08
+        canonical name: Governance, Proof, and Constraints
+    application sector candidates:
+      1.
+        canonical name: Cloud hosting and DevOps
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+      2.
+        canonical name: Critical infrastructure and emergency continuity
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+    foundry candidates:
+      1.
+        canonical name: File System Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      2.
+        canonical name: Server Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+    function id: unknown / not provided
+    function mapping status: UNRESOLVED: canonical source contains no function registry. Delivery and analyst are team roles, not inferred canonical function IDs.
+    mapping basis: Restoration and evidence-backed application recovery.
+    mapping status: REVIEWER_INFERENCE_NOT_ADOPTED
+    ambiguity: Multiple candidates are nonexclusive dependencies; implementation owner must choose lead/accountable scope after reading the relevant sector dossier. No unique mapping forced.
+    taxonomy reference: Owner-supplied taxonomy tables in this file
+    technical sector namespace: technical_sector
+    source artifact namespace: compute
+  33.
+    bottleneck id: REL-TELEMETRY-ECONOMICS
+    title: Observability cardinality cost and blind spots
+    annex: compute-services
+    candidate problem sector id: KEDDEH-REL-TELEMETRY-ECONOMICS
+    technical sector candidates:
+      1.
+        id: S08
+        canonical name: Governance, Proof, and Constraints
+      2.
+        id: S11
+        canonical name: Backend, API, and Service Runtime
+      3.
+        id: S16
+        canonical name: Mining, Compute, and Economics
+    application sector candidates:
+      1.
+        canonical name: Enterprise software and SaaS
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+      2.
+        canonical name: Cloud hosting and DevOps
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+    foundry candidates:
+      1.
+        canonical name: Server Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      2.
+        canonical name: Service Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+    function id: unknown / not provided
+    function mapping status: UNRESOLVED: canonical source contains no function registry. Delivery and analyst are team roles, not inferred canonical function IDs.
+    mapping basis: Evidence retention and observability economics; distinct from network carriage.
+    mapping status: REVIEWER_INFERENCE_NOT_ADOPTED
+    ambiguity: Multiple candidates are nonexclusive dependencies; implementation owner must choose lead/accountable scope after reading the relevant sector dossier. No unique mapping forced.
+    taxonomy reference: Owner-supplied taxonomy tables in this file
+    technical sector namespace: technical_sector
+    source artifact namespace: compute
+  34.
+    bottleneck id: REL-INCIDENT-DIAGNOSIS
+    title: Cross-system incident diagnosis latency
+    annex: compute-services
+    candidate problem sector id: KEDDEH-REL-INCIDENT-DIAGNOSIS
+    technical sector candidates:
+      1.
+        id: S11
+        canonical name: Backend, API, and Service Runtime
+      2.
+        id: S08
+        canonical name: Governance, Proof, and Constraints
+      3.
+        id: S19
+        canonical name: Agent CLI and Codex Fleet
+    application sector candidates:
+      1.
+        canonical name: Enterprise software and SaaS
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+      2.
+        canonical name: Cloud hosting and DevOps
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+    foundry candidates:
+      1.
+        canonical name: Server Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      2.
+        canonical name: Process Mastery
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+    function id: unknown / not provided
+    function mapping status: UNRESOLVED: canonical source contains no function registry. Delivery and analyst are team roles, not inferred canonical function IDs.
+    mapping basis: Operational diagnosis and scoped agent assistance.
+    mapping status: REVIEWER_INFERENCE_NOT_ADOPTED
+    ambiguity: Multiple candidates are nonexclusive dependencies; implementation owner must choose lead/accountable scope after reading the relevant sector dossier. No unique mapping forced.
+    taxonomy reference: Owner-supplied taxonomy tables in this file
+    technical sector namespace: technical_sector
+    source artifact namespace: compute
+  35.
+    bottleneck id: REL-CHANGE-CONTAINMENT
+    title: Configuration and release blast radius
+    annex: compute-services
+    candidate problem sector id: KEDDEH-REL-CHANGE-CONTAINMENT
+    technical sector candidates:
+      1.
+        id: S13
+        canonical name: Cloud, Mesh, and Deployment
+      2.
+        id: S08
+        canonical name: Governance, Proof, and Constraints
+      3.
+        id: S09
+        canonical name: Security, Hardgate, and Identity
+    application sector candidates:
+      1.
+        canonical name: Cloud hosting and DevOps
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+      2.
+        canonical name: Critical infrastructure and emergency continuity
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+    foundry candidates:
+      1.
+        canonical name: Server Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      2.
+        canonical name: Usable Software Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+    function id: unknown / not provided
+    function mapping status: UNRESOLVED: canonical source contains no function registry. Delivery and analyst are team roles, not inferred canonical function IDs.
+    mapping basis: Deployment safety and permission/blast-radius control.
+    mapping status: REVIEWER_INFERENCE_NOT_ADOPTED
+    ambiguity: Multiple candidates are nonexclusive dependencies; implementation owner must choose lead/accountable scope after reading the relevant sector dossier. No unique mapping forced.
+    taxonomy reference: Owner-supplied taxonomy tables in this file
+    technical sector namespace: technical_sector
+    source artifact namespace: compute
+  36.
+    bottleneck id: DEV-BUILD-LATENCY
+    title: Build and CI feedback latency
+    annex: compute-services
+    candidate problem sector id: KEDDEH-DEV-BUILD-LATENCY
+    technical sector candidates:
+      1.
+        id: S19
+        canonical name: Agent CLI and Codex Fleet
+      2.
+        id: S13
+        canonical name: Cloud, Mesh, and Deployment
+    application sector candidates:
+      1.
+        canonical name: AI agents and developer tooling
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+      2.
+        canonical name: Cloud hosting and DevOps
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+    foundry candidates:
+      1.
+        canonical name: Usable Software Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      2.
+        canonical name: Process Mastery
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+    function id: unknown / not provided
+    function mapping status: UNRESOLVED: canonical source contains no function registry. Delivery and analyst are team roles, not inferred canonical function IDs.
+    mapping basis: Developer toolchain and build execution.
+    mapping status: REVIEWER_INFERENCE_NOT_ADOPTED
+    ambiguity: Multiple candidates are nonexclusive dependencies; implementation owner must choose lead/accountable scope after reading the relevant sector dossier. No unique mapping forced.
+    taxonomy reference: Owner-supplied taxonomy tables in this file
+    technical sector namespace: technical_sector
+    source artifact namespace: compute
+  37.
+    bottleneck id: DEV-FLAKY-TESTS
+    title: Flaky-test signal contamination
+    annex: compute-services
+    candidate problem sector id: KEDDEH-DEV-FLAKY-TESTS
+    technical sector candidates:
+      1.
+        id: S19
+        canonical name: Agent CLI and Codex Fleet
+      2.
+        id: S18
+        canonical name: Research, Proof, and Publication
+    application sector candidates:
+      1.
+        canonical name: AI agents and developer tooling
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+    foundry candidates:
+      1.
+        canonical name: Usable Software Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      2.
+        canonical name: Research Mastery
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+    function id: unknown / not provided
+    function mapping status: UNRESOLVED: canonical source contains no function registry. Delivery and analyst are team roles, not inferred canonical function IDs.
+    mapping basis: Tooling feedback and evidence reliability.
+    mapping status: REVIEWER_INFERENCE_NOT_ADOPTED
+    ambiguity: Multiple candidates are nonexclusive dependencies; implementation owner must choose lead/accountable scope after reading the relevant sector dossier. No unique mapping forced.
+    taxonomy reference: Owner-supplied taxonomy tables in this file
+    technical sector namespace: technical_sector
+    source artifact namespace: compute
+  38.
+    bottleneck id: DEV-HERMETIC-ENVIRONMENTS
+    title: Non-reproducible build and test environments
+    annex: compute-services
+    candidate problem sector id: KEDDEH-DEV-HERMETIC-ENVIRONMENTS
+    technical sector candidates:
+      1.
+        id: S19
+        canonical name: Agent CLI and Codex Fleet
+      2.
+        id: S13
+        canonical name: Cloud, Mesh, and Deployment
+      3.
+        id: S18
+        canonical name: Research, Proof, and Publication
+    application sector candidates:
+      1.
+        canonical name: AI agents and developer tooling
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+      2.
+        canonical name: Research computing and scientific simulation
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+    foundry candidates:
+      1.
+        canonical name: Usable Software Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      2.
+        canonical name: Server Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      3.
+        canonical name: Research Mastery
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+    function id: unknown / not provided
+    function mapping status: UNRESOLVED: canonical source contains no function registry. Delivery and analyst are team roles, not inferred canonical function IDs.
+    mapping basis: Reproducible tooling environments; distinct from scientific reanalysis.
+    mapping status: REVIEWER_INFERENCE_NOT_ADOPTED
+    ambiguity: Multiple candidates are nonexclusive dependencies; implementation owner must choose lead/accountable scope after reading the relevant sector dossier. No unique mapping forced.
+    taxonomy reference: Owner-supplied taxonomy tables in this file
+    technical sector namespace: technical_sector
+    source artifact namespace: compute
+  39.
+    bottleneck id: DEV-INFRA-DRIFT
+    title: Desired versus actual infrastructure drift
+    annex: compute-services
+    candidate problem sector id: KEDDEH-DEV-INFRA-DRIFT
+    technical sector candidates:
+      1.
+        id: S13
+        canonical name: Cloud, Mesh, and Deployment
+      2.
+        id: S08
+        canonical name: Governance, Proof, and Constraints
+    application sector candidates:
+      1.
+        canonical name: Cloud hosting and DevOps
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+    foundry candidates:
+      1.
+        canonical name: Server Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      2.
+        canonical name: Process Mastery
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+    function id: unknown / not provided
+    function mapping status: UNRESOLVED: canonical source contains no function registry. Delivery and analyst are team roles, not inferred canonical function IDs.
+    mapping basis: Desired/observed deployment state and governance.
+    mapping status: REVIEWER_INFERENCE_NOT_ADOPTED
+    ambiguity: Multiple candidates are nonexclusive dependencies; implementation owner must choose lead/accountable scope after reading the relevant sector dossier. No unique mapping forced.
+    taxonomy reference: Owner-supplied taxonomy tables in this file
+    technical sector namespace: technical_sector
+    source artifact namespace: compute
+  40.
+    bottleneck id: DEV-SCHEMA-EVOLUTION
+    title: Online schema and contract migration safety
+    annex: compute-services
+    candidate problem sector id: KEDDEH-DEV-SCHEMA-EVOLUTION
+    technical sector candidates:
+      1.
+        id: S11
+        canonical name: Backend, API, and Service Runtime
+      2.
+        id: S12
+        canonical name: Virtual Memory and Sparse Storage
+      3.
+        id: S05
+        canonical name: Workbook OS, KDRIVE, and Web4
+    application sector candidates:
+      1.
+        canonical name: Enterprise software and SaaS
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+      2.
+        canonical name: Cloud hosting and DevOps
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+    foundry candidates:
+      1.
+        canonical name: File System Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      2.
+        canonical name: Usable Software Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+    function id: unknown / not provided
+    function mapping status: UNRESOLVED: canonical source contains no function registry. Delivery and analyst are team roles, not inferred canonical function IDs.
+    mapping basis: Live data/API contract migration.
+    mapping status: REVIEWER_INFERENCE_NOT_ADOPTED
+    ambiguity: Multiple candidates are nonexclusive dependencies; implementation owner must choose lead/accountable scope after reading the relevant sector dossier. No unique mapping forced.
+    taxonomy reference: Owner-supplied taxonomy tables in this file
+    technical sector namespace: technical_sector
+    source artifact namespace: compute
+  41.
+    bottleneck id: DEV-SELF-SERVICE
+    title: Developer self-service and platform friction
+    annex: compute-services
+    candidate problem sector id: KEDDEH-DEV-SELF-SERVICE
+    technical sector candidates:
+      1.
+        id: S19
+        canonical name: Agent CLI and Codex Fleet
+      2.
+        id: S05
+        canonical name: Workbook OS, KDRIVE, and Web4
+      3.
+        id: S10
+        canonical name: UI, Dashboard, and AI Shell
+    application sector candidates:
+      1.
+        canonical name: AI agents and developer tooling
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+      2.
+        canonical name: Workspace operations and HR
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+    foundry candidates:
+      1.
+        canonical name: Workspace Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      2.
+        canonical name: Usable Software Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      3.
+        canonical name: HCI Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+    function id: unknown / not provided
+    function mapping status: UNRESOLVED: canonical source contains no function registry. Delivery and analyst are team roles, not inferred canonical function IDs.
+    mapping basis: Developer workflow, workspace and interaction boundary.
+    mapping status: REVIEWER_INFERENCE_NOT_ADOPTED
+    ambiguity: Multiple candidates are nonexclusive dependencies; implementation owner must choose lead/accountable scope after reading the relevant sector dossier. No unique mapping forced.
+    taxonomy reference: Owner-supplied taxonomy tables in this file
+    technical sector namespace: technical_sector
+    source artifact namespace: compute
+  42.
+    bottleneck id: DEV-VERSION-SKEW
+    title: Dependency and platform version-skew management
+    annex: compute-services
+    candidate problem sector id: KEDDEH-DEV-VERSION-SKEW
+    technical sector candidates:
+      1.
+        id: S13
+        canonical name: Cloud, Mesh, and Deployment
+      2.
+        id: S19
+        canonical name: Agent CLI and Codex Fleet
+    application sector candidates:
+      1.
+        canonical name: AI agents and developer tooling
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+      2.
+        canonical name: Cloud hosting and DevOps
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+    foundry candidates:
+      1.
+        canonical name: Server Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      2.
+        canonical name: Usable Software Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+    function id: unknown / not provided
+    function mapping status: UNRESOLVED: canonical source contains no function registry. Delivery and analyst are team roles, not inferred canonical function IDs.
+    mapping basis: Platform/toolchain compatibility matrix.
+    mapping status: REVIEWER_INFERENCE_NOT_ADOPTED
+    ambiguity: Multiple candidates are nonexclusive dependencies; implementation owner must choose lead/accountable scope after reading the relevant sector dossier. No unique mapping forced.
+    taxonomy reference: Owner-supplied taxonomy tables in this file
+    technical sector namespace: technical_sector
+    source artifact namespace: compute
+  43.
+    bottleneck id: OPS-RUNBOOK-TOIL
+    title: Repetitive operational runbook toil
+    annex: compute-services
+    candidate problem sector id: KEDDEH-OPS-RUNBOOK-TOIL
+    technical sector candidates:
+      1.
+        id: S19
+        canonical name: Agent CLI and Codex Fleet
+      2.
+        id: S11
+        canonical name: Backend, API, and Service Runtime
+      3.
+        id: S08
+        canonical name: Governance, Proof, and Constraints
+    application sector candidates:
+      1.
+        canonical name: Cloud hosting and DevOps
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+      2.
+        canonical name: Workspace operations and HR
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+    foundry candidates:
+      1.
+        canonical name: Process Mastery
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      2.
+        canonical name: Service Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      3.
+        canonical name: Agentics Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+    function id: unknown / not provided
+    function mapping status: UNRESOLVED: canonical source contains no function registry. Delivery and analyst are team roles, not inferred canonical function IDs.
+    mapping basis: Bounded operational automation with explicit actuation and proof gates.
+    mapping status: REVIEWER_INFERENCE_NOT_ADOPTED
+    ambiguity: Multiple candidates are nonexclusive dependencies; implementation owner must choose lead/accountable scope after reading the relevant sector dossier. No unique mapping forced.
+    taxonomy reference: Owner-supplied taxonomy tables in this file
+    technical sector namespace: technical_sector
+    source artifact namespace: compute
+  44.
+    bottleneck id: ai-grounded-factuality
+    title: Grounded answer reliability
+    annex: ai-data
+    candidate problem sector id: proposed-sector-grounded-ai-assurance
+    technical sector candidates:
+      1.
+        id: S03
+        canonical name: IL-LLM Learning and Knowledge
+      2.
+        id: S08
+        canonical name: Governance, Proof, and Constraints
+      3.
+        id: S18
+        canonical name: Research, Proof, and Publication
+    application sector candidates:
+      1.
+        canonical name: AI agents and developer tooling
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+      2.
+        canonical name: Customer support and service fulfilment
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+    foundry candidates:
+      1.
+        canonical name: Agentics Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      2.
+        canonical name: Research Mastery
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+    function id: unknown / not provided
+    function mapping status: UNRESOLVED: canonical source contains no function registry. Delivery and analyst are team roles, not inferred canonical function IDs.
+    mapping basis: Grounded knowledge and claim verification. Original proposed foundry labels have been expanded to exact canonical names; association itself remains inferred.
+    mapping status: REVIEWER_INFERENCE_NOT_ADOPTED
+    ambiguity: Multiple candidates are nonexclusive dependencies; implementation owner must choose lead/accountable scope after reading the relevant sector dossier. No unique mapping forced.
+    taxonomy reference: Owner-supplied taxonomy tables in this file
+    technical sector namespace: technical_sector
+    source artifact namespace: ai_data
+  45.
+    bottleneck id: ai-long-workflow-reliability
+    title: Long workflow reliability
+    annex: ai-data
+    candidate problem sector id: proposed-sector-agent-workflow-reliability
+    technical sector candidates:
+      1.
+        id: S01
+        canonical name: BRAINK Core Runtime
+      2.
+        id: S08
+        canonical name: Governance, Proof, and Constraints
+      3.
+        id: S19
+        canonical name: Agent CLI and Codex Fleet
+    application sector candidates:
+      1.
+        canonical name: AI agents and developer tooling
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+      2.
+        canonical name: Workspace operations and HR
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+    foundry candidates:
+      1.
+        canonical name: Agentics Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      2.
+        canonical name: Process Mastery
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+    function id: unknown / not provided
+    function mapping status: UNRESOLVED: canonical source contains no function registry. Delivery and analyst are team roles, not inferred canonical function IDs.
+    mapping basis: Agent continuation and multi-step tool execution. Original proposed foundry labels have been expanded to exact canonical names; association itself remains inferred.
+    mapping status: REVIEWER_INFERENCE_NOT_ADOPTED
+    ambiguity: Multiple candidates are nonexclusive dependencies; implementation owner must choose lead/accountable scope after reading the relevant sector dossier. No unique mapping forced.
+    taxonomy reference: Owner-supplied taxonomy tables in this file
+    technical sector namespace: technical_sector
+    source artifact namespace: ai_data
+  46.
+    bottleneck id: ai-prompt-injection-containment
+    title: Prompt injection containment
+    annex: ai-data
+    candidate problem sector id: proposed-sector-agent-input-security
+    technical sector candidates:
+      1.
+        id: S09
+        canonical name: Security, Hardgate, and Identity
+      2.
+        id: S08
+        canonical name: Governance, Proof, and Constraints
+      3.
+        id: S19
+        canonical name: Agent CLI and Codex Fleet
+    application sector candidates:
+      1.
+        canonical name: AI agents and developer tooling
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+      2.
+        canonical name: Cybersecurity and identity
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+    foundry candidates:
+      1.
+        canonical name: Agentics Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      2.
+        canonical name: Server Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+    function id: unknown / not provided
+    function mapping status: UNRESOLVED: canonical source contains no function registry. Delivery and analyst are team roles, not inferred canonical function IDs.
+    mapping basis: Untrusted-input containment and scoped actuation. Original proposed foundry labels have been expanded to exact canonical names; association itself remains inferred.
+    mapping status: REVIEWER_INFERENCE_NOT_ADOPTED
+    ambiguity: Multiple candidates are nonexclusive dependencies; implementation owner must choose lead/accountable scope after reading the relevant sector dossier. No unique mapping forced.
+    taxonomy reference: Owner-supplied taxonomy tables in this file
+    technical sector namespace: technical_sector
+    source artifact namespace: ai_data
+  47.
+    bottleneck id: ai-delegated-identity
+    title: Agent identity and authority
+    annex: ai-data
+    candidate problem sector id: proposed-sector-agent-identity-authorization
+    technical sector candidates:
+      1.
+        id: S01
+        canonical name: BRAINK Core Runtime
+      2.
+        id: S09
+        canonical name: Security, Hardgate, and Identity
+      3.
+        id: S08
+        canonical name: Governance, Proof, and Constraints
+    application sector candidates:
+      1.
+        canonical name: AI agents and developer tooling
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+      2.
+        canonical name: Cybersecurity and identity
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+    foundry candidates:
+      1.
+        canonical name: Agentics Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      2.
+        canonical name: Server Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      3.
+        canonical name: Business & Enterprise Structure Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+    function id: unknown / not provided
+    function mapping status: UNRESOLVED: canonical source contains no function registry. Delivery and analyst are team roles, not inferred canonical function IDs.
+    mapping basis: Anchored identity and delegated authority. Original proposed foundry labels have been expanded to exact canonical names; association itself remains inferred.
+    mapping status: REVIEWER_INFERENCE_NOT_ADOPTED
+    ambiguity: Multiple candidates are nonexclusive dependencies; implementation owner must choose lead/accountable scope after reading the relevant sector dossier. No unique mapping forced.
+    taxonomy reference: Owner-supplied taxonomy tables in this file
+    technical sector namespace: technical_sector
+    source artifact namespace: ai_data
+  48.
+    bottleneck id: ai-production-drift
+    title: AI production drift
+    annex: ai-data
+    candidate problem sector id: proposed-sector-ai-lifecycle-observability
+    technical sector candidates:
+      1.
+        id: S03
+        canonical name: IL-LLM Learning and Knowledge
+      2.
+        id: S06
+        canonical name: Bilateral Polygon and Mirror Learning
+      3.
+        id: S08
+        canonical name: Governance, Proof, and Constraints
+    application sector candidates:
+      1.
+        canonical name: AI agents and developer tooling
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+      2.
+        canonical name: Customer support and service fulfilment
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+    foundry candidates:
+      1.
+        canonical name: Agentics Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      2.
+        canonical name: Service Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+    function id: unknown / not provided
+    function mapping status: UNRESOLVED: canonical source contains no function registry. Delivery and analyst are team roles, not inferred canonical function IDs.
+    mapping basis: Model/data shift and governed requalification; S06 is a candidate adaptation-control bridge. Original proposed foundry labels have been expanded to exact canonical names; association itself remains inferred.
+    mapping status: REVIEWER_INFERENCE_NOT_ADOPTED
+    ambiguity: Multiple candidates are nonexclusive dependencies; implementation owner must choose lead/accountable scope after reading the relevant sector dossier. No unique mapping forced.
+    taxonomy reference: Owner-supplied taxonomy tables in this file
+    technical sector namespace: technical_sector
+    source artifact namespace: ai_data
+  49.
+    bottleneck id: ai-productivity-causal-measurement
+    title: AI productivity measurement
+    annex: ai-data
+    candidate problem sector id: proposed-sector-ai-workflow-economics
+    technical sector candidates:
+      1.
+        id: S18
+        canonical name: Research, Proof, and Publication
+      2.
+        id: S19
+        canonical name: Agent CLI and Codex Fleet
+      3.
+        id: S16
+        canonical name: Mining, Compute, and Economics
+    application sector candidates:
+      1.
+        canonical name: AI agents and developer tooling
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+      2.
+        canonical name: Workspace operations and HR
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+    foundry candidates:
+      1.
+        canonical name: Process Mastery
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      2.
+        canonical name: Business & Enterprise Structure Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+    function id: unknown / not provided
+    function mapping status: UNRESOLVED: canonical source contains no function registry. Delivery and analyst are team roles, not inferred canonical function IDs.
+    mapping basis: Causal workflow evaluation and verified unit economics. Original proposed foundry labels have been expanded to exact canonical names; association itself remains inferred.
+    mapping status: REVIEWER_INFERENCE_NOT_ADOPTED
+    ambiguity: Multiple candidates are nonexclusive dependencies; implementation owner must choose lead/accountable scope after reading the relevant sector dossier. No unique mapping forced.
+    taxonomy reference: Owner-supplied taxonomy tables in this file
+    technical sector namespace: technical_sector
+    source artifact namespace: ai_data
+  50.
+    bottleneck id: data-quality-contracts
+    title: Data quality contracts
+    annex: ai-data
+    candidate problem sector id: proposed-sector-data-quality-engineering
+    technical sector candidates:
+      1.
+        id: S05
+        canonical name: Workbook OS, KDRIVE, and Web4
+      2.
+        id: S11
+        canonical name: Backend, API, and Service Runtime
+      3.
+        id: S08
+        canonical name: Governance, Proof, and Constraints
+    application sector candidates:
+      1.
+        canonical name: Enterprise software and SaaS
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+      2.
+        canonical name: Customer support and service fulfilment
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+    foundry candidates:
+      1.
+        canonical name: Customer File Base Software Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      2.
+        canonical name: Process Mastery
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+    function id: unknown / not provided
+    function mapping status: UNRESOLVED: canonical source contains no function registry. Delivery and analyst are team roles, not inferred canonical function IDs.
+    mapping basis: Typed data workflow contracts and quality evidence. Original proposed foundry labels have been expanded to exact canonical names; association itself remains inferred.
+    mapping status: REVIEWER_INFERENCE_NOT_ADOPTED
+    ambiguity: Multiple candidates are nonexclusive dependencies; implementation owner must choose lead/accountable scope after reading the relevant sector dossier. No unique mapping forced.
+    taxonomy reference: Owner-supplied taxonomy tables in this file
+    technical sector namespace: technical_sector
+    source artifact namespace: ai_data
+  51.
+    bottleneck id: data-semantic-interoperability
+    title: Semantic interoperability
+    annex: ai-data
+    candidate problem sector id: proposed-sector-semantic-data-exchange
+    technical sector candidates:
+      1.
+        id: S02
+        canonical name: KEX Algebra and Typed State
+      2.
+        id: S05
+        canonical name: Workbook OS, KDRIVE, and Web4
+      3.
+        id: S11
+        canonical name: Backend, API, and Service Runtime
+    application sector candidates:
+      1.
+        canonical name: Enterprise software and SaaS
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+      2.
+        canonical name: Healthcare equipment and hospital infrastructure
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+    foundry candidates:
+      1.
+        canonical name: Growing Mesh Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      2.
+        canonical name: Customer File Base Software Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      3.
+        canonical name: Domain Mastery
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+    function id: unknown / not provided
+    function mapping status: UNRESOLVED: canonical source contains no function registry. Delivery and analyst are team roles, not inferred canonical function IDs.
+    mapping basis: Typed-state semantics and data/service interchange; preserve domain unit/identity meaning. Original proposed foundry labels have been expanded to exact canonical names; association itself remains inferred.
+    mapping status: REVIEWER_INFERENCE_NOT_ADOPTED
+    ambiguity: Multiple candidates are nonexclusive dependencies; implementation owner must choose lead/accountable scope after reading the relevant sector dossier. No unique mapping forced.
+    taxonomy reference: Owner-supplied taxonomy tables in this file
+    technical sector namespace: technical_sector
+    source artifact namespace: ai_data
+  52.
+    bottleneck id: data-lineage-provenance
+    title: Data lineage and provenance
+    annex: ai-data
+    candidate problem sector id: proposed-sector-data-evidence-lineage
+    technical sector candidates:
+      1.
+        id: S08
+        canonical name: Governance, Proof, and Constraints
+      2.
+        id: S18
+        canonical name: Research, Proof, and Publication
+      3.
+        id: S20
+        canonical name: Cross-Sector Synthesis and Global Ledger
+    application sector candidates:
+      1.
+        canonical name: Enterprise software and SaaS
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+      2.
+        canonical name: Legal evidence and dispute workflows
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+      3.
+        canonical name: Research computing and scientific simulation
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+    foundry candidates:
+      1.
+        canonical name: File System Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      2.
+        canonical name: Research Mastery
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      3.
+        canonical name: Customer File Base Software Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+    function id: unknown / not provided
+    function mapping status: UNRESOLVED: canonical source contains no function registry. Delivery and analyst are team roles, not inferred canonical function IDs.
+    mapping basis: Lineage/evidence across transformations. Original proposed foundry labels have been expanded to exact canonical names; association itself remains inferred.
+    mapping status: REVIEWER_INFERENCE_NOT_ADOPTED
+    ambiguity: Multiple candidates are nonexclusive dependencies; implementation owner must choose lead/accountable scope after reading the relevant sector dossier. No unique mapping forced.
+    taxonomy reference: Owner-supplied taxonomy tables in this file
+    technical sector namespace: technical_sector
+    source artifact namespace: ai_data
+  53.
+    bottleneck id: data-rights-transparency
+    title: AI data rights and transparency
+    annex: ai-data
+    candidate problem sector id: proposed-sector-ai-data-rights-diligence
+    technical sector candidates:
+      1.
+        id: S08
+        canonical name: Governance, Proof, and Constraints
+      2.
+        id: S18
+        canonical name: Research, Proof, and Publication
+      3.
+        id: S17
+        canonical name: Linguistic Process and Ethics
+    application sector candidates:
+      1.
+        canonical name: AI agents and developer tooling
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+      2.
+        canonical name: Education and technical publishing
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+    foundry candidates:
+      1.
+        canonical name: Publishing Mastery
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      2.
+        canonical name: Business & Enterprise Structure Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+    function id: unknown / not provided
+    function mapping status: UNRESOLVED: canonical source contains no function registry. Delivery and analyst are team roles, not inferred canonical function IDs.
+    mapping basis: Provenance, publishing rights and ethical scope; no inferred legal clearance. Original proposed foundry labels have been expanded to exact canonical names; association itself remains inferred.
+    mapping status: REVIEWER_INFERENCE_NOT_ADOPTED
+    ambiguity: Multiple candidates are nonexclusive dependencies; implementation owner must choose lead/accountable scope after reading the relevant sector dossier. No unique mapping forced.
+    taxonomy reference: Owner-supplied taxonomy tables in this file
+    technical sector namespace: technical_sector
+    source artifact namespace: ai_data
+  54.
+    bottleneck id: data-retention-removal
+    title: AI retention and removal
+    annex: ai-data
+    candidate problem sector id: proposed-sector-ai-data-lifecycle-privacy
+    technical sector candidates:
+      1.
+        id: S12
+        canonical name: Virtual Memory and Sparse Storage
+      2.
+        id: S05
+        canonical name: Workbook OS, KDRIVE, and Web4
+      3.
+        id: S09
+        canonical name: Security, Hardgate, and Identity
+    application sector candidates:
+      1.
+        canonical name: Enterprise software and SaaS
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+      2.
+        canonical name: Cybersecurity and identity
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+    foundry candidates:
+      1.
+        canonical name: File System Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      2.
+        canonical name: Customer File Base Software Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      3.
+        canonical name: Agentics Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+    function id: unknown / not provided
+    function mapping status: UNRESOLVED: canonical source contains no function registry. Delivery and analyst are team roles, not inferred canonical function IDs.
+    mapping basis: Storage/index retention and authorized removal boundaries. Original proposed foundry labels have been expanded to exact canonical names; association itself remains inferred.
+    mapping status: REVIEWER_INFERENCE_NOT_ADOPTED
+    ambiguity: Multiple candidates are nonexclusive dependencies; implementation owner must choose lead/accountable scope after reading the relevant sector dossier. No unique mapping forced.
+    taxonomy reference: Owner-supplied taxonomy tables in this file
+    technical sector namespace: technical_sector
+    source artifact namespace: ai_data
+  55.
+    bottleneck id: data-private-analytics-utility
+    title: Private analytics utility
+    annex: ai-data
+    candidate problem sector id: proposed-sector-privacy-preserving-analytics
+    technical sector candidates:
+      1.
+        id: S09
+        canonical name: Security, Hardgate, and Identity
+      2.
+        id: S18
+        canonical name: Research, Proof, and Publication
+    application sector candidates:
+      1.
+        canonical name: Cybersecurity and identity
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+      2.
+        canonical name: Research computing and scientific simulation
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+    foundry candidates:
+      1.
+        canonical name: Research Mastery
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      2.
+        canonical name: Customer File Base Software Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+    function id: unknown / not provided
+    function mapping status: UNRESOLVED: canonical source contains no function registry. Delivery and analyst are team roles, not inferred canonical function IDs.
+    mapping basis: Privacy accounting and statistical utility. Original proposed foundry labels have been expanded to exact canonical names; association itself remains inferred.
+    mapping status: REVIEWER_INFERENCE_NOT_ADOPTED
+    ambiguity: Multiple candidates are nonexclusive dependencies; implementation owner must choose lead/accountable scope after reading the relevant sector dossier. No unique mapping forced.
+    taxonomy reference: Owner-supplied taxonomy tables in this file
+    technical sector namespace: technical_sector
+    source artifact namespace: ai_data
+  56.
+    bottleneck id: security-exploited-vulnerabilities
+    title: Exploited vulnerability remediation
+    annex: ai-data
+    candidate problem sector id: proposed-sector-exposure-remediation
+    technical sector candidates:
+      1.
+        id: S09
+        canonical name: Security, Hardgate, and Identity
+      2.
+        id: S13
+        canonical name: Cloud, Mesh, and Deployment
+    application sector candidates:
+      1.
+        canonical name: Cloud hosting and DevOps
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+      2.
+        canonical name: Cybersecurity and identity
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+    foundry candidates:
+      1.
+        canonical name: Server Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      2.
+        canonical name: Usable Software Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+    function id: unknown / not provided
+    function mapping status: UNRESOLVED: canonical source contains no function registry. Delivery and analyst are team roles, not inferred canonical function IDs.
+    mapping basis: Exposed-asset remediation and deployed verification. Original proposed foundry labels have been expanded to exact canonical names; association itself remains inferred.
+    mapping status: REVIEWER_INFERENCE_NOT_ADOPTED
+    ambiguity: Multiple candidates are nonexclusive dependencies; implementation owner must choose lead/accountable scope after reading the relevant sector dossier. No unique mapping forced.
+    taxonomy reference: Owner-supplied taxonomy tables in this file
+    technical sector namespace: technical_sector
+    source artifact namespace: ai_data
+  57.
+    bottleneck id: security-third-party-exposure
+    title: Third-party exposure mapping
+    annex: ai-data
+    candidate problem sector id: proposed-sector-software-supply-chain-assurance
+    technical sector candidates:
+      1.
+        id: S09
+        canonical name: Security, Hardgate, and Identity
+      2.
+        id: S13
+        canonical name: Cloud, Mesh, and Deployment
+      3.
+        id: S20
+        canonical name: Cross-Sector Synthesis and Global Ledger
+    application sector candidates:
+      1.
+        canonical name: Enterprise software and SaaS
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+      2.
+        canonical name: Cybersecurity and identity
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+    foundry candidates:
+      1.
+        canonical name: Server Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      2.
+        canonical name: Growing Mesh Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      3.
+        canonical name: Business & Enterprise Structure Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+    function id: unknown / not provided
+    function mapping status: UNRESOLVED: canonical source contains no function registry. Delivery and analyst are team roles, not inferred canonical function IDs.
+    mapping basis: Supply-chain dependency exposure and cross-service evidence. Original proposed foundry labels have been expanded to exact canonical names; association itself remains inferred.
+    mapping status: REVIEWER_INFERENCE_NOT_ADOPTED
+    ambiguity: Multiple candidates are nonexclusive dependencies; implementation owner must choose lead/accountable scope after reading the relevant sector dossier. No unique mapping forced.
+    taxonomy reference: Owner-supplied taxonomy tables in this file
+    technical sector namespace: technical_sector
+    source artifact namespace: ai_data
+  58.
+    bottleneck id: security-identity-recovery
+    title: Identity recovery resistance
+    annex: ai-data
+    candidate problem sector id: proposed-sector-identity-abuse-resistance
+    technical sector candidates:
+      1.
+        id: S09
+        canonical name: Security, Hardgate, and Identity
+      2.
+        id: S08
+        canonical name: Governance, Proof, and Constraints
+    application sector candidates:
+      1.
+        canonical name: Cybersecurity and identity
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+      2.
+        canonical name: Workspace operations and HR
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+    foundry candidates:
+      1.
+        canonical name: Workspace Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      2.
+        canonical name: Server Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      3.
+        canonical name: HR & Team Services Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+    function id: unknown / not provided
+    function mapping status: UNRESOLVED: canonical source contains no function registry. Delivery and analyst are team roles, not inferred canonical function IDs.
+    mapping basis: Recovery identity proof and privileged exception control. Original proposed foundry labels have been expanded to exact canonical names; association itself remains inferred.
+    mapping status: REVIEWER_INFERENCE_NOT_ADOPTED
+    ambiguity: Multiple candidates are nonexclusive dependencies; implementation owner must choose lead/accountable scope after reading the relevant sector dossier. No unique mapping forced.
+    taxonomy reference: Owner-supplied taxonomy tables in this file
+    technical sector namespace: technical_sector
+    source artifact namespace: ai_data
+  59.
+    bottleneck id: security-memory-safety
+    title: Memory-safe software transition
+    annex: ai-data
+    candidate problem sector id: proposed-sector-memory-safe-software-transition
+    technical sector candidates:
+      1.
+        id: S09
+        canonical name: Security, Hardgate, and Identity
+      2.
+        id: S14
+        canonical name: Thermodynamic Ledger, TER, and Hardware
+      3.
+        id: S19
+        canonical name: Agent CLI and Codex Fleet
+    application sector candidates:
+      1.
+        canonical name: AI agents and developer tooling
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+      2.
+        canonical name: Cybersecurity and identity
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+    foundry candidates:
+      1.
+        canonical name: Usable Software Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      2.
+        canonical name: Server Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+    function id: unknown / not provided
+    function mapping status: UNRESOLVED: canonical source contains no function registry. Delivery and analyst are team roles, not inferred canonical function IDs.
+    mapping basis: Language/toolchain memory safety; S14 only for concrete low-level/hardware interface scope. Original proposed foundry labels have been expanded to exact canonical names; association itself remains inferred.
+    mapping status: REVIEWER_INFERENCE_NOT_ADOPTED
+    ambiguity: Multiple candidates are nonexclusive dependencies; implementation owner must choose lead/accountable scope after reading the relevant sector dossier. No unique mapping forced.
+    taxonomy reference: Owner-supplied taxonomy tables in this file
+    technical sector namespace: technical_sector
+    source artifact namespace: ai_data
+  60.
+    bottleneck id: security-cryptographic-agility
+    title: Cryptographic agility
+    annex: ai-data
+    candidate problem sector id: proposed-sector-cryptographic-migration
+    technical sector candidates:
+      1.
+        id: S09
+        canonical name: Security, Hardgate, and Identity
+      2.
+        id: S04
+        canonical name: KERA Server, Network, and DNS
+    application sector candidates:
+      1.
+        canonical name: Cybersecurity and identity
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+      2.
+        canonical name: Telecommunications and DNS services
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+    foundry candidates:
+      1.
+        canonical name: Server Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      2.
+        canonical name: Growing Mesh Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+    function id: unknown / not provided
+    function mapping status: UNRESOLVED: canonical source contains no function registry. Delivery and analyst are team roles, not inferred canonical function IDs.
+    mapping basis: Protocol/cryptography migration; S15 quantum-model research is not automatically a cryptographic implementation mapping. Original proposed foundry labels have been expanded to exact canonical names; association itself remains inferred.
+    mapping status: REVIEWER_INFERENCE_NOT_ADOPTED
+    ambiguity: Multiple candidates are nonexclusive dependencies; implementation owner must choose lead/accountable scope after reading the relevant sector dossier. No unique mapping forced.
+    taxonomy reference: Owner-supplied taxonomy tables in this file
+    technical sector namespace: technical_sector
+    source artifact namespace: ai_data
+  61.
+    bottleneck id: security-shadow-ai-data-leakage
+    title: Shadow AI data leakage
+    annex: ai-data
+    candidate problem sector id: proposed-sector-enterprise-ai-data-controls
+    technical sector candidates:
+      1.
+        id: S09
+        canonical name: Security, Hardgate, and Identity
+      2.
+        id: S05
+        canonical name: Workbook OS, KDRIVE, and Web4
+      3.
+        id: S19
+        canonical name: Agent CLI and Codex Fleet
+    application sector candidates:
+      1.
+        canonical name: Cybersecurity and identity
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+      2.
+        canonical name: Workspace operations and HR
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+    foundry candidates:
+      1.
+        canonical name: Workspace Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      2.
+        canonical name: Agentics Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      3.
+        canonical name: Customer File Base Software Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+    function id: unknown / not provided
+    function mapping status: UNRESOLVED: canonical source contains no function registry. Delivery and analyst are team roles, not inferred canonical function IDs.
+    mapping basis: Workspace data egress to agent services. Original proposed foundry labels have been expanded to exact canonical names; association itself remains inferred.
+    mapping status: REVIEWER_INFERENCE_NOT_ADOPTED
+    ambiguity: Multiple candidates are nonexclusive dependencies; implementation owner must choose lead/accountable scope after reading the relevant sector dossier. No unique mapping forced.
+    taxonomy reference: Owner-supplied taxonomy tables in this file
+    technical sector namespace: technical_sector
+    source artifact namespace: ai_data
+  62.
+    bottleneck id: hci-web-accessibility
+    title: Web accessibility remediation
+    annex: ai-data
+    candidate problem sector id: proposed-sector-accessible-web-systems
+    technical sector candidates:
+      1.
+        id: S10
+        canonical name: UI, Dashboard, and AI Shell
+      2.
+        id: S17
+        canonical name: Linguistic Process and Ethics
+    application sector candidates:
+      1.
+        canonical name: Education and technical publishing
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+      2.
+        canonical name: Market frontage and digital commerce
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+    foundry candidates:
+      1.
+        canonical name: HCI Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      2.
+        canonical name: Website Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      3.
+        canonical name: Frontage Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+    function id: unknown / not provided
+    function mapping status: UNRESOLVED: canonical source contains no function registry. Delivery and analyst are team roles, not inferred canonical function IDs.
+    mapping basis: User interface/task accessibility and scoped ethical requirements. Original proposed foundry labels have been expanded to exact canonical names; association itself remains inferred.
+    mapping status: REVIEWER_INFERENCE_NOT_ADOPTED
+    ambiguity: Multiple candidates are nonexclusive dependencies; implementation owner must choose lead/accountable scope after reading the relevant sector dossier. No unique mapping forced.
+    taxonomy reference: Owner-supplied taxonomy tables in this file
+    technical sector namespace: technical_sector
+    source artifact namespace: ai_data
+  63.
+    bottleneck id: hci-document-accessibility
+    title: Document accessibility
+    annex: ai-data
+    candidate problem sector id: proposed-sector-accessible-publishing
+    technical sector candidates:
+      1.
+        id: S10
+        canonical name: UI, Dashboard, and AI Shell
+      2.
+        id: S18
+        canonical name: Research, Proof, and Publication
+    application sector candidates:
+      1.
+        canonical name: Education and technical publishing
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+      2.
+        canonical name: Legal evidence and dispute workflows
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+    foundry candidates:
+      1.
+        canonical name: Publishing Mastery
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      2.
+        canonical name: HCI Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      3.
+        canonical name: File System Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+    function id: unknown / not provided
+    function mapping status: UNRESOLVED: canonical source contains no function registry. Delivery and analyst are team roles, not inferred canonical function IDs.
+    mapping basis: Accessible publication structure and reader interaction. Original proposed foundry labels have been expanded to exact canonical names; association itself remains inferred.
+    mapping status: REVIEWER_INFERENCE_NOT_ADOPTED
+    ambiguity: Multiple candidates are nonexclusive dependencies; implementation owner must choose lead/accountable scope after reading the relevant sector dossier. No unique mapping forced.
+    taxonomy reference: Owner-supplied taxonomy tables in this file
+    technical sector namespace: technical_sector
+    source artifact namespace: ai_data
+  64.
+    bottleneck id: hci-language-localization
+    title: Language-specific AI quality
+    annex: ai-data
+    candidate problem sector id: proposed-sector-language-specific-ai-quality
+    technical sector candidates:
+      1.
+        id: S17
+        canonical name: Linguistic Process and Ethics
+      2.
+        id: S24
+        canonical name: Cultural and Language Decode
+      3.
+        id: S03
+        canonical name: IL-LLM Learning and Knowledge
+    application sector candidates:
+      1.
+        canonical name: Education and technical publishing
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+      2.
+        canonical name: Customer support and service fulfilment
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+    foundry candidates:
+      1.
+        canonical name: HCI Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      2.
+        canonical name: Domain Mastery
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      3.
+        canonical name: Agentics Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+    function id: unknown / not provided
+    function mapping status: UNRESOLVED: canonical source contains no function registry. Delivery and analyst are team roles, not inferred canonical function IDs.
+    mapping basis: Language/cultural interpretation and model task quality. Original proposed foundry labels have been expanded to exact canonical names; association itself remains inferred.
+    mapping status: REVIEWER_INFERENCE_NOT_ADOPTED
+    ambiguity: Multiple candidates are nonexclusive dependencies; implementation owner must choose lead/accountable scope after reading the relevant sector dossier. No unique mapping forced.
+    taxonomy reference: Owner-supplied taxonomy tables in this file
+    technical sector namespace: technical_sector
+    source artifact namespace: ai_data
+  65.
+    bottleneck id: hci-human-ai-oversight
+    title: Human AI oversight
+    annex: ai-data
+    candidate problem sector id: proposed-sector-human-ai-decision-support
+    technical sector candidates:
+      1.
+        id: S10
+        canonical name: UI, Dashboard, and AI Shell
+      2.
+        id: S08
+        canonical name: Governance, Proof, and Constraints
+      3.
+        id: S17
+        canonical name: Linguistic Process and Ethics
+    application sector candidates:
+      1.
+        canonical name: AI agents and developer tooling
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+      2.
+        canonical name: Workspace operations and HR
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+    foundry candidates:
+      1.
+        canonical name: HCI Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      2.
+        canonical name: Process Mastery
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      3.
+        canonical name: Agentics Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+    function id: unknown / not provided
+    function mapping status: UNRESOLVED: canonical source contains no function registry. Delivery and analyst are team roles, not inferred canonical function IDs.
+    mapping basis: Human oversight/agency and interface-induced error detection. Original proposed foundry labels have been expanded to exact canonical names; association itself remains inferred.
+    mapping status: REVIEWER_INFERENCE_NOT_ADOPTED
+    ambiguity: Multiple candidates are nonexclusive dependencies; implementation owner must choose lead/accountable scope after reading the relevant sector dossier. No unique mapping forced.
+    taxonomy reference: Owner-supplied taxonomy tables in this file
+    technical sector namespace: technical_sector
+    source artifact namespace: ai_data
+  66.
+    bottleneck id: verification-computational-reproduction
+    title: Computational reproduction
+    annex: ai-data
+    candidate problem sector id: proposed-sector-reproducible-computation
+    technical sector candidates:
+      1.
+        id: S18
+        canonical name: Research, Proof, and Publication
+      2.
+        id: S19
+        canonical name: Agent CLI and Codex Fleet
+    application sector candidates:
+      1.
+        canonical name: Research computing and scientific simulation
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+      2.
+        canonical name: Education and technical publishing
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+    foundry candidates:
+      1.
+        canonical name: Research Mastery
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      2.
+        canonical name: Publishing Mastery
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      3.
+        canonical name: Server Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+    function id: unknown / not provided
+    function mapping status: UNRESOLVED: canonical source contains no function registry. Delivery and analyst are team roles, not inferred canonical function IDs.
+    mapping basis: Same-data computation replay and source custody. Original proposed foundry labels have been expanded to exact canonical names; association itself remains inferred.
+    mapping status: REVIEWER_INFERENCE_NOT_ADOPTED
+    ambiguity: Multiple candidates are nonexclusive dependencies; implementation owner must choose lead/accountable scope after reading the relevant sector dossier. No unique mapping forced.
+    taxonomy reference: Owner-supplied taxonomy tables in this file
+    technical sector namespace: technical_sector
+    source artifact namespace: ai_data
+  67.
+    bottleneck id: verification-analytical-robustness
+    title: Analytical robustness
+    annex: ai-data
+    candidate problem sector id: proposed-sector-analytical-robustness
+    technical sector candidates:
+      1.
+        id: S18
+        canonical name: Research, Proof, and Publication
+    application sector candidates:
+      1.
+        canonical name: Research computing and scientific simulation
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+    foundry candidates:
+      1.
+        canonical name: Research Mastery
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      2.
+        canonical name: Domain Mastery
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+    function id: unknown / not provided
+    function mapping status: UNRESOLVED: canonical source contains no function registry. Delivery and analyst are team roles, not inferred canonical function IDs.
+    mapping basis: Alternative-analysis sensitivity on the same data. Original proposed foundry labels have been expanded to exact canonical names; association itself remains inferred.
+    mapping status: REVIEWER_INFERENCE_NOT_ADOPTED
+    ambiguity: Multiple candidates are nonexclusive dependencies; implementation owner must choose lead/accountable scope after reading the relevant sector dossier. No unique mapping forced.
+    taxonomy reference: Owner-supplied taxonomy tables in this file
+    technical sector namespace: technical_sector
+    source artifact namespace: ai_data
+  68.
+    bottleneck id: verification-independent-replication
+    title: Independent claim replication
+    annex: ai-data
+    candidate problem sector id: proposed-sector-independent-claim-replication
+    technical sector candidates:
+      1.
+        id: S18
+        canonical name: Research, Proof, and Publication
+    application sector candidates:
+      1.
+        canonical name: Research computing and scientific simulation
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+    foundry candidates:
+      1.
+        canonical name: Research Mastery
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      2.
+        canonical name: Domain Mastery
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+    function id: unknown / not provided
+    function mapping status: UNRESOLVED: canonical source contains no function registry. Delivery and analyst are team roles, not inferred canonical function IDs.
+    mapping basis: New-data independent replication; separate from computational replay. Original proposed foundry labels have been expanded to exact canonical names; association itself remains inferred.
+    mapping status: REVIEWER_INFERENCE_NOT_ADOPTED
+    ambiguity: Multiple candidates are nonexclusive dependencies; implementation owner must choose lead/accountable scope after reading the relevant sector dossier. No unique mapping forced.
+    taxonomy reference: Owner-supplied taxonomy tables in this file
+    technical sector namespace: technical_sector
+    source artifact namespace: ai_data
+  69.
+    bottleneck id: verification-data-leakage
+    title: ML data leakage control
+    annex: ai-data
+    candidate problem sector id: proposed-sector-ml-validation-integrity
+    technical sector candidates:
+      1.
+        id: S03
+        canonical name: IL-LLM Learning and Knowledge
+      2.
+        id: S18
+        canonical name: Research, Proof, and Publication
+    application sector candidates:
+      1.
+        canonical name: AI agents and developer tooling
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+      2.
+        canonical name: Research computing and scientific simulation
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+    foundry candidates:
+      1.
+        canonical name: Research Mastery
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      2.
+        canonical name: Agentics Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      3.
+        canonical name: Customer File Base Software Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+    function id: unknown / not provided
+    function mapping status: UNRESOLVED: canonical source contains no function registry. Delivery and analyst are team roles, not inferred canonical function IDs.
+    mapping basis: Train/test boundary and evaluation independence. Original proposed foundry labels have been expanded to exact canonical names; association itself remains inferred.
+    mapping status: REVIEWER_INFERENCE_NOT_ADOPTED
+    ambiguity: Multiple candidates are nonexclusive dependencies; implementation owner must choose lead/accountable scope after reading the relevant sector dossier. No unique mapping forced.
+    taxonomy reference: Owner-supplied taxonomy tables in this file
+    technical sector namespace: technical_sector
+    source artifact namespace: ai_data
+  70.
+    bottleneck id: verification-evaluation-validity
+    title: Independent AI evaluation validity
+    annex: ai-data
+    candidate problem sector id: proposed-sector-independent-ai-evaluation
+    technical sector candidates:
+      1.
+        id: S18
+        canonical name: Research, Proof, and Publication
+      2.
+        id: S08
+        canonical name: Governance, Proof, and Constraints
+      3.
+        id: S03
+        canonical name: IL-LLM Learning and Knowledge
+    application sector candidates:
+      1.
+        canonical name: AI agents and developer tooling
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+      2.
+        canonical name: Research computing and scientific simulation
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+    foundry candidates:
+      1.
+        canonical name: Research Mastery
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      2.
+        canonical name: Agentics Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+    function id: unknown / not provided
+    function mapping status: UNRESOLVED: canonical source contains no function registry. Delivery and analyst are team roles, not inferred canonical function IDs.
+    mapping basis: Evaluation validity, calibration and deployment slice coverage. Original proposed foundry labels have been expanded to exact canonical names; association itself remains inferred.
+    mapping status: REVIEWER_INFERENCE_NOT_ADOPTED
+    ambiguity: Multiple candidates are nonexclusive dependencies; implementation owner must choose lead/accountable scope after reading the relevant sector dossier. No unique mapping forced.
+    taxonomy reference: Owner-supplied taxonomy tables in this file
+    technical sector namespace: technical_sector
+    source artifact namespace: ai_data
+  71.
+    bottleneck id: KED-PROP-EDGE-SEMANTICS
+    title: Industrial semantic interoperability
+    annex: edge-adoption
+    candidate problem sector id: KED-PROP-EDGE-SEMANTICS
+    technical sector candidates:
+      1.
+        id: S02
+        canonical name: KEX Algebra and Typed State
+      2.
+        id: S07
+        canonical name: KCPU Routing, Software Nodes, and Update Lanes
+      3.
+        id: S11
+        canonical name: Backend, API, and Service Runtime
+      4.
+        id: S14
+        canonical name: Thermodynamic Ledger, TER, and Hardware
+    application sector candidates:
+      1.
+        canonical name: Industrial automation and robotics
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+      2.
+        canonical name: Embedded electronics and CANBUS
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+    foundry candidates:
+      1.
+        canonical name: Domain Mastery
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      2.
+        canonical name: Growing Mesh Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      3.
+        canonical name: Usable Software Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+    function id: unknown / not provided
+    function mapping status: UNRESOLVED: canonical source contains no function registry. Delivery and analyst are team roles, not inferred canonical function IDs.
+    mapping basis: Domain-specific equipment semantics requires physical unit/identity preservation; shared infrastructure with general semantic interoperability is a dependency.
+    mapping status: REVIEWER_INFERENCE_NOT_ADOPTED
+    ambiguity: Multiple candidates are nonexclusive dependencies; accountable mapping needs native-dossier and owner review. No unique mapping forced.
+    taxonomy reference: Owner-supplied taxonomy tables in this file
+    technical sector namespace: technical_sector
+    source artifact namespace: edge_adoption
+  72.
+    bottleneck id: KED-PROP-EDGE-OT-OBS
+    title: Safe legacy OT observability
+    annex: edge-adoption
+    candidate problem sector id: KED-PROP-EDGE-OT-OBS
+    technical sector candidates:
+      1.
+        id: S04
+        canonical name: KERA Server, Network, and DNS
+      2.
+        id: S09
+        canonical name: Security, Hardgate, and Identity
+      3.
+        id: S14
+        canonical name: Thermodynamic Ledger, TER, and Hardware
+      4.
+        id: S08
+        canonical name: Governance, Proof, and Constraints
+    application sector candidates:
+      1.
+        canonical name: Industrial automation and robotics
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+      2.
+        canonical name: Critical infrastructure and emergency continuity
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+    foundry candidates:
+      1.
+        canonical name: Server Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      2.
+        canonical name: Growing Mesh Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      3.
+        canonical name: Domain Mastery
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+    function id: unknown / not provided
+    function mapping status: UNRESOLVED: canonical source contains no function registry. Delivery and analyst are team roles, not inferred canonical function IDs.
+    mapping basis: Passive physical-operation evidence collection adds timing/safety constraints beyond general IT observability.
+    mapping status: REVIEWER_INFERENCE_NOT_ADOPTED
+    ambiguity: Multiple candidates are nonexclusive dependencies; accountable mapping needs native-dossier and owner review. No unique mapping forced.
+    taxonomy reference: Owner-supplied taxonomy tables in this file
+    technical sector namespace: technical_sector
+    source artifact namespace: edge_adoption
+  73.
+    bottleneck id: KED-PROP-EDGE-OFFLINE
+    title: Disconnected edge workflow continuity
+    annex: edge-adoption
+    candidate problem sector id: KED-PROP-EDGE-OFFLINE
+    technical sector candidates:
+      1.
+        id: S05
+        canonical name: Workbook OS, KDRIVE, and Web4
+      2.
+        id: S12
+        canonical name: Virtual Memory and Sparse Storage
+      3.
+        id: S13
+        canonical name: Cloud, Mesh, and Deployment
+      4.
+        id: S08
+        canonical name: Governance, Proof, and Constraints
+    application sector candidates:
+      1.
+        canonical name: Enterprise software and SaaS
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+      2.
+        canonical name: Critical infrastructure and emergency continuity
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+    foundry candidates:
+      1.
+        canonical name: File System Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      2.
+        canonical name: Growing Mesh Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      3.
+        canonical name: Service Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+    function id: unknown / not provided
+    function mapping status: UNRESOLVED: canonical source contains no function registry. Delivery and analyst are team roles, not inferred canonical function IDs.
+    mapping basis: Local persistence/reconciliation supports disconnected physical operations; no implied carrier infrastructure solution.
+    mapping status: REVIEWER_INFERENCE_NOT_ADOPTED
+    ambiguity: Multiple candidates are nonexclusive dependencies; accountable mapping needs native-dossier and owner review. No unique mapping forced.
+    taxonomy reference: Owner-supplied taxonomy tables in this file
+    technical sector namespace: technical_sector
+    source artifact namespace: edge_adoption
+  74.
+    bottleneck id: KED-PROP-EDGE-ONBOARD
+    title: Portable device onboarding and ownership
+    annex: edge-adoption
+    candidate problem sector id: KED-PROP-EDGE-ONBOARD
+    technical sector candidates:
+      1.
+        id: S09
+        canonical name: Security, Hardgate, and Identity
+      2.
+        id: S07
+        canonical name: KCPU Routing, Software Nodes, and Update Lanes
+      3.
+        id: S13
+        canonical name: Cloud, Mesh, and Deployment
+    application sector candidates:
+      1.
+        canonical name: Industrial automation and robotics
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+      2.
+        canonical name: Embedded electronics and CANBUS
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+    foundry candidates:
+      1.
+        canonical name: Agentics Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      2.
+        canonical name: Server Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      3.
+        canonical name: Growing Mesh Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+    function id: unknown / not provided
+    function mapping status: UNRESOLVED: canonical source contains no function registry. Delivery and analyst are team roles, not inferred canonical function IDs.
+    mapping basis: Physical-device identity, ownership transfer and enrollment; not generic agent identity.
+    mapping status: REVIEWER_INFERENCE_NOT_ADOPTED
+    ambiguity: Multiple candidates are nonexclusive dependencies; accountable mapping needs native-dossier and owner review. No unique mapping forced.
+    taxonomy reference: Owner-supplied taxonomy tables in this file
+    technical sector namespace: technical_sector
+    source artifact namespace: edge_adoption
+  75.
+    bottleneck id: KED-PROP-EDGE-OTA
+    title: Failure-safe embedded firmware delivery
+    annex: edge-adoption
+    candidate problem sector id: KED-PROP-EDGE-OTA
+    technical sector candidates:
+      1.
+        id: S07
+        canonical name: KCPU Routing, Software Nodes, and Update Lanes
+      2.
+        id: S09
+        canonical name: Security, Hardgate, and Identity
+      3.
+        id: S14
+        canonical name: Thermodynamic Ledger, TER, and Hardware
+    application sector candidates:
+      1.
+        canonical name: Industrial automation and robotics
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+      2.
+        canonical name: Embedded electronics and CANBUS
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+    foundry candidates:
+      1.
+        canonical name: Usable Software Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      2.
+        canonical name: Server Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      3.
+        canonical name: Domain Mastery
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+    function id: unknown / not provided
+    function mapping status: UNRESOLVED: canonical source contains no function registry. Delivery and analyst are team roles, not inferred canonical function IDs.
+    mapping basis: Firmware update lanes and physical power-loss recovery require hardware-specific assurance.
+    mapping status: REVIEWER_INFERENCE_NOT_ADOPTED
+    ambiguity: Multiple candidates are nonexclusive dependencies; accountable mapping needs native-dossier and owner review. No unique mapping forced.
+    taxonomy reference: Owner-supplied taxonomy tables in this file
+    technical sector namespace: technical_sector
+    source artifact namespace: edge_adoption
+  76.
+    bottleneck id: KED-PROP-EDGE-SUPPORT
+    title: Connected-product support lifecycle evidence
+    annex: edge-adoption
+    candidate problem sector id: KED-PROP-EDGE-SUPPORT
+    technical sector candidates:
+      1.
+        id: S08
+        canonical name: Governance, Proof, and Constraints
+      2.
+        id: S09
+        canonical name: Security, Hardgate, and Identity
+      3.
+        id: S14
+        canonical name: Thermodynamic Ledger, TER, and Hardware
+      4.
+        id: S18
+        canonical name: Research, Proof, and Publication
+    application sector candidates:
+      1.
+        canonical name: Industrial automation and robotics
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+      2.
+        canonical name: Embedded electronics and CANBUS
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+    foundry candidates:
+      1.
+        canonical name: Business & Enterprise Structure Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      2.
+        canonical name: Service Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      3.
+        canonical name: Agentics Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+    function id: unknown / not provided
+    function mapping status: UNRESOLVED: canonical source contains no function registry. Delivery and analyst are team roles, not inferred canonical function IDs.
+    mapping basis: Connected-product support and disclosure evidence; distinguish regulated product obligations from generic cyber governance.
+    mapping status: REVIEWER_INFERENCE_NOT_ADOPTED
+    ambiguity: Multiple candidates are nonexclusive dependencies; accountable mapping needs native-dossier and owner review. No unique mapping forced.
+    taxonomy reference: Owner-supplied taxonomy tables in this file
+    technical sector namespace: technical_sector
+    source artifact namespace: edge_adoption
+  77.
+    bottleneck id: KED-PROP-EDGE-RECOVERY
+    title: OT configuration recovery assurance
+    annex: edge-adoption
+    candidate problem sector id: KED-PROP-EDGE-RECOVERY
+    technical sector candidates:
+      1.
+        id: S07
+        canonical name: KCPU Routing, Software Nodes, and Update Lanes
+      2.
+        id: S12
+        canonical name: Virtual Memory and Sparse Storage
+      3.
+        id: S14
+        canonical name: Thermodynamic Ledger, TER, and Hardware
+      4.
+        id: S08
+        canonical name: Governance, Proof, and Constraints
+    application sector candidates:
+      1.
+        canonical name: Industrial automation and robotics
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+      2.
+        canonical name: Critical infrastructure and emergency continuity
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+    foundry candidates:
+      1.
+        canonical name: Server Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      2.
+        canonical name: File System Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      3.
+        canonical name: Domain Mastery
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+    function id: unknown / not provided
+    function mapping status: UNRESOLVED: canonical source contains no function registry. Delivery and analyst are team roles, not inferred canonical function IDs.
+    mapping basis: Controller logic/configuration restoration with process sequencing and safety validation.
+    mapping status: REVIEWER_INFERENCE_NOT_ADOPTED
+    ambiguity: Multiple candidates are nonexclusive dependencies; accountable mapping needs native-dossier and owner review. No unique mapping forced.
+    taxonomy reference: Owner-supplied taxonomy tables in this file
+    technical sector namespace: technical_sector
+    source artifact namespace: edge_adoption
+  78.
+    bottleneck id: KED-PROP-HW-PROVENANCE
+    title: Hardware provenance and obsolescence intelligence
+    annex: edge-adoption
+    candidate problem sector id: KED-PROP-HW-PROVENANCE
+    technical sector candidates:
+      1.
+        id: S14
+        canonical name: Thermodynamic Ledger, TER, and Hardware
+      2.
+        id: S08
+        canonical name: Governance, Proof, and Constraints
+      3.
+        id: S20
+        canonical name: Cross-Sector Synthesis and Global Ledger
+    application sector candidates:
+      1.
+        canonical name: Embedded electronics and CANBUS
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+    foundry candidates:
+      1.
+        canonical name: Domain Mastery
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      2.
+        canonical name: File System Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      3.
+        canonical name: Business & Enterprise Structure Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+    function id: unknown / not provided
+    function mapping status: UNRESOLVED: canonical source contains no function registry. Delivery and analyst are team roles, not inferred canonical function IDs.
+    mapping basis: Physical component provenance and life-cycle evidence, not proof of authenticity.
+    mapping status: REVIEWER_INFERENCE_NOT_ADOPTED
+    ambiguity: Multiple candidates are nonexclusive dependencies; accountable mapping needs native-dossier and owner review. No unique mapping forced.
+    taxonomy reference: Owner-supplied taxonomy tables in this file
+    technical sector namespace: technical_sector
+    source artifact namespace: edge_adoption
+  79.
+    bottleneck id: KED-PROP-HW-VERIFY
+    title: Portable hardware verification evidence
+    annex: edge-adoption
+    candidate problem sector id: KED-PROP-HW-VERIFY
+    technical sector candidates:
+      1.
+        id: S14
+        canonical name: Thermodynamic Ledger, TER, and Hardware
+      2.
+        id: S18
+        canonical name: Research, Proof, and Publication
+      3.
+        id: S19
+        canonical name: Agent CLI and Codex Fleet
+    application sector candidates:
+      1.
+        canonical name: Embedded electronics and CANBUS
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+      2.
+        canonical name: Research computing and scientific simulation
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+    foundry candidates:
+      1.
+        canonical name: Research Mastery
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      2.
+        canonical name: Usable Software Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      3.
+        canonical name: Domain Mastery
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+    function id: unknown / not provided
+    function mapping status: UNRESOLVED: canonical source contains no function registry. Delivery and analyst are team roles, not inferred canonical function IDs.
+    mapping basis: Portable hardware verification and measured coverage; source-code test reuse is insufficient.
+    mapping status: REVIEWER_INFERENCE_NOT_ADOPTED
+    ambiguity: Multiple candidates are nonexclusive dependencies; accountable mapping needs native-dossier and owner review. No unique mapping forced.
+    taxonomy reference: Owner-supplied taxonomy tables in this file
+    technical sector namespace: technical_sector
+    source artifact namespace: edge_adoption
+  80.
+    bottleneck id: KED-PROP-HW-SEC-METRICS
+    title: Hardware security measurement and validation
+    annex: edge-adoption
+    candidate problem sector id: KED-PROP-HW-SEC-METRICS
+    technical sector candidates:
+      1.
+        id: S14
+        canonical name: Thermodynamic Ledger, TER, and Hardware
+      2.
+        id: S09
+        canonical name: Security, Hardgate, and Identity
+      3.
+        id: S18
+        canonical name: Research, Proof, and Publication
+    application sector candidates:
+      1.
+        canonical name: Cybersecurity and identity
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+      2.
+        canonical name: Embedded electronics and CANBUS
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+    foundry candidates:
+      1.
+        canonical name: Research Mastery
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      2.
+        canonical name: Server Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      3.
+        canonical name: Domain Mastery
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+    function id: unknown / not provided
+    function mapping status: UNRESOLVED: canonical source contains no function registry. Delivery and analyst are team roles, not inferred canonical function IDs.
+    mapping basis: Threat-model-scoped hardware assurance metrics; physical test and attack-class boundaries remain independent.
+    mapping status: REVIEWER_INFERENCE_NOT_ADOPTED
+    ambiguity: Multiple candidates are nonexclusive dependencies; accountable mapping needs native-dossier and owner review. No unique mapping forced.
+    taxonomy reference: Owner-supplied taxonomy tables in this file
+    technical sector namespace: technical_sector
+    source artifact namespace: edge_adoption
+  81.
+    bottleneck id: KED-PROP-HW-METROLOGY
+    title: Semiconductor measurement workflow interoperability
+    annex: edge-adoption
+    candidate problem sector id: KED-PROP-HW-METROLOGY
+    technical sector candidates:
+      1.
+        id: S14
+        canonical name: Thermodynamic Ledger, TER, and Hardware
+      2.
+        id: S18
+        canonical name: Research, Proof, and Publication
+    application sector candidates:
+      1.
+        canonical name: Research computing and scientific simulation
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+    foundry candidates:
+      1.
+        canonical name: Research Mastery
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      2.
+        canonical name: Domain Mastery
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      3.
+        canonical name: File System Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+    function id: unknown / not provided
+    function mapping status: UNRESOLVED: canonical source contains no function registry. Delivery and analyst are team roles, not inferred canonical function IDs.
+    mapping basis: Measurement/uncertainty workflow for hardware laboratories; does not replace measurement physics.
+    mapping status: REVIEWER_INFERENCE_NOT_ADOPTED
+    ambiguity: Semiconductor metrology/manufacturing is not explicitly named in the application registry. Research computing is adjacent only.
+    application mapping gap: Semiconductor metrology/manufacturing is not explicitly named in the application registry. Research computing is adjacent only.
+    taxonomy reference: Owner-supplied taxonomy tables in this file
+    technical sector namespace: technical_sector
+    source artifact namespace: edge_adoption
+  82.
+    bottleneck id: KED-PROP-EDGE-TWIN
+    title: Validated industrial digital twins
+    annex: edge-adoption
+    candidate problem sector id: KED-PROP-EDGE-TWIN
+    technical sector candidates:
+      1.
+        id: S14
+        canonical name: Thermodynamic Ledger, TER, and Hardware
+      2.
+        id: S15
+        canonical name: Quantum, Matrix, and Simulation
+      3.
+        id: S18
+        canonical name: Research, Proof, and Publication
+    application sector candidates:
+      1.
+        canonical name: Industrial automation and robotics
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+      2.
+        canonical name: Research computing and scientific simulation
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+    foundry candidates:
+      1.
+        canonical name: Domain Mastery
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      2.
+        canonical name: Research Mastery
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      3.
+        canonical name: Usable Software Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+    function id: unknown / not provided
+    function mapping status: UNRESOLVED: canonical source contains no function registry. Delivery and analyst are team roles, not inferred canonical function IDs.
+    mapping basis: Simulation candidates must remain grounded in physical validation, uncertainty and envelope checks.
+    mapping status: REVIEWER_INFERENCE_NOT_ADOPTED
+    ambiguity: Multiple candidates are nonexclusive dependencies; accountable mapping needs native-dossier and owner review. No unique mapping forced.
+    taxonomy reference: Owner-supplied taxonomy tables in this file
+    technical sector namespace: technical_sector
+    source artifact namespace: edge_adoption
+  83.
+    bottleneck id: KED-PROP-EDGE-CALIBRATION
+    title: Machine-interpretable sensor calibration
+    annex: edge-adoption
+    candidate problem sector id: KED-PROP-EDGE-CALIBRATION
+    technical sector candidates:
+      1.
+        id: S14
+        canonical name: Thermodynamic Ledger, TER, and Hardware
+      2.
+        id: S18
+        canonical name: Research, Proof, and Publication
+      3.
+        id: S02
+        canonical name: KEX Algebra and Typed State
+    application sector candidates:
+      1.
+        canonical name: Industrial automation and robotics
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+      2.
+        canonical name: Embedded electronics and CANBUS
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+    foundry candidates:
+      1.
+        canonical name: Domain Mastery
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      2.
+        canonical name: Research Mastery
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      3.
+        canonical name: File System Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+    function id: unknown / not provided
+    function mapping status: UNRESOLVED: canonical source contains no function registry. Delivery and analyst are team roles, not inferred canonical function IDs.
+    mapping basis: Calibrated measurement semantics and uncertainty provenance rather than general data cleaning.
+    mapping status: REVIEWER_INFERENCE_NOT_ADOPTED
+    ambiguity: Multiple candidates are nonexclusive dependencies; accountable mapping needs native-dossier and owner review. No unique mapping forced.
+    taxonomy reference: Owner-supplied taxonomy tables in this file
+    technical sector namespace: technical_sector
+    source artifact namespace: edge_adoption
+  84.
+    bottleneck id: KED-PROP-EDGE-ENERGY
+    title: Embedded energy and battery-life verification
+    annex: edge-adoption
+    candidate problem sector id: KED-PROP-EDGE-ENERGY
+    technical sector candidates:
+      1.
+        id: S14
+        canonical name: Thermodynamic Ledger, TER, and Hardware
+      2.
+        id: S16
+        canonical name: Mining, Compute, and Economics
+    application sector candidates:
+      1.
+        canonical name: Embedded electronics and CANBUS
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+    foundry candidates:
+      1.
+        canonical name: Domain Mastery
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      2.
+        canonical name: Research Mastery
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      3.
+        canonical name: Server Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+    function id: unknown / not provided
+    function mapping status: UNRESOLVED: canonical source contains no function registry. Delivery and analyst are team roles, not inferred canonical function IDs.
+    mapping basis: Endpoint energy/battery projections versus datacenter or grid constraints.
+    mapping status: REVIEWER_INFERENCE_NOT_ADOPTED
+    ambiguity: Multiple candidates are nonexclusive dependencies; accountable mapping needs native-dossier and owner review. No unique mapping forced.
+    taxonomy reference: Owner-supplied taxonomy tables in this file
+    technical sector namespace: technical_sector
+    source artifact namespace: edge_adoption
+  85.
+    bottleneck id: KED-PROP-CIRC-REPAIR
+    title: Device repairability and service-life operations
+    annex: edge-adoption
+    candidate problem sector id: KED-PROP-CIRC-REPAIR
+    technical sector candidates:
+      1.
+        id: S14
+        canonical name: Thermodynamic Ledger, TER, and Hardware
+      2.
+        id: S08
+        canonical name: Governance, Proof, and Constraints
+      3.
+        id: S11
+        canonical name: Backend, API, and Service Runtime
+    application sector candidates:
+    foundry candidates:
+      1.
+        canonical name: Service Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      2.
+        canonical name: Domain Mastery
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      3.
+        canonical name: Business & Enterprise Structure Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+    function id: unknown / not provided
+    function mapping status: UNRESOLVED: canonical source contains no function registry. Delivery and analyst are team roles, not inferred canonical function IDs.
+    mapping basis: Repairability, physical parts and lifecycle operations; backend service is supporting scope.
+    mapping status: REVIEWER_INFERENCE_NOT_ADOPTED
+    ambiguity: Device repair/circular service operations are not explicitly named among 18 application sectors; require application extension or explicit owner-approved fit.
+    application mapping gap: Device repair/circular service operations are not explicitly named among 18 application sectors; require application extension or explicit owner-approved fit.
+    taxonomy reference: Owner-supplied taxonomy tables in this file
+    technical sector namespace: technical_sector
+    source artifact namespace: edge_adoption
+  86.
+    bottleneck id: KED-PROP-CIRC-DISPOSITION
+    title: Verifiable circular IT asset disposition
+    annex: edge-adoption
+    candidate problem sector id: KED-PROP-CIRC-DISPOSITION
+    technical sector candidates:
+      1.
+        id: S14
+        canonical name: Thermodynamic Ledger, TER, and Hardware
+      2.
+        id: S09
+        canonical name: Security, Hardgate, and Identity
+      3.
+        id: S08
+        canonical name: Governance, Proof, and Constraints
+      4.
+        id: S20
+        canonical name: Cross-Sector Synthesis and Global Ledger
+    application sector candidates:
+    foundry candidates:
+      1.
+        canonical name: File System Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      2.
+        canonical name: Business & Enterprise Structure Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      3.
+        canonical name: Service Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+    function id: unknown / not provided
+    function mapping status: UNRESOLVED: canonical source contains no function registry. Delivery and analyst are team roles, not inferred canonical function IDs.
+    mapping basis: Physical custody, data sanitization and verified downstream disposition.
+    mapping status: REVIEWER_INFERENCE_NOT_ADOPTED
+    ambiguity: Circular IT asset disposition is not explicitly named among 18 application sectors; do not force it into cloud hosting.
+    application mapping gap: Circular IT asset disposition is not explicitly named among 18 application sectors; do not force it into cloud hosting.
+    taxonomy reference: Owner-supplied taxonomy tables in this file
+    technical sector namespace: technical_sector
+    source artifact namespace: edge_adoption
+  87.
+    bottleneck id: KED-PROP-CIRC-PASSPORT
+    title: Battery and product passport interoperability
+    annex: edge-adoption
+    candidate problem sector id: KED-PROP-CIRC-PASSPORT
+    technical sector candidates:
+      1.
+        id: S14
+        canonical name: Thermodynamic Ledger, TER, and Hardware
+      2.
+        id: S08
+        canonical name: Governance, Proof, and Constraints
+      3.
+        id: S05
+        canonical name: Workbook OS, KDRIVE, and Web4
+      4.
+        id: S20
+        canonical name: Cross-Sector Synthesis and Global Ledger
+    application sector candidates:
+    foundry candidates:
+      1.
+        canonical name: File System Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      2.
+        canonical name: Business & Enterprise Structure Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      3.
+        canonical name: Domain Mastery
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+    function id: unknown / not provided
+    function mapping status: UNRESOLVED: canonical source contains no function registry. Delivery and analyst are team roles, not inferred canonical function IDs.
+    mapping basis: Product/battery evidence schema and access-controlled lifecycle exchange.
+    mapping status: REVIEWER_INFERENCE_NOT_ADOPTED
+    ambiguity: Battery/product passport and circularity services are not explicit application names in the canonical register.
+    application mapping gap: Battery/product passport and circularity services are not explicit application names in the canonical register.
+    taxonomy reference: Owner-supplied taxonomy tables in this file
+    technical sector namespace: technical_sector
+    source artifact namespace: edge_adoption
+  88.
+    bottleneck id: KED-PROP-ADOPT-INTEGRATION
+    title: SME workflow integration and migration
+    annex: edge-adoption
+    candidate problem sector id: KED-PROP-ADOPT-INTEGRATION
+    technical sector candidates:
+      1.
+        id: S05
+        canonical name: Workbook OS, KDRIVE, and Web4
+      2.
+        id: S11
+        canonical name: Backend, API, and Service Runtime
+      3.
+        id: S13
+        canonical name: Cloud, Mesh, and Deployment
+    application sector candidates:
+      1.
+        canonical name: Enterprise software and SaaS
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+      2.
+        canonical name: Market frontage and digital commerce
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+    foundry candidates:
+      1.
+        canonical name: Process Mastery
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      2.
+        canonical name: Service Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      3.
+        canonical name: Customer File Base Software Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+    function id: unknown / not provided
+    function mapping status: UNRESOLVED: canonical source contains no function registry. Delivery and analyst are team roles, not inferred canonical function IDs.
+    mapping basis: Customer-specific process migration; distinct from generic managed-cloud portability.
+    mapping status: REVIEWER_INFERENCE_NOT_ADOPTED
+    ambiguity: Multiple candidates are nonexclusive dependencies; accountable mapping needs native-dossier and owner review. No unique mapping forced.
+    taxonomy reference: Owner-supplied taxonomy tables in this file
+    technical sector namespace: technical_sector
+    source artifact namespace: edge_adoption
+  89.
+    bottleneck id: KED-PROP-ADOPT-CAPABILITY
+    title: Digital adoption and operator capability
+    annex: edge-adoption
+    candidate problem sector id: KED-PROP-ADOPT-CAPABILITY
+    technical sector candidates:
+      1.
+        id: S10
+        canonical name: UI, Dashboard, and AI Shell
+      2.
+        id: S17
+        canonical name: Linguistic Process and Ethics
+      3.
+        id: S19
+        canonical name: Agent CLI and Codex Fleet
+    application sector candidates:
+      1.
+        canonical name: Education and technical publishing
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+      2.
+        canonical name: Workspace operations and HR
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+    foundry candidates:
+      1.
+        canonical name: HR & Team Services Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      2.
+        canonical name: Process Mastery
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      3.
+        canonical name: HCI Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+    function id: unknown / not provided
+    function mapping status: UNRESOLVED: canonical source contains no function registry. Delivery and analyst are team roles, not inferred canonical function IDs.
+    mapping basis: Operator learning and retained practice; not proof of an education credential or human performance score.
+    mapping status: REVIEWER_INFERENCE_NOT_ADOPTED
+    ambiguity: Multiple candidates are nonexclusive dependencies; accountable mapping needs native-dossier and owner review. No unique mapping forced.
+    taxonomy reference: Owner-supplied taxonomy tables in this file
+    technical sector namespace: technical_sector
+    source artifact namespace: edge_adoption
+  90.
+    bottleneck id: KED-PROP-ADOPT-LOWDATA
+    title: Low-data and assisted digital service access
+    annex: edge-adoption
+    candidate problem sector id: KED-PROP-ADOPT-LOWDATA
+    technical sector candidates:
+      1.
+        id: S10
+        canonical name: UI, Dashboard, and AI Shell
+      2.
+        id: S05
+        canonical name: Workbook OS, KDRIVE, and Web4
+      3.
+        id: S17
+        canonical name: Linguistic Process and Ethics
+    application sector candidates:
+      1.
+        canonical name: Education and technical publishing
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+      2.
+        canonical name: Customer support and service fulfilment
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+      3.
+        canonical name: Market frontage and digital commerce
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no distinct application ID
+    foundry candidates:
+      1.
+        canonical name: HCI Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      2.
+        canonical name: Website Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      3.
+        canonical name: Frontage Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+    function id: unknown / not provided
+    function mapping status: UNRESOLVED: canonical source contains no function registry. Delivery and analyst are team roles, not inferred canonical function IDs.
+    mapping basis: Low-data completion and assisted access; application-layer user success rather than network construction.
+    mapping status: REVIEWER_INFERENCE_NOT_ADOPTED
+    ambiguity: Multiple candidates are nonexclusive dependencies; accountable mapping needs native-dossier and owner review. No unique mapping forced.
+    taxonomy reference: Owner-supplied taxonomy tables in this file
+    technical sector namespace: technical_sector
+    source artifact namespace: edge_adoption
+  91.
+    bottleneck id: KED-PROP-ADOPT-PUBLIC-INTEROP
+    title: Cross-agency public-service interoperability
+    annex: edge-adoption
+    candidate problem sector id: KED-PROP-ADOPT-PUBLIC-INTEROP
+    technical sector candidates:
+      1.
+        id: S08
+        canonical name: Governance, Proof, and Constraints
+      2.
+        id: S11
+        canonical name: Backend, API, and Service Runtime
+      3.
+        id: S20
+        canonical name: Cross-Sector Synthesis and Global Ledger
+    application sector candidates:
+    foundry candidates:
+      1.
+        canonical name: Business & Enterprise Structure Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      2.
+        canonical name: Process Mastery
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      3.
+        canonical name: Domain Mastery
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+    function id: unknown / not provided
+    function mapping status: UNRESOLVED: canonical source contains no function registry. Delivery and analyst are team roles, not inferred canonical function IDs.
+    mapping basis: Organizational/legal/semantic exchange governance; APIs alone do not settle authority.
+    mapping status: REVIEWER_INFERENCE_NOT_ADOPTED
+    ambiguity: Public administration and cross-agency digital services are not explicit among the 18 application names.
+    application mapping gap: Public administration and cross-agency digital services are not explicit among the 18 application names.
+    taxonomy reference: Owner-supplied taxonomy tables in this file
+    technical sector namespace: technical_sector
+    source artifact namespace: edge_adoption
+  92.
+    bottleneck id: KED-PROP-SUPPLY-EVENTS
+    title: Cross-partner physical event traceability
+    annex: edge-adoption
+    candidate problem sector id: KED-PROP-SUPPLY-EVENTS
+    technical sector candidates:
+      1.
+        id: S08
+        canonical name: Governance, Proof, and Constraints
+      2.
+        id: S20
+        canonical name: Cross-Sector Synthesis and Global Ledger
+      3.
+        id: S11
+        canonical name: Backend, API, and Service Runtime
+      4.
+        id: S14
+        canonical name: Thermodynamic Ledger, TER, and Hardware
+    application sector candidates:
+    foundry candidates:
+      1.
+        canonical name: Growing Mesh Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      2.
+        canonical name: Customer File Base Software Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      3.
+        canonical name: Domain Mastery
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+    function id: unknown / not provided
+    function mapping status: UNRESOLVED: canonical source contains no function registry. Delivery and analyst are team roles, not inferred canonical function IDs.
+    mapping basis: Physical lot/custody event semantics and partner evidence; separate from product master/passport records.
+    mapping status: REVIEWER_INFERENCE_NOT_ADOPTED
+    ambiguity: Supply-chain logistics and product traceability are not explicit among the 18 application names.
+    application mapping gap: Supply-chain logistics and product traceability are not explicit among the 18 application names.
+    taxonomy reference: Owner-supplied taxonomy tables in this file
+    technical sector namespace: technical_sector
+    source artifact namespace: edge_adoption
+  93.
+    bottleneck id: KED-PROP-EDGE-HOME
+    title: Connected-home compatibility assurance
+    annex: edge-adoption
+    candidate problem sector id: KED-PROP-EDGE-HOME
+    technical sector candidates:
+      1.
+        id: S10
+        canonical name: UI, Dashboard, and AI Shell
+      2.
+        id: S11
+        canonical name: Backend, API, and Service Runtime
+      3.
+        id: S14
+        canonical name: Thermodynamic Ledger, TER, and Hardware
+    application sector candidates:
+    foundry candidates:
+      1.
+        canonical name: HCI Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      2.
+        canonical name: Usable Software Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+      3.
+        canonical name: Service Foundry
+        canonical id: unknown / not provided
+        identity note: Source provides exact name but no numeric/URI foundry ID
+    function id: unknown / not provided
+    function mapping status: UNRESOLVED: canonical source contains no function registry. Delivery and analyst are team roles, not inferred canonical function IDs.
+    mapping basis: Consumer device/controller version compatibility and commissioning.
+    mapping status: REVIEWER_INFERENCE_NOT_ADOPTED
+    ambiguity: Connected-home consumer-device services are not an exact match to industrial automation or CANBUS; application mapping remains open.
+    application mapping gap: Connected-home consumer-device services are not an exact match to industrial automation or CANBUS; application mapping remains open.
+    taxonomy reference: Owner-supplied taxonomy tables in this file
+    technical sector namespace: technical_sector
+    source artifact namespace: edge_adoption
+
+END OF PUBLIC RESEARCH DRAFT

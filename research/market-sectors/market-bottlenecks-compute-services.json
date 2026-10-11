@@ -1,0 +1,3380 @@
+{
+  "metadata": {
+    "title": "Keddeh Systems: Compute and Service Bottleneck Register",
+    "author": "dot (AI-assisted research compilation)",
+    "contributors": [
+      "Public-source authors credited individually in the source index"
+    ],
+    "publisher": "Keddeh Systems; public research-draft edition",
+    "rights_holder": "Original compilation rights reserved; owner to confirm legal rights holder. Third-party source rights retained.",
+    "licence_profile": "All rights reserved for original compilation; cited works retain their own licences",
+    "classification": "Public repository research draft; hypotheses and unadopted mappings; no production or publication-quality qualification",
+    "version": "0.1.0",
+    "status": "Public research draft; all interventions and teams proposed, not built or qualified",
+    "as_of": "2026-10-11",
+    "research_scope": "Compute, memory, storage, networking, cloud economics and portability, reliability, distributed systems, and developer operations",
+    "template_compliance": "Document metadata and research controls are recorded. Exact formal publishing-template conformity and final paginated-layout inspection remain unverified; this is a research draft.",
+    "public_edition": "1.0",
+    "source_namespace": "compute",
+    "publication_scope": "Newly authored 93-candidate market research prepared for the owner-requested public Keddeh1/BRAINK-AGENT repository. No private customer data, credentials, private document text or copied native implementation code is included."
+  },
+  "definitions": {
+    "hard_technical_limit": "Constraint imposed by finite resources, physical distance, or a stated protocol/resource model. Software may improve efficiency or choose trade-offs, not remove the constraint.",
+    "operational_pain": "Documented failure mode or delivery friction with existing technical approaches; prevalence and commercial demand require customer validation.",
+    "market_gap": "Evidence of unmet integration, tooling, pricing, portability or workflow demand. A market gap does not establish willingness to pay or absence of competitors.",
+    "speculative_claim": "A proposal or forecast without deployment evidence. Every Keddeh/BRAINK intervention in this register remains a hypothesis.",
+    "distinct_sector": "A separately addressable failure mechanism, buyer outcome and acceptance test. Related sectors may share infrastructure, but retain distinct IDs, delivery owners and independent analyst teams."
+  },
+  "normalization_rules": [
+    "One bottleneck_id maps to one proposed sector_id, one delivery_team_id and a separate analyst_team_id.",
+    "Sector names are proposals, not assertions that teams, products or deployments already exist.",
+    "Problem metrics are measurements to collect; all numerical acceptance thresholds are proposed pilot gates, not published Keddeh results.",
+    "Source publication dates are exact only where verified. Undated living documentation is marked undated and carries an access date.",
+    "Foundational sources establish mechanisms, not 2026 prevalence. Surveys describe their respondent samples, not all enterprises.",
+    "No aggregate market-size or universal exhaustive-coverage claim is made.",
+    "Existing tools are genuine alternatives; Keddeh must outperform or usefully integrate them rather than rebrand them."
+  ],
+  "analyst_control": {
+    "separation": "Each sector has a distinct analyst team identity and mandate. Delivery experts do not approve their own results.",
+    "required_outputs": [
+      "Source and claim ledger with source date, access date and limitations",
+      "Customer problem baseline and willingness-to-pay evidence",
+      "Pre-registered workload, comparator, measurement method and failure-injection plan",
+      "Independent reproduction using held-out traces and raw immutable measurements",
+      "Costs, regressions, safety limits, uncertainty and reject/no-go recommendation"
+    ],
+    "release_gate": "Do not claim solved until an authorized pilot passes its pre-registered criteria and a separate analyst team signs the evidence report."
+  },
+  "sources": {
+    "CS01": {
+      "title": "GPU Performance Background User Guide",
+      "url": "https://docs.nvidia.com/deeplearning/performance/dl-performance-gpu-background/index.html",
+      "publication_date": null,
+      "accessed": "2026-10-11",
+      "kind": "primary technical documentation",
+      "limitations": "Established roofline mechanism; hardware examples are older and are not current product specifications."
+    },
+    "CS02": {
+      "title": "PyTorch fully_shard / FSDP2 documentation",
+      "url": "https://docs.pytorch.org/docs/stable/distributed.fsdp.fully_shard.html",
+      "publication_date": null,
+      "accessed": "2026-10-11",
+      "kind": "primary technical documentation",
+      "limitations": "Living documentation; no verified publication date."
+    },
+    "CS03": {
+      "title": "Nomad: Non-Exclusive Memory Tiering via Transactional Page Migration",
+      "url": "https://www.usenix.org/conference/osdi24/presentation/xiang",
+      "publication_date": "2024-07",
+      "accessed": "2026-10-11",
+      "kind": "primary peer-reviewed systems research",
+      "limitations": "Reported experimental results are configuration-specific; no Keddeh reproduction."
+    },
+    "CS04": {
+      "title": "Kubernetes Schedule GPUs",
+      "url": "https://kubernetes.io/docs/tasks/manage-gpus/scheduling-gpus/",
+      "publication_date": null,
+      "accessed": "2026-10-11",
+      "kind": "primary technical documentation",
+      "limitations": "Living documentation; no verified publication date."
+    },
+    "CS05": {
+      "title": "Kubernetes Topology Manager policies",
+      "url": "https://kubernetes.io/docs/tasks/administer-cluster/topology-manager/",
+      "publication_date": null,
+      "accessed": "2026-10-11",
+      "kind": "primary technical documentation",
+      "limitations": "Living documentation; no verified publication date."
+    },
+    "CS06": {
+      "title": "Electricity 2026: Grids",
+      "url": "https://www.iea.org/reports/electricity-2026/grids",
+      "publication_date": "2026",
+      "accessed": "2026-10-11",
+      "kind": "primary international-agency analysis",
+      "limitations": "Grid timelines and queue estimates are global context; a site-specific connection study is required."
+    },
+    "CS07": {
+      "title": "DGX SuperPOD architecture with DGX GB200",
+      "url": "https://docs.nvidia.com/dgx-superpod/reference-architecture-scalable-infrastructure-gb200/latest/dgx-superpod-architecture.html",
+      "publication_date": null,
+      "accessed": "2026-10-11",
+      "kind": "primary technical documentation",
+      "limitations": "Vendor reference architecture; thermal design requirements are specific to the equipment and facility."
+    },
+    "CS08": {
+      "title": "What is HIP?",
+      "url": "https://rocmdocs.amd.com/projects/HIP/en/latest/what_is_hip.html",
+      "publication_date": null,
+      "accessed": "2026-10-11",
+      "kind": "primary technical documentation",
+      "limitations": "Living documentation; no verified publication date."
+    },
+    "CS09": {
+      "title": "GPUDirect Storage Overview",
+      "url": "https://docs.nvidia.com/gpudirect-storage/overview-guide/",
+      "publication_date": null,
+      "accessed": "2026-10-11",
+      "kind": "primary technical documentation",
+      "limitations": "Vendor documentation describes eligible direct paths; gains require I/O to be the workload bottleneck."
+    },
+    "CS10": {
+      "title": "Amazon S3 performance best practices",
+      "url": "https://docs.aws.amazon.com/AmazonS3/latest/userguide/optimizing-performance.html",
+      "publication_date": null,
+      "accessed": "2026-10-11",
+      "kind": "primary technical documentation",
+      "limitations": "Stated per-prefix rates are at least achievable rates, not universal fixed ceilings; S3 Express differs."
+    },
+    "CS11": {
+      "title": "How to Write to SSDs",
+      "url": "https://arxiv.org/abs/2603.09927",
+      "publication_date": "2026-03-18",
+      "accessed": "2026-10-11",
+      "kind": "primary research, arXiv v3; author notes PVLDB 2026 acceptance",
+      "limitations": "Benchmark results are research-system and workload-specific, not universal SSD gains."
+    },
+    "CS12": {
+      "title": "S3 archive retrieval options",
+      "url": "https://docs.aws.amazon.com/AmazonS3/latest/userguide/restoring-objects-retrieval-options.html",
+      "publication_date": null,
+      "accessed": "2026-10-11",
+      "kind": "primary technical documentation",
+      "limitations": "Living documentation; no verified publication date."
+    },
+    "CS13": {
+      "title": "ByteCheckpoint",
+      "url": "https://www.usenix.org/conference/nsdi25/presentation/wan-borui",
+      "publication_date": "2025-04",
+      "accessed": "2026-10-11",
+      "kind": "primary peer-reviewed systems research",
+      "limitations": "Performance numbers are authors’ experiments; no independent Keddeh reproduction."
+    },
+    "CS14": {
+      "title": "NCCL troubleshooting",
+      "url": "https://docs.nvidia.com/deeplearning/nccl/user-guide/docs/troubleshooting.html",
+      "publication_date": null,
+      "accessed": "2026-10-11",
+      "kind": "primary technical documentation",
+      "limitations": "Living documentation; no verified publication date."
+    },
+    "CS15": {
+      "title": "The Tail at Scale",
+      "url": "https://research.google/pubs/the-tail-at-scale/",
+      "publication_date": "2013",
+      "accessed": "2026-10-11",
+      "kind": "primary systems research",
+      "limitations": "Foundational mechanism, not a 2026 market-prevalence survey."
+    },
+    "CS16": {
+      "title": "Spanner regional and multi-region configurations",
+      "url": "https://docs.cloud.google.com/spanner/docs/instance-configurations?hl=en",
+      "publication_date": null,
+      "accessed": "2026-10-11",
+      "kind": "primary technical documentation",
+      "limitations": "Living documentation; no verified publication date."
+    },
+    "CS17": {
+      "title": "AWS DynamoDB US-EAST-1 disruption summary",
+      "url": "https://aws.amazon.com/message/101925/",
+      "publication_date": "2025-10",
+      "accessed": "2026-10-11",
+      "kind": "primary provider postmortem",
+      "limitations": "Event occurred 2025-10-19/20; publication day not verified; one incident does not estimate population failure rates."
+    },
+    "CS18": {
+      "title": "State of FinOps 2026",
+      "url": "https://data.finops.org/",
+      "publication_date": "2026",
+      "accessed": "2026-10-11",
+      "kind": "primary practitioner survey",
+      "limitations": "1,192 respondents, representing $83bn+ annual cloud spend; self-selected community sample. Avoid population-wide percentages."
+    },
+    "CS19": {
+      "title": "FOCUS: What is FOCUS?",
+      "url": "https://focus.finops.org/what-is-focus/",
+      "publication_date": null,
+      "accessed": "2026-10-11",
+      "kind": "primary technical documentation",
+      "limitations": "Standardization is an existing alternative, not proof of a greenfield market. Version support differs by provider."
+    },
+    "CS20": {
+      "title": "AWS Savings Plans purchase analysis calculations",
+      "url": "https://docs.aws.amazon.com/savingsplans/latest/userguide/sp-purchase-analysis-calculations.html",
+      "publication_date": null,
+      "accessed": "2026-10-11",
+      "kind": "primary technical documentation",
+      "limitations": "Living documentation; no verified publication date."
+    },
+    "CS21": {
+      "title": "CMA Cloud services final decision report",
+      "url": "https://assets.publishing.service.gov.uk/media/688b8891fdde2b8f73469544/final_decision_report_31.7.25.pdf",
+      "publication_date": "2025-07-31",
+      "accessed": "2026-10-11",
+      "kind": "primary regulator market investigation",
+      "limitations": "UK market findings; provider objections and customer heterogeneity are discussed. Current tariffs and legal status must be rechecked before advice."
+    },
+    "CS22": {
+      "title": "Troubleshoot EC2 launch issues",
+      "url": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/troubleshooting-launch.html",
+      "publication_date": null,
+      "accessed": "2026-10-11",
+      "kind": "primary technical documentation",
+      "limitations": "Living documentation; no verified publication date."
+    },
+    "CS23": {
+      "title": "etcd v3.6 failure modes",
+      "url": "https://etcd.io/docs/v3.6/op-guide/failures/",
+      "publication_date": "2023-02-20",
+      "accessed": "2026-10-11",
+      "kind": "primary technical documentation",
+      "limitations": "Page records a 2023 edit; documents stable quorum behavior, not latest version prevalence."
+    },
+    "CS24": {
+      "title": "Apache Kafka 4.1 design",
+      "url": "https://kafka.apache.org/41/design/design/",
+      "publication_date": null,
+      "accessed": "2026-10-11",
+      "kind": "primary technical documentation",
+      "limitations": "Living documentation; no verified publication date."
+    },
+    "CS25": {
+      "title": "Google SRE: Handling Overload",
+      "url": "https://sre.google/sre-book/handling-overload/",
+      "publication_date": "2016",
+      "accessed": "2026-10-11",
+      "kind": "primary operator technical guidance",
+      "limitations": "Foundational operational practice, not a contemporary market survey."
+    },
+    "CS26": {
+      "title": "Spanner TrueTime and external consistency",
+      "url": "https://docs.cloud.google.com/spanner/docs/true-time-external-consistency",
+      "publication_date": null,
+      "accessed": "2026-10-11",
+      "kind": "primary technical documentation",
+      "limitations": "Living documentation; no verified publication date."
+    },
+    "CS27": {
+      "title": "AWS Saga orchestration pattern",
+      "url": "https://docs.aws.amazon.com/en_en/prescriptive-guidance/latest/cloud-design-patterns/saga-orchestration.html",
+      "publication_date": null,
+      "accessed": "2026-10-11",
+      "kind": "primary technical documentation",
+      "limitations": "Use for heterogeneous-store compensation design; do not generalize that all relational transactions use 2PC or that all cross-store 2PC is impossible."
+    },
+    "CS28": {
+      "title": "Redis client-side caching",
+      "url": "https://redis.io/docs/latest/develop/clients/client-side-caching/",
+      "publication_date": null,
+      "accessed": "2026-10-11",
+      "kind": "primary technical documentation",
+      "limitations": "Living documentation; no verified publication date."
+    },
+    "CS29": {
+      "title": "AWS Backup restore testing and validation",
+      "url": "https://docs.aws.amazon.com/aws-backup/latest/devguide/restore-testing.html",
+      "publication_date": null,
+      "accessed": "2026-10-11",
+      "kind": "primary technical documentation",
+      "limitations": "Living documentation; no verified publication date."
+    },
+    "CS30": {
+      "title": "OpenTelemetry metrics SDK",
+      "url": "https://opentelemetry.io/docs/specs/otel/metrics/sdk/",
+      "publication_date": null,
+      "accessed": "2026-10-11",
+      "kind": "primary technical documentation",
+      "limitations": "Living documentation; no verified publication date."
+    },
+    "CS31": {
+      "title": "OpenTelemetry tracing SDK",
+      "url": "https://opentelemetry.io/docs/specs/otel/trace/sdk/",
+      "publication_date": null,
+      "accessed": "2026-10-11",
+      "kind": "primary technical documentation",
+      "limitations": "Living documentation; no verified publication date."
+    },
+    "CS32": {
+      "title": "Cloudflare: Fail Small resilience plan",
+      "url": "https://blog.cloudflare.com/fail-small-resilience-plan/",
+      "publication_date": "2025-12-19",
+      "accessed": "2026-10-11",
+      "kind": "primary provider postmortem and remediation plan",
+      "limitations": "Provider-reported incidents and planned controls; do not treat plans as independently verified deployments."
+    },
+    "CS33": {
+      "title": "Bazel remote caching",
+      "url": "https://bazel.build/versions/7.1.0/remote/caching?hl=en",
+      "publication_date": null,
+      "accessed": "2026-10-11",
+      "kind": "primary technical documentation",
+      "limitations": "Version-pinned documentation; reproducibility prerequisites still require project-specific checks."
+    },
+    "CS34": {
+      "title": "Bazel hermeticity",
+      "url": "https://bazel.build/basics/hermeticity",
+      "publication_date": null,
+      "accessed": "2026-10-11",
+      "kind": "primary technical documentation",
+      "limitations": "Living documentation; no verified publication date."
+    },
+    "CS35": {
+      "title": "230,439 Test Failures Later: Flaky Failure Classifiers",
+      "url": "https://arxiv.org/abs/2401.15788",
+      "publication_date": "2024-01-28",
+      "accessed": "2026-10-11",
+      "kind": "primary empirical research",
+      "limitations": "498 flaky tests across 22 open-source Java projects; cross-language generalization unproven."
+    },
+    "CS36": {
+      "title": "Terraform drift detection and policy",
+      "url": "https://developer.hashicorp.com/terraform/tutorials/cloud/drift-and-policy",
+      "publication_date": null,
+      "accessed": "2026-10-11",
+      "kind": "primary technical documentation",
+      "limitations": "Living documentation; no verified publication date."
+    },
+    "CS37": {
+      "title": "PostgreSQL 18 ALTER TABLE",
+      "url": "https://www.postgresql.org/docs/current/sql-altertable.html",
+      "publication_date": null,
+      "accessed": "2026-10-11",
+      "kind": "primary technical documentation",
+      "limitations": "Living documentation; no verified publication date."
+    },
+    "CS38": {
+      "title": "DORA platform engineering capability",
+      "url": "https://dora.dev/capabilities/platform-engineering/",
+      "publication_date": "2025 evidence, page undated",
+      "accessed": "2026-10-11",
+      "kind": "primary research-program synthesis",
+      "limitations": "Reported associations are not proof of causality or guaranteed gains from platform adoption."
+    },
+    "CS39": {
+      "title": "Google SRE Workbook: Eliminating Toil",
+      "url": "https://sre.google/workbook/eliminating-toil/",
+      "publication_date": "2018",
+      "accessed": "2026-10-11",
+      "kind": "primary operator technical guidance",
+      "limitations": "Google’s 50% operational-work cap is an organizational example, not a universal customer target."
+    },
+    "CS40": {
+      "title": "InvisiFlow: Silent Telemetry Data Transmission",
+      "url": "https://www.usenix.org/conference/nsdi25/presentation/zhang-yinda",
+      "publication_date": "2025-04",
+      "accessed": "2026-10-11",
+      "kind": "primary peer-reviewed systems research",
+      "limitations": "Programmable-network research evaluated under particular topologies and loads; product readiness unverified."
+    },
+    "CS41": {
+      "title": "Google SRE: Effective Troubleshooting",
+      "url": "https://sre.google/sre-book/effective-troubleshooting/",
+      "publication_date": "2016",
+      "accessed": "2026-10-11",
+      "kind": "primary operator technical guidance",
+      "limitations": "Foundational methodology; no quantitative market-prevalence claim."
+    },
+    "CS42": {
+      "title": "Kubernetes version skew policy",
+      "url": "https://kubernetes.io/releases/version-skew-policy/",
+      "publication_date": null,
+      "accessed": "2026-10-11",
+      "kind": "primary technical documentation",
+      "limitations": "Moving policy page. Use a pinned policy/version matrix for any real upgrade; this register avoids asserting latest release numbers."
+    }
+  },
+  "bottlenecks": [
+    {
+      "bottleneck_id": "CMP-MEM-BANDWIDTH",
+      "name": "Accelerator memory-bandwidth saturation",
+      "family": "compute-memory",
+      "problem_class": "hard_technical_limit",
+      "proposed_sector_id": "KEDDEH-CMP-MEM-BANDWIDTH",
+      "proposed_sector_name": "Accelerator memory-bandwidth saturation Engineering",
+      "buyer_and_users": [
+        "GPU platform owners",
+        "HPC and inference engineers"
+      ],
+      "measurable_problem": "Low-arithmetic-intensity kernels wait for data; peak FLOPS do not translate into throughput. Measure achieved bandwidth, bytes per useful operation, p99 latency and joules per result.",
+      "evidence": [
+        {
+          "source_id": "CS01",
+          "url": "https://docs.nvidia.com/deeplearning/performance/dl-performance-gpu-background/index.html"
+        }
+      ],
+      "evidence_summary": "NVIDIA documents separate memory-bandwidth, computation and latency limits, using arithmetic intensity to identify the binding regime.",
+      "existing_alternatives": [
+        "Nsight profiling",
+        "kernel fusion and tiling",
+        "quantization",
+        "batching",
+        "higher-bandwidth hardware"
+      ],
+      "keddeh_integration_hypothesis": "Use BRAINK-guided profiling and workload-specific transformations with an evidence ledger; test whether reduced data movement improves useful throughput within accuracy and latency budgets.",
+      "hypothesis_status": "Proposed; not built, deployed, or validated by this research",
+      "delivery_team": {
+        "team_id": "BRAINK-CMP-MEM-BANDWIDTH-DELIVERY",
+        "name": "Accelerator memory-bandwidth saturation Delivery Experts",
+        "specialties": [
+          "GPU kernel engineering",
+          "compiler optimization",
+          "performance counters",
+          "numerical validation"
+        ]
+      },
+      "independent_analyst_team": {
+        "team_id": "BRAINK-CMP-MEM-BANDWIDTH-ANALYSIS",
+        "name": "Accelerator memory-bandwidth saturation Independent Analysis",
+        "specialties": [
+          "Accelerator memory-bandwidth saturation benchmark specialist",
+          "compute-memory customer-economics analyst",
+          "Independent reliability and assurance reviewer"
+        ],
+        "mandate": "Independently verify evidence, baseline, comparator and acceptance metric; challenge delivery claims; publish failure cases and no-go findings."
+      },
+      "proposed_acceptance_test": "On a fixed device and held-out workload mix, reduce time per correct result by at least 15%; numerical error and p99 latency must stay within preregistered limits; record power and memory traffic.",
+      "acceptance_test_status": "Illustrative pilot threshold; agree and preregister with the buyer before testing",
+      "dependencies_and_risks": [
+        "Model/data access",
+        "vendor profiler support",
+        "precision loss",
+        "batching can violate latency SLOs"
+      ],
+      "deduplication_boundary": "Memory throughput rather than memory capacity or storage ingest.",
+      "evidence_confidence": "Documented mechanism; customer prevalence and willingness to pay unvalidated",
+      "canonical_sector_id": null,
+      "canonical_mapping_status": "Unreconciled candidate problem-sector key; not a canonical replacement ID",
+      "required_customer_evidence": [
+        "Named workload owner and authorized representative telemetry",
+        "Baseline severity and fully loaded cost",
+        "Existing tool/competitor comparison",
+        "Buyer-approved business outcome and willingness-to-pay evidence"
+      ]
+    },
+    {
+      "bottleneck_id": "CMP-MEM-CAPACITY",
+      "name": "Accelerator working-set capacity",
+      "family": "compute-memory",
+      "problem_class": "hard_technical_limit",
+      "proposed_sector_id": "KEDDEH-CMP-MEM-CAPACITY",
+      "proposed_sector_name": "Accelerator working-set capacity Engineering",
+      "buyer_and_users": [
+        "Model training teams",
+        "GPU-backed simulation teams"
+      ],
+      "measurable_problem": "Parameters, optimizer state, activations or caches exceed device memory, causing OOM, smaller batches or offload stalls. Measure peak allocated/reserved bytes and fit envelope.",
+      "evidence": [
+        {
+          "source_id": "CS02",
+          "url": "https://docs.pytorch.org/docs/stable/distributed.fsdp.fully_shard.html"
+        }
+      ],
+      "evidence_summary": "PyTorch FSDP2 documents grouping and sharding to reduce peak memory while overlapping communication and computation.",
+      "existing_alternatives": [
+        "FSDP/ZeRO",
+        "activation checkpointing",
+        "model/tensor parallelism",
+        "CPU offload",
+        "smaller or quantized models"
+      ],
+      "keddeh_integration_hypothesis": "Integrate memory accounting, supported sharding and offload policies; produce a capacity-versus-throughput frontier for the customer workload.",
+      "hypothesis_status": "Proposed; not built, deployed, or validated by this research",
+      "delivery_team": {
+        "team_id": "BRAINK-CMP-MEM-CAPACITY-DELIVERY",
+        "name": "Accelerator working-set capacity Delivery Experts",
+        "specialties": [
+          "Distributed training",
+          "memory allocation",
+          "tensor parallelism",
+          "numerical testing"
+        ]
+      },
+      "independent_analyst_team": {
+        "team_id": "BRAINK-CMP-MEM-CAPACITY-ANALYSIS",
+        "name": "Accelerator working-set capacity Independent Analysis",
+        "specialties": [
+          "Accelerator working-set capacity benchmark specialist",
+          "compute-memory customer-economics analyst",
+          "Independent reliability and assurance reviewer"
+        ],
+        "mandate": "Independently verify evidence, baseline, comparator and acceptance metric; challenge delivery claims; publish failure cases and no-go findings."
+      },
+      "proposed_acceptance_test": "Run the specified workload without OOM across 100 repetitions; reduce peak device memory at least 20% with no more than 10% throughput loss and no quality regression.",
+      "acceptance_test_status": "Illustrative pilot threshold; agree and preregister with the buyer before testing",
+      "dependencies_and_risks": [
+        "Extra communication",
+        "host-memory and PCIe limits",
+        "framework incompatibilities",
+        "memory fragmentation"
+      ],
+      "deduplication_boundary": "Capacity and peak liveness; do not merge with bandwidth or model-quality sectors.",
+      "evidence_confidence": "Documented mechanism; customer prevalence and willingness to pay unvalidated",
+      "canonical_sector_id": null,
+      "canonical_mapping_status": "Unreconciled candidate problem-sector key; not a canonical replacement ID",
+      "required_customer_evidence": [
+        "Named workload owner and authorized representative telemetry",
+        "Baseline severity and fully loaded cost",
+        "Existing tool/competitor comparison",
+        "Buyer-approved business outcome and willingness-to-pay evidence"
+      ]
+    },
+    {
+      "bottleneck_id": "CMP-MEM-TIERING",
+      "name": "Tiered-memory thrashing and placement",
+      "family": "compute-memory",
+      "problem_class": "operational_pain",
+      "proposed_sector_id": "KEDDEH-CMP-MEM-TIERING",
+      "proposed_sector_name": "Tiered-memory thrashing and placement Engineering",
+      "buyer_and_users": [
+        "In-memory database operators",
+        "large-memory analytics teams"
+      ],
+      "measurable_problem": "Hot-page movement between DRAM and slower tiers can consume CPU and bandwidth and worsen tail latency under pressure. Measure migration rate, faults, tier hit ratio and p99 latency.",
+      "evidence": [
+        {
+          "source_id": "CS03",
+          "url": "https://www.usenix.org/conference/osdi24/presentation/xiang"
+        }
+      ],
+      "evidence_summary": "The OSDI 2024 NOMAD study demonstrates workload-specific degradation from exclusive page migration under fast-memory pressure and evaluates a non-exclusive alternative.",
+      "existing_alternatives": [
+        "Linux tiering/NUMA balancing",
+        "CXL expansion",
+        "application-managed caching",
+        "NOMAD research approach"
+      ],
+      "keddeh_integration_hypothesis": "Benchmark transparent and application-aware tiering behind a workload profiler; adopt only stable supported mechanisms after failure testing.",
+      "hypothesis_status": "Proposed; not built, deployed, or validated by this research",
+      "delivery_team": {
+        "team_id": "BRAINK-CMP-MEM-TIERING-DELIVERY",
+        "name": "Tiered-memory thrashing and placement Delivery Experts",
+        "specialties": [
+          "Linux virtual memory",
+          "CXL/NUMA architecture",
+          "database performance",
+          "kernel validation"
+        ]
+      },
+      "independent_analyst_team": {
+        "team_id": "BRAINK-CMP-MEM-TIERING-ANALYSIS",
+        "name": "Tiered-memory thrashing and placement Independent Analysis",
+        "specialties": [
+          "Tiered-memory thrashing and placement benchmark specialist",
+          "compute-memory customer-economics analyst",
+          "Independent reliability and assurance reviewer"
+        ],
+        "mandate": "Independently verify evidence, baseline, comparator and acceptance metric; challenge delivery claims; publish failure cases and no-go findings."
+      },
+      "proposed_acceptance_test": "At a fixed DRAM budget, improve p99 latency at least 15% over the production tiering baseline during pressure sweeps, with no data loss or uncontrolled memory growth.",
+      "acceptance_test_status": "Illustrative pilot threshold; agree and preregister with the buyer before testing",
+      "dependencies_and_risks": [
+        "CXL hardware availability",
+        "kernel compatibility",
+        "page-copy overhead",
+        "research code maintenance"
+      ],
+      "deduplication_boundary": "Hot/cold placement across memory tiers; distinct from CPU/device NUMA locality.",
+      "evidence_confidence": "Documented mechanism; customer prevalence and willingness to pay unvalidated",
+      "canonical_sector_id": null,
+      "canonical_mapping_status": "Unreconciled candidate problem-sector key; not a canonical replacement ID",
+      "required_customer_evidence": [
+        "Named workload owner and authorized representative telemetry",
+        "Baseline severity and fully loaded cost",
+        "Existing tool/competitor comparison",
+        "Buyer-approved business outcome and willingness-to-pay evidence"
+      ]
+    },
+    {
+      "bottleneck_id": "CMP-NUMA-LOCALITY",
+      "name": "CPU memory and device topology mismatch",
+      "family": "compute-memory",
+      "problem_class": "operational_pain",
+      "proposed_sector_id": "KEDDEH-CMP-NUMA-LOCALITY",
+      "proposed_sector_name": "CPU memory and device topology mismatch Engineering",
+      "buyer_and_users": [
+        "Low-latency platform teams",
+        "telecom/HPC operators"
+      ],
+      "measurable_problem": "CPU threads, memory pages and NIC/GPU placement cross unfavorable NUMA paths. Measure remote-memory fraction, inter-socket traffic, jitter and rejected scheduling.",
+      "evidence": [
+        {
+          "source_id": "CS05",
+          "url": "https://kubernetes.io/docs/tasks/administer-cluster/topology-manager/"
+        }
+      ],
+      "evidence_summary": "Kubernetes documents topology-alignment limitations and possible performance degradation on non-adjacent NUMA placements.",
+      "existing_alternatives": [
+        "Kubernetes Topology Manager",
+        "CPU pinning",
+        "numactl",
+        "Slurm affinity"
+      ],
+      "keddeh_integration_hypothesis": "Add a topology inventory and tested placement recommendations to existing schedulers, preserving admission and rollback controls.",
+      "hypothesis_status": "Proposed; not built, deployed, or validated by this research",
+      "delivery_team": {
+        "team_id": "BRAINK-CMP-NUMA-LOCALITY-DELIVERY",
+        "name": "CPU memory and device topology mismatch Delivery Experts",
+        "specialties": [
+          "Linux scheduling",
+          "NUMA profiling",
+          "Kubernetes resource managers",
+          "hardware topology"
+        ]
+      },
+      "independent_analyst_team": {
+        "team_id": "BRAINK-CMP-NUMA-LOCALITY-ANALYSIS",
+        "name": "CPU memory and device topology mismatch Independent Analysis",
+        "specialties": [
+          "CPU memory and device topology mismatch benchmark specialist",
+          "compute-memory customer-economics analyst",
+          "Independent reliability and assurance reviewer"
+        ],
+        "mandate": "Independently verify evidence, baseline, comparator and acceptance metric; challenge delivery claims; publish failure cases and no-go findings."
+      },
+      "proposed_acceptance_test": "Reduce p99 service latency at least 10% on the same hardware under representative co-load; quantify any loss of schedulable capacity.",
+      "acceptance_test_status": "Illustrative pilot threshold; agree and preregister with the buyer before testing",
+      "dependencies_and_risks": [
+        "BIOS and kernel settings",
+        "special privileges",
+        "packing/latency trade-off",
+        "heterogeneous nodes"
+      ],
+      "deduplication_boundary": "Spatial resource locality, not GPU fractional scheduling or cluster network collectives.",
+      "evidence_confidence": "Documented mechanism; customer prevalence and willingness to pay unvalidated",
+      "canonical_sector_id": null,
+      "canonical_mapping_status": "Unreconciled candidate problem-sector key; not a canonical replacement ID",
+      "required_customer_evidence": [
+        "Named workload owner and authorized representative telemetry",
+        "Baseline severity and fully loaded cost",
+        "Existing tool/competitor comparison",
+        "Buyer-approved business outcome and willingness-to-pay evidence"
+      ]
+    },
+    {
+      "bottleneck_id": "CMP-GPU-SCHEDULING",
+      "name": "Accelerator allocation fragmentation",
+      "family": "compute-memory",
+      "problem_class": "operational_pain",
+      "proposed_sector_id": "KEDDEH-CMP-GPU-SCHEDULING",
+      "proposed_sector_name": "Accelerator allocation fragmentation Engineering",
+      "buyer_and_users": [
+        "GPU cluster operators",
+        "AI platform engineering buyers"
+      ],
+      "measurable_problem": "Jobs queue while fragmented, mismatched or exclusively allocated accelerators sit partly idle. Measure queue wait, useful accelerator utilization, fragmentation and fairness.",
+      "evidence": [
+        {
+          "source_id": "CS04",
+          "url": "https://kubernetes.io/docs/tasks/manage-gpus/scheduling-gpus/"
+        }
+      ],
+      "evidence_summary": "Kubernetes device-plugin GPU requests and limits must match; vendor plugins and drivers are required. This supports the allocation constraint, not a claim that current schedulers lack all sharing features.",
+      "existing_alternatives": [
+        "MIG",
+        "vendor time-slicing/MPS",
+        "Kueue/Volcano/Slurm",
+        "commercial GPU schedulers"
+      ],
+      "keddeh_integration_hypothesis": "Integrate supported sharing, gang scheduling and topology-aware placement; evaluate actual traces instead of equating assigned GPUs with useful work.",
+      "hypothesis_status": "Proposed; not built, deployed, or validated by this research",
+      "delivery_team": {
+        "team_id": "BRAINK-CMP-GPU-SCHEDULING-DELIVERY",
+        "name": "Accelerator allocation fragmentation Delivery Experts",
+        "specialties": [
+          "Cluster scheduling",
+          "GPU isolation",
+          "queueing/fairness",
+          "capacity planning"
+        ]
+      },
+      "independent_analyst_team": {
+        "team_id": "BRAINK-CMP-GPU-SCHEDULING-ANALYSIS",
+        "name": "Accelerator allocation fragmentation Independent Analysis",
+        "specialties": [
+          "Accelerator allocation fragmentation benchmark specialist",
+          "compute-memory customer-economics analyst",
+          "Independent reliability and assurance reviewer"
+        ],
+        "mandate": "Independently verify evidence, baseline, comparator and acceptance metric; challenge delivery claims; publish failure cases and no-go findings."
+      },
+      "proposed_acceptance_test": "On held-out job traces, reduce p95 queue wait at least 20% and improve useful GPU-hours per dollar at least 10%, without starving any agreed priority class.",
+      "acceptance_test_status": "Illustrative pilot threshold; agree and preregister with the buyer before testing",
+      "dependencies_and_risks": [
+        "Isolation and noisy neighbors",
+        "licensing/support",
+        "workload profiling overhead",
+        "topology restrictions"
+      ],
+      "deduplication_boundary": "Allocation and queueing; workload kernel efficiency stays CMP-MEM-BANDWIDTH.",
+      "evidence_confidence": "Documented mechanism; customer prevalence and willingness to pay unvalidated",
+      "canonical_sector_id": null,
+      "canonical_mapping_status": "Unreconciled candidate problem-sector key; not a canonical replacement ID",
+      "required_customer_evidence": [
+        "Named workload owner and authorized representative telemetry",
+        "Baseline severity and fully loaded cost",
+        "Existing tool/competitor comparison",
+        "Buyer-approved business outcome and willingness-to-pay evidence"
+      ]
+    },
+    {
+      "bottleneck_id": "CMP-GRID-CAPACITY",
+      "name": "Power-constrained compute deployment",
+      "family": "compute-facility",
+      "problem_class": "hard_technical_limit",
+      "proposed_sector_id": "KEDDEH-CMP-GRID-CAPACITY",
+      "proposed_sector_name": "Power-constrained compute deployment Engineering",
+      "buyer_and_users": [
+        "Datacenter developers",
+        "enterprise infrastructure executives"
+      ],
+      "measurable_problem": "Compute cannot be energized on schedule because firm grid capacity lags site and equipment readiness. Measure available MW, connection lead time and unserved workload-hours.",
+      "evidence": [
+        {
+          "source_id": "CS06",
+          "url": "https://www.iea.org/reports/electricity-2026/grids"
+        }
+      ],
+      "evidence_summary": "IEA Electricity 2026 describes 5–15 year grid-development timelines versus 1–3 years for datacenters and over 2,500 GW of mixed project types in queues.",
+      "existing_alternatives": [
+        "Colocation capacity",
+        "phased deployment",
+        "demand response",
+        "capacity reservations",
+        "grid upgrades"
+      ],
+      "keddeh_integration_hypothesis": "Build an auditable workload/power scheduling and site-capacity decision layer with utility and facility partners. BRAINK cannot create grid capacity or shorten permits by assertion.",
+      "hypothesis_status": "Proposed; not built, deployed, or validated by this research",
+      "delivery_team": {
+        "team_id": "BRAINK-CMP-GRID-CAPACITY-DELIVERY",
+        "name": "Power-constrained compute deployment Delivery Experts",
+        "specialties": [
+          "Electrical/facility engineering partners",
+          "workload scheduling",
+          "power metering",
+          "capacity economics"
+        ]
+      },
+      "independent_analyst_team": {
+        "team_id": "BRAINK-CMP-GRID-CAPACITY-ANALYSIS",
+        "name": "Power-constrained compute deployment Independent Analysis",
+        "specialties": [
+          "Power-constrained compute deployment benchmark specialist",
+          "compute-facility customer-economics analyst",
+          "Independent reliability and assurance reviewer"
+        ],
+        "mandate": "Independently verify evidence, baseline, comparator and acceptance metric; challenge delivery claims; publish failure cases and no-go findings."
+      },
+      "proposed_acceptance_test": "Under an approved power envelope, meet workload deadlines with zero envelope breaches; validate meter-based energy forecasts within 10% and report remaining capacity deficit.",
+      "acceptance_test_status": "Illustrative pilot threshold; agree and preregister with the buyer before testing",
+      "dependencies_and_risks": [
+        "Utility studies",
+        "permits",
+        "critical-load constraints",
+        "backup-generation restrictions",
+        "capex"
+      ],
+      "deduplication_boundary": "Power availability at site; cooling and energy efficiency are separate. Cross-reference energy-sector research.",
+      "evidence_confidence": "Documented mechanism; customer prevalence and willingness to pay unvalidated",
+      "canonical_sector_id": null,
+      "canonical_mapping_status": "Unreconciled candidate problem-sector key; not a canonical replacement ID",
+      "required_customer_evidence": [
+        "Named workload owner and authorized representative telemetry",
+        "Baseline severity and fully loaded cost",
+        "Existing tool/competitor comparison",
+        "Buyer-approved business outcome and willingness-to-pay evidence"
+      ]
+    },
+    {
+      "bottleneck_id": "CMP-THERMAL-DENSITY",
+      "name": "High-density cooling compatibility",
+      "family": "compute-facility",
+      "problem_class": "hard_technical_limit",
+      "proposed_sector_id": "KEDDEH-CMP-THERMAL-DENSITY",
+      "proposed_sector_name": "High-density cooling compatibility Engineering",
+      "buyer_and_users": [
+        "Datacenter facilities teams",
+        "GPU infrastructure integrators"
+      ],
+      "measurable_problem": "Rack heat density and liquid/air interface requirements exceed the facility envelope, causing throttling, derating or redesign. Measure inlet/coolant temperatures, flow, pressure and sustained useful throughput.",
+      "evidence": [
+        {
+          "source_id": "CS07",
+          "url": "https://docs.nvidia.com/dgx-superpod/reference-architecture-scalable-infrastructure-gb200/latest/dgx-superpod-architecture.html"
+        }
+      ],
+      "evidence_summary": "NVIDIA’s GB200 SuperPOD reference architecture requires both direct liquid and air cooling, evidencing equipment/facility integration requirements.",
+      "existing_alternatives": [
+        "Vendor-qualified cooling designs",
+        "CDUs and liquid loops",
+        "rack derating",
+        "facility retrofit"
+      ],
+      "keddeh_integration_hypothesis": "Integrate telemetry, thermal load simulation and acceptance testing with qualified thermal engineers; use recommendation-only controls until safety-reviewed.",
+      "hypothesis_status": "Proposed; not built, deployed, or validated by this research",
+      "delivery_team": {
+        "team_id": "BRAINK-CMP-THERMAL-DENSITY-DELIVERY",
+        "name": "High-density cooling compatibility Delivery Experts",
+        "specialties": [
+          "Thermal/fluid engineering",
+          "facility OT",
+          "GPU telemetry",
+          "commissioning"
+        ]
+      },
+      "independent_analyst_team": {
+        "team_id": "BRAINK-CMP-THERMAL-DENSITY-ANALYSIS",
+        "name": "High-density cooling compatibility Independent Analysis",
+        "specialties": [
+          "High-density cooling compatibility benchmark specialist",
+          "compute-facility customer-economics analyst",
+          "Independent reliability and assurance reviewer"
+        ],
+        "mandate": "Independently verify evidence, baseline, comparator and acceptance metric; challenge delivery claims; publish failure cases and no-go findings."
+      },
+      "proposed_acceptance_test": "Complete a sustained worst-case workload test at agreed ambient conditions with no thermal throttling and all vendor limits respected; disclose cooling energy overhead.",
+      "acceptance_test_status": "Illustrative pilot threshold; agree and preregister with the buyer before testing",
+      "dependencies_and_risks": [
+        "Facility-qualified contractors",
+        "leak/safety risk",
+        "vendor warranty",
+        "sensor calibration"
+      ],
+      "deduplication_boundary": "Heat removal and equipment compatibility, not utility capacity; no autonomous safety-critical actuation.",
+      "evidence_confidence": "Documented mechanism; customer prevalence and willingness to pay unvalidated",
+      "canonical_sector_id": null,
+      "canonical_mapping_status": "Unreconciled candidate problem-sector key; not a canonical replacement ID",
+      "required_customer_evidence": [
+        "Named workload owner and authorized representative telemetry",
+        "Baseline severity and fully loaded cost",
+        "Existing tool/competitor comparison",
+        "Buyer-approved business outcome and willingness-to-pay evidence"
+      ]
+    },
+    {
+      "bottleneck_id": "CMP-KERNEL-PORTABILITY",
+      "name": "Accelerator software portability and retuning",
+      "family": "compute-toolchain",
+      "problem_class": "market_gap",
+      "proposed_sector_id": "KEDDEH-CMP-KERNEL-PORTABILITY",
+      "proposed_sector_name": "Accelerator software portability and retuning Engineering",
+      "buyer_and_users": [
+        "HPC software vendors",
+        "AI infrastructure buyers seeking hardware options"
+      ],
+      "measurable_problem": "Vendor-specific APIs, kernels and performance assumptions make an apparently portable application expensive to port and tune. Measure unsupported calls, engineer-hours and performance portability.",
+      "evidence": [
+        {
+          "source_id": "CS08",
+          "url": "https://rocmdocs.amd.com/projects/HIP/en/latest/what_is_hip.html"
+        }
+      ],
+      "evidence_summary": "AMD states HIP is not a drop-in CUDA replacement and that manual coding and performance tuning can be necessary.",
+      "existing_alternatives": [
+        "HIP/HIPIFY",
+        "SYCL",
+        "portable frameworks",
+        "vendor-native backends",
+        "compiler toolchains"
+      ],
+      "keddeh_integration_hypothesis": "Create a compatibility inventory, translation assistance and cross-device validation harness, retaining per-backend optimized paths where needed.",
+      "hypothesis_status": "Proposed; not built, deployed, or validated by this research",
+      "delivery_team": {
+        "team_id": "BRAINK-CMP-KERNEL-PORTABILITY-DELIVERY",
+        "name": "Accelerator software portability and retuning Delivery Experts",
+        "specialties": [
+          "CUDA/HIP/SYCL",
+          "compiler engineering",
+          "numerical analysis",
+          "cross-hardware benchmarking"
+        ]
+      },
+      "independent_analyst_team": {
+        "team_id": "BRAINK-CMP-KERNEL-PORTABILITY-ANALYSIS",
+        "name": "Accelerator software portability and retuning Independent Analysis",
+        "specialties": [
+          "Accelerator software portability and retuning benchmark specialist",
+          "compute-toolchain customer-economics analyst",
+          "Independent reliability and assurance reviewer"
+        ],
+        "mandate": "Independently verify evidence, baseline, comparator and acceptance metric; challenge delivery claims; publish failure cases and no-go findings."
+      },
+      "proposed_acceptance_test": "Pass identical correctness tests on two approved backends; document 100% of unsupported operations; achieve at least 80% of each backend’s separately tuned reference throughput on target workloads.",
+      "acceptance_test_status": "Illustrative pilot threshold; agree and preregister with the buyer before testing",
+      "dependencies_and_risks": [
+        "Hardware access",
+        "library/API coverage",
+        "licences",
+        "driver matrix",
+        "floating-point differences"
+      ],
+      "deduplication_boundary": "Kernel and runtime portability; cloud managed-service migration is CLD-SEMANTIC-PORTABILITY.",
+      "evidence_confidence": "Documented mechanism; customer prevalence and willingness to pay unvalidated",
+      "canonical_sector_id": null,
+      "canonical_mapping_status": "Unreconciled candidate problem-sector key; not a canonical replacement ID",
+      "required_customer_evidence": [
+        "Named workload owner and authorized representative telemetry",
+        "Baseline severity and fully loaded cost",
+        "Existing tool/competitor comparison",
+        "Buyer-approved business outcome and willingness-to-pay evidence"
+      ]
+    },
+    {
+      "bottleneck_id": "STO-GPU-INGEST",
+      "name": "Storage-to-accelerator data-path stalls",
+      "family": "storage",
+      "problem_class": "operational_pain",
+      "proposed_sector_id": "KEDDEH-STO-GPU-INGEST",
+      "proposed_sector_name": "Storage-to-accelerator data-path stalls Engineering",
+      "buyer_and_users": [
+        "Training/inference platform teams",
+        "GPU analytics operators"
+      ],
+      "measurable_problem": "Accelerators wait for data while host copies or storage paths consume CPU and interconnect bandwidth. Measure GPU idle time attributable to I/O and end-to-end samples per second.",
+      "evidence": [
+        {
+          "source_id": "CS09",
+          "url": "https://docs.nvidia.com/gpudirect-storage/overview-guide/"
+        }
+      ],
+      "evidence_summary": "GPUDirect Storage supports direct DMA paths avoiding a CPU bounce buffer; its benefit depends on the actual I/O path and bottleneck.",
+      "existing_alternatives": [
+        "GPUDirect Storage",
+        "asynchronous prefetch",
+        "dataset caching",
+        "parallel filesystems",
+        "local NVMe staging"
+      ],
+      "keddeh_integration_hypothesis": "Profile the entire ingest path and integrate eligible direct I/O or prefetch with existing storage systems.",
+      "hypothesis_status": "Proposed; not built, deployed, or validated by this research",
+      "delivery_team": {
+        "team_id": "BRAINK-STO-GPU-INGEST-DELIVERY",
+        "name": "Storage-to-accelerator data-path stalls Delivery Experts",
+        "specialties": [
+          "Storage/network I/O",
+          "GPU DMA",
+          "filesystems",
+          "data loaders"
+        ]
+      },
+      "independent_analyst_team": {
+        "team_id": "BRAINK-STO-GPU-INGEST-ANALYSIS",
+        "name": "Storage-to-accelerator data-path stalls Independent Analysis",
+        "specialties": [
+          "Storage-to-accelerator data-path stalls benchmark specialist",
+          "storage customer-economics analyst",
+          "Independent reliability and assurance reviewer"
+        ],
+        "mandate": "Independently verify evidence, baseline, comparator and acceptance metric; challenge delivery claims; publish failure cases and no-go findings."
+      },
+      "proposed_acceptance_test": "Reduce I/O-attributable accelerator idle time at least 25% and improve end-to-end throughput at least 10%, while preserving checksums and accounting for CPU/memory cost.",
+      "acceptance_test_status": "Illustrative pilot threshold; agree and preregister with the buyer before testing",
+      "dependencies_and_risks": [
+        "Filesystem/driver eligibility",
+        "PCIe topology",
+        "small-read overhead",
+        "CPU preprocessing may remain binding"
+      ],
+      "deduplication_boundary": "Persistent storage to GPU movement; separate from HBM bandwidth and model algorithm design.",
+      "evidence_confidence": "Documented mechanism; customer prevalence and willingness to pay unvalidated",
+      "canonical_sector_id": null,
+      "canonical_mapping_status": "Unreconciled candidate problem-sector key; not a canonical replacement ID",
+      "required_customer_evidence": [
+        "Named workload owner and authorized representative telemetry",
+        "Baseline severity and fully loaded cost",
+        "Existing tool/competitor comparison",
+        "Buyer-approved business outcome and willingness-to-pay evidence"
+      ]
+    },
+    {
+      "bottleneck_id": "STO-OBJECT-REQUESTS",
+      "name": "Small-object request and metadata overhead",
+      "family": "storage",
+      "problem_class": "operational_pain",
+      "proposed_sector_id": "KEDDEH-STO-OBJECT-REQUESTS",
+      "proposed_sector_name": "Small-object request and metadata overhead Engineering",
+      "buyer_and_users": [
+        "Data lake teams",
+        "media/object-storage operators"
+      ],
+      "measurable_problem": "Many tiny objects create disproportionate request, listing and latency costs. Measure object size distribution, requests per useful GB, p99 retrieval and throttling rate.",
+      "evidence": [
+        {
+          "source_id": "CS10",
+          "url": "https://docs.aws.amazon.com/AmazonS3/latest/userguide/optimizing-performance.html"
+        }
+      ],
+      "evidence_summary": "AWS documents gradual S3 request-rate scaling, possible transient 503s and latency-sensitive design patterns; documented per-prefix rates are minimum examples, not hard global ceilings.",
+      "existing_alternatives": [
+        "Object compaction",
+        "manifest indexes",
+        "parallel prefixes",
+        "S3 Express",
+        "CDN/cache",
+        "columnar formats"
+      ],
+      "keddeh_integration_hypothesis": "Build trace-based layout and batching recommendations, then validate request-cost and retrieval trade-offs against the existing service.",
+      "hypothesis_status": "Proposed; not built, deployed, or validated by this research",
+      "delivery_team": {
+        "team_id": "BRAINK-STO-OBJECT-REQUESTS-DELIVERY",
+        "name": "Small-object request and metadata overhead Delivery Experts",
+        "specialties": [
+          "Object storage",
+          "metadata/indexing",
+          "data layout",
+          "cost modeling"
+        ]
+      },
+      "independent_analyst_team": {
+        "team_id": "BRAINK-STO-OBJECT-REQUESTS-ANALYSIS",
+        "name": "Small-object request and metadata overhead Independent Analysis",
+        "specialties": [
+          "Small-object request and metadata overhead benchmark specialist",
+          "storage customer-economics analyst",
+          "Independent reliability and assurance reviewer"
+        ],
+        "mandate": "Independently verify evidence, baseline, comparator and acceptance metric; challenge delivery claims; publish failure cases and no-go findings."
+      },
+      "proposed_acceptance_test": "On held-out access traces, cut requests per useful GB at least 30% with no loss of object discoverability and no p99 latency/SLA breach; reconcile cost changes to bills.",
+      "acceptance_test_status": "Illustrative pilot threshold; agree and preregister with the buyer before testing",
+      "dependencies_and_risks": [
+        "Rewrite/migration cost",
+        "atomicity semantics",
+        "small random access needs",
+        "service class durability differences"
+      ],
+      "deduplication_boundary": "Object/request granularity rather than total capacity or archive retrieval tier.",
+      "evidence_confidence": "Documented mechanism; customer prevalence and willingness to pay unvalidated",
+      "canonical_sector_id": null,
+      "canonical_mapping_status": "Unreconciled candidate problem-sector key; not a canonical replacement ID",
+      "required_customer_evidence": [
+        "Named workload owner and authorized representative telemetry",
+        "Baseline severity and fully loaded cost",
+        "Existing tool/competitor comparison",
+        "Buyer-approved business outcome and willingness-to-pay evidence"
+      ]
+    },
+    {
+      "bottleneck_id": "STO-WRITE-AMPLIFICATION",
+      "name": "Flash and database write amplification",
+      "family": "storage",
+      "problem_class": "hard_technical_limit",
+      "proposed_sector_id": "KEDDEH-STO-WRITE-AMPLIFICATION",
+      "proposed_sector_name": "Flash and database write amplification Engineering",
+      "buyer_and_users": [
+        "Database/storage vendors",
+        "write-heavy service operators"
+      ],
+      "measurable_problem": "Logical updates trigger multiple host and NAND writes, increasing latency, wear and energy. Measure logical bytes, host bytes, NAND bytes and writes per transaction.",
+      "evidence": [
+        {
+          "source_id": "CS11",
+          "url": "https://arxiv.org/abs/2603.09927"
+        }
+      ],
+      "evidence_summary": "The 2026 SSD research evaluates out-of-place database designs and finds substantial benchmark-specific reductions in flash writes; results do not imply a drop-in universal optimization.",
+      "existing_alternatives": [
+        "LSM/B-tree tuning",
+        "FDP/ZNS",
+        "overprovisioning",
+        "batching",
+        "wear-aware placement"
+      ],
+      "keddeh_integration_hypothesis": "Integrate workload instrumentation and vendor-supported placement; reserve database-layout changes for controlled pilots with crash-consistency testing.",
+      "hypothesis_status": "Proposed; not built, deployed, or validated by this research",
+      "delivery_team": {
+        "team_id": "BRAINK-STO-WRITE-AMPLIFICATION-DELIVERY",
+        "name": "Flash and database write amplification Delivery Experts",
+        "specialties": [
+          "Flash/FTL expertise",
+          "database storage engines",
+          "NVMe",
+          "crash consistency"
+        ]
+      },
+      "independent_analyst_team": {
+        "team_id": "BRAINK-STO-WRITE-AMPLIFICATION-ANALYSIS",
+        "name": "Flash and database write amplification Independent Analysis",
+        "specialties": [
+          "Flash and database write amplification benchmark specialist",
+          "storage customer-economics analyst",
+          "Independent reliability and assurance reviewer"
+        ],
+        "mandate": "Independently verify evidence, baseline, comparator and acceptance metric; challenge delivery claims; publish failure cases and no-go findings."
+      },
+      "proposed_acceptance_test": "At fixed durability, reduce NAND bytes per committed transaction at least 20% without worsening p99 write latency; pass power-loss recovery tests on the target device.",
+      "acceptance_test_status": "Illustrative pilot threshold; agree and preregister with the buyer before testing",
+      "dependencies_and_risks": [
+        "Vendor counters",
+        "device support",
+        "garbage collection behavior",
+        "durability regression"
+      ],
+      "deduplication_boundary": "Physical write amplification and endurance; query tuning belongs to the data/database register.",
+      "evidence_confidence": "Documented mechanism; customer prevalence and willingness to pay unvalidated",
+      "canonical_sector_id": null,
+      "canonical_mapping_status": "Unreconciled candidate problem-sector key; not a canonical replacement ID",
+      "required_customer_evidence": [
+        "Named workload owner and authorized representative telemetry",
+        "Baseline severity and fully loaded cost",
+        "Existing tool/competitor comparison",
+        "Buyer-approved business outcome and willingness-to-pay evidence"
+      ]
+    },
+    {
+      "bottleneck_id": "STO-ARCHIVE-RECOVERY",
+      "name": "Archive-cost versus retrieval-time mismatch",
+      "family": "storage",
+      "problem_class": "operational_pain",
+      "proposed_sector_id": "KEDDEH-STO-ARCHIVE-RECOVERY",
+      "proposed_sector_name": "Archive-cost versus retrieval-time mismatch Engineering",
+      "buyer_and_users": [
+        "Backup/archive owners",
+        "compliance and data platform teams"
+      ],
+      "measurable_problem": "Low storage-price tiers fail real restore deadlines or generate unforeseen retrieval/request cost. Measure restore completion distributions, retrieval throughput and fully loaded recovery cost.",
+      "evidence": [
+        {
+          "source_id": "CS12",
+          "url": "https://docs.aws.amazon.com/AmazonS3/latest/userguide/restoring-objects-retrieval-options.html"
+        }
+      ],
+      "evidence_summary": "AWS lists retrieval options ranging from minutes to hours; Deep Archive bulk commonly takes within 48 hours, and very large object sets may take longer.",
+      "existing_alternatives": [
+        "Hot/warm copies",
+        "Glacier retrieval tiers",
+        "lifecycle rules",
+        "retrieval capacity planning"
+      ],
+      "keddeh_integration_hypothesis": "Map datasets to explicit recovery/access objectives and simulate lifecycle policies using actual access traces.",
+      "hypothesis_status": "Proposed; not built, deployed, or validated by this research",
+      "delivery_team": {
+        "team_id": "BRAINK-STO-ARCHIVE-RECOVERY-DELIVERY",
+        "name": "Archive-cost versus retrieval-time mismatch Delivery Experts",
+        "specialties": [
+          "Storage lifecycle",
+          "disaster recovery",
+          "forecasting",
+          "cost analytics"
+        ]
+      },
+      "independent_analyst_team": {
+        "team_id": "BRAINK-STO-ARCHIVE-RECOVERY-ANALYSIS",
+        "name": "Archive-cost versus retrieval-time mismatch Independent Analysis",
+        "specialties": [
+          "Archive-cost versus retrieval-time mismatch benchmark specialist",
+          "storage customer-economics analyst",
+          "Independent reliability and assurance reviewer"
+        ],
+        "mandate": "Independently verify evidence, baseline, comparator and acceptance metric; challenge delivery claims; publish failure cases and no-go findings."
+      },
+      "proposed_acceptance_test": "Meet the chosen RTO for the agreed object-count and volume profile in three restore drills; demonstrate at least 10% total cost improvement including retrieval and request charges.",
+      "acceptance_test_status": "Illustrative pilot threshold; agree and preregister with the buyer before testing",
+      "dependencies_and_risks": [
+        "Uncertain future access",
+        "minimum-duration charges",
+        "retrieval quotas",
+        "large-object-set scaling"
+      ],
+      "deduplication_boundary": "Archive accessibility, not whether restored applications function; latter is REL-RESTORE-VALIDATION.",
+      "evidence_confidence": "Documented mechanism; customer prevalence and willingness to pay unvalidated",
+      "canonical_sector_id": null,
+      "canonical_mapping_status": "Unreconciled candidate problem-sector key; not a canonical replacement ID",
+      "required_customer_evidence": [
+        "Named workload owner and authorized representative telemetry",
+        "Baseline severity and fully loaded cost",
+        "Existing tool/competitor comparison",
+        "Buyer-approved business outcome and willingness-to-pay evidence"
+      ]
+    },
+    {
+      "bottleneck_id": "STO-CHECKPOINT-RESHARD",
+      "name": "Checkpoint stalls and resharding friction",
+      "family": "storage",
+      "problem_class": "operational_pain",
+      "proposed_sector_id": "KEDDEH-STO-CHECKPOINT-RESHARD",
+      "proposed_sector_name": "Checkpoint stalls and resharding friction Engineering",
+      "buyer_and_users": [
+        "Large-scale training operators",
+        "HPC job owners"
+      ],
+      "measurable_problem": "Saving state stalls expensive compute and restart across changed resource layouts needs costly conversion. Measure training stall fraction, checkpoint duration, restart time and wasted work.",
+      "evidence": [
+        {
+          "source_id": "CS13",
+          "url": "https://www.usenix.org/conference/nsdi25/presentation/wan-borui"
+        }
+      ],
+      "evidence_summary": "ByteCheckpoint documents production needs for changing framework/storage/parallelism and evaluates a parallelism-agnostic checkpoint system.",
+      "existing_alternatives": [
+        "PyTorch distributed checkpoint",
+        "DeepSpeed universal checkpoints",
+        "ByteCheckpoint",
+        "asynchronous checkpointing"
+      ],
+      "keddeh_integration_hypothesis": "Integrate portable checkpoint manifests, asynchronous pipelines and verified restart tests for supported frameworks.",
+      "hypothesis_status": "Proposed; not built, deployed, or validated by this research",
+      "delivery_team": {
+        "team_id": "BRAINK-STO-CHECKPOINT-RESHARD-DELIVERY",
+        "name": "Checkpoint stalls and resharding friction Delivery Experts",
+        "specialties": [
+          "Distributed training state",
+          "parallel I/O",
+          "serialization",
+          "failure recovery"
+        ]
+      },
+      "independent_analyst_team": {
+        "team_id": "BRAINK-STO-CHECKPOINT-RESHARD-ANALYSIS",
+        "name": "Checkpoint stalls and resharding friction Independent Analysis",
+        "specialties": [
+          "Checkpoint stalls and resharding friction benchmark specialist",
+          "storage customer-economics analyst",
+          "Independent reliability and assurance reviewer"
+        ],
+        "mandate": "Independently verify evidence, baseline, comparator and acceptance metric; challenge delivery claims; publish failure cases and no-go findings."
+      },
+      "proposed_acceptance_test": "Reduce checkpoint-induced stall fraction at least 30%; restart at two agreed parallelism configurations with identical logical training state and no increase in unrecoverable progress loss.",
+      "acceptance_test_status": "Illustrative pilot threshold; agree and preregister with the buyer before testing",
+      "dependencies_and_risks": [
+        "Temporary memory",
+        "storage burst capacity",
+        "optimizer state compatibility",
+        "partial checkpoint detection"
+      ],
+      "deduplication_boundary": "Training/HPC state persistence and resharding; general disaster recovery remains separate.",
+      "evidence_confidence": "Documented mechanism; customer prevalence and willingness to pay unvalidated",
+      "canonical_sector_id": null,
+      "canonical_mapping_status": "Unreconciled candidate problem-sector key; not a canonical replacement ID",
+      "required_customer_evidence": [
+        "Named workload owner and authorized representative telemetry",
+        "Baseline severity and fully loaded cost",
+        "Existing tool/competitor comparison",
+        "Buyer-approved business outcome and willingness-to-pay evidence"
+      ]
+    },
+    {
+      "bottleneck_id": "NET-COLLECTIVE-SCALING",
+      "name": "Collective communication scaling loss",
+      "family": "networking",
+      "problem_class": "hard_technical_limit",
+      "proposed_sector_id": "KEDDEH-NET-COLLECTIVE-SCALING",
+      "proposed_sector_name": "Collective communication scaling loss Engineering",
+      "buyer_and_users": [
+        "Distributed AI/HPC cluster buyers"
+      ],
+      "measurable_problem": "All-reduce/all-gather or topology mismatch consumes an increasing share of job time. Measure effective bus bandwidth, exposed communication time and scaling efficiency.",
+      "evidence": [
+        {
+          "source_id": "CS14",
+          "url": "https://docs.nvidia.com/deeplearning/nccl/user-guide/docs/troubleshooting.html"
+        }
+      ],
+      "evidence_summary": "NCCL provides distinct GPU/topology, network, runtime and performance diagnostics, showing the multiple integration layers behind collectives.",
+      "existing_alternatives": [
+        "NCCL/RCCL/MPI tuning",
+        "topology-aware placement",
+        "faster fabrics",
+        "overlap/compression"
+      ],
+      "keddeh_integration_hypothesis": "Coordinate topology inventory, collective microbenchmarks and application traces, then propose supported communication/placement changes.",
+      "hypothesis_status": "Proposed; not built, deployed, or validated by this research",
+      "delivery_team": {
+        "team_id": "BRAINK-NET-COLLECTIVE-SCALING-DELIVERY",
+        "name": "Collective communication scaling loss Delivery Experts",
+        "specialties": [
+          "RDMA/InfiniBand/RoCE",
+          "collective algorithms",
+          "GPU topology",
+          "performance engineering"
+        ]
+      },
+      "independent_analyst_team": {
+        "team_id": "BRAINK-NET-COLLECTIVE-SCALING-ANALYSIS",
+        "name": "Collective communication scaling loss Independent Analysis",
+        "specialties": [
+          "Collective communication scaling loss benchmark specialist",
+          "networking customer-economics analyst",
+          "Independent reliability and assurance reviewer"
+        ],
+        "mandate": "Independently verify evidence, baseline, comparator and acceptance metric; challenge delivery claims; publish failure cases and no-go findings."
+      },
+      "proposed_acceptance_test": "At fixed model and node count, reduce exposed collective time at least 15% and improve application throughput without accuracy loss; include degraded-link runs.",
+      "acceptance_test_status": "Illustrative pilot threshold; agree and preregister with the buyer before testing",
+      "dependencies_and_risks": [
+        "Fabric configuration",
+        "packet loss",
+        "NIC/driver compatibility",
+        "network oversubscription"
+      ],
+      "deduplication_boundary": "Collective workload communication; general interactive tail latency is NET-TAIL-LATENCY.",
+      "evidence_confidence": "Documented mechanism; customer prevalence and willingness to pay unvalidated",
+      "canonical_sector_id": null,
+      "canonical_mapping_status": "Unreconciled candidate problem-sector key; not a canonical replacement ID",
+      "required_customer_evidence": [
+        "Named workload owner and authorized representative telemetry",
+        "Baseline severity and fully loaded cost",
+        "Existing tool/competitor comparison",
+        "Buyer-approved business outcome and willingness-to-pay evidence"
+      ]
+    },
+    {
+      "bottleneck_id": "NET-TAIL-LATENCY",
+      "name": "Fan-out and congestion tail latency",
+      "family": "networking",
+      "problem_class": "hard_technical_limit",
+      "proposed_sector_id": "KEDDEH-NET-TAIL-LATENCY",
+      "proposed_sector_name": "Fan-out and congestion tail latency Engineering",
+      "buyer_and_users": [
+        "Interactive SaaS owners",
+        "search/API platform SREs"
+      ],
+      "measurable_problem": "A small fraction of slow network/service paths dominates multi-dependency request completion, especially near saturation. Measure p99/p99.9 and per-hop queueing, not averages alone.",
+      "evidence": [
+        {
+          "source_id": "CS15",
+          "url": "https://research.google/pubs/the-tail-at-scale/"
+        }
+      ],
+      "evidence_summary": "The Tail at Scale explains how rare slow components dominate aggregate latency as service fan-out and utilization increase.",
+      "existing_alternatives": [
+        "Adaptive concurrency",
+        "queue discipline",
+        "hedged requests",
+        "load balancing",
+        "capacity headroom"
+      ],
+      "keddeh_integration_hypothesis": "Use traces and load replay to identify tail amplification; test bounded hedging, admission control or placement changes.",
+      "hypothesis_status": "Proposed; not built, deployed, or validated by this research",
+      "delivery_team": {
+        "team_id": "BRAINK-NET-TAIL-LATENCY-DELIVERY",
+        "name": "Fan-out and congestion tail latency Delivery Experts",
+        "specialties": [
+          "Queueing theory",
+          "RPC systems",
+          "network performance",
+          "load testing"
+        ]
+      },
+      "independent_analyst_team": {
+        "team_id": "BRAINK-NET-TAIL-LATENCY-ANALYSIS",
+        "name": "Fan-out and congestion tail latency Independent Analysis",
+        "specialties": [
+          "Fan-out and congestion tail latency benchmark specialist",
+          "networking customer-economics analyst",
+          "Independent reliability and assurance reviewer"
+        ],
+        "mandate": "Independently verify evidence, baseline, comparator and acceptance metric; challenge delivery claims; publish failure cases and no-go findings."
+      },
+      "proposed_acceptance_test": "Reduce p99 latency at least 20% at the same admitted load while keeping extra downstream work below 10%; repeat under burst and slow-dependency faults.",
+      "acceptance_test_status": "Illustrative pilot threshold; agree and preregister with the buyer before testing",
+      "dependencies_and_risks": [
+        "Hedging can amplify load",
+        "timeout cancellation",
+        "measurement bias",
+        "tail sample size"
+      ],
+      "deduplication_boundary": "Latency distribution and fan-out, not consensus semantics or provider-wide outages.",
+      "evidence_confidence": "Documented mechanism; customer prevalence and willingness to pay unvalidated",
+      "canonical_sector_id": null,
+      "canonical_mapping_status": "Unreconciled candidate problem-sector key; not a canonical replacement ID",
+      "required_customer_evidence": [
+        "Named workload owner and authorized representative telemetry",
+        "Baseline severity and fully loaded cost",
+        "Existing tool/competitor comparison",
+        "Buyer-approved business outcome and willingness-to-pay evidence"
+      ]
+    },
+    {
+      "bottleneck_id": "NET-GEO-LATENCY",
+      "name": "Geographic replication latency trade-offs",
+      "family": "networking",
+      "problem_class": "hard_technical_limit",
+      "proposed_sector_id": "KEDDEH-NET-GEO-LATENCY",
+      "proposed_sector_name": "Geographic replication latency trade-offs Engineering",
+      "buyer_and_users": [
+        "Global application architects",
+        "multiregion database buyers"
+      ],
+      "measurable_problem": "Distance and replication round trips constrain write/read freshness latency even with available capacity. Measure client-to-leader RTT, quorum time and user-region p99.",
+      "evidence": [
+        {
+          "source_id": "CS16",
+          "url": "https://docs.cloud.google.com/spanner/docs/instance-configurations?hl=en"
+        }
+      ],
+      "evidence_summary": "Spanner documents extra write latency for cross-region quorums and performance guidance aligning compute with the leader region.",
+      "existing_alternatives": [
+        "Regional leaders",
+        "read replicas",
+        "bounded-staleness reads",
+        "edge caching",
+        "geo-sharding"
+      ],
+      "keddeh_integration_hypothesis": "Build a workload geography and consistency-budget model to choose placement and read modes explicitly, with buyer approval of any freshness trade-off.",
+      "hypothesis_status": "Proposed; not built, deployed, or validated by this research",
+      "delivery_team": {
+        "team_id": "BRAINK-NET-GEO-LATENCY-DELIVERY",
+        "name": "Geographic replication latency trade-offs Delivery Experts",
+        "specialties": [
+          "Distributed databases",
+          "WAN measurement",
+          "data placement",
+          "consistency models"
+        ]
+      },
+      "independent_analyst_team": {
+        "team_id": "BRAINK-NET-GEO-LATENCY-ANALYSIS",
+        "name": "Geographic replication latency trade-offs Independent Analysis",
+        "specialties": [
+          "Geographic replication latency trade-offs benchmark specialist",
+          "networking customer-economics analyst",
+          "Independent reliability and assurance reviewer"
+        ],
+        "mandate": "Independently verify evidence, baseline, comparator and acceptance metric; challenge delivery claims; publish failure cases and no-go findings."
+      },
+      "proposed_acceptance_test": "Meet region-specific p99 and freshness objectives for every tested region; reject designs that improve median latency by hiding stale results or losing required durability.",
+      "acceptance_test_status": "Illustrative pilot threshold; agree and preregister with the buyer before testing",
+      "dependencies_and_risks": [
+        "Physics",
+        "data-residency requirements",
+        "conflict resolution",
+        "cross-region cost"
+      ],
+      "deduplication_boundary": "Propagation/placement trade-offs under healthy links; partition correctness is DST-QUORUM-SAFETY.",
+      "evidence_confidence": "Documented mechanism; customer prevalence and willingness to pay unvalidated",
+      "canonical_sector_id": null,
+      "canonical_mapping_status": "Unreconciled candidate problem-sector key; not a canonical replacement ID",
+      "required_customer_evidence": [
+        "Named workload owner and authorized representative telemetry",
+        "Baseline severity and fully loaded cost",
+        "Existing tool/competitor comparison",
+        "Buyer-approved business outcome and willingness-to-pay evidence"
+      ]
+    },
+    {
+      "bottleneck_id": "NET-TELEMETRY-LOSS",
+      "name": "Network telemetry overhead and loss under load",
+      "family": "networking",
+      "problem_class": "operational_pain",
+      "proposed_sector_id": "KEDDEH-NET-TELEMETRY-LOSS",
+      "proposed_sector_name": "Network telemetry overhead and loss under load Engineering",
+      "buyer_and_users": [
+        "Network operators",
+        "datacenter fabric engineering teams"
+      ],
+      "measurable_problem": "Telemetry competes with user traffic or is lost during the congestion it should explain. Measure telemetry completeness, delay and added user-flow latency.",
+      "evidence": [
+        {
+          "source_id": "CS40",
+          "url": "https://www.usenix.org/conference/nsdi25/presentation/zhang-yinda"
+        }
+      ],
+      "evidence_summary": "InvisiFlow’s NSDI 2025 research documents overhead/loss trade-offs in existing telemetry delivery and evaluates spare-capacity routing.",
+      "existing_alternatives": [
+        "Sampled flow telemetry",
+        "out-of-band collectors",
+        "INT/programmable switches",
+        "buffered agents"
+      ],
+      "keddeh_integration_hypothesis": "Integrate collection-health measurement and supported adaptive sampling or out-of-band paths; treat novel dataplane methods as research pilots.",
+      "hypothesis_status": "Proposed; not built, deployed, or validated by this research",
+      "delivery_team": {
+        "team_id": "BRAINK-NET-TELEMETRY-LOSS-DELIVERY",
+        "name": "Network telemetry overhead and loss under load Delivery Experts",
+        "specialties": [
+          "Programmable networking",
+          "telemetry protocols",
+          "congestion control",
+          "measurement science"
+        ]
+      },
+      "independent_analyst_team": {
+        "team_id": "BRAINK-NET-TELEMETRY-LOSS-ANALYSIS",
+        "name": "Network telemetry overhead and loss under load Independent Analysis",
+        "specialties": [
+          "Network telemetry overhead and loss under load benchmark specialist",
+          "networking customer-economics analyst",
+          "Independent reliability and assurance reviewer"
+        ],
+        "mandate": "Independently verify evidence, baseline, comparator and acceptance metric; challenge delivery claims; publish failure cases and no-go findings."
+      },
+      "proposed_acceptance_test": "Capture at least 99% of designated critical fault records while adding less than 1% user-traffic latency/throughput overhead in the agreed stress test.",
+      "acceptance_test_status": "Illustrative pilot threshold; agree and preregister with the buyer before testing",
+      "dependencies_and_risks": [
+        "Switch support",
+        "sensitive packet metadata",
+        "collector scaling",
+        "sampling blind spots"
+      ],
+      "deduplication_boundary": "Transport of network evidence; observability volume/cost is REL-TELEMETRY-ECONOMICS.",
+      "evidence_confidence": "Documented mechanism; customer prevalence and willingness to pay unvalidated",
+      "canonical_sector_id": null,
+      "canonical_mapping_status": "Unreconciled candidate problem-sector key; not a canonical replacement ID",
+      "required_customer_evidence": [
+        "Named workload owner and authorized representative telemetry",
+        "Baseline severity and fully loaded cost",
+        "Existing tool/competitor comparison",
+        "Buyer-approved business outcome and willingness-to-pay evidence"
+      ]
+    },
+    {
+      "bottleneck_id": "CLD-RIGHTSIZING",
+      "name": "Safe workload rightsizing and waste removal",
+      "family": "cloud-economics",
+      "problem_class": "operational_pain",
+      "proposed_sector_id": "KEDDEH-CLD-RIGHTSIZING",
+      "proposed_sector_name": "Safe workload rightsizing and waste removal Engineering",
+      "buyer_and_users": [
+        "FinOps leaders",
+        "platform engineering owners"
+      ],
+      "measurable_problem": "Idle or oversized resources waste spend, but naive downsizing can break burst or reliability requirements. Measure realized cost per business unit alongside SLOs and remediation effort.",
+      "evidence": [
+        {
+          "source_id": "CS18",
+          "url": "https://data.finops.org/"
+        }
+      ],
+      "evidence_summary": "FinOps 2026 respondents still rank workload optimization highly, while reporting diminishing returns and many smaller, harder-to-capture opportunities.",
+      "existing_alternatives": [
+        "Native cost optimization hubs",
+        "autoscaling",
+        "Kubecost/OpenCost",
+        "commercial FinOps platforms",
+        "manual engineering review"
+      ],
+      "keddeh_integration_hypothesis": "Join resource, performance and ownership data; propose reversible changes with canaries, then verify realized net savings.",
+      "hypothesis_status": "Proposed; not built, deployed, or validated by this research",
+      "delivery_team": {
+        "team_id": "BRAINK-CLD-RIGHTSIZING-DELIVERY",
+        "name": "Safe workload rightsizing and waste removal Delivery Experts",
+        "specialties": [
+          "FinOps",
+          "capacity modeling",
+          "Kubernetes/cloud engineering",
+          "SLO analysis"
+        ]
+      },
+      "independent_analyst_team": {
+        "team_id": "BRAINK-CLD-RIGHTSIZING-ANALYSIS",
+        "name": "Safe workload rightsizing and waste removal Independent Analysis",
+        "specialties": [
+          "Safe workload rightsizing and waste removal benchmark specialist",
+          "cloud-economics customer-economics analyst",
+          "Independent reliability and assurance reviewer"
+        ],
+        "mandate": "Independently verify evidence, baseline, comparator and acceptance metric; challenge delivery claims; publish failure cases and no-go findings."
+      },
+      "proposed_acceptance_test": "Reduce monthly cost per comparable business unit at least 10% after including engineering/tool costs; maintain availability and p99 latency through a representative demand cycle.",
+      "acceptance_test_status": "Illustrative pilot threshold; agree and preregister with the buyer before testing",
+      "dependencies_and_risks": [
+        "Billing lag",
+        "seasonality",
+        "owner approval",
+        "reserve capacity",
+        "savings double counting"
+      ],
+      "deduplication_boundary": "Resource-use efficiency; cost allocation and commitment purchasing are separate.",
+      "evidence_confidence": "Documented mechanism; customer prevalence and willingness to pay unvalidated",
+      "canonical_sector_id": null,
+      "canonical_mapping_status": "Unreconciled candidate problem-sector key; not a canonical replacement ID",
+      "required_customer_evidence": [
+        "Named workload owner and authorized representative telemetry",
+        "Baseline severity and fully loaded cost",
+        "Existing tool/competitor comparison",
+        "Buyer-approved business outcome and willingness-to-pay evidence"
+      ]
+    },
+    {
+      "bottleneck_id": "CLD-COST-ATTRIBUTION",
+      "name": "Cross-service cost allocation gaps",
+      "family": "cloud-economics",
+      "problem_class": "market_gap",
+      "proposed_sector_id": "KEDDEH-CLD-COST-ATTRIBUTION",
+      "proposed_sector_name": "Cross-service cost allocation gaps Engineering",
+      "buyer_and_users": [
+        "Finance/FinOps buyers",
+        "business unit owners"
+      ],
+      "measurable_problem": "Shared services, containers and varied billing schemas obscure who caused spend and cost per product. Measure unallocated spend, reconciliation error and attribution latency.",
+      "evidence": [
+        {
+          "source_id": "CS19",
+          "url": "https://focus.finops.org/what-is-focus/"
+        },
+        {
+          "source_id": "CS18",
+          "url": "https://data.finops.org/"
+        }
+      ],
+      "evidence_summary": "FOCUS supplies a normalized billing standard; FinOps 2026 requests include shared/container allocation and unified technology-spend views.",
+      "existing_alternatives": [
+        "FOCUS datasets",
+        "OpenCost/Kubecost",
+        "cloud tags/cost categories",
+        "commercial cost platforms"
+      ],
+      "keddeh_integration_hypothesis": "Build a FOCUS-compatible ledger joining provider costs to verified service/tenant ownership with explicit shared-cost policies and confidence levels.",
+      "hypothesis_status": "Proposed; not built, deployed, or validated by this research",
+      "delivery_team": {
+        "team_id": "BRAINK-CLD-COST-ATTRIBUTION-DELIVERY",
+        "name": "Cross-service cost allocation gaps Delivery Experts",
+        "specialties": [
+          "Cost-data engineering",
+          "FOCUS",
+          "allocation methods",
+          "cloud billing audit"
+        ]
+      },
+      "independent_analyst_team": {
+        "team_id": "BRAINK-CLD-COST-ATTRIBUTION-ANALYSIS",
+        "name": "Cross-service cost allocation gaps Independent Analysis",
+        "specialties": [
+          "Cross-service cost allocation gaps benchmark specialist",
+          "cloud-economics customer-economics analyst",
+          "Independent reliability and assurance reviewer"
+        ],
+        "mandate": "Independently verify evidence, baseline, comparator and acceptance metric; challenge delivery claims; publish failure cases and no-go findings."
+      },
+      "proposed_acceptance_test": "Reconcile at least 99.5% of invoice value and attribute at least 95% to approved owners; expose every allocation assumption and avoid allocating shared cost twice.",
+      "acceptance_test_status": "Illustrative pilot threshold; agree and preregister with the buyer before testing",
+      "dependencies_and_risks": [
+        "Missing tags",
+        "data export delays",
+        "credits/discount treatment",
+        "contested allocation policies"
+      ],
+      "deduplication_boundary": "Accounting/attribution, not whether workloads consume too much or deliver value.",
+      "evidence_confidence": "Documented mechanism; customer prevalence and willingness to pay unvalidated",
+      "canonical_sector_id": null,
+      "canonical_mapping_status": "Unreconciled candidate problem-sector key; not a canonical replacement ID",
+      "required_customer_evidence": [
+        "Named workload owner and authorized representative telemetry",
+        "Baseline severity and fully loaded cost",
+        "Existing tool/competitor comparison",
+        "Buyer-approved business outcome and willingness-to-pay evidence"
+      ]
+    },
+    {
+      "bottleneck_id": "CLD-COMMITMENT-FORECAST",
+      "name": "Commitment and demand forecasting mismatch",
+      "family": "cloud-economics",
+      "problem_class": "operational_pain",
+      "proposed_sector_id": "KEDDEH-CLD-COMMITMENT-FORECAST",
+      "proposed_sector_name": "Commitment and demand forecasting mismatch Engineering",
+      "buyer_and_users": [
+        "FinOps and procurement teams"
+      ],
+      "measurable_problem": "Long-lived rate commitments can become underused when architecture or demand changes; historical recommendations may not model future change. Measure utilization, coverage, forecast error and downside exposure.",
+      "evidence": [
+        {
+          "source_id": "CS20",
+          "url": "https://docs.aws.amazon.com/savingsplans/latest/userguide/sp-purchase-analysis-calculations.html"
+        }
+      ],
+      "evidence_summary": "AWS explicitly says Savings Plans purchase analyses use historical usage and do not forecast future usage.",
+      "existing_alternatives": [
+        "Native Savings Plans/RI analysis",
+        "scenario spreadsheets",
+        "commercial commitment management",
+        "on-demand purchasing"
+      ],
+      "keddeh_integration_hypothesis": "Generate architecture-aware demand scenarios and stress tests; provide decision support, with commitment purchases remaining owner-approved.",
+      "hypothesis_status": "Proposed; not built, deployed, or validated by this research",
+      "delivery_team": {
+        "team_id": "BRAINK-CLD-COMMITMENT-FORECAST-DELIVERY",
+        "name": "Commitment and demand forecasting mismatch Delivery Experts",
+        "specialties": [
+          "Demand forecasting",
+          "FinOps contracts",
+          "optimization under uncertainty",
+          "scenario analysis"
+        ]
+      },
+      "independent_analyst_team": {
+        "team_id": "BRAINK-CLD-COMMITMENT-FORECAST-ANALYSIS",
+        "name": "Commitment and demand forecasting mismatch Independent Analysis",
+        "specialties": [
+          "Commitment and demand forecasting mismatch benchmark specialist",
+          "cloud-economics customer-economics analyst",
+          "Independent reliability and assurance reviewer"
+        ],
+        "mandate": "Independently verify evidence, baseline, comparator and acceptance metric; challenge delivery claims; publish failure cases and no-go findings."
+      },
+      "proposed_acceptance_test": "Backtest forecasts on held-out periods and disclose error bands; proposed portfolio must lower expected cost versus on-demand while respecting the buyer’s worst-case unused-commitment budget.",
+      "acceptance_test_status": "Illustrative pilot threshold; agree and preregister with the buyer before testing",
+      "dependencies_and_risks": [
+        "Business roadmap uncertainty",
+        "contract restrictions",
+        "nonstationary prices",
+        "new fees",
+        "purchase authority"
+      ],
+      "deduplication_boundary": "Financial commitment risk, not physical capacity reservations or rightsizing.",
+      "evidence_confidence": "Documented mechanism; customer prevalence and willingness to pay unvalidated",
+      "canonical_sector_id": null,
+      "canonical_mapping_status": "Unreconciled candidate problem-sector key; not a canonical replacement ID",
+      "required_customer_evidence": [
+        "Named workload owner and authorized representative telemetry",
+        "Baseline severity and fully loaded cost",
+        "Existing tool/competitor comparison",
+        "Buyer-approved business outcome and willingness-to-pay evidence"
+      ]
+    },
+    {
+      "bottleneck_id": "CLD-EGRESS-ECONOMICS",
+      "name": "Data movement cost and exit friction",
+      "family": "cloud-portability",
+      "problem_class": "market_gap",
+      "proposed_sector_id": "KEDDEH-CLD-EGRESS-ECONOMICS",
+      "proposed_sector_name": "Data movement cost and exit friction Engineering",
+      "buyer_and_users": [
+        "Data-heavy cloud customers",
+        "procurement and architecture buyers"
+      ],
+      "measurable_problem": "Recurring cross-cloud transfer or migration costs can erase compute-price savings. Measure billable transferred bytes, all-in cost per migration and steady-state synchronization cost.",
+      "evidence": [
+        {
+          "source_id": "CS21",
+          "url": "https://assets.publishing.service.gov.uk/media/688b8891fdde2b8f73469544/final_decision_report_31.7.25.pdf"
+        }
+      ],
+      "evidence_summary": "The CMA’s 2025 UK final report analyzes egress as a switching/multicloud barrier, with impact depending on data volume, frequency and programme scope.",
+      "existing_alternatives": [
+        "Free-exit programmes",
+        "data-local processing",
+        "caching/compression",
+        "private connectivity",
+        "provider negotiation"
+      ],
+      "keddeh_integration_hypothesis": "Model the transfer graph and actual contract/tariff rules before recommending portability; validate a small migration and bill reconciliation.",
+      "hypothesis_status": "Proposed; not built, deployed, or validated by this research",
+      "delivery_team": {
+        "team_id": "BRAINK-CLD-EGRESS-ECONOMICS-DELIVERY",
+        "name": "Data movement cost and exit friction Delivery Experts",
+        "specialties": [
+          "Network economics",
+          "cloud billing",
+          "data transfer engineering",
+          "contract analysis"
+        ]
+      },
+      "independent_analyst_team": {
+        "team_id": "BRAINK-CLD-EGRESS-ECONOMICS-ANALYSIS",
+        "name": "Data movement cost and exit friction Independent Analysis",
+        "specialties": [
+          "Data movement cost and exit friction benchmark specialist",
+          "cloud-portability customer-economics analyst",
+          "Independent reliability and assurance reviewer"
+        ],
+        "mandate": "Independently verify evidence, baseline, comparator and acceptance metric; challenge delivery claims; publish failure cases and no-go findings."
+      },
+      "proposed_acceptance_test": "Predict a representative transfer bill within 5%; an approved migration must meet total-cost and time caps with complete checksum verification.",
+      "acceptance_test_status": "Illustrative pilot threshold; agree and preregister with the buyer before testing",
+      "dependencies_and_risks": [
+        "Tariffs and exemptions change",
+        "legal terms",
+        "data sensitivity",
+        "ongoing multicloud differs from one-time exit"
+      ],
+      "deduplication_boundary": "Commercial transfer friction; semantic/API migration work is a separate sector. UK findings are not universal law.",
+      "evidence_confidence": "Documented mechanism; customer prevalence and willingness to pay unvalidated",
+      "canonical_sector_id": null,
+      "canonical_mapping_status": "Unreconciled candidate problem-sector key; not a canonical replacement ID",
+      "required_customer_evidence": [
+        "Named workload owner and authorized representative telemetry",
+        "Baseline severity and fully loaded cost",
+        "Existing tool/competitor comparison",
+        "Buyer-approved business outcome and willingness-to-pay evidence"
+      ]
+    },
+    {
+      "bottleneck_id": "CLD-SEMANTIC-PORTABILITY",
+      "name": "Managed-service semantic portability",
+      "family": "cloud-portability",
+      "problem_class": "market_gap",
+      "proposed_sector_id": "KEDDEH-CLD-SEMANTIC-PORTABILITY",
+      "proposed_sector_name": "Managed-service semantic portability Engineering",
+      "buyer_and_users": [
+        "Enterprise architects",
+        "SaaS companies avoiding concentration"
+      ],
+      "measurable_problem": "Similar-looking APIs differ in data types, consistency, IAM, events, quotas and failure behavior; packaging containers alone does not move the application. Measure incompatible contracts and migration effort.",
+      "evidence": [
+        {
+          "source_id": "CS21",
+          "url": "https://assets.publishing.service.gov.uk/media/688b8891fdde2b8f73469544/final_decision_report_31.7.25.pdf"
+        }
+      ],
+      "evidence_summary": "CMA final-report sections 6.32–6.323 document heterogeneous technical switching barriers, including interoperability and customer-specific architecture/skills constraints.",
+      "existing_alternatives": [
+        "Open standards",
+        "portable databases",
+        "Kubernetes",
+        "adapters",
+        "migration specialists",
+        "provider-native migration tools"
+      ],
+      "keddeh_integration_hypothesis": "Create a service dependency and behavioral contract inventory; implement narrow adapters and differential tests for a defined migration target.",
+      "hypothesis_status": "Proposed; not built, deployed, or validated by this research",
+      "delivery_team": {
+        "team_id": "BRAINK-CLD-SEMANTIC-PORTABILITY-DELIVERY",
+        "name": "Managed-service semantic portability Delivery Experts",
+        "specialties": [
+          "Cloud architecture",
+          "API contract testing",
+          "identity mapping",
+          "data migration",
+          "distributed semantics"
+        ]
+      },
+      "independent_analyst_team": {
+        "team_id": "BRAINK-CLD-SEMANTIC-PORTABILITY-ANALYSIS",
+        "name": "Managed-service semantic portability Independent Analysis",
+        "specialties": [
+          "Managed-service semantic portability benchmark specialist",
+          "cloud-portability customer-economics analyst",
+          "Independent reliability and assurance reviewer"
+        ],
+        "mandate": "Independently verify evidence, baseline, comparator and acceptance metric; challenge delivery claims; publish failure cases and no-go findings."
+      },
+      "proposed_acceptance_test": "Pass 100% of agreed critical behavioral tests on source and target, including failure paths; migrate the pilot dataset with no unexplained loss and within an agreed downtime budget.",
+      "acceptance_test_status": "Illustrative pilot threshold; agree and preregister with the buyer before testing",
+      "dependencies_and_risks": [
+        "Least-common-denominator features",
+        "operating-cost increase",
+        "IAM redesign",
+        "vendor extensions",
+        "data-transfer cost"
+      ],
+      "deduplication_boundary": "Semantic compatibility, not merely egress cost or GPU kernel portability.",
+      "evidence_confidence": "Documented mechanism; customer prevalence and willingness to pay unvalidated",
+      "canonical_sector_id": null,
+      "canonical_mapping_status": "Unreconciled candidate problem-sector key; not a canonical replacement ID",
+      "required_customer_evidence": [
+        "Named workload owner and authorized representative telemetry",
+        "Baseline severity and fully loaded cost",
+        "Existing tool/competitor comparison",
+        "Buyer-approved business outcome and willingness-to-pay evidence"
+      ]
+    },
+    {
+      "bottleneck_id": "CLD-CAPACITY-ADMISSION",
+      "name": "Cloud quota and capacity admission failures",
+      "family": "cloud-capacity",
+      "problem_class": "operational_pain",
+      "proposed_sector_id": "KEDDEH-CLD-CAPACITY-ADMISSION",
+      "proposed_sector_name": "Cloud quota and capacity admission failures Engineering",
+      "buyer_and_users": [
+        "Elastic service operators",
+        "GPU/batch platform teams"
+      ],
+      "measurable_problem": "An autoscaler requests machines but quota or regional availability prevents launch. Measure launch success, time-to-capacity and unmet demand by instance type/AZ.",
+      "evidence": [
+        {
+          "source_id": "CS22",
+          "url": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/troubleshooting-launch.html"
+        }
+      ],
+      "evidence_summary": "AWS distinguishes account instance-limit errors from insufficient On-Demand capacity; these require different remedies.",
+      "existing_alternatives": [
+        "Quota planning",
+        "capacity reservations",
+        "instance diversification",
+        "multi-AZ placement",
+        "warm pools"
+      ],
+      "keddeh_integration_hypothesis": "Integrate quota/capacity evidence into admission and fallback planning, using workload-certified alternatives and explicit spending limits.",
+      "hypothesis_status": "Proposed; not built, deployed, or validated by this research",
+      "delivery_team": {
+        "team_id": "BRAINK-CLD-CAPACITY-ADMISSION-DELIVERY",
+        "name": "Cloud quota and capacity admission failures Delivery Experts",
+        "specialties": [
+          "Cloud capacity engineering",
+          "autoscaling",
+          "queueing",
+          "workload certification"
+        ]
+      },
+      "independent_analyst_team": {
+        "team_id": "BRAINK-CLD-CAPACITY-ADMISSION-ANALYSIS",
+        "name": "Cloud quota and capacity admission failures Independent Analysis",
+        "specialties": [
+          "Cloud quota and capacity admission failures benchmark specialist",
+          "cloud-capacity customer-economics analyst",
+          "Independent reliability and assurance reviewer"
+        ],
+        "mandate": "Independently verify evidence, baseline, comparator and acceptance metric; challenge delivery claims; publish failure cases and no-go findings."
+      },
+      "proposed_acceptance_test": "During staged demand spikes, fulfill at least 99% of eligible requests within the agreed capacity deadline and budget; distinguish quota, capacity and configuration failures in all results.",
+      "acceptance_test_status": "Illustrative pilot threshold; agree and preregister with the buyer before testing",
+      "dependencies_and_risks": [
+        "Reservation costs",
+        "no guaranteed supply",
+        "data locality",
+        "fallback performance",
+        "supplier concentration"
+      ],
+      "deduplication_boundary": "Acquiring instances, not low utilization after allocation; distinct from grid/site build constraints.",
+      "evidence_confidence": "Documented mechanism; customer prevalence and willingness to pay unvalidated",
+      "canonical_sector_id": null,
+      "canonical_mapping_status": "Unreconciled candidate problem-sector key; not a canonical replacement ID",
+      "required_customer_evidence": [
+        "Named workload owner and authorized representative telemetry",
+        "Baseline severity and fully loaded cost",
+        "Existing tool/competitor comparison",
+        "Buyer-approved business outcome and willingness-to-pay evidence"
+      ]
+    },
+    {
+      "bottleneck_id": "CLD-PREDEPLOY-COST",
+      "name": "Pre-deployment architecture cost uncertainty",
+      "family": "cloud-economics",
+      "problem_class": "market_gap",
+      "proposed_sector_id": "KEDDEH-CLD-PREDEPLOY-COST",
+      "proposed_sector_name": "Pre-deployment architecture cost uncertainty Engineering",
+      "buyer_and_users": [
+        "Platform teams",
+        "FinOps/architecture review boards"
+      ],
+      "measurable_problem": "Teams approve designs before request rates, traffic shape, storage growth and service pricing are translated into credible total cost. Measure forecast error and unpriced dependencies.",
+      "evidence": [
+        {
+          "source_id": "CS18",
+          "url": "https://data.finops.org/"
+        }
+      ],
+      "evidence_summary": "Pre-deployment architecture costing is among the top requested missing tool capabilities in the State of FinOps 2026 respondent survey.",
+      "existing_alternatives": [
+        "Provider calculators",
+        "Infracost",
+        "load-test billing",
+        "architecture reviews",
+        "commercial estimators"
+      ],
+      "keddeh_integration_hypothesis": "Join infrastructure-as-code with workload demand and network/data-retention assumptions; produce ranges and sensitivity analysis rather than a false precise quote.",
+      "hypothesis_status": "Proposed; not built, deployed, or validated by this research",
+      "delivery_team": {
+        "team_id": "BRAINK-CLD-PREDEPLOY-COST-DELIVERY",
+        "name": "Pre-deployment architecture cost uncertainty Delivery Experts",
+        "specialties": [
+          "Cost modeling",
+          "IaC analysis",
+          "performance testing",
+          "product unit economics"
+        ]
+      },
+      "independent_analyst_team": {
+        "team_id": "BRAINK-CLD-PREDEPLOY-COST-ANALYSIS",
+        "name": "Pre-deployment architecture cost uncertainty Independent Analysis",
+        "specialties": [
+          "Pre-deployment architecture cost uncertainty benchmark specialist",
+          "cloud-economics customer-economics analyst",
+          "Independent reliability and assurance reviewer"
+        ],
+        "mandate": "Independently verify evidence, baseline, comparator and acceptance metric; challenge delivery claims; publish failure cases and no-go findings."
+      },
+      "proposed_acceptance_test": "For a pilot architecture, predict one representative billing period within 15%, identify every material cost driver, and demonstrate calibration on a held-out architecture.",
+      "acceptance_test_status": "Illustrative pilot threshold; agree and preregister with the buyer before testing",
+      "dependencies_and_risks": [
+        "Demand unknowns",
+        "hidden API/network charges",
+        "discount changes",
+        "cost-avoidance counterfactuals"
+      ],
+      "deduplication_boundary": "Forward design estimates; realized allocation and operational waste reduction remain distinct.",
+      "evidence_confidence": "Documented mechanism; customer prevalence and willingness to pay unvalidated",
+      "canonical_sector_id": null,
+      "canonical_mapping_status": "Unreconciled candidate problem-sector key; not a canonical replacement ID",
+      "required_customer_evidence": [
+        "Named workload owner and authorized representative telemetry",
+        "Baseline severity and fully loaded cost",
+        "Existing tool/competitor comparison",
+        "Buyer-approved business outcome and willingness-to-pay evidence"
+      ]
+    },
+    {
+      "bottleneck_id": "DST-QUORUM-SAFETY",
+      "name": "Partition and quorum safety trade-offs",
+      "family": "distributed-systems",
+      "problem_class": "hard_technical_limit",
+      "proposed_sector_id": "KEDDEH-DST-QUORUM-SAFETY",
+      "proposed_sector_name": "Partition and quorum safety trade-offs Engineering",
+      "buyer_and_users": [
+        "Distributed database/control-plane teams"
+      ],
+      "measurable_problem": "During partitions or majority loss, preserving single-system correctness restricts which nodes may accept writes. Measure committed-write integrity, stale reads and recovery time under partition.",
+      "evidence": [
+        {
+          "source_id": "CS23",
+          "url": "https://etcd.io/docs/v3.6/op-guide/failures/"
+        }
+      ],
+      "evidence_summary": "etcd documents that majority failure prevents writes and that only the majority partition stays available, with committed writes preserved.",
+      "existing_alternatives": [
+        "Raft/Paxos-backed systems",
+        "quorum placement",
+        "read-only fallback",
+        "CRDTs for suitable data",
+        "formal modeling"
+      ],
+      "keddeh_integration_hypothesis": "Audit consistency requirements and fault domains; integrate invariant-based fault tests and approved degradation modes. BRAINK cannot promise availability and strong consistency for every partition.",
+      "hypothesis_status": "Proposed; not built, deployed, or validated by this research",
+      "delivery_team": {
+        "team_id": "BRAINK-DST-QUORUM-SAFETY-DELIVERY",
+        "name": "Partition and quorum safety trade-offs Delivery Experts",
+        "specialties": [
+          "Consensus protocols",
+          "formal methods",
+          "fault injection",
+          "distributed storage"
+        ]
+      },
+      "independent_analyst_team": {
+        "team_id": "BRAINK-DST-QUORUM-SAFETY-ANALYSIS",
+        "name": "Partition and quorum safety trade-offs Independent Analysis",
+        "specialties": [
+          "Partition and quorum safety trade-offs benchmark specialist",
+          "distributed-systems customer-economics analyst",
+          "Independent reliability and assurance reviewer"
+        ],
+        "mandate": "Independently verify evidence, baseline, comparator and acceptance metric; challenge delivery claims; publish failure cases and no-go findings."
+      },
+      "proposed_acceptance_test": "Across a preregistered partition matrix, observe zero committed-write loss or split-brain invariant violations; availability/failover duration must match the declared contract.",
+      "acceptance_test_status": "Illustrative pilot threshold; agree and preregister with the buyer before testing",
+      "dependencies_and_risks": [
+        "Fault-model assumptions",
+        "correlated failure",
+        "operator recovery hazards",
+        "insufficient replicas"
+      ],
+      "deduplication_boundary": "Safety/availability under failed communication, distinct from geographic latency on healthy links.",
+      "evidence_confidence": "Documented mechanism; customer prevalence and willingness to pay unvalidated",
+      "canonical_sector_id": null,
+      "canonical_mapping_status": "Unreconciled candidate problem-sector key; not a canonical replacement ID",
+      "required_customer_evidence": [
+        "Named workload owner and authorized representative telemetry",
+        "Baseline severity and fully loaded cost",
+        "Existing tool/competitor comparison",
+        "Buyer-approved business outcome and willingness-to-pay evidence"
+      ]
+    },
+    {
+      "bottleneck_id": "DST-END-TO-END-IDEMPOTENCY",
+      "name": "Duplicate side effects across message boundaries",
+      "family": "distributed-systems",
+      "problem_class": "operational_pain",
+      "proposed_sector_id": "KEDDEH-DST-END-TO-END-IDEMPOTENCY",
+      "proposed_sector_name": "Duplicate side effects across message boundaries Engineering",
+      "buyer_and_users": [
+        "Payments/order workflow engineers",
+        "event-streaming platform teams"
+      ],
+      "measurable_problem": "Retries and crash recovery can duplicate or lose effects when a message system and external sink do not share an atomic boundary. Measure duplicate/lost business effects, replay and reconciliation.",
+      "evidence": [
+        {
+          "source_id": "CS24",
+          "url": "https://kafka.apache.org/41/design/design/"
+        }
+      ],
+      "evidence_summary": "Kafka describes exactly-once processing within supported transactional boundaries; external destinations generally need cooperation with the consumer/output commit.",
+      "existing_alternatives": [
+        "Transactional outbox/inbox",
+        "idempotency keys",
+        "deduplication stores",
+        "Kafka transactions",
+        "sink transactions"
+      ],
+      "keddeh_integration_hypothesis": "Generate explicit effect/commit contracts and integrate idempotent adapters with replay test harnesses and bounded deduplication retention.",
+      "hypothesis_status": "Proposed; not built, deployed, or validated by this research",
+      "delivery_team": {
+        "team_id": "BRAINK-DST-END-TO-END-IDEMPOTENCY-DELIVERY",
+        "name": "Duplicate side effects across message boundaries Delivery Experts",
+        "specialties": [
+          "Messaging semantics",
+          "database transactions",
+          "idempotent API design",
+          "failure testing"
+        ]
+      },
+      "independent_analyst_team": {
+        "team_id": "BRAINK-DST-END-TO-END-IDEMPOTENCY-ANALYSIS",
+        "name": "Duplicate side effects across message boundaries Independent Analysis",
+        "specialties": [
+          "Duplicate side effects across message boundaries benchmark specialist",
+          "distributed-systems customer-economics analyst",
+          "Independent reliability and assurance reviewer"
+        ],
+        "mandate": "Independently verify evidence, baseline, comparator and acceptance metric; challenge delivery claims; publish failure cases and no-go findings."
+      },
+      "proposed_acceptance_test": "Under crashes at every send/commit boundary and repeated replay, produce exactly one durable logical effect per accepted input for the declared sink, with zero unexplained loss.",
+      "acceptance_test_status": "Illustrative pilot threshold; agree and preregister with the buyer before testing",
+      "dependencies_and_risks": [
+        "External API semantics",
+        "dedup retention",
+        "non-idempotent effects",
+        "token collisions",
+        "out-of-order messages"
+      ],
+      "deduplication_boundary": "Effect duplication/loss, not atomicity of a multi-step cross-service transaction.",
+      "evidence_confidence": "Documented mechanism; customer prevalence and willingness to pay unvalidated",
+      "canonical_sector_id": null,
+      "canonical_mapping_status": "Unreconciled candidate problem-sector key; not a canonical replacement ID",
+      "required_customer_evidence": [
+        "Named workload owner and authorized representative telemetry",
+        "Baseline severity and fully loaded cost",
+        "Existing tool/competitor comparison",
+        "Buyer-approved business outcome and willingness-to-pay evidence"
+      ]
+    },
+    {
+      "bottleneck_id": "DST-OVERLOAD-CASCADES",
+      "name": "Retry and concurrency overload cascades",
+      "family": "distributed-systems",
+      "problem_class": "operational_pain",
+      "proposed_sector_id": "KEDDEH-DST-OVERLOAD-CASCADES",
+      "proposed_sector_name": "Retry and concurrency overload cascades Engineering",
+      "buyer_and_users": [
+        "Microservice platform owners",
+        "SRE organizations"
+      ],
+      "measurable_problem": "Local retries or unbounded concurrency amplify partial failures into system-wide overload. Measure retry amplification, queue age, goodput and recovery hysteresis.",
+      "evidence": [
+        {
+          "source_id": "CS25",
+          "url": "https://sre.google/sre-book/handling-overload/"
+        }
+      ],
+      "evidence_summary": "Google SRE documents per-request/per-client retry budgets and warns that retries at multiple stack layers create combinatorial amplification.",
+      "existing_alternatives": [
+        "Backoff/jitter",
+        "retry budgets",
+        "load shedding",
+        "bulkheads",
+        "adaptive concurrency",
+        "circuit breakers"
+      ],
+      "keddeh_integration_hypothesis": "Analyze retry/concurrency policies across the service graph; test bounded controls and degraded-response contracts.",
+      "hypothesis_status": "Proposed; not built, deployed, or validated by this research",
+      "delivery_team": {
+        "team_id": "BRAINK-DST-OVERLOAD-CASCADES-DELIVERY",
+        "name": "Retry and concurrency overload cascades Delivery Experts",
+        "specialties": [
+          "Queueing theory",
+          "RPC/client libraries",
+          "SRE",
+          "load shedding"
+        ]
+      },
+      "independent_analyst_team": {
+        "team_id": "BRAINK-DST-OVERLOAD-CASCADES-ANALYSIS",
+        "name": "Retry and concurrency overload cascades Independent Analysis",
+        "specialties": [
+          "Retry and concurrency overload cascades benchmark specialist",
+          "distributed-systems customer-economics analyst",
+          "Independent reliability and assurance reviewer"
+        ],
+        "mandate": "Independently verify evidence, baseline, comparator and acceptance metric; challenge delivery claims; publish failure cases and no-go findings."
+      },
+      "proposed_acceptance_test": "During a 2x demand spike and a slow-dependency fault, preserve the agreed critical goodput; cap retry amplification at 1.1x and recover automatically within the agreed interval.",
+      "acceptance_test_status": "Illustrative pilot threshold; agree and preregister with the buyer before testing",
+      "dependencies_and_risks": [
+        "Client ecosystem",
+        "unpropagated deadlines",
+        "hidden retries",
+        "load-test fidelity",
+        "priority fairness"
+      ],
+      "deduplication_boundary": "Load amplification and recovery dynamics; generic tail latency and incident diagnosis are separate.",
+      "evidence_confidence": "Documented mechanism; customer prevalence and willingness to pay unvalidated",
+      "canonical_sector_id": null,
+      "canonical_mapping_status": "Unreconciled candidate problem-sector key; not a canonical replacement ID",
+      "required_customer_evidence": [
+        "Named workload owner and authorized representative telemetry",
+        "Baseline severity and fully loaded cost",
+        "Existing tool/competitor comparison",
+        "Buyer-approved business outcome and willingness-to-pay evidence"
+      ]
+    },
+    {
+      "bottleneck_id": "DST-TIME-ORDERING",
+      "name": "Clock and event-ordering assumptions",
+      "family": "distributed-systems",
+      "problem_class": "hard_technical_limit",
+      "proposed_sector_id": "KEDDEH-DST-TIME-ORDERING",
+      "proposed_sector_name": "Clock and event-ordering assumptions Engineering",
+      "buyer_and_users": [
+        "Distributed database authors",
+        "event/audit pipeline teams"
+      ],
+      "measurable_problem": "Wall clocks and arrival order can be mistaken for causal or commit order, breaking leases, deduplication and cross-system timelines. Measure clock uncertainty and order/invariant violations.",
+      "evidence": [
+        {
+          "source_id": "CS26",
+          "url": "https://docs.cloud.google.com/spanner/docs/true-time-external-consistency"
+        }
+      ],
+      "evidence_summary": "Spanner relies on TrueTime’s distributed timestamp guarantees for externally consistent transaction ordering; an ordinary timestamp is not equivalent evidence.",
+      "existing_alternatives": [
+        "Logical/hybrid clocks",
+        "sequence numbers",
+        "bounded clock uncertainty",
+        "TrueTime-backed databases",
+        "fencing tokens"
+      ],
+      "keddeh_integration_hypothesis": "Audit time assumptions and add explicit sequence/epoch/fencing contracts; use supported clock services where required.",
+      "hypothesis_status": "Proposed; not built, deployed, or validated by this research",
+      "delivery_team": {
+        "team_id": "BRAINK-DST-TIME-ORDERING-DELIVERY",
+        "name": "Clock and event-ordering assumptions Delivery Experts",
+        "specialties": [
+          "Distributed clocks",
+          "concurrency",
+          "leases/fencing",
+          "event-time processing"
+        ]
+      },
+      "independent_analyst_team": {
+        "team_id": "BRAINK-DST-TIME-ORDERING-ANALYSIS",
+        "name": "Clock and event-ordering assumptions Independent Analysis",
+        "specialties": [
+          "Clock and event-ordering assumptions benchmark specialist",
+          "distributed-systems customer-economics analyst",
+          "Independent reliability and assurance reviewer"
+        ],
+        "mandate": "Independently verify evidence, baseline, comparator and acceptance metric; challenge delivery claims; publish failure cases and no-go findings."
+      },
+      "proposed_acceptance_test": "Inject skew, pauses and reordered messages; zero lease/fencing/order invariant violations in the stated fault model, with latency cost reported.",
+      "acceptance_test_status": "Illustrative pilot threshold; agree and preregister with the buyer before testing",
+      "dependencies_and_risks": [
+        "Clock-source trust",
+        "pause duration bounds",
+        "leap/time adjustments",
+        "cross-service semantics"
+      ],
+      "deduplication_boundary": "Time/order correctness, not general quorum placement or exactly-once effects.",
+      "evidence_confidence": "Documented mechanism; customer prevalence and willingness to pay unvalidated",
+      "canonical_sector_id": null,
+      "canonical_mapping_status": "Unreconciled candidate problem-sector key; not a canonical replacement ID",
+      "required_customer_evidence": [
+        "Named workload owner and authorized representative telemetry",
+        "Baseline severity and fully loaded cost",
+        "Existing tool/competitor comparison",
+        "Buyer-approved business outcome and willingness-to-pay evidence"
+      ]
+    },
+    {
+      "bottleneck_id": "DST-CROSS-SERVICE-ATOMICITY",
+      "name": "Cross-service transaction compensation",
+      "family": "distributed-systems",
+      "problem_class": "operational_pain",
+      "proposed_sector_id": "KEDDEH-DST-CROSS-SERVICE-ATOMICITY",
+      "proposed_sector_name": "Cross-service transaction compensation Engineering",
+      "buyer_and_users": [
+        "Commerce/logistics SaaS teams",
+        "microservice architects"
+      ],
+      "measurable_problem": "A multi-step business operation partly commits across heterogeneous stores, requiring compensation or reconciliation. Measure incomplete workflows, compensation success and reconciliation time.",
+      "evidence": [
+        {
+          "source_id": "CS27",
+          "url": "https://docs.aws.amazon.com/en_en/prescriptive-guidance/latest/cloud-design-patterns/saga-orchestration.html"
+        }
+      ],
+      "evidence_summary": "AWS’s saga pattern addresses integrity across service-local transactions when a suitable common transactional mechanism is unavailable.",
+      "existing_alternatives": [
+        "Sagas",
+        "2PC where supported",
+        "transactional monolith boundaries",
+        "durable workflow engines",
+        "manual reconciliation"
+      ],
+      "keddeh_integration_hypothesis": "Make business invariants and irreversible steps explicit; integrate a durable orchestrator and test both forward and compensating recovery.",
+      "hypothesis_status": "Proposed; not built, deployed, or validated by this research",
+      "delivery_team": {
+        "team_id": "BRAINK-DST-CROSS-SERVICE-ATOMICITY-DELIVERY",
+        "name": "Cross-service transaction compensation Delivery Experts",
+        "specialties": [
+          "Transaction protocols",
+          "domain modeling",
+          "durable workflows",
+          "reconciliation"
+        ]
+      },
+      "independent_analyst_team": {
+        "team_id": "BRAINK-DST-CROSS-SERVICE-ATOMICITY-ANALYSIS",
+        "name": "Cross-service transaction compensation Independent Analysis",
+        "specialties": [
+          "Cross-service transaction compensation benchmark specialist",
+          "distributed-systems customer-economics analyst",
+          "Independent reliability and assurance reviewer"
+        ],
+        "mandate": "Independently verify evidence, baseline, comparator and acceptance metric; challenge delivery claims; publish failure cases and no-go findings."
+      },
+      "proposed_acceptance_test": "Crash or reject every workflow step in a test matrix; all runs reach a valid terminal or explicitly escalated state, with zero silently orphaned commitments.",
+      "acceptance_test_status": "Illustrative pilot threshold; agree and preregister with the buyer before testing",
+      "dependencies_and_risks": [
+        "Compensation may not undo real-world effects",
+        "business approval",
+        "concurrent workflow conflicts",
+        "operator intervention"
+      ],
+      "deduplication_boundary": "Partial multi-service commitment; delivery duplication is DST-END-TO-END-IDEMPOTENCY.",
+      "evidence_confidence": "Documented mechanism; customer prevalence and willingness to pay unvalidated",
+      "canonical_sector_id": null,
+      "canonical_mapping_status": "Unreconciled candidate problem-sector key; not a canonical replacement ID",
+      "required_customer_evidence": [
+        "Named workload owner and authorized representative telemetry",
+        "Baseline severity and fully loaded cost",
+        "Existing tool/competitor comparison",
+        "Buyer-approved business outcome and willingness-to-pay evidence"
+      ]
+    },
+    {
+      "bottleneck_id": "DST-CACHE-COHERENCE",
+      "name": "Cache invalidation and stale-result control",
+      "family": "distributed-systems",
+      "problem_class": "operational_pain",
+      "proposed_sector_id": "KEDDEH-DST-CACHE-COHERENCE",
+      "proposed_sector_name": "Cache invalidation and stale-result control Engineering",
+      "buyer_and_users": [
+        "High-read SaaS operators",
+        "edge/data platform teams"
+      ],
+      "measurable_problem": "Caches trade latency/load reduction against stale results, invalidation fan-out and memory overhead. Measure stale-read age, invalidation lag, hit rate and origin load.",
+      "evidence": [
+        {
+          "source_id": "CS28",
+          "url": "https://redis.io/docs/latest/develop/clients/client-side-caching/"
+        }
+      ],
+      "evidence_summary": "Redis documents server tracking/invalidation and notes that frequent updates can make invalidation overhead exceed caching benefits.",
+      "existing_alternatives": [
+        "TTL",
+        "server-assisted invalidation",
+        "versioned keys",
+        "write-through",
+        "bounded-staleness contracts"
+      ],
+      "keddeh_integration_hypothesis": "Match each cache to a declared freshness requirement, then test invalidation and disconnect behavior under realistic update traces.",
+      "hypothesis_status": "Proposed; not built, deployed, or validated by this research",
+      "delivery_team": {
+        "team_id": "BRAINK-DST-CACHE-COHERENCE-DELIVERY",
+        "name": "Cache invalidation and stale-result control Delivery Experts",
+        "specialties": [
+          "Cache systems",
+          "consistency contracts",
+          "distributed tracing",
+          "load modeling"
+        ]
+      },
+      "independent_analyst_team": {
+        "team_id": "BRAINK-DST-CACHE-COHERENCE-ANALYSIS",
+        "name": "Cache invalidation and stale-result control Independent Analysis",
+        "specialties": [
+          "Cache invalidation and stale-result control benchmark specialist",
+          "distributed-systems customer-economics analyst",
+          "Independent reliability and assurance reviewer"
+        ],
+        "mandate": "Independently verify evidence, baseline, comparator and acceptance metric; challenge delivery claims; publish failure cases and no-go findings."
+      },
+      "proposed_acceptance_test": "Meet an agreed maximum staleness bound in disconnect/update-race tests while reducing origin requests at least 30%; disclose invalidation memory and traffic cost.",
+      "acceptance_test_status": "Illustrative pilot threshold; agree and preregister with the buyer before testing",
+      "dependencies_and_risks": [
+        "Miss storms",
+        "lost invalidations",
+        "multiwriter races",
+        "privacy/deletion requirements",
+        "workload sensitivity"
+      ],
+      "deduplication_boundary": "Freshness of derived/cache copies; source-of-truth transactions remain separate.",
+      "evidence_confidence": "Documented mechanism; customer prevalence and willingness to pay unvalidated",
+      "canonical_sector_id": null,
+      "canonical_mapping_status": "Unreconciled candidate problem-sector key; not a canonical replacement ID",
+      "required_customer_evidence": [
+        "Named workload owner and authorized representative telemetry",
+        "Baseline severity and fully loaded cost",
+        "Existing tool/competitor comparison",
+        "Buyer-approved business outcome and willingness-to-pay evidence"
+      ]
+    },
+    {
+      "bottleneck_id": "REL-CONTROL-DEPENDENCIES",
+      "name": "Hidden control-plane recovery dependencies",
+      "family": "reliability",
+      "problem_class": "operational_pain",
+      "proposed_sector_id": "KEDDEH-REL-CONTROL-DEPENDENCIES",
+      "proposed_sector_name": "Hidden control-plane recovery dependencies Engineering",
+      "buyer_and_users": [
+        "Enterprise resilience owners",
+        "cloud SRE teams"
+      ],
+      "measurable_problem": "Redundant application instances still depend on shared DNS, identity or provisioning controls; recovery may need the same failed dependency. Measure recovery-path dependency coverage and failover success without control-plane access.",
+      "evidence": [
+        {
+          "source_id": "CS17",
+          "url": "https://aws.amazon.com/message/101925/"
+        }
+      ],
+      "evidence_summary": "AWS’s October 2025 postmortem attributes a regional endpoint failure to DNS automation and describes downstream EC2 launch impairment after the primary DNS issue was repaired.",
+      "existing_alternatives": [
+        "Static stability",
+        "pre-provisioned failover",
+        "dependency maps",
+        "cell isolation",
+        "multiregion architectures"
+      ],
+      "keddeh_integration_hypothesis": "Model serving and recovery dependency graphs separately; verify warm recovery paths with safe fault injection and operator runbooks.",
+      "hypothesis_status": "Proposed; not built, deployed, or validated by this research",
+      "delivery_team": {
+        "team_id": "BRAINK-REL-CONTROL-DEPENDENCIES-DELIVERY",
+        "name": "Hidden control-plane recovery dependencies Delivery Experts",
+        "specialties": [
+          "Resilience architecture",
+          "DNS/control planes",
+          "dependency analysis",
+          "disaster exercises"
+        ]
+      },
+      "independent_analyst_team": {
+        "team_id": "BRAINK-REL-CONTROL-DEPENDENCIES-ANALYSIS",
+        "name": "Hidden control-plane recovery dependencies Independent Analysis",
+        "specialties": [
+          "Hidden control-plane recovery dependencies benchmark specialist",
+          "reliability customer-economics analyst",
+          "Independent reliability and assurance reviewer"
+        ],
+        "mandate": "Independently verify evidence, baseline, comparator and acceptance metric; challenge delivery claims; publish failure cases and no-go findings."
+      },
+      "proposed_acceptance_test": "Complete the agreed failover scenario while the designated control plane is unavailable; meet RTO/RPO using existing capacity, and expose every untested shared dependency.",
+      "acceptance_test_status": "Illustrative pilot threshold; agree and preregister with the buyer before testing",
+      "dependencies_and_risks": [
+        "Expensive standby capacity",
+        "hidden global services",
+        "credentials/network dependencies",
+        "simulated faults may miss real coupling"
+      ],
+      "deduplication_boundary": "Recovery dependence on shared controls; quotas are capacity admission, and configuration blast radius is REL-CHANGE-CONTAINMENT.",
+      "evidence_confidence": "Documented mechanism; customer prevalence and willingness to pay unvalidated",
+      "canonical_sector_id": null,
+      "canonical_mapping_status": "Unreconciled candidate problem-sector key; not a canonical replacement ID",
+      "required_customer_evidence": [
+        "Named workload owner and authorized representative telemetry",
+        "Baseline severity and fully loaded cost",
+        "Existing tool/competitor comparison",
+        "Buyer-approved business outcome and willingness-to-pay evidence"
+      ]
+    },
+    {
+      "bottleneck_id": "REL-RESTORE-VALIDATION",
+      "name": "Backup success without application recoverability",
+      "family": "reliability",
+      "problem_class": "operational_pain",
+      "proposed_sector_id": "KEDDEH-REL-RESTORE-VALIDATION",
+      "proposed_sector_name": "Backup success without application recoverability Engineering",
+      "buyer_and_users": [
+        "Business continuity teams",
+        "database/platform owners"
+      ],
+      "measurable_problem": "Successful backup jobs do not prove an application can recover with correct data, keys, dependencies and timing. Measure application-level RTO/RPO and validated recovery rate.",
+      "evidence": [
+        {
+          "source_id": "CS29",
+          "url": "https://docs.aws.amazon.com/aws-backup/latest/devguide/restore-testing.html"
+        }
+      ],
+      "evidence_summary": "AWS Backup separates automated restore viability/duration testing from optional application validation after a restore completes.",
+      "existing_alternatives": [
+        "AWS Backup restore testing",
+        "database PITR",
+        "immutable backups",
+        "isolated recovery environments",
+        "DR drills"
+      ],
+      "keddeh_integration_hypothesis": "Integrate existing backup systems with business-invariant checks and isolated restoration exercises; retain evidence of actual readback and service operation.",
+      "hypothesis_status": "Proposed; not built, deployed, or validated by this research",
+      "delivery_team": {
+        "team_id": "BRAINK-REL-RESTORE-VALIDATION-DELIVERY",
+        "name": "Backup success without application recoverability Delivery Experts",
+        "specialties": [
+          "Backup/recovery",
+          "database integrity",
+          "application testing",
+          "key/access dependency analysis"
+        ]
+      },
+      "independent_analyst_team": {
+        "team_id": "BRAINK-REL-RESTORE-VALIDATION-ANALYSIS",
+        "name": "Backup success without application recoverability Independent Analysis",
+        "specialties": [
+          "Backup success without application recoverability benchmark specialist",
+          "reliability customer-economics analyst",
+          "Independent reliability and assurance reviewer"
+        ],
+        "mandate": "Independently verify evidence, baseline, comparator and acceptance metric; challenge delivery claims; publish failure cases and no-go findings."
+      },
+      "proposed_acceptance_test": "Restore into an isolated environment; pass all critical business checks and meet agreed RTO/RPO in three materially different failure scenarios. A completed restore job alone is insufficient.",
+      "acceptance_test_status": "Illustrative pilot threshold; agree and preregister with the buyer before testing",
+      "dependencies_and_risks": [
+        "Key availability",
+        "backup age",
+        "malware/latent corruption",
+        "restore quota/cost",
+        "data privacy"
+      ],
+      "deduplication_boundary": "Application recoverability, not archive retrieval economics or training checkpoint efficiency.",
+      "evidence_confidence": "Documented mechanism; customer prevalence and willingness to pay unvalidated",
+      "canonical_sector_id": null,
+      "canonical_mapping_status": "Unreconciled candidate problem-sector key; not a canonical replacement ID",
+      "required_customer_evidence": [
+        "Named workload owner and authorized representative telemetry",
+        "Baseline severity and fully loaded cost",
+        "Existing tool/competitor comparison",
+        "Buyer-approved business outcome and willingness-to-pay evidence"
+      ]
+    },
+    {
+      "bottleneck_id": "REL-TELEMETRY-ECONOMICS",
+      "name": "Observability cardinality cost and blind spots",
+      "family": "reliability",
+      "problem_class": "operational_pain",
+      "proposed_sector_id": "KEDDEH-REL-TELEMETRY-ECONOMICS",
+      "proposed_sector_name": "Observability cardinality cost and blind spots Engineering",
+      "buyer_and_users": [
+        "Observability platform owners",
+        "SRE and FinOps buyers"
+      ],
+      "measurable_problem": "Unbounded metric labels and traces consume storage/compute while indiscriminate sampling hides rare failures. Measure telemetry spend, series cardinality, ingestion loss and fault-detection recall.",
+      "evidence": [
+        {
+          "source_id": "CS30",
+          "url": "https://opentelemetry.io/docs/specs/otel/metrics/sdk/"
+        },
+        {
+          "source_id": "CS31",
+          "url": "https://opentelemetry.io/docs/specs/otel/trace/sdk/"
+        }
+      ],
+      "evidence_summary": "OpenTelemetry defines cardinality limits and tracing sampling to manage data volume/overhead; sampling necessarily changes what evidence is retained.",
+      "existing_alternatives": [
+        "OpenTelemetry views/sampling",
+        "tail sampling",
+        "retention tiers",
+        "vendor cost controls",
+        "service-level telemetry budgets"
+      ],
+      "keddeh_integration_hypothesis": "Integrate telemetry budgets with service objectives and fault-injection coverage; keep rare critical paths while dropping low-value repetition.",
+      "hypothesis_status": "Proposed; not built, deployed, or validated by this research",
+      "delivery_team": {
+        "team_id": "BRAINK-REL-TELEMETRY-ECONOMICS-DELIVERY",
+        "name": "Observability cardinality cost and blind spots Delivery Experts",
+        "specialties": [
+          "OpenTelemetry",
+          "time-series systems",
+          "statistical sampling",
+          "incident analysis"
+        ]
+      },
+      "independent_analyst_team": {
+        "team_id": "BRAINK-REL-TELEMETRY-ECONOMICS-ANALYSIS",
+        "name": "Observability cardinality cost and blind spots Independent Analysis",
+        "specialties": [
+          "Observability cardinality cost and blind spots benchmark specialist",
+          "reliability customer-economics analyst",
+          "Independent reliability and assurance reviewer"
+        ],
+        "mandate": "Independently verify evidence, baseline, comparator and acceptance metric; challenge delivery claims; publish failure cases and no-go findings."
+      },
+      "proposed_acceptance_test": "Lower telemetry cost per request at least 20% while preserving at least 99% detection of a preregistered critical-fault suite and keeping overhead within the service budget.",
+      "acceptance_test_status": "Illustrative pilot threshold; agree and preregister with the buyer before testing",
+      "dependencies_and_risks": [
+        "Unknown failure classes",
+        "sampling bias",
+        "privacy in labels",
+        "collector resource use",
+        "vendor billing semantics"
+      ],
+      "deduplication_boundary": "Evidence volume/value trade-off; network telemetry transport loss is NET-TELEMETRY-LOSS.",
+      "evidence_confidence": "Documented mechanism; customer prevalence and willingness to pay unvalidated",
+      "canonical_sector_id": null,
+      "canonical_mapping_status": "Unreconciled candidate problem-sector key; not a canonical replacement ID",
+      "required_customer_evidence": [
+        "Named workload owner and authorized representative telemetry",
+        "Baseline severity and fully loaded cost",
+        "Existing tool/competitor comparison",
+        "Buyer-approved business outcome and willingness-to-pay evidence"
+      ]
+    },
+    {
+      "bottleneck_id": "REL-INCIDENT-DIAGNOSIS",
+      "name": "Cross-system incident diagnosis latency",
+      "family": "reliability",
+      "problem_class": "operational_pain",
+      "proposed_sector_id": "KEDDEH-REL-INCIDENT-DIAGNOSIS",
+      "proposed_sector_name": "Cross-system incident diagnosis latency Engineering",
+      "buyer_and_users": [
+        "SRE/on-call teams",
+        "enterprise operations leaders"
+      ],
+      "measurable_problem": "Operators must reconcile symptoms, changes and dependencies before isolating a cause; unsupported AI explanations can worsen response. Measure time-to-valid-hypothesis and time-to-safe-mitigation.",
+      "evidence": [
+        {
+          "source_id": "CS41",
+          "url": "https://sre.google/sre-book/effective-troubleshooting/"
+        }
+      ],
+      "evidence_summary": "Google SRE frames troubleshooting as iterative hypothesis testing informed by system knowledge; observations alone are insufficient to establish cause.",
+      "existing_alternatives": [
+        "Incident management tools",
+        "runbooks",
+        "tracing/log correlation",
+        "service catalogs",
+        "experienced on-call engineers"
+      ],
+      "keddeh_integration_hypothesis": "Use BRAINK to assemble source-linked timelines and ranked hypotheses with explicit falsifiers; keep consequential remediation approval and verification separate.",
+      "hypothesis_status": "Proposed; not built, deployed, or validated by this research",
+      "delivery_team": {
+        "team_id": "BRAINK-REL-INCIDENT-DIAGNOSIS-DELIVERY",
+        "name": "Cross-system incident diagnosis latency Delivery Experts",
+        "specialties": [
+          "SRE diagnostics",
+          "causal reasoning",
+          "telemetry integration",
+          "human factors"
+        ]
+      },
+      "independent_analyst_team": {
+        "team_id": "BRAINK-REL-INCIDENT-DIAGNOSIS-ANALYSIS",
+        "name": "Cross-system incident diagnosis latency Independent Analysis",
+        "specialties": [
+          "Cross-system incident diagnosis latency benchmark specialist",
+          "reliability customer-economics analyst",
+          "Independent reliability and assurance reviewer"
+        ],
+        "mandate": "Independently verify evidence, baseline, comparator and acceptance metric; challenge delivery claims; publish failure cases and no-go findings."
+      },
+      "proposed_acceptance_test": "On blinded historical and injected incidents, reduce median time to a correct actionable hypothesis at least 20%; measure false-cause rate and require no unsafe automatic changes.",
+      "acceptance_test_status": "Illustrative pilot threshold; agree and preregister with the buyer before testing",
+      "dependencies_and_risks": [
+        "Incomplete evidence",
+        "hallucinated causality",
+        "sensitive logs",
+        "automation bias",
+        "hindsight leakage"
+      ],
+      "deduplication_boundary": "Diagnosis quality/time, not automatic anomaly detection or blanket autonomous remediation.",
+      "evidence_confidence": "Documented mechanism; customer prevalence and willingness to pay unvalidated",
+      "canonical_sector_id": null,
+      "canonical_mapping_status": "Unreconciled candidate problem-sector key; not a canonical replacement ID",
+      "required_customer_evidence": [
+        "Named workload owner and authorized representative telemetry",
+        "Baseline severity and fully loaded cost",
+        "Existing tool/competitor comparison",
+        "Buyer-approved business outcome and willingness-to-pay evidence"
+      ]
+    },
+    {
+      "bottleneck_id": "REL-CHANGE-CONTAINMENT",
+      "name": "Configuration and release blast radius",
+      "family": "reliability",
+      "problem_class": "operational_pain",
+      "proposed_sector_id": "KEDDEH-REL-CHANGE-CONTAINMENT",
+      "proposed_sector_name": "Configuration and release blast radius Engineering",
+      "buyer_and_users": [
+        "Platform release teams",
+        "network/cloud service operators"
+      ],
+      "measurable_problem": "A valid-looking but harmful change propagates too quickly to many fault domains, outpacing detection and rollback. Measure exposure growth, detection time, rollback time and affected traffic.",
+      "evidence": [
+        {
+          "source_id": "CS32",
+          "url": "https://blog.cloudflare.com/fail-small-resilience-plan/"
+        }
+      ],
+      "evidence_summary": "Cloudflare’s December 2025 resilience plan describes two recent incidents and changes intended to make configuration deployment fail in smaller scopes.",
+      "existing_alternatives": [
+        "Canary releases",
+        "staged configuration rollout",
+        "feature flags",
+        "automatic rollback",
+        "cell-based isolation"
+      ],
+      "keddeh_integration_hypothesis": "Integrate schema/semantic validation, representative canaries and rollout-velocity controls for code and configuration as distinct change types.",
+      "hypothesis_status": "Proposed; not built, deployed, or validated by this research",
+      "delivery_team": {
+        "team_id": "BRAINK-REL-CHANGE-CONTAINMENT-DELIVERY",
+        "name": "Configuration and release blast radius Delivery Experts",
+        "specialties": [
+          "Release engineering",
+          "configuration systems",
+          "SLO-based canary analysis",
+          "fault containment"
+        ]
+      },
+      "independent_analyst_team": {
+        "team_id": "BRAINK-REL-CHANGE-CONTAINMENT-ANALYSIS",
+        "name": "Configuration and release blast radius Independent Analysis",
+        "specialties": [
+          "Configuration and release blast radius benchmark specialist",
+          "reliability customer-economics analyst",
+          "Independent reliability and assurance reviewer"
+        ],
+        "mandate": "Independently verify evidence, baseline, comparator and acceptance metric; challenge delivery claims; publish failure cases and no-go findings."
+      },
+      "proposed_acceptance_test": "Inject a harmful configuration in staging/canary; halt before more than the agreed 1% traffic exposure and restore the previous known-good state within five minutes.",
+      "acceptance_test_status": "Illustrative pilot threshold; agree and preregister with the buyer before testing",
+      "dependencies_and_risks": [
+        "Canary representativeness",
+        "correlated global state",
+        "rollback compatibility",
+        "false positives",
+        "approval policy"
+      ],
+      "deduplication_boundary": "Change propagation/containment; configuration drift and version compatibility are separate sectors.",
+      "evidence_confidence": "Documented mechanism; customer prevalence and willingness to pay unvalidated",
+      "canonical_sector_id": null,
+      "canonical_mapping_status": "Unreconciled candidate problem-sector key; not a canonical replacement ID",
+      "required_customer_evidence": [
+        "Named workload owner and authorized representative telemetry",
+        "Baseline severity and fully loaded cost",
+        "Existing tool/competitor comparison",
+        "Buyer-approved business outcome and willingness-to-pay evidence"
+      ]
+    },
+    {
+      "bottleneck_id": "DEV-BUILD-LATENCY",
+      "name": "Build and CI feedback latency",
+      "family": "developer-operations",
+      "problem_class": "operational_pain",
+      "proposed_sector_id": "KEDDEH-DEV-BUILD-LATENCY",
+      "proposed_sector_name": "Build and CI feedback latency Engineering",
+      "buyer_and_users": [
+        "Developer productivity teams",
+        "large repository owners"
+      ],
+      "measurable_problem": "Repeated or poorly parallelized builds delay useful feedback and consume CI resources. Measure p50/p95 critical-path build time, queue delay, cache hit rate and cost per verified change.",
+      "evidence": [
+        {
+          "source_id": "CS33",
+          "url": "https://bazel.build/versions/7.1.0/remote/caching?hl=en"
+        }
+      ],
+      "evidence_summary": "Bazel documents shared remote caching of reproducible action outputs; successful reuse depends on the build’s declared inputs and reproducibility.",
+      "existing_alternatives": [
+        "Bazel/Buck/Pants",
+        "remote execution/cache",
+        "incremental builds",
+        "test selection",
+        "CI runner scaling"
+      ],
+      "keddeh_integration_hypothesis": "Profile the build graph and integrate cache/parallel execution in the existing toolchain; compare safe test-selection and full-build results.",
+      "hypothesis_status": "Proposed; not built, deployed, or validated by this research",
+      "delivery_team": {
+        "team_id": "BRAINK-DEV-BUILD-LATENCY-DELIVERY",
+        "name": "Build and CI feedback latency Delivery Experts",
+        "specialties": [
+          "Build systems",
+          "dependency graphs",
+          "CI infrastructure",
+          "cache integrity"
+        ]
+      },
+      "independent_analyst_team": {
+        "team_id": "BRAINK-DEV-BUILD-LATENCY-ANALYSIS",
+        "name": "Build and CI feedback latency Independent Analysis",
+        "specialties": [
+          "Build and CI feedback latency benchmark specialist",
+          "developer-operations customer-economics analyst",
+          "Independent reliability and assurance reviewer"
+        ],
+        "mandate": "Independently verify evidence, baseline, comparator and acceptance metric; challenge delivery claims; publish failure cases and no-go findings."
+      },
+      "proposed_acceptance_test": "Reduce p95 time-to-first-actionable-feedback at least 30% on held-out commit traces; preserve all seeded defect detections and verify cached artifact correctness.",
+      "acceptance_test_status": "Illustrative pilot threshold; agree and preregister with the buyer before testing",
+      "dependencies_and_risks": [
+        "Migration effort",
+        "cache poisoning/access",
+        "network overhead",
+        "nondeterministic inputs",
+        "test-selection misses"
+      ],
+      "deduplication_boundary": "Feedback latency, separate from reproducible outputs and false flaky-test failures.",
+      "evidence_confidence": "Documented mechanism; customer prevalence and willingness to pay unvalidated",
+      "canonical_sector_id": null,
+      "canonical_mapping_status": "Unreconciled candidate problem-sector key; not a canonical replacement ID",
+      "required_customer_evidence": [
+        "Named workload owner and authorized representative telemetry",
+        "Baseline severity and fully loaded cost",
+        "Existing tool/competitor comparison",
+        "Buyer-approved business outcome and willingness-to-pay evidence"
+      ]
+    },
+    {
+      "bottleneck_id": "DEV-FLAKY-TESTS",
+      "name": "Flaky-test signal contamination",
+      "family": "developer-operations",
+      "problem_class": "operational_pain",
+      "proposed_sector_id": "KEDDEH-DEV-FLAKY-TESTS",
+      "proposed_sector_name": "Flaky-test signal contamination Engineering",
+      "buyer_and_users": [
+        "Quality engineering teams",
+        "CI platform owners"
+      ],
+      "measurable_problem": "Nondeterministic failures trigger reruns and hide genuine regressions when ignored. Measure flaky failure rate, triage time, false-negative defect classification and retry cost.",
+      "evidence": [
+        {
+          "source_id": "CS35",
+          "url": "https://arxiv.org/abs/2401.15788"
+        }
+      ],
+      "evidence_summary": "The 2024 empirical study collected 230,439 failures from 498 flaky tests in 22 Java projects and found failure deduplication effectiveness varied sharply across projects.",
+      "existing_alternatives": [
+        "Deterministic clocks/fixtures",
+        "repeated execution",
+        "test isolation",
+        "flaky-test tracking/quarantine",
+        "failure clustering"
+      ],
+      "keddeh_integration_hypothesis": "Integrate controlled reruns and root-cause signatures; keep quarantined tests visible and independently test classifiers on new failure families.",
+      "hypothesis_status": "Proposed; not built, deployed, or validated by this research",
+      "delivery_team": {
+        "team_id": "BRAINK-DEV-FLAKY-TESTS-DELIVERY",
+        "name": "Flaky-test signal contamination Delivery Experts",
+        "specialties": [
+          "Test infrastructure",
+          "concurrency testing",
+          "statistical classification",
+          "developer tooling"
+        ]
+      },
+      "independent_analyst_team": {
+        "team_id": "BRAINK-DEV-FLAKY-TESTS-ANALYSIS",
+        "name": "Flaky-test signal contamination Independent Analysis",
+        "specialties": [
+          "Flaky-test signal contamination benchmark specialist",
+          "developer-operations customer-economics analyst",
+          "Independent reliability and assurance reviewer"
+        ],
+        "mandate": "Independently verify evidence, baseline, comparator and acceptance metric; challenge delivery claims; publish failure cases and no-go findings."
+      },
+      "proposed_acceptance_test": "Halve false-positive pipeline blocks on a held-out period while preserving at least 99% recall for seeded real regressions; report quarantine debt and compute cost.",
+      "acceptance_test_status": "Illustrative pilot threshold; agree and preregister with the buyer before testing",
+      "dependencies_and_risks": [
+        "Classifier drift",
+        "rare failures",
+        "masking production races",
+        "language/domain generalization"
+      ],
+      "deduplication_boundary": "Test reliability, not merely build speed or AI code generation.",
+      "evidence_confidence": "Documented mechanism; customer prevalence and willingness to pay unvalidated",
+      "canonical_sector_id": null,
+      "canonical_mapping_status": "Unreconciled candidate problem-sector key; not a canonical replacement ID",
+      "required_customer_evidence": [
+        "Named workload owner and authorized representative telemetry",
+        "Baseline severity and fully loaded cost",
+        "Existing tool/competitor comparison",
+        "Buyer-approved business outcome and willingness-to-pay evidence"
+      ]
+    },
+    {
+      "bottleneck_id": "DEV-HERMETIC-ENVIRONMENTS",
+      "name": "Non-reproducible build and test environments",
+      "family": "developer-operations",
+      "problem_class": "operational_pain",
+      "proposed_sector_id": "KEDDEH-DEV-HERMETIC-ENVIRONMENTS",
+      "proposed_sector_name": "Non-reproducible build and test environments Engineering",
+      "buyer_and_users": [
+        "Software release teams",
+        "developer platform buyers"
+      ],
+      "measurable_problem": "Undeclared host tools, time, network or dependency differences produce inconsistent outputs and unreproducible failures. Measure cross-host artifact identity and undeclared-input rate.",
+      "evidence": [
+        {
+          "source_id": "CS34",
+          "url": "https://bazel.build/basics/hermeticity"
+        }
+      ],
+      "evidence_summary": "Bazel identifies timestamps, differing system binaries and source-tree writes as common sources of non-hermetic behavior, and recommends isolation/comparison tests.",
+      "existing_alternatives": [
+        "Pinned toolchains",
+        "Nix",
+        "containers/devcontainers",
+        "Bazel sandboxing",
+        "lockfiles",
+        "reproducible-build tooling"
+      ],
+      "keddeh_integration_hypothesis": "Create a dependency/environment manifest and reproducibility harness; integrate supported isolation rather than claiming a container alone is hermetic.",
+      "hypothesis_status": "Proposed; not built, deployed, or validated by this research",
+      "delivery_team": {
+        "team_id": "BRAINK-DEV-HERMETIC-ENVIRONMENTS-DELIVERY",
+        "name": "Non-reproducible build and test environments Delivery Experts",
+        "specialties": [
+          "Build/toolchain engineering",
+          "dependency management",
+          "sandboxing",
+          "artifact provenance"
+        ]
+      },
+      "independent_analyst_team": {
+        "team_id": "BRAINK-DEV-HERMETIC-ENVIRONMENTS-ANALYSIS",
+        "name": "Non-reproducible build and test environments Independent Analysis",
+        "specialties": [
+          "Non-reproducible build and test environments benchmark specialist",
+          "developer-operations customer-economics analyst",
+          "Independent reliability and assurance reviewer"
+        ],
+        "mandate": "Independently verify evidence, baseline, comparator and acceptance metric; challenge delivery claims; publish failure cases and no-go findings."
+      },
+      "proposed_acceptance_test": "For agreed deterministic artifacts, obtain identical hashes across three clean hosts and repeated builds; document and bound every deliberately nondeterministic output.",
+      "acceptance_test_status": "Illustrative pilot threshold; agree and preregister with the buyer before testing",
+      "dependencies_and_risks": [
+        "Platform-specific binaries",
+        "network downloads",
+        "secrets",
+        "licensing",
+        "reproducible does not mean secure"
+      ],
+      "deduplication_boundary": "Environment/input determinism; supply-chain authenticity is excluded for the security register.",
+      "evidence_confidence": "Documented mechanism; customer prevalence and willingness to pay unvalidated",
+      "canonical_sector_id": null,
+      "canonical_mapping_status": "Unreconciled candidate problem-sector key; not a canonical replacement ID",
+      "required_customer_evidence": [
+        "Named workload owner and authorized representative telemetry",
+        "Baseline severity and fully loaded cost",
+        "Existing tool/competitor comparison",
+        "Buyer-approved business outcome and willingness-to-pay evidence"
+      ]
+    },
+    {
+      "bottleneck_id": "DEV-INFRA-DRIFT",
+      "name": "Desired versus actual infrastructure drift",
+      "family": "developer-operations",
+      "problem_class": "operational_pain",
+      "proposed_sector_id": "KEDDEH-DEV-INFRA-DRIFT",
+      "proposed_sector_name": "Desired versus actual infrastructure drift Engineering",
+      "buyer_and_users": [
+        "Cloud platform teams",
+        "managed service operators"
+      ],
+      "measurable_problem": "Manual or external changes diverge from declared configuration; blind reconciliation can overwrite intentional changes or recreate resources. Measure detection latency and unauthorized/unexplained differences.",
+      "evidence": [
+        {
+          "source_id": "CS36",
+          "url": "https://developer.hashicorp.com/terraform/tutorials/cloud/drift-and-policy"
+        }
+      ],
+      "evidence_summary": "Terraform health assessments compare remote state with configuration, and documented drift checks cover attributes represented in configuration; remediation needs a decision on intended state.",
+      "existing_alternatives": [
+        "Terraform refresh-only plans",
+        "GitOps controllers",
+        "cloud configuration services",
+        "drift platforms"
+      ],
+      "keddeh_integration_hypothesis": "Aggregate read-only drift evidence with ownership and change history; propose reconciliations as reviewable plans, not automatic destructive corrections.",
+      "hypothesis_status": "Proposed; not built, deployed, or validated by this research",
+      "delivery_team": {
+        "team_id": "BRAINK-DEV-INFRA-DRIFT-DELIVERY",
+        "name": "Desired versus actual infrastructure drift Delivery Experts",
+        "specialties": [
+          "IaC/GitOps",
+          "provider APIs",
+          "configuration models",
+          "change governance"
+        ]
+      },
+      "independent_analyst_team": {
+        "team_id": "BRAINK-DEV-INFRA-DRIFT-ANALYSIS",
+        "name": "Desired versus actual infrastructure drift Independent Analysis",
+        "specialties": [
+          "Desired versus actual infrastructure drift benchmark specialist",
+          "developer-operations customer-economics analyst",
+          "Independent reliability and assurance reviewer"
+        ],
+        "mandate": "Independently verify evidence, baseline, comparator and acceptance metric; challenge delivery claims; publish failure cases and no-go findings."
+      },
+      "proposed_acceptance_test": "Detect all seeded material drift within 15 minutes with less than 5% false positives; every fix must show reviewed intent, reversible plan and verified readback.",
+      "acceptance_test_status": "Illustrative pilot threshold; agree and preregister with the buyer before testing",
+      "dependencies_and_risks": [
+        "Incomplete modeled attributes",
+        "eventual consistency",
+        "provider defaults",
+        "destructive plans",
+        "ownership disputes"
+      ],
+      "deduplication_boundary": "Actual-state divergence, not release blast radius or security permission governance.",
+      "evidence_confidence": "Documented mechanism; customer prevalence and willingness to pay unvalidated",
+      "canonical_sector_id": null,
+      "canonical_mapping_status": "Unreconciled candidate problem-sector key; not a canonical replacement ID",
+      "required_customer_evidence": [
+        "Named workload owner and authorized representative telemetry",
+        "Baseline severity and fully loaded cost",
+        "Existing tool/competitor comparison",
+        "Buyer-approved business outcome and willingness-to-pay evidence"
+      ]
+    },
+    {
+      "bottleneck_id": "DEV-SCHEMA-EVOLUTION",
+      "name": "Online schema and contract migration safety",
+      "family": "developer-operations",
+      "problem_class": "operational_pain",
+      "proposed_sector_id": "KEDDEH-DEV-SCHEMA-EVOLUTION",
+      "proposed_sector_name": "Online schema and contract migration safety Engineering",
+      "buyer_and_users": [
+        "Database/application delivery teams"
+      ],
+      "measurable_problem": "DDL locks, table scans and mixed-version application assumptions cause downtime or corruption during change. Measure lock wait, blocked traffic, replication lag and backward/forward compatibility.",
+      "evidence": [
+        {
+          "source_id": "CS37",
+          "url": "https://www.postgresql.org/docs/current/sql-altertable.html"
+        }
+      ],
+      "evidence_summary": "PostgreSQL ALTER TABLE generally takes ACCESS EXCLUSIVE unless a subform states otherwise, and documents lower-impact patterns such as deferred constraint validation.",
+      "existing_alternatives": [
+        "Expand-contract migrations",
+        "online index creation",
+        "shadow tables",
+        "versioned APIs",
+        "migration tools"
+      ],
+      "keddeh_integration_hypothesis": "Build a dependency-aware migration planner and rehearsal harness using production-like volume and mixed-version clients.",
+      "hypothesis_status": "Proposed; not built, deployed, or validated by this research",
+      "delivery_team": {
+        "team_id": "BRAINK-DEV-SCHEMA-EVOLUTION-DELIVERY",
+        "name": "Online schema and contract migration safety Delivery Experts",
+        "specialties": [
+          "Database internals",
+          "schema migration",
+          "API compatibility",
+          "release orchestration"
+        ]
+      },
+      "independent_analyst_team": {
+        "team_id": "BRAINK-DEV-SCHEMA-EVOLUTION-ANALYSIS",
+        "name": "Online schema and contract migration safety Independent Analysis",
+        "specialties": [
+          "Online schema and contract migration safety benchmark specialist",
+          "developer-operations customer-economics analyst",
+          "Independent reliability and assurance reviewer"
+        ],
+        "mandate": "Independently verify evidence, baseline, comparator and acceptance metric; challenge delivery claims; publish failure cases and no-go findings."
+      },
+      "proposed_acceptance_test": "At agreed scale, complete migration within a one-second lock-blocking budget, preserve all data invariants, and prove supported rollback/forward recovery with old and new clients.",
+      "acceptance_test_status": "Illustrative pilot threshold; agree and preregister with the buyer before testing",
+      "dependencies_and_risks": [
+        "Long transactions",
+        "table size",
+        "DDL differences",
+        "irreversible transformations",
+        "replica lag"
+      ],
+      "deduplication_boundary": "Change compatibility and data evolution, not general query optimization or portability.",
+      "evidence_confidence": "Documented mechanism; customer prevalence and willingness to pay unvalidated",
+      "canonical_sector_id": null,
+      "canonical_mapping_status": "Unreconciled candidate problem-sector key; not a canonical replacement ID",
+      "required_customer_evidence": [
+        "Named workload owner and authorized representative telemetry",
+        "Baseline severity and fully loaded cost",
+        "Existing tool/competitor comparison",
+        "Buyer-approved business outcome and willingness-to-pay evidence"
+      ]
+    },
+    {
+      "bottleneck_id": "DEV-SELF-SERVICE",
+      "name": "Developer self-service and platform friction",
+      "family": "developer-operations",
+      "problem_class": "market_gap",
+      "proposed_sector_id": "KEDDEH-DEV-SELF-SERVICE",
+      "proposed_sector_name": "Developer self-service and platform friction Engineering",
+      "buyer_and_users": [
+        "Platform engineering leaders",
+        "engineering executives"
+      ],
+      "measurable_problem": "Developers wait for environment/provisioning tickets or navigate fragmented tools; a rigid platform can also reduce delivery independence. Measure task completion, handoffs and change outcomes.",
+      "evidence": [
+        {
+          "source_id": "CS38",
+          "url": "https://dora.dev/capabilities/platform-engineering/"
+        }
+      ],
+      "evidence_summary": "DORA’s platform guidance highlights user-centered feedback/self-service and warns that poorly managed platforms can hurt throughput or change stability.",
+      "existing_alternatives": [
+        "Internal developer platforms",
+        "Backstage/service catalogs",
+        "golden paths",
+        "templates",
+        "managed PaaS"
+      ],
+      "keddeh_integration_hypothesis": "Integrate a narrow, user-tested BRAINK workflow over existing tools, with visible task outcomes and escape paths; prioritize one frequent bottleneck before broad platform expansion.",
+      "hypothesis_status": "Proposed; not built, deployed, or validated by this research",
+      "delivery_team": {
+        "team_id": "BRAINK-DEV-SELF-SERVICE-DELIVERY",
+        "name": "Developer self-service and platform friction Delivery Experts",
+        "specialties": [
+          "Developer experience research",
+          "platform product management",
+          "workflow integration",
+          "service ownership"
+        ]
+      },
+      "independent_analyst_team": {
+        "team_id": "BRAINK-DEV-SELF-SERVICE-ANALYSIS",
+        "name": "Developer self-service and platform friction Independent Analysis",
+        "specialties": [
+          "Developer self-service and platform friction benchmark specialist",
+          "developer-operations customer-economics analyst",
+          "Independent reliability and assurance reviewer"
+        ],
+        "mandate": "Independently verify evidence, baseline, comparator and acceptance metric; challenge delivery claims; publish failure cases and no-go findings."
+      },
+      "proposed_acceptance_test": "Reduce p95 time for one agreed developer task at least 50% and human handoffs at least 50%, with no increase in change failure rate over a comparable delivery window.",
+      "acceptance_test_status": "Illustrative pilot threshold; agree and preregister with the buyer before testing",
+      "dependencies_and_risks": [
+        "Low adoption",
+        "golden-cage restrictions",
+        "tool sprawl",
+        "misaligned ownership",
+        "survey correlations not causal"
+      ],
+      "deduplication_boundary": "Workflow friction and self-service, distinct from CI speed, environment determinism and runbook toil.",
+      "evidence_confidence": "Documented mechanism; customer prevalence and willingness to pay unvalidated",
+      "canonical_sector_id": null,
+      "canonical_mapping_status": "Unreconciled candidate problem-sector key; not a canonical replacement ID",
+      "required_customer_evidence": [
+        "Named workload owner and authorized representative telemetry",
+        "Baseline severity and fully loaded cost",
+        "Existing tool/competitor comparison",
+        "Buyer-approved business outcome and willingness-to-pay evidence"
+      ]
+    },
+    {
+      "bottleneck_id": "DEV-VERSION-SKEW",
+      "name": "Dependency and platform version-skew management",
+      "family": "developer-operations",
+      "problem_class": "operational_pain",
+      "proposed_sector_id": "KEDDEH-DEV-VERSION-SKEW",
+      "proposed_sector_name": "Dependency and platform version-skew management Engineering",
+      "buyer_and_users": [
+        "Kubernetes/platform operators",
+        "enterprise software maintainers"
+      ],
+      "measurable_problem": "Components, APIs, drivers and plugins must be upgraded in compatible orders while services stay available. Measure unsupported combinations, deprecated API use and successful upgrade rehearsal.",
+      "evidence": [
+        {
+          "source_id": "CS42",
+          "url": "https://kubernetes.io/releases/version-skew-policy/"
+        }
+      ],
+      "evidence_summary": "Kubernetes publishes component-specific maximum version skews, supported release windows and required upgrade ordering. This is a changing policy, not a fixed universal version rule.",
+      "existing_alternatives": [
+        "Managed upgrade channels",
+        "compatibility matrices",
+        "staging clusters",
+        "dependency bots",
+        "vendor support"
+      ],
+      "keddeh_integration_hypothesis": "Maintain a source-pinned compatibility graph, detect blockers, and generate a tested staged upgrade plan with rollback constraints.",
+      "hypothesis_status": "Proposed; not built, deployed, or validated by this research",
+      "delivery_team": {
+        "team_id": "BRAINK-DEV-VERSION-SKEW-DELIVERY",
+        "name": "Dependency and platform version-skew management Delivery Experts",
+        "specialties": [
+          "Release compatibility",
+          "Kubernetes operations",
+          "driver/runtime integration",
+          "contract tests"
+        ]
+      },
+      "independent_analyst_team": {
+        "team_id": "BRAINK-DEV-VERSION-SKEW-ANALYSIS",
+        "name": "Dependency and platform version-skew management Independent Analysis",
+        "specialties": [
+          "Dependency and platform version-skew management benchmark specialist",
+          "developer-operations customer-economics analyst",
+          "Independent reliability and assurance reviewer"
+        ],
+        "mandate": "Independently verify evidence, baseline, comparator and acceptance metric; challenge delivery claims; publish failure cases and no-go findings."
+      },
+      "proposed_acceptance_test": "Rehearse the specified upgrade with zero unsupported combinations and all critical tests passing; production proposal includes bounded downtime, rollback evidence and unsupported-plugin exceptions.",
+      "acceptance_test_status": "Illustrative pilot threshold; agree and preregister with the buyer before testing",
+      "dependencies_and_risks": [
+        "Vendor support gaps",
+        "API removals",
+        "state format migrations",
+        "rollback may be impossible",
+        "maintenance windows"
+      ],
+      "deduplication_boundary": "Temporal version compatibility; code/CPU-vendor portability and live-state drift are separate.",
+      "evidence_confidence": "Documented mechanism; customer prevalence and willingness to pay unvalidated",
+      "canonical_sector_id": null,
+      "canonical_mapping_status": "Unreconciled candidate problem-sector key; not a canonical replacement ID",
+      "required_customer_evidence": [
+        "Named workload owner and authorized representative telemetry",
+        "Baseline severity and fully loaded cost",
+        "Existing tool/competitor comparison",
+        "Buyer-approved business outcome and willingness-to-pay evidence"
+      ]
+    },
+    {
+      "bottleneck_id": "OPS-RUNBOOK-TOIL",
+      "name": "Repetitive operational runbook toil",
+      "family": "developer-operations",
+      "problem_class": "operational_pain",
+      "proposed_sector_id": "KEDDEH-OPS-RUNBOOK-TOIL",
+      "proposed_sector_name": "Repetitive operational runbook toil Engineering",
+      "buyer_and_users": [
+        "SRE leaders",
+        "operations service owners"
+      ],
+      "measurable_problem": "Manual recurring checks and low-risk remediation consume engineering capacity and produce inconsistent execution. Measure hours per repeated task, error rate and escalation frequency.",
+      "evidence": [
+        {
+          "source_id": "CS39",
+          "url": "https://sre.google/workbook/eliminating-toil/"
+        }
+      ],
+      "evidence_summary": "Google SRE describes manual, repetitive, automatable work as toil and gives operational-work limits as a way to protect engineering capacity.",
+      "existing_alternatives": [
+        "Scripts",
+        "runbook automation",
+        "workflow engines",
+        "managed services",
+        "better product design"
+      ],
+      "keddeh_integration_hypothesis": "Convert approved repetitive procedures into observable idempotent workflows with preconditions, approval boundaries, rollback and post-action readback.",
+      "hypothesis_status": "Proposed; not built, deployed, or validated by this research",
+      "delivery_team": {
+        "team_id": "BRAINK-OPS-RUNBOOK-TOIL-DELIVERY",
+        "name": "Repetitive operational runbook toil Delivery Experts",
+        "specialties": [
+          "Operations automation",
+          "workflow safety",
+          "idempotency",
+          "human factors"
+        ]
+      },
+      "independent_analyst_team": {
+        "team_id": "BRAINK-OPS-RUNBOOK-TOIL-ANALYSIS",
+        "name": "Repetitive operational runbook toil Independent Analysis",
+        "specialties": [
+          "Repetitive operational runbook toil benchmark specialist",
+          "developer-operations customer-economics analyst",
+          "Independent reliability and assurance reviewer"
+        ],
+        "mandate": "Independently verify evidence, baseline, comparator and acceptance metric; challenge delivery claims; publish failure cases and no-go findings."
+      },
+      "proposed_acceptance_test": "Reduce hands-on time for an approved routine by at least 50% over 30 runs, with zero policy violations, full audit evidence and no increased incidents.",
+      "acceptance_test_status": "Illustrative pilot threshold; agree and preregister with the buyer before testing",
+      "dependencies_and_risks": [
+        "Over-automation",
+        "stale runbooks",
+        "privileged access",
+        "unsafe retries",
+        "task may require human judgment"
+      ],
+      "deduplication_boundary": "Routine execution burden; incidents requiring new diagnosis remain REL-INCIDENT-DIAGNOSIS.",
+      "evidence_confidence": "Documented mechanism; customer prevalence and willingness to pay unvalidated",
+      "canonical_sector_id": null,
+      "canonical_mapping_status": "Unreconciled candidate problem-sector key; not a canonical replacement ID",
+      "required_customer_evidence": [
+        "Named workload owner and authorized representative telemetry",
+        "Baseline severity and fully loaded cost",
+        "Existing tool/competitor comparison",
+        "Buyer-approved business outcome and willingness-to-pay evidence"
+      ]
+    }
+  ],
+  "canonical_taxonomy_reconciliation": {
+    "status": "Proposed mappings only; canonical IDs remain unchanged and mappings require owner reconciliation.",
+    "canonical_taxonomy_reference": "market-sector-review-crosswalk.json",
+    "provenance": "Owner-supplied canonical taxonomy: 29 technical sector IDs and 18 independently named foundries. Underlying private document is not redistributed.",
+    "next_step": "Use proposed crosswalk with exact canonical names; resolve function IDs and accountable ownership before admission."
+  },
+  "coverage_notes": {
+    "scope_exclusions": [
+      "Semiconductor fabrication, packaging/yield and HBM supply-chain capacity: hardware/semiconductor register.",
+      "AI model quality, hallucination, agent control, model evaluation and training-data rights: AI/data register. Compute acceptance still protects numerical correctness.",
+      "Cybersecurity, IAM policy, vulnerability management, software supply-chain trust and privacy compliance: security register. Here they are constraints, not duplicate sectors.",
+      "Database query optimization, data quality, ETL/CDC semantics and data governance: data register; storage mechanisms and distributed transaction boundaries are retained here.",
+      "Power generation, utility market reform and water-resource policy: energy/infrastructure register; site compute-power and cooling integration remain explicit cross-references.",
+      "Quantum computing, exotic hardware and algorithmic impossibility claims outside the named scope are not covered."
+    ],
+    "overlap_handling": [
+      "Do not merge memory bandwidth, memory capacity, tier placement and NUMA locality: they have different controlling variables and tests.",
+      "Do not merge ingest, small-object request overhead, SSD wear, archive access and checkpoints: each can be binding while the others are healthy.",
+      "Cloud economics is split into use efficiency, allocation, forecasting/commitment, egress, semantic portability, admission and pre-deployment estimation.",
+      "Distributed correctness separates quorum safety, side-effect idempotency, overload, time/order, cross-service compensation and cache freshness.",
+      "Reliability separates recovery dependency structure, actual restore validation, telemetry economics, diagnosis and change containment.",
+      "Developer operations separates build latency, test flakiness, environment determinism, drift, schema evolution, self-service, version skew and routine toil."
+    ],
+    "completeness": "Broad first-pass register, not a provably exhaustive inventory. A missing bottleneck should receive a new stable ID and independent team pair, rather than being forced into a broad existing sector."
+  },
+  "recommended_discovery_sequence": [
+    {
+      "stage": "Baseline and fit",
+      "sectors": [
+        "CLD-RIGHTSIZING",
+        "CLD-COST-ATTRIBUTION",
+        "DEV-BUILD-LATENCY",
+        "REL-RESTORE-VALIDATION",
+        "REL-TELEMETRY-ECONOMICS"
+      ],
+      "reason": "Accessible baselines and existing integration surfaces can support bounded pilot evaluations. This is an execution heuristic, not a revenue ranking."
+    },
+    {
+      "stage": "Workload-specific engineering",
+      "sectors": [
+        "CMP-MEM-BANDWIDTH",
+        "CMP-GPU-SCHEDULING",
+        "STO-GPU-INGEST",
+        "NET-COLLECTIVE-SCALING",
+        "DEV-SCHEMA-EVOLUTION"
+      ],
+      "reason": "Potential value depends on representative traces, hardware and domain expertise."
+    },
+    {
+      "stage": "Longer-horizon or high-assurance validation",
+      "sectors": [
+        "CMP-GRID-CAPACITY",
+        "CMP-THERMAL-DENSITY",
+        "CMP-MEM-TIERING",
+        "NET-TELEMETRY-LOSS",
+        "DST-QUORUM-SAFETY"
+      ],
+      "reason": "Physical infrastructure, specialized equipment, protocol assumptions or research maturity constrain realistic delivery."
+    }
+  ],
+  "research_cautions": [
+    "No Keddeh/BRAINK source code, implementation, delivery headcount, telemetry or customer evidence was inspected. All sector/team mappings are proposed designs.",
+    "A cited vendor solution demonstrates that alternatives exist. It does not independently establish market size or prove Keddeh differentiation.",
+    "All market-gap rows need interviews with named authorized buyers, purchasing constraints, competitor comparison and willingness-to-pay tests before staffing.",
+    "Do not sum savings across bottlenecks: improvements can share the same baseline and move the binding bottleneck elsewhere.",
+    "Use fixed workloads, hardware, prices and consistency/accuracy requirements in comparisons; publish resource, reliability and maintenance regressions.",
+    "No external systems were changed and no customer/private data was transmitted."
+  ],
+  "counts": {
+    "distinct_bottlenecks": 43,
+    "proposed_sectors": 43,
+    "delivery_teams": 43,
+    "independent_analyst_teams": 43,
+    "sources": 42,
+    "by_family": {
+      "compute-memory": 5,
+      "compute-facility": 2,
+      "compute-toolchain": 1,
+      "storage": 5,
+      "networking": 4,
+      "cloud-economics": 4,
+      "cloud-portability": 2,
+      "cloud-capacity": 1,
+      "distributed-systems": 6,
+      "reliability": 5,
+      "developer-operations": 8
+    },
+    "by_problem_class": {
+      "hard_technical_limit": 10,
+      "operational_pain": 27,
+      "market_gap": 6
+    }
+  }
+}

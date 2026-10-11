@@ -1,0 +1,2101 @@
+KEDDEH SYSTEMS | ENGINEER · AUTOMATE · SCALE
+PUBLIC RESEARCH DRAFT | ALL RIGHTS RESERVED FOR ORIGINAL COMPILATION
+Third-party sources retain their own rights. No implementation or scientific qualification is implied.
+
+metadata:
+  title: Keddeh Systems: AI, Data, Security, HCI and Verification Market Bottlenecks
+  document id: KEDDEH-MARKET-AI-DATA-20261011
+  version: 0.1.1
+  status: Public research draft; not production- or publication-quality approved
+  classification: Public repository research draft; hypotheses and unadopted mappings; no production or publication-quality qualification
+  prepared on: 2026-10-11
+  author: AI-assisted research prepared for Keddeh Systems
+  contributions: Source discovery, synthesis, proposed sector/team charters and falsifiable pilot gates
+  publisher: Keddeh Systems; public research-draft edition
+  rights holder: Owner to confirm; third-party materials retain their original rights
+  licence profile: Reserved rights by default; no external reuse licence granted
+  formal template status: Document metadata and research controls are recorded. Exact formal publishing-template conformity and final paginated-layout inspection remain unverified; this is a research draft.
+  scope: Targeted discovery across AI/agents, data quality/interoperability/governance, cybersecurity/privacy, HCI/accessibility and scientific verification. Not exhaustive across all technology.
+  knowledge cutoff: Public sources accessed 2026-10-11; observation years retained separately from publication dates
+  artifact type: Research register and readable working annex; no implementation or external mutation
+  public edition: 1.0
+  source namespace: ai_data
+  publication scope: Newly authored 93-candidate market research prepared for the owner-requested public Keddeh1/BRAINK-AGENT repository. No private customer data, credentials, private document text or copied native implementation code is included.
+definitions:
+  Bottleneck: A scoped obstacle to a useful, safe or economical outcome, with an observable mechanism or evidence and a testable remediation hypothesis.
+  Sector: A proposed market/problem accountability boundary; not an assertion that a canonical Keddeh registry sector exists.
+  Foundry: An independently named Keddeh organizational/technical domain referenced by the parent; a relationship to multiple foundries does not merge them.
+  Delivery team: Proposed BRAINK specialist team responsible for building or operating an authorized intervention.
+  Analyst team: Separate proposed BRAINK team responsible for baseline, evidence, evaluation design, criticism and acceptance reporting.
+  Reproduction: Same data and analysis rerun; computational repeatability alone does not establish truth.
+  Robustness: Sensitivity of conclusions to reasonable changes in analysis using the same data.
+  Replication: New-data test of the same scientific question.
+  Primary evidence: Original study, official measurement, standard or first-party technical report; its type and limitations are retained.
+  Service hypothesis: A proposed paid or internal intervention to validate, not an existing solved capability or guarantee.
+controls and conventions:
+  - Every sector identifier and BRAINK team charter in this register is proposed. Reconcile canonical registry identities without merging the independently named foundries.
+  - Keep problem diagnosis, sourced capability, implementation, deployment, readback and independent verification as separate statuses. None of these entries is an implemented Keddeh service.
+  - Each problem owns a delivery team and a separate analyst team. Shared specialists may advise, but analysts must not self-approve delivery or alter locked tests after seeing results.
+  - All numerical acceptance gates are proposed local pilot criteria, not measured accomplishments, published industry standards or safety certifications. Adjust with the owner before the pilot and lock them before testing.
+  - Report denominators, dates, task slices, confidence intervals, baseline quality, costs and negative outcomes. Zero observed failures never proves zero future risk.
+  - Market demand, market size, willingness to pay and Keddeh qualification are unverified. Sources establish problem mechanisms or bounded measurements; proposed buyers and services are analyst inferences.
+  - Do not make high-impact decisions autonomously. Require authorization for access, sensitive data use, production changes, red teaming, external communication and human-subject studies.
+  - Prefer existing standards and maintained products when they satisfy the need. A Keddeh service must demonstrate a better measured outcome than those alternatives.
+  - A byte hash establishes identity and custody, not scientific validity, truth, safety or qualified cryptography.
+  - No private customer data was searched, published or transmitted for this annex. No teams, services, credentials or infrastructure were provisioned.
+normalisation:
+  id policy: Descriptive IDs are stable within this annex; canonical mapping remains pending. Do not renumber to imply official sector assignment.
+  overlap policy: Preserve distinct failure mechanisms and acceptance tests. Share dependencies and link related entries instead of collapsing them.
+  evidence policy: Primary-source preference; empirical, survey, guidance and standard evidence explicitly distinguished. Missing prevalence is not replaced with invented market statistics.
+  priority policy: pilot-candidate means a bounded, measurable starting point; validate-demand means investigate buyer urgency, access and economics. Neither means authority to launch.
+sources:
+  1.
+    id: AI-E01
+    title: FACTS Benchmark Suite
+    url: https://deepmind.google/blog/facts-benchmark-suite-systematically-evaluating-the-factuality-of-large-language-models/
+    publication or update date: 2025-12-09
+    accessed date: 2026-10-11
+    source type: primary benchmark by model developer
+    reported evidence: Across 15 evaluated models, overall factuality scores were below 70%; the suite separates grounding, search, parametric knowledge and multimodal tasks.
+    limitations: Historical benchmark snapshot, not October 2026 model rankings or enterprise failure prevalence; developer-origin benchmark and automated grading require scrutiny.
+  2.
+    id: AI-E02
+    title: METR task-completion time horizons
+    url: https://metr.org/time-horizons/
+    publication or update date: 2026-09-08
+    accessed date: 2026-10-11
+    source type: primary evaluation program
+    reported evidence: Over 100 software-oriented tasks support 50% and 80% task-success horizons; measurements above 16 human-expert hours are marked unreliable.
+    limitations: Page no longer actively updated; clean software/ML/security tasks are not all jobs, and a time horizon is task difficulty rather than autonomous elapsed runtime.
+  3.
+    id: AI-E03
+    title: Mitigating prompt injection in browser use
+    url: https://www.anthropic.com/research/prompt-injection-defenses
+    publication or update date: 2025-11-24
+    accessed date: 2026-10-11
+    source type: primary vendor adversarial evaluation
+    reported evidence: An adaptive attacker received 100 attempts per environment; the report discusses residual 1% attack success despite improved defenses.
+    limitations: Vendor-specific internal test; not a universal failure probability and not evidence of immunity.
+  4.
+    id: AI-E04
+    title: Agent identity foundations
+    url: https://www.nist.gov/blogs/cybersecurity-insights/back-future-why-agentic-ai-needs-strong-identity-foundation
+    publication or update date: 2026-08-27
+    accessed date: 2026-10-11
+    source type: primary government technical analysis
+    reported evidence: NIST identifies credential sharing, long-lived tokens and agent delegation/accountability gaps; modern OAuth and workload identity offer existing building blocks.
+    limitations: Qualitative engineering diagnosis, without population prevalence or product qualification.
+  5.
+    id: AI-E05
+    title: Agent identity project comments
+    url: https://www.nist.gov/news-events/news/2026/09/comments-software-and-agentic-ai-identity-concept-paper
+    publication or update date: 2026-09-29
+    accessed date: 2026-10-11
+    source type: primary government project update
+    reported evidence: More than 600 commenters responded; a DevSecOps environment will be the first implementation use case.
+    limitations: Engagement demonstrates attention, not customer demand or an implemented standard.
+  6.
+    id: AI-E06
+    title: METR productivity experiment redesign
+    url: https://metr.org/blog/2026-02-24-uplift-update/
+    publication or update date: 2026-02-24
+    accessed date: 2026-10-11
+    source type: primary experimental follow-up
+    reported evidence: Early-2025 tasks took 19% longer with AI; later results suggested speedups but selection effects and concurrent-agent time measurement made the current effect unreliable.
+    limitations: Do not generalize the old slowdown to current tools or present the biased later estimates as causal proof.
+  7.
+    id: AI-E07
+    title: NIST Generative AI Profile
+    url: https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf
+    publication or update date: 2024-07-26
+    accessed date: 2026-10-11
+    source type: primary risk-management guidance
+    reported evidence: Identifies confabulation, privacy, harmful bias, human-AI configuration and value-chain risks; supports lifecycle measurement and governance.
+    limitations: Taxonomy and guidance, not an incidence survey, certification or evidence that any mitigation eliminates risk.
+  8.
+    id: AI-E08
+    title: GAO data quality and AI-enabled fraud detection
+    url: https://www.gao.gov/products/gao-25-108412
+    publication or update date: 2025-04-09
+    accessed date: 2026-10-11
+    source type: primary government oversight
+    reported evidence: GAO identifies data quality and skilled-workforce constraints on reliable AI-enabled fraud detection.
+    limitations: Does not quantify the share of losses caused by poor data or establish AI remediation savings.
+  9.
+    id: AI-E09
+    title: Interoperable exchange among US hospitals
+    url: https://healthit.gov/data/data-briefs/interoperable-exchange-patient-health-information-among-us-hospitals-2023/
+    publication or update date: 2024-05
+    accessed date: 2026-10-11
+    source type: primary national survey analysis
+    reported evidence: In 2023, 43% of non-federal acute-care hospitals routinely engaged in all four exchange domains; 71% had routine outside information access, versus 42% reporting routine clinical use.
+    limitations: Lagged, sector-specific self-report; not current global enterprise interoperability prevalence.
+  10.
+    id: AI-E10
+    title: DCAT 3
+    url: https://www.w3.org/TR/2024/REC-vocab-dcat-3-20240822/
+    publication or update date: 2024-08-22
+    accessed date: 2026-10-11
+    source type: primary technical recommendation
+    reported evidence: Standard metadata supports federated catalog discovery, dataset versions, series and checksums.
+    limitations: A catalog vocabulary does not by itself resolve domain semantics, clean source records or prove correctness.
+  11.
+    id: AI-E11
+    title: Foundation Model Transparency Index 2025
+    url: https://crfm.stanford.edu/fmti/December-2025/index.html
+    publication or update date: 2025-12
+    accessed date: 2026-10-11
+    source type: primary transparency assessment
+    reported evidence: Thirteen developers were assessed on 100 indicators; mean transparency was about 41/100, with major information gaps.
+    limitations: Indicators changed since 2024; disclosure is not equivalent to safety, licensing clearance or model quality.
+  12.
+    id: AI-E12
+    title: GAO AI privacy-related gaps
+    url: https://files.gao.gov/reports/GAO-26-107681/index.html
+    publication or update date: 2026-03-26
+    accessed date: 2026-10-11
+    source type: primary government audit and expert panel
+    reported evidence: Experts identified persistence, re-identification and secondary-use risks. OMB guidance fully addressed two of ten selected challenges and partially addressed eight.
+    limitations: Federal-guidance audit, not a universal legal determination or an empirical rate of privacy incidents.
+  13.
+    id: AI-E13
+    title: NIST SP 800-226 differential privacy guarantees
+    url: https://csrc.nist.gov/pubs/sp/800/226/final
+    publication or update date: 2025-03-06
+    accessed date: 2026-10-11
+    source type: primary technical guidance
+    reported evidence: Describes differential privacy evaluation and practical hazards when translating mathematical guarantees into systems.
+    limitations: No universal epsilon, error or privacy setting; synthetic data alone is not a privacy guarantee.
+  14.
+    id: AI-E14
+    title: Verizon DBIR 2026
+    url: https://www.verizon.com/about/news/breach-industry-wide-dbir-finds
+    publication or update date: 2026-05-19
+    accessed date: 2026-10-11
+    source type: primary incident-data report publisher
+    reported evidence: The report attributes 31% of breach entry to vulnerability exploitation and 48% of breaches to third-party involvement.
+    limitations: Contributor dataset and context-specific telemetry are not a random population sample; third-party involvement is broader than compromised dependencies; shadow-AI usage is not a breach rate.
+  15.
+    id: AI-E15
+    title: CISA 2026 SBOM minimum-elements release
+    url: https://content.govdelivery.com/accounts/USDHSCISA/bulletins/422a7eb
+    publication or update date: 2026-07-29
+    accessed date: 2026-10-11
+    source type: primary government bulletin
+    reported evidence: CISA and partner agencies released updated SBOM minimum elements to improve software-component and supply-chain visibility.
+    limitations: An SBOM supports inventory and response; its existence does not prove exploitability or security.
+  16.
+    id: AI-E16
+    title: Scattered Spider joint advisory
+    url: https://www.ic3.gov/CSA/2025/250729.pdf
+    publication or update date: 2025-07-29
+    accessed date: 2026-10-11
+    source type: primary multi-agency threat advisory
+    reported evidence: Documents social engineering and identity-focused intrusions and recommends stronger authentication, help-desk controls and defensive resilience.
+    limitations: Threat-group observations, not an identity-compromise base rate; defensive testing requires permission.
+  17.
+    id: AI-E17
+    title: Eliminating buffer overflow vulnerabilities
+    url: https://www.cisa.gov/sites/default/files/2025-02/secure-by-design-alert-eliminating-buffer-overflow-vulnerabilities-508c.pdf
+    publication or update date: 2025-02-11
+    accessed date: 2026-10-11
+    source type: primary government defensive guidance
+    reported evidence: CISA calls for memory-safe development, prioritized migration, fuzzing and adversarial product testing against persistent buffer-overflow defects.
+    limitations: No measured business ROI; memory-safe languages do not eliminate logic, dependency or unsafe-interface bugs.
+  18.
+    id: AI-E18
+    title: NIST PQC migration FAQ
+    url: https://pages.nist.gov/nccoe-migration-post-quantum-cryptography/
+    publication or update date: unknown / not provided
+    accessed date: 2026-10-11
+    source type: primary government technical migration resource
+    reported evidence: NIST describes standardized post-quantum algorithms and interoperability/performance migration testing.
+    limitations: Living resource; no prediction of a cryptographically relevant quantum computer date, nor evidence all products are validated.
+  19.
+    id: AI-E19
+    title: WebAIM Million 2026
+    url: https://webaim.org/projects/million/
+    publication or update date: 2026-02 (measurement period)
+    accessed date: 2026-10-11
+    source type: primary automated web evaluation
+    reported evidence: 95.9% of one million sampled homepages had detected WCAG failures; mean errors were 56.1/page. Six common categories accounted for 96% of detected errors.
+    limitations: Automatic detection covers only part of accessibility; homepage sampling cannot establish whole-site or legal conformance.
+  20.
+    id: AI-E20
+    title: WebAIM Screen Reader Survey 11
+    url: https://webaim.org/projects/screenreadersurvey11/
+    publication or update date: 2026-09-29
+    accessed date: 2026-10-11
+    source type: primary user survey
+    reported evidence: The survey had 1,780 valid responses overall. Among the 1,754 respondents answering the PDF question, 85.6% reported that PDF documents were very or somewhat likely to pose significant accessibility issues. Separately, 70.3% reported using multiple desktop screen readers.
+    limitations: Uncontrolled voluntary sample and self-reported experience; not a representative population prevalence estimate.
+  21.
+    id: AI-E21
+    title: HELM Arabic Enterprise
+    url: https://crfm.stanford.edu/helm/arabic-enterprise/latest/
+    publication or update date: unknown / not provided
+    accessed date: 2026-10-11
+    source type: primary evaluation leaderboard
+    reported evidence: Six enterprise Arabic tasks assess content, finance and legal QA; the retrieved table includes mean scores of 0.826 for LLM-X Preview and 0.767 for GPT-5.4.
+    limitations: Living snapshot, not language-wide ability or legal/financial suitability; collaboration with Arabic.AI and task weighting matter.
+  22.
+    id: AI-E22
+    title: Generative AI and critical thinking survey
+    url: https://www.microsoft.com/en-us/research/publication/the-impact-of-generative-ai-on-critical-thinking-self-reported-reductions-in-cognitive-effort-and-confidence-effects-from-a-survey-of-knowledge-workers/
+    publication or update date: 2025-04 (CHI 2025)
+    accessed date: 2026-10-11
+    source type: primary research study
+    reported evidence: Surveyed 319 knowledge workers about perceived critical thinking effort and confidence when using generative AI.
+    limitations: Self-report and association do not prove cognitive decline, causality or the effectiveness of a proposed interface.
+  23.
+    id: AI-E23
+    title: SCORE research outcomes
+    url: https://www.cos.io/score
+    publication or update date: 2026 (outcome release; exact date not stated)
+    accessed date: 2026-10-11
+    source type: primary research-program summary
+    reported evidence: About half of assessed claims reproduced precisely, around three-quarters approximately; roughly one-third of reanalyses matched within narrow tolerance; about half replicated with the same significant pattern.
+    limitations: Social/behavioral studies only; distinct substudies have different samples and outcomes. These are not failure rates for all science.
+  24.
+    id: AI-E24
+    title: Leakage in connectome-based machine learning
+    url: https://www.nature.com/articles/s41467-024-46150-w
+    publication or update date: 2024-02-28
+    accessed date: 2026-10-11
+    source type: primary peer-reviewed empirical study
+    reported evidence: Compared leaky feature selection, site correction, covariate regression, family leakage and subject leakage against non-leaky evaluation pipelines.
+    limitations: Specific datasets and pipelines; effect size depends on the task and leakage mechanism.
+  25.
+    id: AI-E26
+    title: Verizon DBIR 2026: AI data-loss context
+    url: https://www.verizon.com/business/resources/T1e0/reports/2026-dbir-data-breach-investigations-report.pdf
+    publication or update date: 2026-05-19
+    accessed date: 2026-10-11
+    source type: primary incident and telemetry report
+    reported evidence: Page 13 distinguishes regular AI use on corporate devices (45%, authorized or not), non-corporate account use (67%), and shadow AI as the third most common non-malicious insider action in its DLP data.
+    limitations: Different denominators and telemetry sources must not be mixed; these figures are not the share of all workers leaking data or breaches caused by AI.
+  26.
+    id: AI-E25
+    title: NIST adversarial ML taxonomy
+    url: https://www.nist.gov/publications/adversarial-machine-learning-taxonomy-and-terminology-attacks-and-mitigations-0
+    publication or update date: 2025-03
+    accessed date: 2026-10-11
+    source type: primary technical taxonomy
+    reported evidence: Distinguishes evasion, poisoning, privacy and abuse attacks and their mitigations across AI lifecycles.
+    limitations: Taxonomy identifies mechanisms, not prevalence or assurance that particular defenses work.
+entries:
+  1.
+    id: ai-grounded-factuality
+    proposed sector id: proposed-sector-grounded-ai-assurance
+    proposed sector name: Grounded Ai Assurance
+    sector mapping status: proposed; reconcile against native Keddeh registry
+    parent foundries:
+      - Agentics
+      - Research Mastery
+    title: Grounded answer reliability
+    scope: Knowledge assistants, support and retrieval-augmented generation; separate evidence retrieval from truthful synthesis.
+    affected users and potential buyers:
+      - Knowledge operations leaders
+      - Customer-support teams
+      - Regulated document users
+    measured problem: A dated multi-task benchmark found factual errors even with grounding/search; customer error rate is unmeasured.
+    primary evidence ids:
+      - AI-E01
+      - AI-E07
+    existing alternatives:
+      - Search with human review
+      - Retrieval-augmented generation
+      - FACTS-style evaluation
+      - Abstention and citation checks
+    proposed keddeh service hypothesis: Pilot a source-bound answer workflow with claim-level evidence, freshness checks and calibrated abstention, then test against the customer’s existing search process.
+    delivery team:
+      id: proposed-braink-delivery-ai-grounded-factuality
+      display name: BRAINK Grounded answer reliability Delivery
+      status: proposed charter; staffing and execution unqualified
+      specialist expertise:
+        - Information retrieval
+        - Domain specialists
+        - NLP evaluation
+        - Uncertainty calibration
+    analyst team:
+      id: proposed-braink-analyst-ai-grounded-factuality
+      display name: BRAINK Grounded answer reliability Analysis
+      status: separate proposed team; not the delivery team
+      distinct role: Audit citation entailment and missing/contradictory evidence on a blind adjudicated holdout; measure answer coverage as well as errors.
+      independence: Own baseline, held-out evaluation, evidence review and failure report; cannot approve its own implementation or silently change acceptance criteria.
+    falsifiable acceptance metric:
+      status: proposed pilot gate, not observed achievement or source-derived industry threshold
+      test: On at least 300 adjudicated questions: unsupported material-claim rate <=2%, answerable-question coverage >=85%, no critical harm cases, and review time at least 20% below baseline. Report confidence intervals.
+      baseline: Measure prospectively in an authorized customer pilot; unknown at present.
+    failure and safety risks:
+      - Convincing but unsupported citations
+      - Retrieval access leakage
+      - Over-abstention concealing poor capability
+    dependencies:
+      - Authorized corpus
+      - Document versions
+      - Domain adjudicators
+      - Source access control
+    overlap with ids:
+      - data-lineage-provenance
+      - hci-human-ai-oversight
+      - verification-evaluation-validity
+    discovery priority: pilot-candidate
+    execution qualification: unqualified; no service implementation, team deployment or customer result verified
+    commercial evidence: Potential buyer and service inference only. No customer interviews, willingness-to-pay or market-size study completed.
+    primary evidence:
+      1.
+        id: AI-E01
+        url: https://deepmind.google/blog/facts-benchmark-suite-systematically-evaluating-the-factuality-of-large-language-models/
+        publication or update date: 2025-12-09
+        accessed date: 2026-10-11
+      2.
+        id: AI-E07
+        url: https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf
+        publication or update date: 2024-07-26
+        accessed date: 2026-10-11
+  2.
+    id: ai-long-workflow-reliability
+    proposed sector id: proposed-sector-agent-workflow-reliability
+    proposed sector name: Agent Workflow Reliability
+    sector mapping status: proposed; reconcile against native Keddeh registry
+    parent foundries:
+      - Agentics
+      - Process Mastery
+    title: Long workflow reliability
+    scope: Multi-step software and business workflows including interrupted execution, retries, external-state reconciliation and recovery.
+    affected users and potential buyers:
+      - Operations owners
+      - Engineering platform teams
+      - Enterprise automation buyers
+    measured problem: Controlled task success changes with task difficulty and scoring; public time horizons do not establish production reliability.
+    primary evidence ids:
+      - AI-E02
+    existing alternatives:
+      - Deterministic workflow engines
+      - RPA
+      - Human operators
+      - Agent frameworks with checkpoints
+    proposed keddeh service hypothesis: Prototype bounded agent workflows using explicit state transitions, idempotency keys, checkpoints and human escalation.
+    delivery team:
+      id: proposed-braink-delivery-ai-long-workflow-reliability
+      display name: BRAINK Long workflow reliability Delivery
+      status: proposed charter; staffing and execution unqualified
+      specialist expertise:
+        - Distributed systems
+        - Workflow orchestration
+        - SRE
+        - Domain operations
+    analyst team:
+      id: proposed-braink-analyst-ai-long-workflow-reliability
+      display name: BRAINK Long workflow reliability Analysis
+      status: separate proposed team; not the delivery team
+      distinct role: Build fault-injection and blind task suites; verify externally observed outcomes rather than agent statements of success.
+      independence: Own baseline, held-out evaluation, evidence review and failure report; cannot approve its own implementation or silently change acceptance criteria.
+    falsifiable acceptance metric:
+      status: proposed pilot gate, not observed achievement or source-derived industry threshold
+      test: Across 200 replayable scenarios including 50 injected timeouts/restarts: >=95% correct terminal outcomes, zero duplicate consequential writes, and 100% ambiguous writes reconciled or escalated.
+      baseline: Measure prospectively in an authorized customer pilot; unknown at present.
+    failure and safety risks:
+      - Retry duplication
+      - Partial transactions
+      - Unrecoverable state
+      - Out-of-scope action
+    dependencies:
+      - Sandbox environment
+      - Stable APIs
+      - Business rollback policy
+      - Outcome readbacks
+    overlap with ids:
+      - ai-delegated-identity
+      - verification-evaluation-validity
+    discovery priority: pilot-candidate
+    execution qualification: unqualified; no service implementation, team deployment or customer result verified
+    commercial evidence: Potential buyer and service inference only. No customer interviews, willingness-to-pay or market-size study completed.
+    primary evidence:
+      1.
+        id: AI-E02
+        url: https://metr.org/time-horizons/
+        publication or update date: 2026-09-08
+        accessed date: 2026-10-11
+  3.
+    id: ai-prompt-injection-containment
+    proposed sector id: proposed-sector-agent-input-security
+    proposed sector name: Agent Input Security
+    sector mapping status: proposed; reconcile against native Keddeh registry
+    parent foundries:
+      - Agentics
+      - Server
+    title: Prompt injection containment
+    scope: Untrusted documents, web content, tool responses and persistent memory influencing privileged agents.
+    affected users and potential buyers:
+      - Agent platform owners
+      - Enterprise security
+      - Workflow operators
+    measured problem: Vendor adversarial testing retained residual attack success; no universal successful defense is established.
+    primary evidence ids:
+      - AI-E03
+      - AI-E25
+    existing alternatives:
+      - Model-level defenses
+      - Content classifiers
+      - Sandboxing
+      - Read-only tools
+      - Explicit approval controls
+    proposed keddeh service hypothesis: Offer authorized adversarial assessment and architectural containment: isolate data from authority, constrain tools and destinations, and test escalation paths.
+    delivery team:
+      id: proposed-braink-delivery-ai-prompt-injection-containment
+      display name: BRAINK Prompt injection containment Delivery
+      status: proposed charter; staffing and execution unqualified
+      specialist expertise:
+        - AI red teaming
+        - Application security
+        - Capability security
+        - Secure memory design
+    analyst team:
+      id: proposed-braink-analyst-ai-prompt-injection-containment
+      display name: BRAINK Prompt injection containment Analysis
+      status: separate proposed team; not the delivery team
+      distinct role: Design withheld attacks and measure both attack success and legitimate-task degradation; review exfiltration simulations independently.
+      independence: Own baseline, held-out evaluation, evidence review and failure report; cannot approve its own implementation or silently change acceptance criteria.
+    falsifiable acceptance metric:
+      status: proposed pilot gate, not observed achievement or source-derived industry threshold
+      test: In 500 authorized held-out attack scenarios: zero simulated high-impact unauthorized writes/exfiltrations; legitimate completion degrades by <=5 percentage points. Report remaining uncertainty, not immunity.
+      baseline: Measure prospectively in an authorized customer pilot; unknown at present.
+    failure and safety risks:
+      - Benchmark overfitting
+      - False positives
+      - Indirect/multimodal attacks
+      - Persistent memory poisoning
+    dependencies:
+      - Explicit defensive-test authorization
+      - Synthetic secrets
+      - Threat model
+      - Tool isolation
+    overlap with ids:
+      - ai-delegated-identity
+      - security-shadow-ai-data-leakage
+    discovery priority: pilot-candidate
+    execution qualification: unqualified; no service implementation, team deployment or customer result verified
+    commercial evidence: Potential buyer and service inference only. No customer interviews, willingness-to-pay or market-size study completed.
+    primary evidence:
+      1.
+        id: AI-E03
+        url: https://www.anthropic.com/research/prompt-injection-defenses
+        publication or update date: 2025-11-24
+        accessed date: 2026-10-11
+      2.
+        id: AI-E25
+        url: https://www.nist.gov/publications/adversarial-machine-learning-taxonomy-and-terminology-attacks-and-mitigations-0
+        publication or update date: 2025-03
+        accessed date: 2026-10-11
+  4.
+    id: ai-delegated-identity
+    proposed sector id: proposed-sector-agent-identity-authorization
+    proposed sector name: Agent Identity Authorization
+    sector mapping status: proposed; reconcile against native Keddeh registry
+    parent foundries:
+      - Agentics
+      - Server
+      - Business & Enterprise Structure
+    title: Agent identity and authority
+    scope: Distinguish owner, agent, subagent and service identity; scoped delegated authority and revocation.
+    affected users and potential buyers:
+      - IAM teams
+      - CISOs
+      - Agent platform developers
+    measured problem: NIST identifies accountability gaps; more than 600 project commenters indicate active standards attention, not a market-size estimate.
+    primary evidence ids:
+      - AI-E04
+      - AI-E05
+    existing alternatives:
+      - OAuth delegation
+      - SPIFFE workload identity
+      - IAM policy engines
+      - Vendor agent identities
+    proposed keddeh service hypothesis: Design a narrowly scoped identity/delegation pilot with auditable actor chains, short-lived credentials and explicit revocation.
+    delivery team:
+      id: proposed-braink-delivery-ai-delegated-identity
+      display name: BRAINK Agent identity and authority Delivery
+      status: proposed charter; staffing and execution unqualified
+      specialist expertise:
+        - IAM
+        - OAuth/OIDC
+        - Workload identity
+        - Policy engineering
+    analyst team:
+      id: proposed-braink-analyst-ai-delegated-identity
+      display name: BRAINK Agent identity and authority Analysis
+      status: separate proposed team; not the delivery team
+      distinct role: Map every action to an accountable principal; independently test scope confusion, revocation and forged delegation.
+      independence: Own baseline, held-out evaluation, evidence review and failure report; cannot approve its own implementation or silently change acceptance criteria.
+    falsifiable acceptance metric:
+      status: proposed pilot gate, not observed achievement or source-derived industry threshold
+      test: All 100 sampled actions attribute actor and authority; 100% of unauthorized-scope test requests denied; revocation reaches all pilot enforcement points within 60 seconds.
+      baseline: Measure prospectively in an authorized customer pilot; unknown at present.
+    failure and safety risks:
+      - Token theft
+      - Confused deputy
+      - Authority expansion
+      - Revocation lag
+    dependencies:
+      - Identity provider capabilities
+      - Service support
+      - Owner permissions
+      - Secret-handling controls
+    overlap with ids:
+      - ai-prompt-injection-containment
+      - security-identity-recovery
+    discovery priority: pilot-candidate
+    execution qualification: unqualified; no service implementation, team deployment or customer result verified
+    commercial evidence: Potential buyer and service inference only. No customer interviews, willingness-to-pay or market-size study completed.
+    primary evidence:
+      1.
+        id: AI-E04
+        url: https://www.nist.gov/blogs/cybersecurity-insights/back-future-why-agentic-ai-needs-strong-identity-foundation
+        publication or update date: 2026-08-27
+        accessed date: 2026-10-11
+      2.
+        id: AI-E05
+        url: https://www.nist.gov/news-events/news/2026/09/comments-software-and-agentic-ai-identity-concept-paper
+        publication or update date: 2026-09-29
+        accessed date: 2026-10-11
+  5.
+    id: ai-production-drift
+    proposed sector id: proposed-sector-ai-lifecycle-observability
+    proposed sector name: Ai Lifecycle Observability
+    sector mapping status: proposed; reconcile against native Keddeh registry
+    parent foundries:
+      - Agentics
+      - Service
+    title: AI production drift
+    scope: Detect degraded behavior after model, prompt, retriever, data or business-context changes.
+    affected users and potential buyers:
+      - AI product owners
+      - SRE
+      - Risk managers
+    measured problem: Lifecycle risks and evaluator limitations require local surveillance; no customer production-drift rate has been measured.
+    primary evidence ids:
+      - AI-E07
+      - AI-E02
+    existing alternatives:
+      - MLOps observability
+      - Canary deployments
+      - Regression test suites
+      - Manual incident review
+    proposed keddeh service hypothesis: Pilot privacy-preserving telemetry, version-pinned evaluation and rollback gates for one production-like workflow.
+    delivery team:
+      id: proposed-braink-delivery-ai-production-drift
+      display name: BRAINK AI production drift Delivery
+      status: proposed charter; staffing and execution unqualified
+      specialist expertise:
+        - MLOps
+        - SRE
+        - Change-point detection
+        - Privacy engineering
+    analyst team:
+      id: proposed-braink-analyst-ai-production-drift
+      display name: BRAINK AI production drift Analysis
+      status: separate proposed team; not the delivery team
+      distinct role: Maintain an untouched sentinel set, investigate alerts and distinguish data drift from business harm.
+      independence: Own baseline, held-out evaluation, evidence review and failure report; cannot approve its own implementation or silently change acceptance criteria.
+    falsifiable acceptance metric:
+      status: proposed pilot gate, not observed achievement or source-derived industry threshold
+      test: Detect >=90% of 30 seeded material regressions within the agreed monitoring interval with <=5% false-alert rate; rollback simulation restores baseline without losing state.
+      baseline: Measure prospectively in an authorized customer pilot; unknown at present.
+    failure and safety risks:
+      - PII in logs
+      - Alert fatigue
+      - Silent business drift
+      - Metric gaming
+    dependencies:
+      - Permitted telemetry
+      - Release history
+      - Baseline cases
+      - Rollback ownership
+    overlap with ids:
+      - ai-grounded-factuality
+      - verification-evaluation-validity
+    discovery priority: validate-demand
+    execution qualification: unqualified; no service implementation, team deployment or customer result verified
+    commercial evidence: Potential buyer and service inference only. No customer interviews, willingness-to-pay or market-size study completed.
+    primary evidence:
+      1.
+        id: AI-E07
+        url: https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf
+        publication or update date: 2024-07-26
+        accessed date: 2026-10-11
+      2.
+        id: AI-E02
+        url: https://metr.org/time-horizons/
+        publication or update date: 2026-09-08
+        accessed date: 2026-10-11
+  6.
+    id: ai-productivity-causal-measurement
+    proposed sector id: proposed-sector-ai-workflow-economics
+    proposed sector name: Ai Workflow Economics
+    sector mapping status: proposed; reconcile against native Keddeh registry
+    parent foundries:
+      - Process Mastery
+      - Business & Enterprise Structure
+    title: AI productivity measurement
+    scope: Measure quality-adjusted benefit of AI adoption, including review, rework, waiting and parallel-agent work.
+    affected users and potential buyers:
+      - COOs
+      - Engineering leaders
+      - AI investment committees
+    measured problem: METR’s follow-up shows why tool-era and selection effects make blanket productivity claims unreliable.
+    primary evidence ids:
+      - AI-E06
+    existing alternatives:
+      - Controlled trials
+      - Time-motion analysis
+      - Engineering metrics
+      - Finance-led cost review
+    proposed keddeh service hypothesis: Run a preregistered workflow trial comparing AI-assisted and existing practice with fully loaded time, cost and quality.
+    delivery team:
+      id: proposed-braink-delivery-ai-productivity-causal-measurement
+      display name: BRAINK AI productivity measurement Delivery
+      status: proposed charter; staffing and execution unqualified
+      specialist expertise:
+        - Experimental design
+        - Econometrics
+        - Workflow research
+        - Cost accounting
+    analyst team:
+      id: proposed-braink-analyst-ai-productivity-causal-measurement
+      display name: BRAINK AI productivity measurement Analysis
+      status: separate proposed team; not the delivery team
+      distinct role: Own randomization and exclusions; test selection effects and report negative results and uncertainty.
+      independence: Own baseline, held-out evaluation, evidence review and failure report; cannot approve its own implementation or silently change acceptance criteria.
+    falsifiable acceptance metric:
+      status: proposed pilot gate, not observed achievement or source-derived industry threshold
+      test: For a power-calculated trial: lower confidence bound on quality-adjusted time saving exceeds 10%, defect severity does not worsen, and total cost per accepted task falls >=10%; otherwise reject the rollout claim.
+      baseline: Measure prospectively in an authorized customer pilot; unknown at present.
+    failure and safety risks:
+      - Selection bias
+      - Concurrent work mismeasurement
+      - Hidden review load
+      - Gaming completion counts
+    dependencies:
+      - Consenting participants
+      - Comparable task allocation
+      - Quality rubric
+      - Usage/cost data
+    overlap with ids:
+      - hci-human-ai-oversight
+      - verification-analytical-robustness
+    discovery priority: pilot-candidate
+    execution qualification: unqualified; no service implementation, team deployment or customer result verified
+    commercial evidence: Potential buyer and service inference only. No customer interviews, willingness-to-pay or market-size study completed.
+    primary evidence:
+      1.
+        id: AI-E06
+        url: https://metr.org/blog/2026-02-24-uplift-update/
+        publication or update date: 2026-02-24
+        accessed date: 2026-10-11
+  7.
+    id: data-quality-contracts
+    proposed sector id: proposed-sector-data-quality-engineering
+    proposed sector name: Data Quality Engineering
+    sector mapping status: proposed; reconcile against native Keddeh registry
+    parent foundries:
+      - Customer File Base Software
+      - Process Mastery
+    title: Data quality contracts
+    scope: Completeness, validity, freshness, entity duplication and fitness for use in business analytics and AI.
+    affected users and potential buyers:
+      - Data platform teams
+      - Fraud operations
+      - Analytics owners
+    measured problem: GAO documents quality and staffing constraints; the portion of any customer loss attributable to data is unknown.
+    primary evidence ids:
+      - AI-E08
+    existing alternatives:
+      - Data profiling
+      - Validation libraries
+      - Master data management
+      - Manual stewardship
+    proposed keddeh service hypothesis: Implement producer-consumer data contracts and exception queues on one high-value dataset with accountable owners.
+    delivery team:
+      id: proposed-braink-delivery-data-quality-contracts
+      display name: BRAINK Data quality contracts Delivery
+      status: proposed charter; staffing and execution unqualified
+      specialist expertise:
+        - Data engineering
+        - Domain stewardship
+        - Entity resolution
+        - Statistical quality control
+    analyst team:
+      id: proposed-braink-analyst-data-quality-contracts
+      display name: BRAINK Data quality contracts Analysis
+      status: separate proposed team; not the delivery team
+      distinct role: Independently label defects, quantify downstream consequences and audit false merges and exclusions.
+      independence: Own baseline, held-out evaluation, evidence review and failure report; cannot approve its own implementation or silently change acceptance criteria.
+    falsifiable acceptance metric:
+      status: proposed pilot gate, not observed achievement or source-derived industry threshold
+      test: On 1,000 independently sampled records: reduce critical defects >=50%, maintain >=99% valid-record retention, and meet a prespecified freshness SLA in 99% of runs.
+      baseline: Measure prospectively in an authorized customer pilot; unknown at present.
+    failure and safety risks:
+      - False deduplication
+      - Biased missing-data handling
+      - Bad records quarantined without recovery
+    dependencies:
+      - Ground-truth samples
+      - Source owners
+      - Business definitions
+      - Remediation rights
+    overlap with ids:
+      - data-semantic-interoperability
+      - verification-data-leakage
+    discovery priority: pilot-candidate
+    execution qualification: unqualified; no service implementation, team deployment or customer result verified
+    commercial evidence: Potential buyer and service inference only. No customer interviews, willingness-to-pay or market-size study completed.
+    primary evidence:
+      1.
+        id: AI-E08
+        url: https://www.gao.gov/products/gao-25-108412
+        publication or update date: 2025-04-09
+        accessed date: 2026-10-11
+  8.
+    id: data-semantic-interoperability
+    proposed sector id: proposed-sector-semantic-data-exchange
+    proposed sector name: Semantic Data Exchange
+    sector mapping status: proposed; reconcile against native Keddeh registry
+    parent foundries:
+      - Growing Mesh
+      - Customer File Base Software
+      - Domain Mastery
+    title: Semantic interoperability
+    scope: Meaning-preserving exchange across organizations, schemas, units, codes and versioned APIs.
+    affected users and potential buyers:
+      - Health information exchange teams
+      - Enterprise integration owners
+      - Data-sharing consortia
+    measured problem: Hospital exchange measures show a gap between access and use; semantic mapping is one plausible contributor, not an isolated causal finding.
+    primary evidence ids:
+      - AI-E09
+      - AI-E10
+    existing alternatives:
+      - FHIR/HL7 adapters
+      - ETL/iPaaS
+      - Canonical schemas
+      - Domain ontologies
+      - DCAT catalogs
+    proposed keddeh service hypothesis: Validate mapping contracts for a bounded pair of systems with provenance, unit/code validation and round-trip tests.
+    delivery team:
+      id: proposed-braink-delivery-data-semantic-interoperability
+      display name: BRAINK Semantic interoperability Delivery
+      status: proposed charter; staffing and execution unqualified
+      specialist expertise:
+        - Ontology engineering
+        - Domain semantics
+        - API integration
+        - Terminology systems
+    analyst team:
+      id: proposed-braink-analyst-data-semantic-interoperability
+      display name: BRAINK Semantic interoperability Analysis
+      status: separate proposed team; not the delivery team
+      distinct role: Independently adjudicate meaning loss and assess whether workflows actually use the exchanged information.
+      independence: Own baseline, held-out evaluation, evidence review and failure report; cannot approve its own implementation or silently change acceptance criteria.
+    falsifiable acceptance metric:
+      status: proposed pilot gate, not observed achievement or source-derived industry threshold
+      test: For 500 gold-standard exchanged objects: >=99% semantic fidelity, zero critical unit/identity mismatches, and >=95% round-trip preservation of required fields.
+      baseline: Measure prospectively in an authorized customer pilot; unknown at present.
+    failure and safety risks:
+      - Syntactic success hiding semantic corruption
+      - Lossy code mapping
+      - Patient/entity mix-ups
+    dependencies:
+      - Domain experts
+      - Data-sharing permission
+      - Versioned interface specs
+      - Source-system cooperation
+    overlap with ids:
+      - data-quality-contracts
+      - data-lineage-provenance
+    discovery priority: validate-demand
+    execution qualification: unqualified; no service implementation, team deployment or customer result verified
+    commercial evidence: Potential buyer and service inference only. No customer interviews, willingness-to-pay or market-size study completed.
+    primary evidence:
+      1.
+        id: AI-E09
+        url: https://healthit.gov/data/data-briefs/interoperable-exchange-patient-health-information-among-us-hospitals-2023/
+        publication or update date: 2024-05
+        accessed date: 2026-10-11
+      2.
+        id: AI-E10
+        url: https://www.w3.org/TR/2024/REC-vocab-dcat-3-20240822/
+        publication or update date: 2024-08-22
+        accessed date: 2026-10-11
+  9.
+    id: data-lineage-provenance
+    proposed sector id: proposed-sector-data-evidence-lineage
+    proposed sector name: Data Evidence Lineage
+    sector mapping status: proposed; reconcile against native Keddeh registry
+    parent foundries:
+      - File System
+      - Research Mastery
+      - Customer File Base Software
+    title: Data lineage and provenance
+    scope: Trace source, version, transformation, custody and downstream dependency of data and evidence.
+    affected users and potential buyers:
+      - Data governance
+      - Research institutions
+      - Audit and publishing teams
+    measured problem: DCAT provides version/checksum mechanisms; standards existence supports feasibility, not prevalence of missing lineage.
+    primary evidence ids:
+      - AI-E10
+    existing alternatives:
+      - Data catalogs
+      - Lineage tools
+      - Workflow manifests
+      - Version control
+    proposed keddeh service hypothesis: Implement a provenance manifest and dependency graph for a bounded analytic pipeline; link outputs to source versions and transformations.
+    delivery team:
+      id: proposed-braink-delivery-data-lineage-provenance
+      display name: BRAINK Data lineage and provenance Delivery
+      status: proposed charter; staffing and execution unqualified
+      specialist expertise:
+        - Metadata engineering
+        - Data versioning
+        - Workflow systems
+        - Digital preservation
+    analyst team:
+      id: proposed-braink-analyst-data-lineage-provenance
+      display name: BRAINK Data lineage and provenance Analysis
+      status: separate proposed team; not the delivery team
+      distinct role: Reconstruct randomly selected outputs independently and flag untraceable steps or mismatched bytes.
+      independence: Own baseline, held-out evaluation, evidence review and failure report; cannot approve its own implementation or silently change acceptance criteria.
+    falsifiable acceptance metric:
+      status: proposed pilot gate, not observed achievement or source-derived industry threshold
+      test: For 100 sampled outputs: 100% map to source and transformation versions, checksum mismatch tests fail closed, and impact analysis finds >=95% of seeded downstream dependencies.
+      baseline: Measure prospectively in an authorized customer pilot; unknown at present.
+    failure and safety risks:
+      - False trust in signed bad data
+      - Incomplete lineage
+      - Metadata privacy leaks
+    dependencies:
+      - Stable identifiers
+      - Immutable source snapshots
+      - Retention agreement
+      - Transformation instrumentation
+    overlap with ids:
+      - data-rights-transparency
+      - verification-computational-reproduction
+    discovery priority: pilot-candidate
+    execution qualification: unqualified; no service implementation, team deployment or customer result verified
+    commercial evidence: Potential buyer and service inference only. No customer interviews, willingness-to-pay or market-size study completed.
+    primary evidence:
+      1.
+        id: AI-E10
+        url: https://www.w3.org/TR/2024/REC-vocab-dcat-3-20240822/
+        publication or update date: 2024-08-22
+        accessed date: 2026-10-11
+  10.
+    id: data-rights-transparency
+    proposed sector id: proposed-sector-ai-data-rights-diligence
+    proposed sector name: Ai Data Rights Diligence
+    sector mapping status: proposed; reconcile against native Keddeh registry
+    parent foundries:
+      - Publishing Mastery
+      - Business & Enterprise Structure
+    title: AI data rights and transparency
+    scope: Procurement evidence about dataset origin, permitted use, restrictions and supplier disclosures.
+    affected users and potential buyers:
+      - AI procurement
+      - Legal/compliance teams
+      - Publishers
+      - Dataset providers
+    measured problem: FMTI documents limited developer disclosure; it does not prove infringement or establish a legal rights deficit for any named model.
+    primary evidence ids:
+      - AI-E11
+    existing alternatives:
+      - Vendor questionnaires
+      - Model/data cards
+      - License inventories
+      - Qualified legal review
+    proposed keddeh service hypothesis: Create evidence-linked supplier and dataset dossiers with explicit unknowns, contractual-use assumptions and escalation to counsel.
+    delivery team:
+      id: proposed-braink-delivery-data-rights-transparency
+      display name: BRAINK AI data rights and transparency Delivery
+      status: proposed charter; staffing and execution unqualified
+      specialist expertise:
+        - Data provenance
+        - Procurement risk
+        - Licensing analysis
+        - Qualified legal specialist
+    analyst team:
+      id: proposed-braink-analyst-data-rights-transparency
+      display name: BRAINK AI data rights and transparency Analysis
+      status: separate proposed team; not the delivery team
+      distinct role: Check source authenticity and conflicts; distinguish documented rights, contractual representations and unresolved questions.
+      independence: Own baseline, held-out evaluation, evidence review and failure report; cannot approve its own implementation or silently change acceptance criteria.
+    falsifiable acceptance metric:
+      status: proposed pilot gate, not observed achievement or source-derived industry threshold
+      test: Every asset in a 100-item pilot has an owner/source, version, permitted-use evidence or explicit unresolved flag; zero unsupported legal-clearance assertions.
+      baseline: Measure prospectively in an authorized customer pilot; unknown at present.
+    failure and safety risks:
+      - Wrong legal inference
+      - Stale licenses
+      - Confidentiality breach
+      - False assurance from disclosure scores
+    dependencies:
+      - Access to actual terms
+      - Counsel
+      - Supplier responses
+      - Jurisdiction and use case
+    overlap with ids:
+      - data-lineage-provenance
+      - security-third-party-exposure
+    discovery priority: validate-demand
+    execution qualification: unqualified; no service implementation, team deployment or customer result verified
+    commercial evidence: Potential buyer and service inference only. No customer interviews, willingness-to-pay or market-size study completed.
+    primary evidence:
+      1.
+        id: AI-E11
+        url: https://crfm.stanford.edu/fmti/December-2025/index.html
+        publication or update date: 2025-12
+        accessed date: 2026-10-11
+  11.
+    id: data-retention-removal
+    proposed sector id: proposed-sector-ai-data-lifecycle-privacy
+    proposed sector name: Ai Data Lifecycle Privacy
+    sector mapping status: proposed; reconcile against native Keddeh registry
+    parent foundries:
+      - File System
+      - Customer File Base Software
+      - Agentics
+    title: AI retention and removal
+    scope: Locate and remove or restrict personal data across raw stores, embeddings, caches, logs and model-related artifacts.
+    affected users and potential buyers:
+      - Privacy officers
+      - Data platforms
+      - AI service operators
+    measured problem: GAO identifies persistence and difficulty separating sensitive data from integrated AI products.
+    primary evidence ids:
+      - AI-E12
+    existing alternatives:
+      - Retention policies
+      - Deletion workflows
+      - Access revocation
+      - Retraining/unlearning research
+    proposed keddeh service hypothesis: Map data flows and implement auditable retention/removal tests for controllable stores; explicitly separate those guarantees from model unlearning.
+    delivery team:
+      id: proposed-braink-delivery-data-retention-removal
+      display name: BRAINK AI retention and removal Delivery
+      status: proposed charter; staffing and execution unqualified
+      specialist expertise:
+        - Privacy engineering
+        - Storage systems
+        - Data lineage
+        - ML systems
+    analyst team:
+      id: proposed-braink-analyst-data-retention-removal
+      display name: BRAINK AI retention and removal Analysis
+      status: separate proposed team; not the delivery team
+      distinct role: Use synthetic identifiers to independently probe residual retrievability and record untestable model internals.
+      independence: Own baseline, held-out evaluation, evidence review and failure report; cannot approve its own implementation or silently change acceptance criteria.
+    falsifiable acceptance metric:
+      status: proposed pilot gate, not observed achievement or source-derived industry threshold
+      test: All synthetic deletion requests propagate to declared pilot stores within the approved SLA; 100% residual-access probes fail after completion; every excluded artifact is disclosed.
+      baseline: Measure prospectively in an authorized customer pilot; unknown at present.
+    failure and safety risks:
+      - Unverifiable model erasure
+      - Backup resurrection
+      - Over-deletion
+      - Legal holds
+    dependencies:
+      - Lawful retention requirements
+      - System inventory
+      - Provider support
+      - Deletion authorization
+    overlap with ids:
+      - data-lineage-provenance
+      - security-shadow-ai-data-leakage
+    discovery priority: validate-demand
+    execution qualification: unqualified; no service implementation, team deployment or customer result verified
+    commercial evidence: Potential buyer and service inference only. No customer interviews, willingness-to-pay or market-size study completed.
+    primary evidence:
+      1.
+        id: AI-E12
+        url: https://files.gao.gov/reports/GAO-26-107681/index.html
+        publication or update date: 2026-03-26
+        accessed date: 2026-10-11
+  12.
+    id: data-private-analytics-utility
+    proposed sector id: proposed-sector-privacy-preserving-analytics
+    proposed sector name: Privacy Preserving Analytics
+    sector mapping status: proposed; reconcile against native Keddeh registry
+    parent foundries:
+      - Research Mastery
+      - Customer File Base Software
+    title: Private analytics utility
+    scope: Privacy guarantees and useful statistical outputs for data sharing, analytics and AI evaluation.
+    affected users and potential buyers:
+      - Statistical agencies
+      - Health research
+      - Enterprise data-sharing teams
+    measured problem: Formal privacy methods have implementation hazards and task-specific utility tradeoffs; synthetic data is not inherently private.
+    primary evidence ids:
+      - AI-E13
+      - AI-E12
+    existing alternatives:
+      - Differential privacy
+      - Secure enclaves
+      - Federated analysis
+      - Access-controlled clean rooms
+      - Suppression
+    proposed keddeh service hypothesis: Compare appropriate privacy-enhancing techniques for one approved statistic or workflow under an explicit threat model and budget.
+    delivery team:
+      id: proposed-braink-delivery-data-private-analytics-utility
+      display name: BRAINK Private analytics utility Delivery
+      status: proposed charter; staffing and execution unqualified
+      specialist expertise:
+        - Differential privacy
+        - Statistics
+        - Privacy attacks
+        - Distributed systems
+    analyst team:
+      id: proposed-braink-analyst-data-private-analytics-utility
+      display name: BRAINK Private analytics utility Analysis
+      status: separate proposed team; not the delivery team
+      distinct role: Independently verify assumptions, budget composition and subgroup error; attempt approved privacy attacks using synthetic/canary records.
+      independence: Own baseline, held-out evaluation, evidence review and failure report; cannot approve its own implementation or silently change acceptance criteria.
+    falsifiable acceptance metric:
+      status: proposed pilot gate, not observed achievement or source-derived industry threshold
+      test: Independent review confirms declared privacy accounting; prespecified high-value statistics remain within agreed error tolerance across all required cohorts; composition and malformed-input tests pass.
+      baseline: Measure prospectively in an authorized customer pilot; unknown at present.
+    failure and safety risks:
+      - Unbounded composition
+      - Privacy leakage through metadata
+      - Poor small-cohort utility
+      - Misstated guarantees
+    dependencies:
+      - Lawful data access
+      - Privacy budget decision
+      - Threat model
+      - Qualified review
+    overlap with ids:
+      - data-retention-removal
+      - verification-analytical-robustness
+    discovery priority: validate-demand
+    execution qualification: unqualified; no service implementation, team deployment or customer result verified
+    commercial evidence: Potential buyer and service inference only. No customer interviews, willingness-to-pay or market-size study completed.
+    primary evidence:
+      1.
+        id: AI-E13
+        url: https://csrc.nist.gov/pubs/sp/800/226/final
+        publication or update date: 2025-03-06
+        accessed date: 2026-10-11
+      2.
+        id: AI-E12
+        url: https://files.gao.gov/reports/GAO-26-107681/index.html
+        publication or update date: 2026-03-26
+        accessed date: 2026-10-11
+  13.
+    id: security-exploited-vulnerabilities
+    proposed sector id: proposed-sector-exposure-remediation
+    proposed sector name: Exposure Remediation
+    sector mapping status: proposed; reconcile against native Keddeh registry
+    parent foundries:
+      - Server
+      - Usable Software
+    title: Exploited vulnerability remediation
+    scope: Prioritize reachable vulnerabilities and prove remediation of exposed production assets.
+    affected users and potential buyers:
+      - CISOs
+      - IT operations
+      - Managed-service providers
+    measured problem: Vulnerability exploitation represented 31% of breach entry in the 2026 DBIR dataset.
+    primary evidence ids:
+      - AI-E14
+    existing alternatives:
+      - Asset management
+      - Vulnerability scanners
+      - KEV-based prioritization
+      - Patch management
+    proposed keddeh service hypothesis: Deliver authorized exposure triage, patch/mitigation planning and independent closure verification for a defined asset estate.
+    delivery team:
+      id: proposed-braink-delivery-security-exploited-vulnerabilities
+      display name: BRAINK Exploited vulnerability remediation Delivery
+      status: proposed charter; staffing and execution unqualified
+      specialist expertise:
+        - Application security
+        - Asset discovery
+        - SRE
+        - Patch engineering
+    analyst team:
+      id: proposed-braink-analyst-security-exploited-vulnerabilities
+      display name: BRAINK Exploited vulnerability remediation Analysis
+      status: separate proposed team; not the delivery team
+      distinct role: Validate exploitability/reachability and use independent rescans plus version readbacks to reject false closure.
+      independence: Own baseline, held-out evaluation, evidence review and failure report; cannot approve its own implementation or silently change acceptance criteria.
+    falsifiable acceptance metric:
+      status: proposed pilot gate, not observed achievement or source-derived industry threshold
+      test: 100% known internet-facing critical assets accounted for; >=95% agreed priority findings remediated within SLA; zero critical false closures in independent rescan.
+      baseline: Measure prospectively in an authorized customer pilot; unknown at present.
+    failure and safety risks:
+      - Outages from patches
+      - Hidden assets
+      - Scanner false positives
+      - Unapproved exploitation
+    dependencies:
+      - Asset-owner authorization
+      - Maintenance windows
+      - Backups
+      - Vendor fixes
+    overlap with ids:
+      - security-third-party-exposure
+      - security-memory-safety
+    discovery priority: pilot-candidate
+    execution qualification: unqualified; no service implementation, team deployment or customer result verified
+    commercial evidence: Potential buyer and service inference only. No customer interviews, willingness-to-pay or market-size study completed.
+    primary evidence:
+      1.
+        id: AI-E14
+        url: https://www.verizon.com/about/news/breach-industry-wide-dbir-finds
+        publication or update date: 2026-05-19
+        accessed date: 2026-10-11
+  14.
+    id: security-third-party-exposure
+    proposed sector id: proposed-sector-software-supply-chain-assurance
+    proposed sector name: Software Supply Chain Assurance
+    sector mapping status: proposed; reconcile against native Keddeh registry
+    parent foundries:
+      - Server
+      - Growing Mesh
+      - Business & Enterprise Structure
+    title: Third-party exposure mapping
+    scope: Map software dependencies and service-provider access to business-critical exposure and incident response.
+    affected users and potential buyers:
+      - Vendor risk
+      - Product security
+      - Supply-chain buyers
+    measured problem: Third-party involvement affected 48% of DBIR breaches; SBOM guidance addresses the narrower software-component visibility problem.
+    primary evidence ids:
+      - AI-E14
+      - AI-E15
+    existing alternatives:
+      - SBOM/SCA
+      - Vendor assessments
+      - VEX
+      - Supplier access reviews
+    proposed keddeh service hypothesis: Join component inventory and service access maps to risk-informed remediation and incident-notification playbooks.
+    delivery team:
+      id: proposed-braink-delivery-security-third-party-exposure
+      display name: BRAINK Third-party exposure mapping Delivery
+      status: proposed charter; staffing and execution unqualified
+      specialist expertise:
+        - Software composition
+        - Supplier risk
+        - Cloud security
+        - Incident response
+    analyst team:
+      id: proposed-braink-analyst-security-third-party-exposure
+      display name: BRAINK Third-party exposure mapping Analysis
+      status: separate proposed team; not the delivery team
+      distinct role: Check inventory completeness and distinguish vulnerable component presence from reachable exposure and supplier compromise.
+      independence: Own baseline, held-out evaluation, evidence review and failure report; cannot approve its own implementation or silently change acceptance criteria.
+    falsifiable acceptance metric:
+      status: proposed pilot gate, not observed achievement or source-derived industry threshold
+      test: For 50 critical services: >=95% independently verified component/provider coverage; identify all planted critical exposure chains within 4 hours; no unsupported safe-status declarations.
+      baseline: Measure prospectively in an authorized customer pilot; unknown at present.
+    failure and safety risks:
+      - Incomplete transitive dependencies
+      - Stale inventories
+      - False VEX claims
+      - Supplier non-cooperation
+    dependencies:
+      - Build artifacts
+      - Supplier disclosures
+      - Access inventories
+      - Incident rights
+    overlap with ids:
+      - security-exploited-vulnerabilities
+      - ai-delegated-identity
+      - data-rights-transparency
+    discovery priority: pilot-candidate
+    execution qualification: unqualified; no service implementation, team deployment or customer result verified
+    commercial evidence: Potential buyer and service inference only. No customer interviews, willingness-to-pay or market-size study completed.
+    primary evidence:
+      1.
+        id: AI-E14
+        url: https://www.verizon.com/about/news/breach-industry-wide-dbir-finds
+        publication or update date: 2026-05-19
+        accessed date: 2026-10-11
+      2.
+        id: AI-E15
+        url: https://content.govdelivery.com/accounts/USDHSCISA/bulletins/422a7eb
+        publication or update date: 2026-07-29
+        accessed date: 2026-10-11
+  15.
+    id: security-identity-recovery
+    proposed sector id: proposed-sector-identity-abuse-resistance
+    proposed sector name: Identity Abuse Resistance
+    sector mapping status: proposed; reconcile against native Keddeh registry
+    parent foundries:
+      - Workspace
+      - Server
+      - HR & Team Services
+    title: Identity recovery resistance
+    scope: Help-desk impersonation, account recovery, phishing resistance and offboarding.
+    affected users and potential buyers:
+      - IAM owners
+      - IT help desks
+      - Security awareness teams
+    measured problem: A multi-agency advisory documents identity-focused attacker methods; affected-customer incidence must be established locally.
+    primary evidence ids:
+      - AI-E16
+    existing alternatives:
+      - Phishing-resistant MFA
+      - Recovery verification
+      - Privileged-access management
+      - Help-desk training
+    proposed keddeh service hypothesis: Pilot safer account recovery and privileged-authentication workflows with explicit exception handling and authorized simulations.
+    delivery team:
+      id: proposed-braink-delivery-security-identity-recovery
+      display name: BRAINK Identity recovery resistance Delivery
+      status: proposed charter; staffing and execution unqualified
+      specialist expertise:
+        - IAM
+        - Human factors
+        - Fraud operations
+        - Help-desk process design
+    analyst team:
+      id: proposed-braink-analyst-security-identity-recovery
+      display name: BRAINK Identity recovery resistance Analysis
+      status: separate proposed team; not the delivery team
+      distinct role: Independently simulate approved recovery abuses and audit accessibility and legitimate recovery completion.
+      independence: Own baseline, held-out evaluation, evidence review and failure report; cannot approve its own implementation or silently change acceptance criteria.
+    falsifiable acceptance metric:
+      status: proposed pilot gate, not observed achievement or source-derived industry threshold
+      test: No unauthorized recovery in 100 approved simulations; >=95% legitimate recoveries completed within SLA; every privileged exception has verifiable approval and audit trail.
+      baseline: Measure prospectively in an authorized customer pilot; unknown at present.
+    failure and safety risks:
+      - Locking out legitimate users
+      - Biometric/privacy overreach
+      - Social engineering
+      - Weak fallback paths
+    dependencies:
+      - IdP support
+      - Recovery authority
+      - User accessibility needs
+      - Test authorization
+    overlap with ids:
+      - ai-delegated-identity
+      - hci-human-ai-oversight
+    discovery priority: validate-demand
+    execution qualification: unqualified; no service implementation, team deployment or customer result verified
+    commercial evidence: Potential buyer and service inference only. No customer interviews, willingness-to-pay or market-size study completed.
+    primary evidence:
+      1.
+        id: AI-E16
+        url: https://www.ic3.gov/CSA/2025/250729.pdf
+        publication or update date: 2025-07-29
+        accessed date: 2026-10-11
+  16.
+    id: security-memory-safety
+    proposed sector id: proposed-sector-memory-safe-software-transition
+    proposed sector name: Memory Safe Software Transition
+    sector mapping status: proposed; reconcile against native Keddeh registry
+    parent foundries:
+      - Usable Software
+      - Server
+    title: Memory-safe software transition
+    scope: Eliminate classes of unsafe memory operations in exposed components while preserving behavior and performance.
+    affected users and potential buyers:
+      - Systems-software vendors
+      - Device makers
+      - Platform engineering
+    measured problem: CISA describes persistent buffer-overflow risk and recommends migration plus adversarial testing.
+    primary evidence ids:
+      - AI-E17
+    existing alternatives:
+      - Safer languages
+      - Fuzzing
+      - Sanitizers
+      - Compiler hardening
+      - Code review
+    proposed keddeh service hypothesis: Select one exposed component for boundary hardening or staged migration, with compatibility and fuzz testing.
+    delivery team:
+      id: proposed-braink-delivery-security-memory-safety
+      display name: BRAINK Memory-safe software transition Delivery
+      status: proposed charter; staffing and execution unqualified
+      specialist expertise:
+        - Systems programming
+        - Rust or comparable memory-safe systems
+        - Fuzzing
+        - FFI/security review
+    analyst team:
+      id: proposed-braink-analyst-security-memory-safety
+      display name: BRAINK Memory-safe software transition Analysis
+      status: separate proposed team; not the delivery team
+      distinct role: Own independent behavioral-equivalence, unsafe-boundary and performance review.
+      independence: Own baseline, held-out evaluation, evidence review and failure report; cannot approve its own implementation or silently change acceptance criteria.
+    falsifiable acceptance metric:
+      status: proposed pilot gate, not observed achievement or source-derived industry threshold
+      test: All agreed API compatibility tests pass; zero sanitizer findings in the preregistered fuzz campaign; unsafe code inventory is complete; p95 latency regression <=5% on agreed workload.
+      baseline: Measure prospectively in an authorized customer pilot; unknown at present.
+    failure and safety risks:
+      - Unsafe FFI remains
+      - Logic/security defects survive
+      - Performance regression
+      - Unmaintainable rewrite
+    dependencies:
+      - Source access
+      - Component tests
+      - Hardware targets
+      - Maintenance owner
+    overlap with ids:
+      - security-exploited-vulnerabilities
+      - verification-evaluation-validity
+    discovery priority: validate-demand
+    execution qualification: unqualified; no service implementation, team deployment or customer result verified
+    commercial evidence: Potential buyer and service inference only. No customer interviews, willingness-to-pay or market-size study completed.
+    primary evidence:
+      1.
+        id: AI-E17
+        url: https://www.cisa.gov/sites/default/files/2025-02/secure-by-design-alert-eliminating-buffer-overflow-vulnerabilities-508c.pdf
+        publication or update date: 2025-02-11
+        accessed date: 2026-10-11
+  17.
+    id: security-cryptographic-agility
+    proposed sector id: proposed-sector-cryptographic-migration
+    proposed sector name: Cryptographic Migration
+    sector mapping status: proposed; reconcile against native Keddeh registry
+    parent foundries:
+      - Server
+      - Growing Mesh
+    title: Cryptographic agility
+    scope: Inventory and migrate cryptographic dependencies, certificates and protocols toward validated contemporary and post-quantum implementations.
+    affected users and potential buyers:
+      - Security architects
+      - Infrastructure owners
+      - Long-retention data custodians
+    measured problem: Standards and migration testing exist; local cryptographic inventory and compatibility readiness are unknown.
+    primary evidence ids:
+      - AI-E18
+    existing alternatives:
+      - Vendor migration tools
+      - Cryptographic inventory
+      - Standardized algorithm libraries
+      - Staged hybrid deployments
+    proposed keddeh service hypothesis: Offer crypto inventory and interoperability/performance pilot using approved implementations; avoid developing novel primitives.
+    delivery team:
+      id: proposed-braink-delivery-security-cryptographic-agility
+      display name: BRAINK Cryptographic agility Delivery
+      status: proposed charter; staffing and execution unqualified
+      specialist expertise:
+        - Applied cryptography
+        - PKI
+        - Protocol engineering
+        - Performance testing
+    analyst team:
+      id: proposed-braink-analyst-security-cryptographic-agility
+      display name: BRAINK Cryptographic agility Analysis
+      status: separate proposed team; not the delivery team
+      distinct role: Independently verify algorithm/configuration claims, downgrade behavior, library provenance and interoperability.
+      independence: Own baseline, held-out evaluation, evidence review and failure report; cannot approve its own implementation or silently change acceptance criteria.
+    falsifiable acceptance metric:
+      status: proposed pilot gate, not observed achievement or source-derived industry threshold
+      test: Every critical pilot data flow has identified algorithms and owners; all required client/server matrix tests pass; no silent downgrade; latency and payload overhead stay within approved budgets.
+      baseline: Measure prospectively in an authorized customer pilot; unknown at present.
+    failure and safety risks:
+      - Crypto implementation flaw
+      - False quantum-safe claim
+      - Protocol incompatibility
+      - Unsafe downgrade
+    dependencies:
+      - Inventory access
+      - Vendor support
+      - Approved cryptographic implementations
+      - Key-management controls
+    overlap with ids:
+      - security-third-party-exposure
+      - verification-evaluation-validity
+    discovery priority: validate-demand
+    execution qualification: unqualified; no service implementation, team deployment or customer result verified
+    commercial evidence: Potential buyer and service inference only. No customer interviews, willingness-to-pay or market-size study completed.
+    primary evidence:
+      1.
+        id: AI-E18
+        url: https://pages.nist.gov/nccoe-migration-post-quantum-cryptography/
+        publication or update date: unknown / not provided
+        accessed date: 2026-10-11
+  18.
+    id: security-shadow-ai-data-leakage
+    proposed sector id: proposed-sector-enterprise-ai-data-controls
+    proposed sector name: Enterprise Ai Data Controls
+    sector mapping status: proposed; reconcile against native Keddeh registry
+    parent foundries:
+      - Workspace
+      - Agentics
+      - Customer File Base Software
+    title: Shadow AI data leakage
+    scope: Unapproved AI use and excessive data transmission through prompts, uploads, retrieval connectors and logs.
+    affected users and potential buyers:
+      - CISOs
+      - Privacy teams
+      - Workplace technology owners
+    measured problem: DBIR reports increased AI usage in its leakage context; GAO describes secondary-use and inference risks. Usage is not a leakage probability.
+    primary evidence ids:
+      - AI-E26
+      - AI-E12
+    existing alternatives:
+      - DLP/CASB
+      - Approved enterprise AI tools
+      - Data classification
+      - User education
+    proposed keddeh service hypothesis: Pilot an approved AI route with data minimization, connector scoping and proportionate DLP; measure usable safe completion.
+    delivery team:
+      id: proposed-braink-delivery-security-shadow-ai-data-leakage
+      display name: BRAINK Shadow AI data leakage Delivery
+      status: proposed charter; staffing and execution unqualified
+      specialist expertise:
+        - Privacy/security engineering
+        - Enterprise integration
+        - DLP
+        - Change management
+    analyst team:
+      id: proposed-braink-analyst-security-shadow-ai-data-leakage
+      display name: BRAINK Shadow AI data leakage Analysis
+      status: separate proposed team; not the delivery team
+      distinct role: Test synthetic sensitive-data egress and false blocking; independently check employee privacy impacts.
+      independence: Own baseline, held-out evaluation, evidence review and failure report; cannot approve its own implementation or silently change acceptance criteria.
+    falsifiable acceptance metric:
+      status: proposed pilot gate, not observed achievement or source-derived industry threshold
+      test: Block or require approved escalation for 100% of 100 seeded disallowed egress cases; legitimate-task false blocks <=5%; no personal monitoring beyond agreed telemetry.
+      baseline: Measure prospectively in an authorized customer pilot; unknown at present.
+    failure and safety risks:
+      - Intrusive monitoring
+      - Unusable controls drive workarounds
+      - False negatives
+      - Logs leak data
+    dependencies:
+      - User notice/authority
+      - Data classification
+      - Approved destinations
+      - Retention policy
+    overlap with ids:
+      - ai-prompt-injection-containment
+      - data-retention-removal
+    discovery priority: validate-demand
+    execution qualification: unqualified; no service implementation, team deployment or customer result verified
+    commercial evidence: Potential buyer and service inference only. No customer interviews, willingness-to-pay or market-size study completed.
+    primary evidence:
+      1.
+        id: AI-E26
+        url: https://www.verizon.com/business/resources/T1e0/reports/2026-dbir-data-breach-investigations-report.pdf
+        publication or update date: 2026-05-19
+        accessed date: 2026-10-11
+      2.
+        id: AI-E12
+        url: https://files.gao.gov/reports/GAO-26-107681/index.html
+        publication or update date: 2026-03-26
+        accessed date: 2026-10-11
+  19.
+    id: hci-web-accessibility
+    proposed sector id: proposed-sector-accessible-web-systems
+    proposed sector name: Accessible Web Systems
+    sector mapping status: proposed; reconcile against native Keddeh registry
+    parent foundries:
+      - HCI
+      - Website
+      - Frontage
+    title: Web accessibility remediation
+    scope: Semantic structure, contrast, labels, keyboard behavior and interaction of customer-facing web journeys.
+    affected users and potential buyers:
+      - Digital product owners
+      - Public-service teams
+      - E-commerce operators
+    measured problem: The 2026 homepage study reports widespread detectable failures; conformance and task usability require additional manual tests.
+    primary evidence ids:
+      - AI-E19
+    existing alternatives:
+      - WAVE/axe audits
+      - Accessible design systems
+      - Manual WCAG testing
+      - Specialist accessibility services
+    proposed keddeh service hypothesis: Remediate a scoped set of high-value journeys and reusable components, with disabled-user testing and regression gates.
+    delivery team:
+      id: proposed-braink-delivery-hci-web-accessibility
+      display name: BRAINK Web accessibility remediation Delivery
+      status: proposed charter; staffing and execution unqualified
+      specialist expertise:
+        - Accessibility engineering
+        - Frontend systems
+        - UX research
+        - Assistive technology
+    analyst team:
+      id: proposed-braink-analyst-hci-web-accessibility
+      display name: BRAINK Web accessibility remediation Analysis
+      status: separate proposed team; not the delivery team
+      distinct role: Conduct independent keyboard/screen-reader and user-task tests; never certify whole-site conformance from automated scans alone.
+      independence: Own baseline, held-out evaluation, evidence review and failure report; cannot approve its own implementation or silently change acceptance criteria.
+    falsifiable acceptance metric:
+      status: proposed pilot gate, not observed achievement or source-derived industry threshold
+      test: Zero critical blockers on 10 agreed journeys across the supported device/AT matrix; >=90% user task completion; no new automated high-confidence failures in those journeys.
+      baseline: Measure prospectively in an authorized customer pilot; unknown at present.
+    failure and safety risks:
+      - Overlay-only fixes
+      - Unrepresentative users
+      - Regressions
+      - False legal-conformance assurance
+    dependencies:
+      - Source access
+      - Disabled-user participation
+      - Supported AT matrix
+      - Product owner
+    overlap with ids:
+      - hci-document-accessibility
+      - hci-human-ai-oversight
+    discovery priority: pilot-candidate
+    execution qualification: unqualified; no service implementation, team deployment or customer result verified
+    commercial evidence: Potential buyer and service inference only. No customer interviews, willingness-to-pay or market-size study completed.
+    primary evidence:
+      1.
+        id: AI-E19
+        url: https://webaim.org/projects/million/
+        publication or update date: 2026-02 (measurement period)
+        accessed date: 2026-10-11
+  20.
+    id: hci-document-accessibility
+    proposed sector id: proposed-sector-accessible-publishing
+    proposed sector name: Accessible Publishing
+    sector mapping status: proposed; reconcile against native Keddeh registry
+    parent foundries:
+      - Publishing Mastery
+      - HCI
+      - File System
+    title: Document accessibility
+    scope: Accessible PDF/Word publishing, tagged structure, tables, forms, reading order and alternatives.
+    affected users and potential buyers:
+      - Publishers
+      - Government communications
+      - Enterprise documentation
+      - Training providers
+    measured problem: 85.6% of the 1,754 respondents answering the PDF question reported likely significant PDF barriers; the overall survey had 1,780 valid responses and used a voluntary sample.
+    primary evidence ids:
+      - AI-E20
+    existing alternatives:
+      - Accessible HTML
+      - Tagged PDF workflows
+      - Office accessibility checks
+      - PDF remediation specialists
+    proposed keddeh service hypothesis: Build accessible source templates and verify representative outputs with tag checks and actual assistive-technology task testing.
+    delivery team:
+      id: proposed-braink-delivery-hci-document-accessibility
+      display name: BRAINK Document accessibility Delivery
+      status: proposed charter; staffing and execution unqualified
+      specialist expertise:
+        - Accessible documents
+        - Typesetting
+        - PDF tagging
+        - Screen-reader testing
+    analyst team:
+      id: proposed-braink-analyst-hci-document-accessibility
+      display name: BRAINK Document accessibility Analysis
+      status: separate proposed team; not the delivery team
+      distinct role: Audit reading order, forms and data-table comprehension independently from visual layout QA.
+      independence: Own baseline, held-out evaluation, evidence review and failure report; cannot approve its own implementation or silently change acceptance criteria.
+    falsifiable acceptance metric:
+      status: proposed pilot gate, not observed achievement or source-derived industry threshold
+      test: For 25 representative documents: zero critical reading-order/form blockers, >=95% required structural checks pass, and >=90% user success on extraction/navigation tasks.
+      baseline: Measure prospectively in an authorized customer pilot; unknown at present.
+    failure and safety risks:
+      - Visually polished inaccessible files
+      - Bad OCR
+      - Misleading alternative text
+      - Unsupported PDF features
+    dependencies:
+      - Editable originals
+      - Content owners
+      - AT testers
+      - Distribution format decision
+    overlap with ids:
+      - hci-web-accessibility
+      - data-lineage-provenance
+    discovery priority: pilot-candidate
+    execution qualification: unqualified; no service implementation, team deployment or customer result verified
+    commercial evidence: Potential buyer and service inference only. No customer interviews, willingness-to-pay or market-size study completed.
+    primary evidence:
+      1.
+        id: AI-E20
+        url: https://webaim.org/projects/screenreadersurvey11/
+        publication or update date: 2026-09-29
+        accessed date: 2026-10-11
+  21.
+    id: hci-language-localization
+    proposed sector id: proposed-sector-language-specific-ai-quality
+    proposed sector name: Language Specific Ai Quality
+    sector mapping status: proposed; reconcile against native Keddeh registry
+    parent foundries:
+      - HCI
+      - Domain Mastery
+      - Agentics
+    title: Language-specific AI quality
+    scope: Language, dialect, cultural context and domain register in AI-enabled enterprise interfaces.
+    affected users and potential buyers:
+      - Multilingual service operators
+      - Regional enterprises
+      - Public-sector service teams
+    measured problem: Arabic enterprise benchmark results vary materially by model and task; they do not prove capability in every dialect or language.
+    primary evidence ids:
+      - AI-E21
+    existing alternatives:
+      - Human localization
+      - Regional models
+      - Translation systems
+      - Language-specific benchmarks
+    proposed keddeh service hypothesis: Evaluate and adapt one workflow for named languages/dialects using native-language domain reviewers, preserving safe fallback paths.
+    delivery team:
+      id: proposed-braink-delivery-hci-language-localization
+      display name: BRAINK Language-specific AI quality Delivery
+      status: proposed charter; staffing and execution unqualified
+      specialist expertise:
+        - Computational linguistics
+        - Native-language domain expertise
+        - Localization
+        - Speech/text evaluation
+    analyst team:
+      id: proposed-braink-analyst-hci-language-localization
+      display name: BRAINK Language-specific AI quality Analysis
+      status: separate proposed team; not the delivery team
+      distinct role: Maintain independent local-language holdouts; test disparity across dialects, scripts and technical registers.
+      independence: Own baseline, held-out evaluation, evidence review and failure report; cannot approve its own implementation or silently change acceptance criteria.
+    falsifiable acceptance metric:
+      status: proposed pilot gate, not observed achievement or source-derived industry threshold
+      test: Each scoped language achieves >=90% accepted task completion and <=2% critical factual errors on >=100 local cases; no subgroup more than 5 percentage points below agreed baseline without explicit disclosure.
+      baseline: Measure prospectively in an authorized customer pilot; unknown at present.
+    failure and safety risks:
+      - Low-resource exclusions
+      - Cultural stereotyping
+      - Translation destroys meaning
+      - Unqualified domain advice
+    dependencies:
+      - Native reviewers
+      - Licensed evaluation data
+      - Defined dialects
+      - Fallback capacity
+    overlap with ids:
+      - ai-grounded-factuality
+      - hci-human-ai-oversight
+    discovery priority: validate-demand
+    execution qualification: unqualified; no service implementation, team deployment or customer result verified
+    commercial evidence: Potential buyer and service inference only. No customer interviews, willingness-to-pay or market-size study completed.
+    primary evidence:
+      1.
+        id: AI-E21
+        url: https://crfm.stanford.edu/helm/arabic-enterprise/latest/
+        publication or update date: unknown / not provided
+        accessed date: 2026-10-11
+  22.
+    id: hci-human-ai-oversight
+    proposed sector id: proposed-sector-human-ai-decision-support
+    proposed sector name: Human Ai Decision Support
+    sector mapping status: proposed; reconcile against native Keddeh registry
+    parent foundries:
+      - HCI
+      - Process Mastery
+      - Agentics
+    title: Human AI oversight
+    scope: Help people detect errors, understand uncertainty and retain meaningful control over AI-assisted workflows.
+    affected users and potential buyers:
+      - Product owners
+      - Operations managers
+      - Training teams
+    measured problem: A 319-worker survey documents perceived shifts in critical effort; it does not prove permanent skill loss.
+    primary evidence ids:
+      - AI-E22
+      - AI-E07
+    existing alternatives:
+      - Human review
+      - Approval queues
+      - Explanations
+      - Source display
+      - Escalation protocols
+    proposed keddeh service hypothesis: Prototype evidence-first review and meaningful confirmation interfaces, then test whether users catch seeded errors without excessive burden.
+    delivery team:
+      id: proposed-braink-delivery-hci-human-ai-oversight
+      display name: BRAINK Human AI oversight Delivery
+      status: proposed charter; staffing and execution unqualified
+      specialist expertise:
+        - HCI
+        - Cognitive ergonomics
+        - UX experimentation
+        - Domain operations
+    analyst team:
+      id: proposed-braink-analyst-hci-human-ai-oversight
+      display name: BRAINK Human AI oversight Analysis
+      status: separate proposed team; not the delivery team
+      distinct role: Independently measure error detection, automation bias, reviewer workload and accessibility.
+      independence: Own baseline, held-out evaluation, evidence review and failure report; cannot approve its own implementation or silently change acceptance criteria.
+    falsifiable acceptance metric:
+      status: proposed pilot gate, not observed achievement or source-derived industry threshold
+      test: In a power-calculated user study, increase detection of seeded material errors >=20 percentage points while review time rises <=10%; no loss of user ability to override or stop.
+      baseline: Measure prospectively in an authorized customer pilot; unknown at present.
+    failure and safety risks:
+      - Automation bias
+      - Rubber-stamp approval
+      - Alert fatigue
+      - Explanations generate false trust
+    dependencies:
+      - Representative users
+      - Seeded-error ethics
+      - Review authority
+      - Accessible UX
+    overlap with ids:
+      - ai-productivity-causal-measurement
+      - ai-grounded-factuality
+    discovery priority: validate-demand
+    execution qualification: unqualified; no service implementation, team deployment or customer result verified
+    commercial evidence: Potential buyer and service inference only. No customer interviews, willingness-to-pay or market-size study completed.
+    primary evidence:
+      1.
+        id: AI-E22
+        url: https://www.microsoft.com/en-us/research/publication/the-impact-of-generative-ai-on-critical-thinking-self-reported-reductions-in-cognitive-effort-and-confidence-effects-from-a-survey-of-knowledge-workers/
+        publication or update date: 2025-04 (CHI 2025)
+        accessed date: 2026-10-11
+      2.
+        id: AI-E07
+        url: https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf
+        publication or update date: 2024-07-26
+        accessed date: 2026-10-11
+  23.
+    id: verification-computational-reproduction
+    proposed sector id: proposed-sector-reproducible-computation
+    proposed sector name: Reproducible Computation
+    sector mapping status: proposed; reconcile against native Keddeh registry
+    parent foundries:
+      - Research Mastery
+      - Publishing Mastery
+      - Server
+    title: Computational reproduction
+    scope: Rerun published or internal analyses from the same data and code in a clean environment.
+    affected users and potential buyers:
+      - Research funders
+      - R&D teams
+      - Journals
+      - Evidence-intensive buyers
+    measured problem: SCORE reported a difference between exact and approximate reproduction; this is separate from obtaining new experimental data.
+    primary evidence ids:
+      - AI-E23
+    existing alternatives:
+      - Containers
+      - Workflow engines
+      - Versioned datasets
+      - OSF/repository deposits
+      - Reproducibility review
+    proposed keddeh service hypothesis: Prepare reproducible execution packages with locked inputs, environment manifests and machine-readable output tolerances.
+    delivery team:
+      id: proposed-braink-delivery-verification-computational-reproduction
+      display name: BRAINK Computational reproduction Delivery
+      status: proposed charter; staffing and execution unqualified
+      specialist expertise:
+        - Research software engineering
+        - Numerical methods
+        - Dependency management
+        - Domain science
+    analyst team:
+      id: proposed-braink-analyst-verification-computational-reproduction
+      display name: BRAINK Computational reproduction Analysis
+      status: separate proposed team; not the delivery team
+      distinct role: Attempt reproduction in a separate clean environment; log missing assets, manual interventions and tolerance deviations.
+      independence: Own baseline, held-out evaluation, evidence review and failure report; cannot approve its own implementation or silently change acceptance criteria.
+    falsifiable acceptance metric:
+      status: proposed pilot gate, not observed achievement or source-derived industry threshold
+      test: An independent analyst reruns 100% of designated headline outputs within preregistered tolerances using only the package; all deviations and unavailable inputs are explicit.
+      baseline: Measure prospectively in an authorized customer pilot; unknown at present.
+    failure and safety risks:
+      - Hidden preprocessing
+      - Hardware/nondeterminism
+      - Missing rights
+      - Digest mistaken for truth
+    dependencies:
+      - Executable code
+      - Data access rights
+      - Compute budget
+      - Numeric tolerances
+    overlap with ids:
+      - data-lineage-provenance
+      - verification-analytical-robustness
+    discovery priority: pilot-candidate
+    execution qualification: unqualified; no service implementation, team deployment or customer result verified
+    commercial evidence: Potential buyer and service inference only. No customer interviews, willingness-to-pay or market-size study completed.
+    primary evidence:
+      1.
+        id: AI-E23
+        url: https://www.cos.io/score
+        publication or update date: 2026 (outcome release; exact date not stated)
+        accessed date: 2026-10-11
+  24.
+    id: verification-analytical-robustness
+    proposed sector id: proposed-sector-analytical-robustness
+    proposed sector name: Analytical Robustness
+    sector mapping status: proposed; reconcile against native Keddeh registry
+    parent foundries:
+      - Research Mastery
+      - Domain Mastery
+    title: Analytical robustness
+    scope: Assess whether defensible alternative analytical choices change results using the same evidence.
+    affected users and potential buyers:
+      - R&D executives
+      - Policy analysis
+      - Scientific teams
+      - Model validation
+    measured problem: SCORE found substantial quantitative variation across reanalyses, even where qualitative conclusions agreed.
+    primary evidence ids:
+      - AI-E23
+    existing alternatives:
+      - Sensitivity analysis
+      - Multiverse analysis
+      - Independent reanalysis
+      - Robust statistics
+    proposed keddeh service hypothesis: Preregister a bounded set of defensible models, preprocessing choices and uncertainty analyses around one decision claim.
+    delivery team:
+      id: proposed-braink-delivery-verification-analytical-robustness
+      display name: BRAINK Analytical robustness Delivery
+      status: proposed charter; staffing and execution unqualified
+      specialist expertise:
+        - Statistics
+        - Causal inference
+        - Domain science
+        - Research methods
+    analyst team:
+      id: proposed-braink-analyst-verification-analytical-robustness
+      display name: BRAINK Analytical robustness Analysis
+      status: separate proposed team; not the delivery team
+      distinct role: Choose alternatives independently, disclose all outcomes and audit researcher degrees of freedom.
+      independence: Own baseline, held-out evaluation, evidence review and failure report; cannot approve its own implementation or silently change acceptance criteria.
+    falsifiable acceptance metric:
+      status: proposed pilot gate, not observed achievement or source-derived industry threshold
+      test: All preregistered analyses run; decision conclusion survives >=90% of justified specifications and required confounding sensitivity, or is downgraded as fragile. Threshold is a pilot decision rule, not universal scientific validity.
+      baseline: Measure prospectively in an authorized customer pilot; unknown at present.
+    failure and safety risks:
+      - Cherry-picked specifications
+      - Misleading pooled estimates
+      - Unmodeled confounding
+      - False certainty
+    dependencies:
+      - Original data
+      - Decision threshold
+      - Domain review
+      - Analysis budget
+    overlap with ids:
+      - verification-computational-reproduction
+      - verification-independent-replication
+      - ai-productivity-causal-measurement
+    discovery priority: validate-demand
+    execution qualification: unqualified; no service implementation, team deployment or customer result verified
+    commercial evidence: Potential buyer and service inference only. No customer interviews, willingness-to-pay or market-size study completed.
+    primary evidence:
+      1.
+        id: AI-E23
+        url: https://www.cos.io/score
+        publication or update date: 2026 (outcome release; exact date not stated)
+        accessed date: 2026-10-11
+  25.
+    id: verification-independent-replication
+    proposed sector id: proposed-sector-independent-claim-replication
+    proposed sector name: Independent Claim Replication
+    sector mapping status: proposed; reconcile against native Keddeh registry
+    parent foundries:
+      - Research Mastery
+      - Domain Mastery
+    title: Independent claim replication
+    scope: Test the same substantive scientific question with new data and independently controlled execution.
+    affected users and potential buyers:
+      - Funders
+      - R&D investors
+      - Research laboratories
+      - Policy evidence teams
+    measured problem: SCORE distinguishes new-data replication from rerunning original analyses; roughly half reproduced the significant pattern in its sampled claims.
+    primary evidence ids:
+      - AI-E23
+    existing alternatives:
+      - Registered replication
+      - Multi-site studies
+      - Independent labs
+      - Prospective validation
+    proposed keddeh service hypothesis: Scope and commission a qualified, preregistered replication with an independent laboratory or data-collection team; BRAINK coordinates evidence rather than claiming scientific validation.
+    delivery team:
+      id: proposed-braink-delivery-verification-independent-replication
+      display name: BRAINK Independent claim replication Delivery
+      status: proposed charter; staffing and execution unqualified
+      specialist expertise:
+        - Experimental design
+        - Domain scientists
+        - Measurement specialists
+        - Research ethics
+    analyst team:
+      id: proposed-braink-analyst-verification-independent-replication
+      display name: BRAINK Independent claim replication Analysis
+      status: separate proposed team; not the delivery team
+      distinct role: Audit independence, power, deviations and uncertainty; report unsuccessful replication without treating it as proof of fraud.
+      independence: Own baseline, held-out evaluation, evidence review and failure report; cannot approve its own implementation or silently change acceptance criteria.
+    falsifiable acceptance metric:
+      status: proposed pilot gate, not observed achievement or source-derived industry threshold
+      test: Replication meets preregistered sample/power and protocol; estimated effect and uncertainty meet the pre-agreed decision threshold, or the claim is explicitly not corroborated.
+      baseline: Measure prospectively in an authorized customer pilot; unknown at present.
+    failure and safety risks:
+      - Underpowered negative result
+      - Protocol differences
+      - Conflicts of interest
+      - Ethical or safety violations
+    dependencies:
+      - Qualified lab
+      - Ethics/consent approvals
+      - Funding
+      - New data access
+    overlap with ids:
+      - verification-computational-reproduction
+      - verification-analytical-robustness
+    discovery priority: validate-demand
+    execution qualification: unqualified; no service implementation, team deployment or customer result verified
+    commercial evidence: Potential buyer and service inference only. No customer interviews, willingness-to-pay or market-size study completed.
+    primary evidence:
+      1.
+        id: AI-E23
+        url: https://www.cos.io/score
+        publication or update date: 2026 (outcome release; exact date not stated)
+        accessed date: 2026-10-11
+  26.
+    id: verification-data-leakage
+    proposed sector id: proposed-sector-ml-validation-integrity
+    proposed sector name: Ml Validation Integrity
+    sector mapping status: proposed; reconcile against native Keddeh registry
+    parent foundries:
+      - Research Mastery
+      - Agentics
+      - Customer File Base Software
+    title: ML data leakage control
+    scope: Prevent train-test, temporal, patient/family/site and preprocessing leakage in scientific and enterprise ML.
+    affected users and potential buyers:
+      - ML research teams
+      - Clinical AI evaluators
+      - Risk model validators
+    measured problem: Empirical connectome work compares multiple leakage mechanisms; inflated estimates are task-dependent.
+    primary evidence ids:
+      - AI-E24
+    existing alternatives:
+      - Grouped/temporal splits
+      - Nested cross-validation
+      - Locked holdouts
+      - Data versioning
+    proposed keddeh service hypothesis: Audit pipeline boundaries and reconstruct leakage-safe evaluation with explicit entity/time separation.
+    delivery team:
+      id: proposed-braink-delivery-verification-data-leakage
+      display name: BRAINK ML data leakage control Delivery
+      status: proposed charter; staffing and execution unqualified
+      specialist expertise:
+        - ML validation
+        - Biostatistics
+        - Data engineering
+        - Domain sampling
+    analyst team:
+      id: proposed-braink-analyst-verification-data-leakage
+      display name: BRAINK ML data leakage control Analysis
+      status: separate proposed team; not the delivery team
+      distinct role: Own hidden holdout and contamination probes; reproduce scores before and after fixes.
+      independence: Own baseline, held-out evaluation, evidence review and failure report; cannot approve its own implementation or silently change acceptance criteria.
+    falsifiable acceptance metric:
+      status: proposed pilot gate, not observed achievement or source-derived industry threshold
+      test: Zero entity/time overlap prohibited by protocol; all fitted transforms use training data only; independently reproduced held-out performance passes the business threshold or the claim is withdrawn.
+      baseline: Measure prospectively in an authorized customer pilot; unknown at present.
+    failure and safety risks:
+      - Small-sample instability
+      - Unrecognized duplicates
+      - Benchmark leakage
+      - Selection bias persists after split repair
+    dependencies:
+      - Entity identifiers
+      - Data lineage
+      - Locked holdout
+      - Domain sampling rules
+    overlap with ids:
+      - data-quality-contracts
+      - verification-evaluation-validity
+      - verification-computational-reproduction
+    discovery priority: pilot-candidate
+    execution qualification: unqualified; no service implementation, team deployment or customer result verified
+    commercial evidence: Potential buyer and service inference only. No customer interviews, willingness-to-pay or market-size study completed.
+    primary evidence:
+      1.
+        id: AI-E24
+        url: https://www.nature.com/articles/s41467-024-46150-w
+        publication or update date: 2024-02-28
+        accessed date: 2026-10-11
+  27.
+    id: verification-evaluation-validity
+    proposed sector id: proposed-sector-independent-ai-evaluation
+    proposed sector name: Independent Ai Evaluation
+    sector mapping status: proposed; reconcile against native Keddeh registry
+    parent foundries:
+      - Research Mastery
+      - Agentics
+    title: Independent AI evaluation validity
+    scope: Ensure tests measure the intended real task, with valid labels, representative cases, versioned scaffolds and independently checked scoring.
+    affected users and potential buyers:
+      - AI buyers
+      - Product release teams
+      - Standards/evaluation organizations
+    measured problem: Public evaluators disclose scoring, distribution and reproducibility limits; benchmark achievement does not establish customer-ready performance.
+    primary evidence ids:
+      - AI-E02
+      - AI-E11
+    existing alternatives:
+      - HELM-style harnesses
+      - Task-specific tests
+      - Blind human review
+      - External audits
+    proposed keddeh service hypothesis: Build a customer-specific evaluation contract and independent assessment package; separate benchmark, integration and deployed-outcome claims.
+    delivery team:
+      id: proposed-braink-delivery-verification-evaluation-validity
+      display name: BRAINK Independent AI evaluation validity Delivery
+      status: proposed charter; staffing and execution unqualified
+      specialist expertise:
+        - Measurement science
+        - ML evaluation
+        - Statistics
+        - Domain adjudication
+    analyst team:
+      id: proposed-braink-analyst-verification-evaluation-validity
+      display name: BRAINK Independent AI evaluation validity Analysis
+      status: separate proposed team; not the delivery team
+      distinct role: Own test-set custody, contamination checks and adjudication; analyst findings remain separate from delivery logs and model self-reports.
+      independence: Own baseline, held-out evaluation, evidence review and failure report; cannot approve its own implementation or silently change acceptance criteria.
+    falsifiable acceptance metric:
+      status: proposed pilot gate, not observed achievement or source-derived industry threshold
+      test: At least 200 stratified cases with documented labels; inter-rater agreement >=0.8 where appropriate; repeat scoring differs <=2 percentage points; all critical deployment slices meet predeclared gates.
+      baseline: Measure prospectively in an authorized customer pilot; unknown at present.
+    failure and safety risks:
+      - Contaminated tests
+      - Bad labels
+      - LLM judge bias
+      - Aggregate hides critical failure
+    dependencies:
+      - Representative cases
+      - Independent evaluators
+      - Versioned harness
+      - Acceptance owner
+    overlap with ids:
+      - ai-production-drift
+      - verification-data-leakage
+      - ai-long-workflow-reliability
+    discovery priority: pilot-candidate
+    execution qualification: unqualified; no service implementation, team deployment or customer result verified
+    commercial evidence: Potential buyer and service inference only. No customer interviews, willingness-to-pay or market-size study completed.
+    primary evidence:
+      1.
+        id: AI-E02
+        url: https://metr.org/time-horizons/
+        publication or update date: 2026-09-08
+        accessed date: 2026-10-11
+      2.
+        id: AI-E11
+        url: https://crfm.stanford.edu/fmti/December-2025/index.html
+        publication or update date: 2025-12
+        accessed date: 2026-10-11
+
+END OF PUBLIC RESEARCH DRAFT
