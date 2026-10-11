@@ -1,0 +1,36 @@
+{
+  "schema": "braink.agent.publication-safety.v1",
+  "observedDate": "2026-10-11",
+  "sourceManifest": "../SOURCE-PROVENANCE.json",
+  "sourceGroups": [
+    {
+      "repository": "Keddeh1/KEDDEH--",
+      "visibility": "public",
+      "commit": "800cc656eab27bbd031048bb57d78150868137a2",
+      "files": 34
+    },
+    {
+      "repository": "aboudykeddeh276-stack/BRAINK-Sovereign-Virtual-Brain-Console",
+      "visibility": "public",
+      "commit": "cfbee37c3c3a984201ce36f4c1d943ea395a63a3",
+      "files": 3
+    }
+  ],
+  "verification": "Every selected native file compared byte-for-byte with git show at its pinned public source commit; all 37 SHA-256 values match.",
+  "privateSourceCopied": false,
+  "excluded": [
+    "private deployment-queue implementation",
+    "private Site source",
+    "runtime databases",
+    "credential values",
+    "account allowlists",
+    "unavailable research archive bytes"
+  ],
+  "rights": "Upstream rights retained; public visibility is provenance evidence, not a new licence grant. Newly authored integration reserved rights.",
+  "sourceIntegrityDoesNotProve": [
+    "runtime safety of every upstream entrypoint",
+    "model capability",
+    "market qualification",
+    "public hosting"
+  ]
+}

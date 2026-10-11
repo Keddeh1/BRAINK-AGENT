@@ -27,6 +27,10 @@ python3 -m braink_agent --state /tmp/braink-agent-demo status
 
 Use the returned native team ID in the UI's enqueue, run and verify controls. Production workers uppercase UTF-8; specialist workers count words. These are deterministic adapters, not expert language models. `undertake` additionally composes the native bounded circuit and shell engines with family memory, capability registration, continuation and VFS.
 
+## Existing native host deployment
+
+The published manager is running on the existing Keddeh host at `http://127.0.0.1:28787` (host-local access). Native birth, worker/observer execution and persistence after container restart passed. See [deployment and access boundaries](docs/DEPLOYMENT.md) and [host evidence](evidence/host-verification.json). No public ingress or model qualification is implied.
+
 ## Verify and package
 
 ```sh

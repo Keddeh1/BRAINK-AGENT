@@ -24,6 +24,18 @@ Install the verified source tree on the selected existing Linux host with Python
 
 This task does not create a host, paid resource, new credential, pending migration or widened grant. Hosted admission/deployment remains a separate explicit native boundary. The existing Keddeh Site is owned by a concurrent deployment task and is not modified here.
 
+## Observed resident deployment — 2026-10-11
+
+The published source commit `b92535b3b5b118d18fb74ed270fe36ff5d1f5996` is running under the existing Keddeh Docker supervisor as `keddeh-braink-agent`. It uses the existing admitted runtime image `sha256:4474575af321d192b019de6675e97312a9bceeb30a95c6e4914cfa2b3ec4bdf9` (Python 3.12.15, Node 24.21.0). All 21 integration/security/MCP tests passed inside that image before launch.
+
+The HTML control runtime is accessible on **the host's loopback** at `http://127.0.0.1:28787`. This is not an internet URL or a new Site deployment. The process uses read-only release source, private persistent state, the existing SERVERSPACE owner credential mounted read-only, `unless-stopped` restart policy, no added Linux capabilities, no privilege escalation, 512 MiB memory, one CPU and 64 process IDs. It has no Docker socket mount. Native cloud credentials are not inferred from the local owner credential.
+
+The exact source archive was checked against all 80 release file hashes before launch. Eleven host checks exercised anonymous/Origin rejection, native identity birth, VFS memory, bounded worker execution, distinct observer readback, container restart and preserved identity/memory/verification records. See [host verification](../evidence/host-verification.json). This running deployment retains the initial code commit; later documentation commits do not imply an unrecorded deployment.
+
+Owner operators can inspect `docker inspect keddeh-braink-agent`, read status through the existing protected loopback API, and use `docker stop --time 10 keddeh-braink-agent` to stop this manager without touching another family. Restart with `docker start keddeh-braink-agent`. State resides outside the release tree and survives container restart. The owner-private deployment record under `/workspace/braink-setup/braink-agent/deployment.json` binds the exact release and image; it contains no credential value.
+
+A remotely accessible owner control interface requires an existing approved identity/TLS gateway route whose Host, Origin and credential boundaries are tested. No such route has been configured here. The current fixed Host/Origin checks deliberately reject a forwarded foreign host. Standalone cloud MCP transport separately needs an existing authorized native binding; a successful managed-connector call cannot supply or establish that binding.
+
 ## Rollback
 
 Record the previous source commit, package SHA-256 and state backup before switching versions. Stop admission and workers, preserve current state as evidence, select the prior verified package and use its compatible state backup in a new directory. Read back source and durable records before restoring service. Record rollback as a new operation; do not rewrite source history or relabel an old assessment as current. Schema-changing rollback requires a separately tested migration path.

@@ -22,6 +22,14 @@ Native local team members have manager, administration, production, specialist a
 
 Technical sectors S01–S29, application sectors, functions, 18 independent foundries and market bottlenecks are separate axes. This release preserves supplied references without inventing the missing full register. `foundryMapping=UNADMITTED_REFERENCES` explicitly prevents a reference string from becoming a grant or a qualified mapping.
 
+## Incoming research and provenance namespaces
+
+The separately prepared research package is reported to contain 93 candidate rows and 186 proposed team identities. Those are transfer metadata, not imported records or validated markets: the supported Library download failed before archive bytes arrived. The live manager currently has zero admitted sectors. The corrected birth v0.2.0 package is likewise not integrated; current native birth tests do not validate that external schema.
+
+Admission must keep evidence identifiers such as an edge source's `S01` distinct from canonical technical sector `S01` and birth references. Use separate provenance namespaces for each source register, canonical taxonomy and birth contract. Preserve source ID and source package digest together; never overwrite a canonical identifier because a short label matches. Reconcile exact canonical IDs/names only against inspected taxonomy bytes. Application and function mappings remain unresolved when evidence is missing.
+
+Import must retain many-to-many mappings and explicit parent/child relations for the reported industrial-semantics, OT-recovery and firmware-containment overlaps. The source rows are candidate bottlenecks; their count must not be presented as independent validated markets. Proposed delivery/analyst IDs must be linked to the identities returned by real native births, with separate purposes, memory, restart readback and unqualified expertise status. No proposed identity alone establishes an executable or qualified team.
+
 ## Qualification contract
 
 A sector's desired expertise must resolve to an exact typed capability, admitted source and executable binding. A qualifying record needs the source version, model/runtime identity when applicable, benchmark ID/version, input/output digests, actual actor run, durable artifact readback, analyst identity and findings, scope, exclusions and separate assessment receipt when required.
