@@ -18,13 +18,13 @@ Native local team members have manager, administration, production, specialist a
 
 ## Sector admission
 
-`admit_sector` requires a stable ID, title, bottleneck, source URL/title/claim/access date, delivery purpose, analyst purpose and foundry references. The source record is immutable. Its delivery and analyst teams are born separately; their member VFS roots do not overlap. Records are owner-only by default.
+`admit_sector` requires a stable ID, title, bottleneck, source URL/title/claim/access date, delivery purpose, analyst purpose and foundry references. The source record is immutable and bounded to 32,768 encoded bytes before any birth or intent mutation. Its delivery and analyst teams are born separately; their member VFS roots do not overlap. Records are owner-only by default.
 
 Technical sectors S01–S29, application sectors, functions, 18 independent foundries and market bottlenecks are separate axes. This release preserves supplied references without inventing the missing full register. `foundryMapping=UNADMITTED_REFERENCES` explicitly prevents a reference string from becoming a grant or a qualified mapping.
 
 ## Incoming research and provenance namespaces
 
-The separately prepared research package is reported to contain 93 candidate rows and 186 proposed team identities. Those are transfer metadata, not imported records or validated markets: the supported Library download failed before archive bytes arrived. The live manager currently has zero admitted sectors. The corrected birth v0.2.0 package is likewise not integrated; current native birth tests do not validate that external schema.
+The separately prepared research package is reported to contain 93 candidate rows and 186 proposed team identities. The initial Library transfer failed. The independently screened public Git handoff now supplies exact research bytes, verified against its manifest. The importer creates real scoped native families and research memory while retaining candidate status; neither import nor birth validates a market. The corrected birth v0.2.0 package is likewise not integrated; current native birth tests do not validate that external schema.
 
 Admission must keep evidence identifiers such as an edge source's `S01` distinct from canonical technical sector `S01` and birth references. Use separate provenance namespaces for each source register, canonical taxonomy and birth contract. Preserve source ID and source package digest together; never overwrite a canonical identifier because a short label matches. Reconcile exact canonical IDs/names only against inspected taxonomy bytes. Application and function mappings remain unresolved when evidence is missing.
 
@@ -42,7 +42,7 @@ Authoritative memory is retained native history and immutable objects. A future 
 
 Learning follows propose → review → compare → validate → commit/reject as a documented workflow. Merely storing that preference does not execute scientific validation. New claims need evidence, version binding and reviewer findings before promotion.
 
-Research artifacts are external supplied inputs. Until their bytes and rights are inspected, the repository keeps an empty research admission surface rather than invented bottleneck records.
+The public research manifest pins all supplied records and review/crosswalk files. Import verifies their bytes before any admission. Changed IDs or records conflict with durable admission intents; retry never silently substitutes a different brief.
 
 
 ---

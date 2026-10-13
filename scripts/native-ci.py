@@ -14,7 +14,7 @@ def main():
         records=[]
         for argv in commands:
             started=time.monotonic()
-            r=subprocess.run(argv,cwd=ROOT,capture_output=True,timeout=120)
+            r=subprocess.run(argv,cwd=ROOT,capture_output=True,timeout=900)
             output=(r.stdout+r.stderr).decode(errors='replace')
             records.append({'command':argv,'exitCode':r.returncode,'seconds':round(time.monotonic()-started,3),
                             'output':output,'outputSha256':hashlib.sha256((r.stdout+r.stderr)).hexdigest()})

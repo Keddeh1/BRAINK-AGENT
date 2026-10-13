@@ -4,7 +4,7 @@ import hashlib,io,json,subprocess,tarfile
 ROOT=Path(__file__).resolve().parents[1]
 def validate_name(name):
     p=Path(name)
-    allowed_dirs={'braink_agent','contracts','docs','evidence','runtime','scripts','tests','vendor','web'}
+    allowed_dirs={'braink_agent','contracts','docs','evidence','runtime','scripts','tests','vendor','web','research'}
     allowed_roots={'README.md','NOTICE','Makefile','SOURCE-PROVENANCE.json','.gitignore'}
     if p.is_absolute() or '..' in p.parts or (len(p.parts)>1 and p.parts[0] not in allowed_dirs) or (len(p.parts)==1 and name not in allowed_roots):
         raise ValueError('SOURCE_ALLOWLIST_REJECTED')

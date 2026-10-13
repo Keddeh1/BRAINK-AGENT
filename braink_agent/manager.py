@@ -16,6 +16,7 @@ from typing import Any
 from .native import ROOT, NATIVE, Runtime, ROLES, ScopedVFSStore, ArtifactWrite, canonical_json
 from .adapters import KeddehService, Dispatch
 from .resident import exact_store_class
+from .operational import OperationalRuntime
 
 def bounded_id(value: str) -> str:
     if not isinstance(value, str) or not re.fullmatch(r"[A-Za-z0-9_-]{1,100}", value):
@@ -38,11 +39,13 @@ class Manager:
         if self.root.resolve() != self.root:
             raise ValueError("STATE_SYMLINK_REJECTED")
         self.root.mkdir(parents=True, exist_ok=True, mode=0o700)
-        self.runtime = Runtime(self.root / "teams")
+        self.runtime = OperationalRuntime(self.root / "teams")
         self.vfs = ScopedVFSStore(self.root, self.root / "memory")
         with self.database() as db:
             db.executescript("""
                 CREATE TABLE IF NOT EXISTS sectors(id TEXT PRIMARY KEY, body TEXT NOT NULL);
+                CREATE TABLE IF NOT EXISTS birth_intents(id TEXT PRIMARY KEY, body TEXT NOT NULL);
+                CREATE TABLE IF NOT EXISTS sector_intents(id TEXT PRIMARY KEY, digest TEXT NOT NULL);
                 CREATE TABLE IF NOT EXISTS remote_requests(id TEXT PRIMARY KEY, request TEXT NOT NULL,
                   state TEXT NOT NULL, actor TEXT, readback TEXT, assessment TEXT);
             """)
@@ -104,12 +107,28 @@ class Manager:
             raise KeyError(key)
         return json.loads(self.vfs.read_content(record.digest))
 
-    def birth(self, key: str, purpose: str) -> dict:
+    def birth(self, key: str, purpose: str, operational_role: str | None = None) -> dict:
         bounded_id(key)
         bounded_id("birth-" + key)
+        if operational_role not in {None, "delivery", "analyst"}:
+            raise ValueError("UNADMITTED_OPERATIONAL_ROLE")
         if not isinstance(purpose, str) or not 1 <= len(purpose.encode()) <= 4096:
             raise ValueError("PURPOSE_REQUIRED")
         with self.owner_lock():
+            try:
+                prior = self.recall("birth-" + key)
+            except KeyError:
+                prior = None
+            if prior is not None:
+                if prior["purpose"] != purpose or prior.get("operationalRole") != operational_role:
+                    raise ValueError("BIRTH_PURPOSE_OR_ROLE_CONFLICT")
+                return {**prior, "custody": self.remember("birth-" + key, prior)}
+            intent = bounded_json({"purpose": purpose, "operationalRole": operational_role}).decode()
+            with self.database() as db:
+                old = db.execute("SELECT body FROM birth_intents WHERE id=?", (key,)).fetchone()
+                if old and old[0] != intent:
+                    raise ValueError("BIRTH_INTENT_CONFLICT")
+                db.execute("INSERT OR IGNORE INTO birth_intents VALUES(?,?)", (key, intent))
             self.control("BIRTH_LOCAL_FAMILY", "system://braink/" + key, [purpose])
             from storage import sqlite_paths
             sqlite_paths(self.root, self.root / "family.sqlite3")
@@ -120,9 +139,12 @@ class Manager:
                      "model_binding": None, "expertise": "UNQUALIFIED_UNTIL_EVIDENCE"})
             finally:
                 store.close()
-            team = self.runtime.instantiate(key, NATIVE / "templates", set().union(*ROLES.values()))
+            team = (self.runtime.instantiate_operational(key, operational_role) if operational_role else
+                    self.runtime.instantiate(key, NATIVE / "templates", set().union(*ROLES.values())))
             packet = {"key": key, "purpose": purpose, "family": result,
                       "team": team, "modelBinding": None, "qualification": "DETERMINISTIC_ADAPTERS_ONLY"}
+            if operational_role:
+                packet["operationalRole"] = operational_role
             custody = self.remember("birth-" + key, packet)
             return {**packet, "custody": custody}
 
@@ -208,7 +230,8 @@ class Manager:
         if not isinstance(record["foundryRefs"], list) or any(not isinstance(x, str) for x in record["foundryRefs"]):
             raise ValueError("FOUNDRY_REFERENCES_REQUIRED")
         # No invented foundry mapping: supplied references remain unadmitted claims.
-        data = bounded_json(record)
+        # Reserve room for scoped brief purpose and final custody metadata.
+        data = bounded_json(record, 32768)
         digest = hashlib.sha256(data).hexdigest()
         with self.database() as db:
             prior = db.execute("SELECT body FROM sectors WHERE id=?", (sid,)).fetchone()
@@ -217,12 +240,34 @@ class Manager:
             if old["sourceDigest"] != digest:
                 raise ValueError("SECTOR_ID_CONFLICT")
             return old
+        with self.database() as db:
+            db.execute("BEGIN IMMEDIATE")
+            intent = db.execute("SELECT digest FROM sector_intents WHERE id=?", (sid,)).fetchone()
+            if intent and intent[0] != digest:
+                db.execute("ROLLBACK")
+                raise ValueError("SECTOR_INTENT_CONFLICT")
+            db.execute("INSERT OR IGNORE INTO sector_intents VALUES(?,?)", (sid, digest))
+            db.execute("COMMIT")
         delivery = self.birth("sector-" + sid + "-delivery", record["deliveryPurpose"])
         analyst = self.birth("sector-" + sid + "-analyst", record["analystPurpose"])
-        result = {"record": record, "sourceDigest": digest,
+        memories = {}
+        for role, born in (("delivery", delivery), ("analyst", analyst)):
+            team = born["team"]
+            member = next(m for m in team["members"] if m["role"] == "production")
+            store = self.runtime.member_store(team["team_instance_id"], member["member_id"])
+            brief = bounded_json({"sectorId": sid, "responsibility": role,
+                "purpose": record[role + "Purpose"], "sourceDigest": digest,
+                "research": record, "expertise": "UNQUALIFIED"})
+            artifact, receipt = store.write(ArtifactWrite("/artifacts/research-brief.json", brief,
+                member["member_id"], continuation_id="sector-" + digest, expected_version=0, media_type="application/json"))
+            if store.read_content(artifact.digest) != brief:
+                raise ValueError("SECTOR_MEMORY_READBACK_REJECTED")
+            memories[role + "Memory"] = {"memberId": member["member_id"], "digest": artifact.digest,
+                "path": "/artifacts/research-brief.json", "receipt": receipt.receipt_id, "state": "DURABLE_READBACK"}
+        result = {"record": record, "sourceDigest": digest, **memories,
                   "deliveryTeam": delivery["team"]["team_instance_id"],
                   "analystTeam": analyst["team"]["team_instance_id"],
-                  "expertise": "REQUIRES_APPLIED_QUALIFICATION", "assessmentReceipt": None,
+                  "expertise": "REQUIRES_APPLIED_QUALIFICATION", "qualificationStatus": "UNQUALIFIED", "assessmentReceipt": None,
                   "foundryMapping": "UNADMITTED_REFERENCES", "marketOutcome": "NOT_DEMONSTRATED"}
         self.remember("sector-" + sid, result)
         with self.database() as db:

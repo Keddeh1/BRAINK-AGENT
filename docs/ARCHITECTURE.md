@@ -50,5 +50,11 @@ Typed adapters implement MCP initialization, bounded JSON/SSE responses, no redi
 The live site is maintained by a separate deployment task. This repository does not deploy or change that site, widen grants, create paid resources or migrate accounts. The existing service's namespaces partition state under one owner credential; they do not create separate credential tenants.
 
 
+## Operational adapters
+
+`OperationalRuntime` extends the admitted native engine with explicit operational templates and a separate integrity observer for those templates. It inherits the native queue, claim, lease fencing, production, failure and VFS machinery. Legacy fixture adapters retain their original observer. Operational observer receipts prove bytes and immutable task binding; the separately scoped analyst process performs substantive source comparison, independent service observation or checkpoint recomputation. Neither is represented as different-model assessment.
+
+`Workflows` persists immutable task intent before family birth, then reconciles each native stage from durable state. A per-task process lock prevents concurrent advancement. Native workers keep bounded leases and three attempts. After interruption, existing immutable output is read back before another external read is considered. No arbitrary caller URL or executable is accepted.
+
 ---
 © 2026 Keddeh Systems. All rights reserved. Source custody, actor execution, durable readback and independent assessment are separate records.

@@ -104,3 +104,47 @@ Independently inspected the running deployment without reading credential values
 Observed controls: listener only at `127.0.0.1:28787`; non-root UID/GID; read-only root filesystem, source and existing owner credential mounts; private writable state directory mode 0700; all capabilities dropped; no-new-privileges; no privileged mode or Docker socket mount. Host networking is enabled, so this is not an isolated network sandbox. Health returned 200 with cloud `NOT_PROBED`; anonymous owner access returned 401; foreign Host returned 421. No public ingress or cloud credential binding is established by these checks.
 
 Read-only SQLite integrity checks passed for manager, family, memory and queue databases. Persisted state contained one team, one `VERIFIED` job and five memory artifacts. The saved result had distinct actor/observer process IDs, matching digests and successful content observation. Admitted sector count was zero; research rows must not be reported as imported. Reviewed `host-verification.json`, which records 11 host checks and persistence after container restart; this reviewer independently observed the resulting stored state but did not repeat the restart or those mutations. No qualified independent-model assessment is asserted.
+
+## Operational workflow review — implementation in progress
+
+Inspected the initial operational templates, host adapter, workflow coordinator/worker and manager/server integration. No cloud call or persistent host mutation was performed. Three reproducible findings were sent to the implementer:
+
+- **R5, P1, open:** a synthetic durable-checkpoint workflow produces its delivery artifact but inherited `verify_job` launches the legacy observer, which rejects new operational adapter IDs with `unqualified observation`. `advance` raises; workflow remains `DELIVERY_RUNNING` with job `PRODUCED`. The unchanged observer only knows uppercase/word-count semantics. New outputs need an explicitly scoped operational observer; native integrity observation must remain distinct from analyst semantic work.
+- **R6, P2, open:** birth with the same key/purpose first as `delivery`, then as `analyst`, raises a custody `BindingConflict` but leaves two teams. Operational role is absent from the immutable family request and conflict is detected after creating the second team. Validate the immutable birth responsibility before team mutation.
+- **R7, P2, open:** the service-health analyst independently observes degraded health after the actor observed healthy health, but copies the actor's next action. A synthetic injected observation reproduced `ACTION_REQUIRED` alongside `No recovery action indicated by this observation.` Derive the analyst action from its independent observation.
+
+The host adapter accepts only a configured loopback service path, disables environment proxies and redirects, reads an existing private credential and retains selected response fields rather than the raw response. These observations do not establish credential isolation between local workers. Workflow delivery and analyst use distinct native identities and processes; until observed execution and fixes are reviewed, their existence is not evidence of successful analysis. Neither role has a model binding or qualified expertise.
+
+## Operational workflow corrections and independent recovery checks
+
+**R5–R7 are now corrected and independently retested.** Operational output uses a separate observer that checks native bytes, immutable task/role/request binding and native receipt custody, with an explicit integrity-only scope. Legacy deterministic jobs retain their original observer. The analyst still performs separate source reopening, checkpoint recomputation or health re-observation; integrity verification does not imply independent model assessment.
+
+An additional **R8, P2** was reproduced and corrected during this follow-up: operational observation failed when an SDK caller changed working directory outside the checkout. The observer process now starts with the explicit source root; the same outside-checkout workflow completed on recheck.
+
+The first R6 correction covered committed birth packets only. A synthetic interruption after delivery-team creation but before birth custody allowed an analyst retry to create a second team. The final durable birth-intent correction rejects that role change with `BIRTH_INTENT_CONFLICT`, retains one team, and allows the original delivery request to finish with that same team. R7 recheck produced `ACTION_REQUIRED` and an inspection/recovery recommendation from the analyst's own degraded observation.
+
+Independently executed:
+
+- All 27 current unittests passed in 17.661 seconds, including six operational-workflow tests.
+- Four concurrent advances of one task: one completed, three returned nonblocking queued snapshots; final state was complete with exactly one delivery attempt and one analyst attempt.
+- Actual wall-clock lease expiry after an injected post-VFS-write process exit: retained recovery state, waited approximately 20 seconds without editing expiry, resumed after restart, completed on delivery attempt two and retained exactly one immutable artifact binding.
+- Stateful HTTP privacy check after a synthetic private checkpoint completed: public HTML, public API and health output did not contain the private marker; anonymous owner GET and workflow-read POST both returned 401.
+- Synthetic authenticated health boundary and failure classes passed in the workflow suite. This is not a new live SERVERSPACE observation or deployment verification.
+
+No remaining reproduced functional blocker in these reviewed operational modules. These uncommitted changes and checks are separate from the earlier deployed commit, archive hash and live-host review. No newly added research-import module or research rows were assessed by this follow-up.
+
+## Research normalization and targeted sector-admission review
+
+Independently ran the catalogue verifier against manifest SHA-256 `27522df847e298311df2873db7f9fd9b157afd43e89378eea9dadb6443dd6222`: all 13 declared file hashes/lengths passed. Observed 93 unique normalized rows, 186 distinct proposed team identifiers, 94 unique composite source identifiers, exact technical-sector IDs S01–S29 and 18 distinct foundry names. Public-source namespaces `ai_data`, `compute` and `edge_adoption` remain separate from `technical_sector` references. Three distinct specialized-child relationships retain their pending market-validation status. Proposed mappings remain unadopted; no qualification or market outcome is inferred.
+
+Targeted recovery test using one actual normalized row: interrupted before analyst birth, reopened manager, rejected a changed bottleneck with `SECTOR_INTENT_CONFLICT`, then resumed the original record successfully with exactly two teams. Both role-specific research briefs read back their exact record, purpose and role; native receipt chains verified. Repeated admission returned the same record. This reviewer did not repeat the full 93-row/186-birth integration run or revalidate the research's external market claims.
+
+**R9, P2, open:** generic `admit_sector` accepts a 65,500-byte JSON record but its added brief/result envelope exceeds the 65,536-byte custody bound. Synthetic filler added to one real row reproduced `BYTE_BOUND` after two team births, zero completed sectors, and the same failure on retry. Preflight the expanded records or lower the admitted record bound before durable intent/birth. The fixed research catalogue is unaffected by this reproducer: its largest normalized record was 8,317 bytes, with purposes at most 264 bytes and at most two source references per row.
+
+## Final research-bound recheck and pending-source screening
+
+**R9 is corrected and independently retested.** The same 65,500-byte record now rejects `BYTE_BOUND` on both attempts before any birth or sector intent is retained: zero teams, zero sectors, zero birth intents and zero sector intents. The fixed 93-row catalogue continues to normalize successfully under the 32 KiB admission limit.
+
+Reviewed the pending integration, documentation, UI/test and packaging changes. Pinned native `vendor/`, `runtime/` and `SOURCE-PROVENANCE.json` bytes had no changes relative to the public research handoff commit. All 104 tracked/nonignored candidate files passed the package path allowlist, with no symlink or runtime-state path rejection. A targeted content screen found no private-key headers, common GitHub/AWS/Slack credential patterns or private Google document/file links. This limited screen is evidence against accidental inclusion, not a universal secret detector or independent grant of publication rights. The research files remained hash-pinned to the approved public derivative.
+
+No remaining reproduced implementation blocker in the reviewed changes. The implementer reports completion of the full 93-sector/186-team integration test; this reviewer independently exercised targeted admission/recovery cases rather than duplicating that run. Host deployment of these new changes remains a separate verification boundary.

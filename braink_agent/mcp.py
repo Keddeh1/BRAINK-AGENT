@@ -12,6 +12,10 @@ def obj(properties, required):
     return {"type":"object","properties":properties,"required":required,"additionalProperties":False}
 STRING={"type":"string","minLength":1,"maxLength":4096}
 TOOLS={
+    "braink_workflow_submit":("workflow_submit",obj({"key":STRING,"kind":{"enum":["service_health","source_reconcile","durable_checkpoint"]},"inputs":{"type":"object"}},["key","kind","inputs"]),False),
+    "braink_workflow_advance":("workflow_advance",obj({"key":STRING},["key"]),False),
+    "braink_workflow_read":("workflow_read",obj({"key":STRING},["key"]),True),
+    "braink_research_import":("research_import",obj({"limit":{"type":"integer","minimum":1,"maximum":10}},["limit"]),False),
     "braink_status":("status",obj({},[]),True),
     "braink_birth":("birth",obj({"key":STRING,"purpose":STRING},["key","purpose"]),False),
     "braink_enqueue":("enqueue",obj({"team_id":STRING,"role":{"enum":["production","specialist"]},"key":STRING,"text":{"type":"string","maxLength":16384}},["team_id","role","key","text"]),False),
@@ -36,7 +40,7 @@ def respond(manager, request, service=None):
         elif method=='ping':result={}
         elif method=='tools/list':
             result={'tools':[{'name':name,'description':'Owner-local native '+op+'; execution is not independent assessment.',
-                'inputSchema':schema,'annotations':{'readOnlyHint':read,'destructiveHint':False,'openWorldHint':op.startswith('cloud_')}} for name,(op,schema,read) in TOOLS.items()]}
+                'inputSchema':schema,'annotations':{'readOnlyHint':read,'destructiveHint':False,'openWorldHint':op.startswith('cloud_') or op=='workflow_advance'}} for name,(op,schema,read) in TOOLS.items()]}
         elif method=='tools/call':
             name=params['name'];args=params.get('arguments',{})
             if name not in TOOLS:raise ValueError('UNADMITTED_TOOL')

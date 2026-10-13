@@ -25,7 +25,21 @@ printf '%s\n' '{"operation":"birth","arguments":{"key":"operations","purpose":"C
 python3 -m braink_agent --state /tmp/braink-agent-demo status
 ```
 
-Use the returned native team ID in the UI's enqueue, run and verify controls. Production workers uppercase UTF-8; specialist workers count words. These are deterministic adapters, not expert language models. `undertake` additionally composes the native bounded circuit and shell engines with family memory, capability registration, continuation and VFS.
+## Useful operational workflows
+
+The owner UI provides three working task controls:
+
+- **Diagnose SERVERSPACE:** authenticate to the existing admitted owner endpoint, classify transport/authentication/protocol/health failures, and obtain a separate analyst observation with a concrete next action.
+- **Reconcile native source:** hash all 37 pinned native files; a separate analyst process reopens each file and reports changes or scope limitations.
+- **Retain a workload checkpoint:** persist a bounded record, recompute its digest from the original input, inspect native lease/production/readback events, and resume interrupted work without duplicating its artifact.
+
+Each task has separately born delivery and analyst families, native leased work, retained outputs and separate-process integrity observation. The UI shows task state, analyst findings, recovery controls and readable results. Low-level uppercase/wordcount fixtures remain available only in the advanced controls.
+
+SDK: `Workflows(manager).submit(key, kind, inputs)`, `advance(key)` and `read(key)`. The same operations are available as `braink_workflow_*` local MCP tools. `BRAINK_HOST_SERVICE_BINDING_FILE` points to a private existing-host binding with `serviceId`, fixed loopback status `endpoint` and `tokenFile`; see the deployment runbook. Missing bindings are classified explicitly and never replaced with generated credentials.
+
+## Reviewed research register
+
+The repository includes the public-safe 93-row research handoff and a byte-verifying importer. Owner operation `research_import` accepts `{"limit":10}` and resumes bounded batches. Each row creates separate delivery/analyst native identities and scoped persistent research briefs. Source identifiers remain namespaced; canonical technical-sector IDs/names are checked without promoting proposed many-to-many mappings into authority. Expertise remains **UNQUALIFIED**, and market validation remains pending.
 
 ## Existing native host deployment
 

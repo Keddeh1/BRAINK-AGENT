@@ -24,6 +24,19 @@ CATALOGUE = {
 def operations(manager: Manager, name: str, args: dict, service=None) -> dict:
     if not isinstance(args, dict):
         raise ValueError("OBJECT_REQUIRED")
+    if name == "research_import" and set(args) == {"limit"}:
+        from .research import import_catalogue
+        return import_catalogue(manager, args["limit"])
+    if name.startswith("workflow_"):
+        from .workflows import Workflows
+        workflows = Workflows(manager)
+        if name == "workflow_submit" and set(args) == {"key", "kind", "inputs"}:
+            return workflows.submit(**args)
+        if name == "workflow_advance" and set(args) == {"key"}:
+            return workflows.advance(args["key"])
+        if name == "workflow_read" and set(args) == {"key"}:
+            return workflows.read(args["key"])
+        raise ValueError("EXACT_WORKFLOW_ARGUMENTS_REQUIRED")
     if name.startswith("cloud_"):
         if service is None:
             raise ValueError("EXISTING_NATIVE_CREDENTIAL_BINDING_REQUIRED")
@@ -100,7 +113,8 @@ class Handler(BaseHTTPRequestHandler):
         if path == "/api/owner":
             if not self.owner():
                 return self.send(401, {"error": "OWNER_AUTHENTICATION_REQUIRED"})
-            return self.send(200, self.server.manager.overview())
+            from .workflows import Workflows
+            return self.send(200, {**self.server.manager.overview(), "workflows": Workflows(self.server.manager).list()})
         assets = {"/": ("index.html", "text/html"), "/app.js": ("app.js", "text/javascript"),
                   "/style.css": ("style.css", "text/css")}
         if path in assets:
