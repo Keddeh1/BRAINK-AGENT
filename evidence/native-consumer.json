@@ -1,0 +1,27 @@
+{
+  "schema": "braink.native-consumer-qualification.v1",
+  "actorExecution": "OBSERVED_NATIVE_CHROMIUM_SERVERSPACE_CAPTURE",
+  "transport": "EXISTING_OWNER_CONNECTOR_VFS_PUT_READ; OPERATOR_MEDIATED",
+  "cloudRequest": "RETAINED_AND_BYTE_VERIFIED",
+  "nativeResult": "RETAINED_IN_HOST_VFS",
+  "cloudResult": "RETAINED_AND_EXACT_BYTE_READBACK_VERIFIED",
+  "screenshot": {
+    "bytes": 14621,
+    "sha256": "815e023f4a157a581ac14ffe9bb1d7f216b83bdbc1320c48de6912556e66fc03"
+  },
+  "sourceIdentity": "FENCED_BEFORE_NATIVE_EFFECTS",
+  "SDKBounds": "CANONICAL_ENVELOPE_8192_BYTES; SOURCE_ID_512_UTF8_BYTES; COMMAND_4096_BYTES; 128_INTENTS",
+  "credentialsCreated": false,
+  "listenersCreated": false,
+  "siteWrites": false,
+  "privateImagesPublishedInRepository": false,
+  "persistentCloudConsumer": "NOT_ESTABLISHED",
+  "publicInteractiveBrowserBinding": "NOT_ESTABLISHED",
+  "independentModelAssessment": "NOT_CONFIGURED",
+  "independentCodeReview": "R13_CORRECTED_AND_INDEPENDENTLY_RETESTED; no remaining reproduced consumer blocker",
+  "tests": {
+    "focusedConsumerTests": 3
+  },
+  "replay": "EXACT_RESULT_BYTES_AFTER_REOPEN",
+  "cloudResultDigest": "65c89f2901dcc84111352975a490a639f24825a8f1be05b7081ca42377577a3e"
+}

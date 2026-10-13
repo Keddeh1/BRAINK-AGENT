@@ -37,6 +37,14 @@ The admitted service names are `serverspace`, `remix`, `console` and `platform`.
 
 Capture requests use bounded host execution and VFS custody; they are not native leased team jobs. The existing container image has no Chromium executable, so run this adapter through the host CLI or host stdio MCP installation. No whole-browser network isolation or persistent browser session is claimed.
 
+The bounded native consumer accepts one `vfs_read` envelope supplied by the existing authenticated owner connector:
+
+```sh
+python3 -m braink_agent.native_consumer /absolute/private/state < owner-vfs-read.json
+```
+
+The retained object's content must be exactly `{"schema":"braink.native-browser-command.v1","key":"capture-001","service":"serverspace"}`. The consumer checks canonical envelope/source identity bounds and content digest before reserving the source identity, executing the fixed native capture and retaining its result. Reusing a key with a changed source object or payload is rejected, including after interrupted execution. Its output includes private screenshot bytes for return through the existing owner-only `vfs_put` contract, followed by `vfs_read` and byte equality checks. Do not publish that output. The envelope's `verified` flag is an owner-connector report, not a credential or a signature; the local consumer runs under the existing OS account's authority. A live operator-mediated cloud-request → native-capture → cloud-result round trip passed. An unattended cloud consumer and the public interactive controls remain unbound.
+
 The owner UI provides three working task controls:
 
 - **Diagnose SERVERSPACE:** authenticate to the existing admitted owner endpoint, classify transport/authentication/protocol/health failures, and obtain a separate analyst observation with a concrete next action.
