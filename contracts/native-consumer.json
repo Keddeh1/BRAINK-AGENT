@@ -1,0 +1,47 @@
+{
+  "authentication": {
+    "cloudDelivery": "UNCONFIGURED; verified is connector-reported integrity, not a credential or signature",
+    "localHealth": "EXISTING_PRIVATE_BRAINK_HOST_SERVICE_BINDING_FILE; installed HostStatusAdapter uses its existing bearer file",
+    "nativeInvocation": "EXISTING_OS_ACCOUNT_AUTHORITY"
+  },
+  "identity": "Stable key is fenced to source object ID and exact UTF-8 content SHA-256 before effects",
+  "limits": {
+    "attemptsPerCommand": 3,
+    "commandBytes": 4096,
+    "envelopeCanonicalBytes": 8192,
+    "healthProcessSeconds": 8,
+    "intents": 128,
+    "keyCharacters": 48,
+    "resultBytes": 65536,
+    "sourceIdUtf8Bytes": 512
+  },
+  "methods": {
+    "consume": "One verified owner VFS read envelope on stdin; one result JSON on stdout",
+    "poll": "NOT_IMPLEMENTED; the matching cloud adapter must deliver an owner-authorized envelope",
+    "read": "--read KEY returns the retained service-command result without execution"
+  },
+  "networkListeners": "NONE",
+  "operations": {
+    "native_browser_capture": {
+      "arguments": {
+        "service": [
+          "serverspace",
+          "remix",
+          "console",
+          "platform"
+        ]
+      },
+      "effect": "Fixed owner-local headless rendering and private VFS custody"
+    },
+    "service_health": {
+      "arguments": {
+        "serviceId": "serverspace"
+      },
+      "effect": "Authenticated fixed local status read"
+    }
+  },
+  "persistentConsumer": "NOT_INSTALLED",
+  "receipt": "cloud-service-KEY in existing private Manager VFS; immutable result with sourceObjectId and sourceDigest",
+  "requestSchema": "braink.native-service-command.v1",
+  "schema": "braink.native-service-consumer-contract.v1"
+}
