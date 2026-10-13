@@ -1,0 +1,14 @@
+{
+  "sourceCommit": "4df3e437c6a4be67b7de6d05bac901b1a7336c8b",
+  "task": "live-health-interruption",
+  "realServiceBoundary": "existing authenticated SERVERSPACE status",
+  "interruption": "actor exited after native VFS write",
+  "recovery": "actual native20-second lease expiry, readback and retry",
+  "actorStatus": "HEALTHY",
+  "analystStatus": "SUPPORTED_WITHIN_SCOPE",
+  "idempotentReadback": true,
+  "staleLeaseRejected": true,
+  "artifactBindings": 1,
+  "jobState": "VERIFIED",
+  "attempts": 2
+}

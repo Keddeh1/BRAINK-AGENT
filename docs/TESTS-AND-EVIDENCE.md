@@ -19,5 +19,11 @@ Live service results are in `evidence/live-boundary.json`: authenticated registr
 Publication, source custody, package execution, cloud deployment and assessment are individually recorded. No single PASS field promotes all of them.
 
 
+## Operational release validation
+
+The final native CI passed 30 integration/security/MCP/workflow/research tests, 10 original family tests and 60 original team canary assertions. The full research test creates 93 actual sector records and 186 distinct native families, then reads every scoped brief after reopening the manager and verifies repeated import creates no duplicates. Browser validation covers 13 controls and privacy/layout checks, including real source/checkpoint task execution in synthetic owner state.
+
+Independent review reproduced and closed operational observer compatibility, interrupted role identity, stale analyst recommendations, observer working-directory and expanded sector-custody bounds. The reviewer performed concurrent advancement, actual lease-expiry recovery, stateful privacy and targeted sector-recovery checks. The final host checks are separately scoped in their readbacks; actor-run restart/fault tests are not relabelled reviewer repetitions.
+
 ---
 © 2026 Keddeh Systems. All rights reserved. Source custody, actor execution, durable readback and independent assessment are separate records.

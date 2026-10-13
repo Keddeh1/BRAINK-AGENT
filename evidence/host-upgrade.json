@@ -1,0 +1,94 @@
+{
+  "schema": "braink.agent.host-upgrade.v1",
+  "observedAt": "2026-10-13T10:34:00.397190+00:00",
+  "sourceCommit": "4df3e437c6a4be67b7de6d05bac901b1a7336c8b",
+  "sourceArchiveSha256": "63f362cc37744d3bf3c857bece182916159ba4a9ccbe22ccb009361fb821cc01",
+  "sourceFiles": 104,
+  "runtimeImage": "sha256:4474575af321d192b019de6675e97312a9bceeb30a95c6e4914cfa2b3ec4bdf9",
+  "loopbackUrl": "http://127.0.0.1:28787",
+  "stateAfterRestart": "EXACT_OWNER_READBACK_MATCH",
+  "previousMemory": "PRESERVED",
+  "sectorAdmission": {
+    "sectors": 93,
+    "sectorTeams": 186,
+    "briefsRehashed": 186,
+    "sectorCustodyReadbacks": 93,
+    "completedTasks": 5,
+    "technicalHandoffTransferState": "PREPARED"
+  },
+  "workflows": [
+    {
+      "id": "live-health-interruption",
+      "kind": "service_health",
+      "state": "COMPLETE",
+      "deliveryJob": "VERIFIED",
+      "analystJob": "VERIFIED",
+      "analystStatus": "SUPPORTED_WITHIN_SCOPE",
+      "expertise": "UNQUALIFIED"
+    },
+    {
+      "id": "live-workload-checkpoint",
+      "kind": "durable_checkpoint",
+      "state": "COMPLETE",
+      "deliveryJob": "VERIFIED",
+      "analystJob": "VERIFIED",
+      "analystStatus": "SUPPORTED_WITHIN_SCOPE",
+      "expertise": "UNQUALIFIED"
+    },
+    {
+      "id": "live-source-reconcile",
+      "kind": "source_reconcile",
+      "state": "COMPLETE",
+      "deliveryJob": "VERIFIED",
+      "analystJob": "VERIFIED",
+      "analystStatus": "SUPPORTED_WITHIN_SCOPE",
+      "expertise": "UNQUALIFIED"
+    },
+    {
+      "id": "live-service-health",
+      "kind": "service_health",
+      "state": "COMPLETE",
+      "deliveryJob": "VERIFIED",
+      "analystJob": "VERIFIED",
+      "analystStatus": "SUPPORTED_WITHIN_SCOPE",
+      "expertise": "UNQUALIFIED"
+    }
+  ],
+  "privateTechnicalDirective": "Retained locally; package remains PREPARED, unavailable dependencies not integrated",
+  "authorityNegatives": {
+    "anonymousOwner": 401,
+    "foreignOrigin": 401,
+    "foreignHost": 421
+  },
+  "newCredentials": false,
+  "siteChanged": false,
+  "remoteOwnerIngress": "NOT_CONFIGURED",
+  "standaloneCloudMcpBinding": "NOT_CONFIGURED",
+  "independentModelAssessment": null,
+  "rollback": "Stopped predecessor container and private pre-upgrade state backup retained",
+  "liveOwnerUi": {
+    "state": "PASS",
+    "checks": [
+      "public-owner-separation",
+      "93-sector-view",
+      "5-retained-tasks",
+      "sector-search",
+      "explicit-parent-child",
+      "readable-role-purposes",
+      "responsive",
+      "owner-lock-clears-state",
+      "no-browser-storage",
+      "no-page-errors"
+    ]
+  },
+  "independentReadOnlyReview": {
+    "report": "independent-review.md",
+    "releaseFilesVerified": 104,
+    "preservedOriginalObjects": 18,
+    "sectors": 93,
+    "distinctSectorTeams": 186,
+    "briefsRehashed": 186,
+    "newMaterialFindings": 0,
+    "restartIndependentlyRepeated": false
+  }
+}

@@ -24,17 +24,25 @@ Install the verified source tree on the selected existing Linux host with Python
 
 This task does not create a host, paid resource, new credential, pending migration or widened grant. Hosted admission/deployment remains a separate explicit native boundary. The existing Keddeh Site is owned by a concurrent deployment task and is not modified here.
 
-## Observed resident deployment — 2026-10-11
+## Initial resident deployment — 2026-10-11
 
-The published source commit `b92535b3b5b118d18fb74ed270fe36ff5d1f5996` is running under the existing Keddeh Docker supervisor as `keddeh-braink-agent`. It uses the existing admitted runtime image `sha256:4474575af321d192b019de6675e97312a9bceeb30a95c6e4914cfa2b3ec4bdf9` (Python 3.12.15, Node 24.21.0). All 21 integration/security/MCP tests passed inside that image before launch.
+The initial source commit `b92535b3b5b118d18fb74ed270fe36ff5d1f5996` was deployed under the existing Keddeh Docker supervisor as `keddeh-braink-agent`. It uses the existing admitted runtime image `sha256:4474575af321d192b019de6675e97312a9bceeb30a95c6e4914cfa2b3ec4bdf9` (Python 3.12.15, Node 24.21.0). All 21 integration/security/MCP tests passed inside that image before launch.
 
 The HTML control runtime is accessible on **the host's loopback** at `http://127.0.0.1:28787`. This is not an internet URL or a new Site deployment. The process uses read-only release source, private persistent state, the existing SERVERSPACE owner credential mounted read-only, `unless-stopped` restart policy, no added Linux capabilities, no privilege escalation, 512 MiB memory, one CPU and 64 process IDs. It has no Docker socket mount. Native cloud credentials are not inferred from the local owner credential.
 
-The exact source archive was checked against all 80 release file hashes before launch. Eleven host checks exercised anonymous/Origin rejection, native identity birth, VFS memory, bounded worker execution, distinct observer readback, container restart and preserved identity/memory/verification records. See [host verification](../evidence/host-verification.json). This running deployment retains the initial code commit; later documentation commits do not imply an unrecorded deployment.
+The exact source archive was checked against all 80 release file hashes before launch. Eleven host checks exercised anonymous/Origin rejection, native identity birth, VFS memory, bounded worker execution, distinct observer readback, container restart and preserved identity/memory/verification records. See [host verification](../evidence/host-verification.json). Those initial checks refer to the initial code commit. The current source release is recorded below.
 
 Owner operators can inspect `docker inspect keddeh-braink-agent`, read status through the existing protected loopback API, and use `docker stop --time 10 keddeh-braink-agent` to stop this manager without touching another family. Restart with `docker start keddeh-braink-agent`. State resides outside the release tree and survives container restart. The owner-private deployment record under `/workspace/braink-setup/braink-agent/deployment.json` binds the exact release and image; it contains no credential value.
 
 A remotely accessible owner control interface requires an existing approved identity/TLS gateway route whose Host, Origin and credential boundaries are tested. No such route has been configured here. The current fixed Host/Origin checks deliberately reject a forwarded foreign host. Standalone cloud MCP transport separately needs an existing authorized native binding; a successful managed-connector call cannot supply or establish that binding.
+
+## Current manager release — 2026-10-13
+
+The resident manager now runs source commit `4df3e437c6a4be67b7de6d05bac901b1a7336c8b`, source archive SHA-256 `63f362cc37744d3bf3c857bece182916159ba4a9ccbe22ccb009361fb821cc01`, with all 104 source-file hashes checked. The update retained the existing state and credential, and mounts a private fixed SERVERSPACE status binding. The existing memory readback survived the update. The predecessor container is stopped and retained for rollback; a private state backup was made before switching releases.
+
+The deployed owner interface runs real service-health, source-reconciliation and workload-checkpoint tasks with separate native delivery/analyst families, leased workers, immutable outputs and separate integrity observation. The live service task authenticated to the actual SERVERSPACE status endpoint. A controlled interruption after output write recovered after the actual 20-second lease expiry, preserved one artifact binding, rejected the stale lease and returned idempotent readback. Full host population and restart results are recorded in [host upgrade readback](../evidence/host-upgrade.json) and [live recovery](../evidence/live-recovery.json).
+
+The owner-private T45 technical directive is retained as a workload checkpoint with transfer status PREPARED. Its full package bytes remain unavailable. No external chat delivery, acknowledgement or integration of those unavailable modules is inferred from this local checkpoint.
 
 ## Rollback
 

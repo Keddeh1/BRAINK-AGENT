@@ -1,8 +1,8 @@
 {
   "schema": "braink.agent.verification.v1",
-  "date": "2026-10-11",
+  "date": "2026-10-13",
   "sourceFilesHashVerified": 37,
-  "managerSecurityPackageTests": 20,
+  "managerSecurityPackageTests": 30,
   "nativeFamilyTests": 10,
   "nativeTeamCanaryAssertions": 60,
   "nativeCanaryJobs": {
@@ -16,6 +16,9 @@
     "enqueue",
     "worker",
     "separate observer",
+    "source workflow",
+    "checkpoint workflow",
+    "actionable analyst findings",
     "responsive layout",
     "owner lock",
     "no localStorage credentials",
@@ -28,15 +31,32 @@
     "reproducedFindings": 4,
     "remainingReproducedFindings": 0,
     "packagedTests": 30,
-    "packagedSourceFilesVerified": 37
+    "packagedSourceFilesVerified": 37,
+    "liveSectorBriefsRehashed": 186,
+    "liveSectorTeams": 186
   },
   "actorExecution": "PASSED_FOR_RECORDED_LOCAL_TESTS",
   "durableReadback": "REPRODUCED",
   "independentModelAssessmentReceipt": null,
   "cloud": "See live-boundary.json; no repository standalone credential binding tested",
   "limits": [
-    "Research Library ZIP downloads failed through supported helper; no supplied research bytes copied.",
+    "Private cross-thread handoff, corrected birth v0.2.0 and v65 native contract Library transfers still fail before bytes arrive.",
+    "Research transfer was resolved through the separately authorized screened public Git handoff.",
     "Detailed formal publishing reference and layout asset unavailable; no layout-template conformance claim.",
-    "Public storage app fetch returned HTTP403; no source admission inferred."
-  ]
+    "Remote owner ingress and standalone cloud MCP credential binding remain separate unconfigured boundaries."
+  ],
+  "localMcpProtocolTestsIncludedInManagerCount": true,
+  "researchCatalogue": {
+    "rows": 93,
+    "proposedTeamIds": 186,
+    "publicSourceUrls": 94,
+    "technicalSectors": 29,
+    "independentFoundries": 18,
+    "explicitSpecializedChildRelations": 3,
+    "fullBirthMemoryRestartTest": "PASSED",
+    "livePopulation": "See host-upgrade.json"
+  },
+  "nativeCiFinal": "PASSED",
+  "previousNativeCiFailure": "One interrupted run exceeded the native five-second ToT subprocess bound; successful rerun passed all30tests.",
+  "liveOwnerUiChecks": 10
 }
