@@ -1,0 +1,118 @@
+{
+  "schema": "braink.native-browser-qualification.v1",
+  "actorExecution": "OBSERVED_NATIVE_CHROMIUM",
+  "durableReadback": "VERIFIED_ALL_FOUR",
+  "reopenReplay": "MATCHED_ALL_FOUR",
+  "stdioMCP": "METADATA_READBACK_VERIFIED",
+  "independentAssessment": "TARGETED_CODE_AND_FAILURE_CASE_REVIEW_COMPLETED; not independent model or screenshot-content assessment",
+  "publicNativeBinding": "NOT_ESTABLISHED; no Site or ingress changes",
+  "captures": [
+    {
+      "adapterDigest": "ca2eebc249e2617d1a916b1d2328641a24cf897b5121f6628ae000de16f788ed",
+      "blockedRequests": 0,
+      "chromiumVersion": "151.0.7922.173",
+      "httpStatus": 200,
+      "meaning": "Actual native headless rendering; no remote interactive desktop, model binding, or public ingress claim.",
+      "network": "PAGE_REQUESTS_FIXED_OWNER_LOCAL_ORIGIN_GET_ONLY_REDIRECTS_REJECTED",
+      "origin": "http://127.0.0.1:29381",
+      "profile": "EPHEMERAL",
+      "sandboxRequested": true,
+      "schema": "braink.native-browser-observation.v1",
+      "service": "serverspace",
+      "title": "SERVERspace - Cloud Server Platform & Storage Workspace",
+      "screenshot": {
+        "bytes": 14621,
+        "mediaType": "image/jpeg",
+        "sha256": "815e023f4a157a581ac14ffe9bb1d7f216b83bdbc1320c48de6912556e66fc03"
+      },
+      "custody": "DURABLE_READBACK",
+      "independentAssessmentReceipt": null
+    },
+    {
+      "adapterDigest": "ca2eebc249e2617d1a916b1d2328641a24cf897b5121f6628ae000de16f788ed",
+      "blockedRequests": 0,
+      "chromiumVersion": "151.0.7922.173",
+      "httpStatus": 200,
+      "meaning": "Actual native headless rendering; no remote interactive desktop, model binding, or public ingress claim.",
+      "network": "PAGE_REQUESTS_FIXED_OWNER_LOCAL_ORIGIN_GET_ONLY_REDIRECTS_REJECTED",
+      "origin": "http://127.0.0.1:29382",
+      "profile": "EPHEMERAL",
+      "sandboxRequested": true,
+      "schema": "braink.native-browser-observation.v1",
+      "service": "remix",
+      "title": "Keddeh Systems (SERVERspace) v6.8",
+      "screenshot": {
+        "bytes": 12646,
+        "mediaType": "image/jpeg",
+        "sha256": "c19348fbeeb95c7dd0e62a72ff3370d263bd53464ded97ddb99d56663015d71a"
+      },
+      "custody": "DURABLE_READBACK",
+      "independentAssessmentReceipt": null
+    },
+    {
+      "adapterDigest": "ca2eebc249e2617d1a916b1d2328641a24cf897b5121f6628ae000de16f788ed",
+      "blockedRequests": 1,
+      "chromiumVersion": "151.0.7922.173",
+      "httpStatus": 200,
+      "meaning": "Actual native headless rendering; no remote interactive desktop, model binding, or public ingress claim.",
+      "network": "PAGE_REQUESTS_FIXED_OWNER_LOCAL_ORIGIN_GET_ONLY_REDIRECTS_REJECTED",
+      "origin": "http://127.0.0.1:29383",
+      "profile": "EPHEMERAL",
+      "sandboxRequested": true,
+      "schema": "braink.native-browser-observation.v1",
+      "service": "console",
+      "title": "BRAINK // Multi-Tenant Agentic Runtime Infrastructure",
+      "screenshot": {
+        "bytes": 14080,
+        "mediaType": "image/jpeg",
+        "sha256": "2b68ca259dccb7f4cbc9ff12ea8c780650bcdd36f069f8b2046fc2e82fd989bf"
+      },
+      "custody": "DURABLE_READBACK",
+      "independentAssessmentReceipt": null
+    },
+    {
+      "adapterDigest": "ca2eebc249e2617d1a916b1d2328641a24cf897b5121f6628ae000de16f788ed",
+      "blockedRequests": 0,
+      "chromiumVersion": "151.0.7922.173",
+      "httpStatus": 200,
+      "meaning": "Actual native headless rendering; no remote interactive desktop, model binding, or public ingress claim.",
+      "network": "PAGE_REQUESTS_FIXED_OWNER_LOCAL_ORIGIN_GET_ONLY_REDIRECTS_REJECTED",
+      "origin": "http://127.0.0.1:29384",
+      "profile": "EPHEMERAL",
+      "sandboxRequested": true,
+      "schema": "braink.native-browser-observation.v1",
+      "service": "platform",
+      "title": "Keddeh Systems \u2014 Governed Intelligence Infrastructure",
+      "screenshot": {
+        "bytes": 12132,
+        "mediaType": "image/jpeg",
+        "sha256": "0d895e13201fb1a49c20de5fc5aca4746563565be3f8b6f7920337576425a78c"
+      },
+      "custody": "DURABLE_READBACK",
+      "independentAssessmentReceipt": null
+    }
+  ],
+  "reviewFixes": [
+    "Reject automatic redirect chains before browser receives them",
+    "Persist bounded service intents before browser execution",
+    "Terminate actual browser descendants using Linux pidfds and validated parentage; Playwright launches Chromium in another process group"
+  ],
+  "earlierFailures": [
+    "Initial larger screenshot exceeded bound",
+    "Reviewer reproduced cross-origin redirect bypass in initial adapter; initial captures are not used as egress qualification"
+  ],
+  "independentFindings": {
+    "R10": "CORRECTED_RETESTED",
+    "R11": "CORRECTED_RETESTED",
+    "R12": "CORRECTED_RETESTED; 8 isolated actual Chromium processes terminated"
+  },
+  "tests": {
+    "managerRegression": {
+      "passed": 33,
+      "seconds": 358.265
+    },
+    "focusedBrowserTests": 5,
+    "realChromiumEgressChecks": 5,
+    "pinnedSourceFiles": 37
+  }
+}

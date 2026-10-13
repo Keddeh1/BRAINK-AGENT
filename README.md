@@ -27,6 +27,16 @@ python3 -m braink_agent --state /tmp/braink-agent-demo status
 
 ## Useful operational workflows
 
+Native Chromium can render the four existing owner-local application frontages and retain verified screenshot bytes in the manager VFS. Run this on the host with `/usr/bin/chromium`, Node and Playwright 1.62.1 available:
+
+```sh
+python3 -m braink_agent.native_browser /absolute/private/state capture-001 serverspace
+```
+
+The admitted service names are `serverspace`, `remix`, `console` and `platform`. The host stdio MCP server also exposes `braink_native_browser_capture` with `key` and `service`. The adapter requests Chromium's sandbox, uses an ephemeral profile, restricts page requests to GET on the selected fixed loopback origin, blocks WebSockets and downloads, and enforces execution/image bounds. A retained request ID reopens the original capture; use a new ID for a fresh observation. Screenshots stay in private VFS state; CLI/MCP capture output contains metadata and hashes only. If the host needs `NODE_PATH`, point it to its existing Playwright installation. This host adapter opens no listener and changes no credentials or ingress. It provides native headless rendering, not an interactive remote desktop or the pending public-to-native connection. Independent image-content assessment remains separate from byte readback.
+
+Capture requests use bounded host execution and VFS custody; they are not native leased team jobs. The existing container image has no Chromium executable, so run this adapter through the host CLI or host stdio MCP installation. No whole-browser network isolation or persistent browser session is claimed.
+
 The owner UI provides three working task controls:
 
 - **Diagnose SERVERSPACE:** authenticate to the existing admitted owner endpoint, classify transport/authentication/protocol/health failures, and obtain a separate analyst observation with a concrete next action.

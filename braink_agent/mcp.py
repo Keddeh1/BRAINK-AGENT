@@ -12,6 +12,7 @@ def obj(properties, required):
     return {"type":"object","properties":properties,"required":required,"additionalProperties":False}
 STRING={"type":"string","minLength":1,"maxLength":4096}
 TOOLS={
+    "braink_native_browser_capture":("native_browser_capture",obj({"key":{"type":"string","minLength":1,"maxLength":48},"service":{"enum":["serverspace","remix","console","platform"]}},["key","service"]),False),
     "braink_workflow_submit":("workflow_submit",obj({"key":STRING,"kind":{"enum":["service_health","source_reconcile","durable_checkpoint"]},"inputs":{"type":"object"}},["key","kind","inputs"]),False),
     "braink_workflow_advance":("workflow_advance",obj({"key":STRING},["key"]),False),
     "braink_workflow_read":("workflow_read",obj({"key":STRING},["key"]),True),
@@ -48,6 +49,10 @@ def respond(manager, request, service=None):
             if op=='status':
                 if args:raise ValueError('NO_ARGUMENTS_EXPECTED')
                 value=manager.overview()
+            elif op=='native_browser_capture':
+                if set(args) != {'key','service'}:raise ValueError('EXACT_BROWSER_ARGUMENTS_REQUIRED')
+                from .native_browser import observe, summary
+                value=summary(observe(manager,args['key'],args['service']))
             else:value=operations(manager,op,args,service)
             encoded=json.dumps(value,allow_nan=False)
             if len(encoded.encode())>2*1024*1024:raise ValueError('RESPONSE_BOUND')
