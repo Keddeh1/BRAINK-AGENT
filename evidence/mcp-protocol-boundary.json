@@ -1,0 +1,22 @@
+{
+  "baseRevision": "27881a34ad96739adf1581141381d8b9b2050464",
+  "capacityQualification": "UNQUALIFIED; requires measured per-queue throughput and latency",
+  "independentReview": {
+    "MP1": "CLOSED; null/bool/floating IDs rejected before execution",
+    "MP2": "CLOSED; bounded batches, mixed errors and notification suppression tested",
+    "modelAssessmentReceipt": null,
+    "remainingFocusedBlockers": []
+  },
+  "mcpTestsPassed": 7,
+  "nativeConsumerRegressionTestsPassed": 12,
+  "protocolVersion": "2025-03-26",
+  "references": [
+    "https://www.jsonrpc.org/specification",
+    "https://modelcontextprotocol.io/specification/2025-03-26/basic",
+    "https://modelcontextprotocol.io/specification/2025-03-26/server/tools",
+    "https://www.dorsethouse.com/books/psare.html"
+  ],
+  "requirementsMap": "contracts/engineering-invariants.json",
+  "schema": "braink.mcp-protocol-boundary-evidence.v1",
+  "scope": "Finite advertised tool schemas, request identity, bounded batches, protocol/execution error separation; not complete MCP conformance certification"
+}

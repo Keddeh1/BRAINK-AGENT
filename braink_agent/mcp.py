@@ -29,12 +29,49 @@ TOOLS={
     "braink_cloud_reconcile":("cloud_reconcile",obj({"command_id":STRING},["command_id"]),False),
 }
 
+def valid_arguments(value, schema):
+    """Validate the finite schema vocabulary used by this module's own tools."""
+    kind=schema.get('type')
+    kinds=kind if isinstance(kind,list) else [kind] if kind else []
+    accepted={'object':isinstance(value,dict),'string':isinstance(value,str),
+              'integer':type(value) is int,'null':value is None}
+    if kinds and not any(accepted.get(k,False) for k in kinds):return False
+    if 'enum' in schema and value not in schema['enum']:return False
+    if isinstance(value,str):
+        if len(value)<schema.get('minLength',0) or len(value)>schema.get('maxLength',len(value)):return False
+    if type(value) is int:
+        if value<schema.get('minimum',value) or value>schema.get('maximum',value):return False
+    if isinstance(value,dict):
+        properties=schema.get('properties',{})
+        if not set(schema.get('required',[])).issubset(value):return False
+        if schema.get('additionalProperties') is False and set(value)-set(properties):return False
+        for key,child in properties.items():
+            if key in value and not valid_arguments(value[key],child):return False
+    return True
+
 def respond(manager, request, service=None):
-    if not isinstance(request,dict) or request.get('jsonrpc')!='2.0':
+    if isinstance(request,list):
+        if not request or len(request)>64:
+            return {'jsonrpc':'2.0','id':None,'error':{'code':-32600,'message':'Invalid or oversized batch'}}
+        replies=[]
+        for item in request:
+            reply=({'jsonrpc':'2.0','id':None,'error':{'code':-32600,'message':'Invalid request'}}
+                if isinstance(item,list) else respond(manager,item,service))
+            if reply is not None:replies.append(reply)
+        return replies or None
+    if not isinstance(request,dict) or request.get('jsonrpc')!='2.0' or not isinstance(request.get('method'),str):
         return {'jsonrpc':'2.0','id':None,'error':{'code':-32600,'message':'Invalid request'}}
     rid=request.get('id');method=request.get('method');params=request.get('params',{})
+    if 'id' in request and type(rid) not in (str,int):
+        return {'jsonrpc':'2.0','id':None,'error':{'code':-32600,'message':'Invalid request'}}
     if method=='notifications/initialized' and 'id' not in request:return None
     if 'id' not in request:return None
+    if not isinstance(params,dict):
+        return {'jsonrpc':'2.0','id':rid,'error':{'code':-32602,'message':'Invalid params'}}
+    if method=='tools/call':
+        name=params.get('name');args=params.get('arguments',{})
+        if not isinstance(name,str) or name not in TOOLS or not valid_arguments(args,TOOLS[name][1]):
+            return {'jsonrpc':'2.0','id':rid,'error':{'code':-32602,'message':'Invalid tool or arguments'}}
     try:
         if method=='initialize':
             result={'protocolVersion':'2025-03-26','capabilities':{'tools':{}},'serverInfo':{'name':'BRAINK_AGENT','version':'0.1.0'}}

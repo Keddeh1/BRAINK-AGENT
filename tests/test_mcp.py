@@ -13,6 +13,6 @@ class MCPTests(unittest.TestCase):
             self.assertIn('braink_birth',names)
             result=call('tools/call',{'name':'braink_status','arguments':{}})
             self.assertFalse(result['result']['isError'])
-            self.assertTrue(call('tools/call',{'name':'arbitrary_shell','arguments':{}})['result']['isError'])
+            self.assertEqual(call('tools/call',{'name':'arbitrary_shell','arguments':{}})['error']['code'],-32602)
             self.assertIsNone(respond(manager,{'jsonrpc':'2.0','method':'notifications/initialized'}))
 if __name__=='__main__':unittest.main()

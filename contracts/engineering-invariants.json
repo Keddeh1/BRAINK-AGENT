@@ -1,0 +1,169 @@
+{
+  "architecture": [
+    {
+      "boundary": "OS-account-authorized stdio; finite declared tools; no public listener",
+      "id": "A-MCP",
+      "source": "braink_agent/mcp.py"
+    },
+    {
+      "boundary": "One verified owner-delivered envelope; fixed read operations; 3attempts and128intents",
+      "id": "A-CONSUMER",
+      "source": "braink_agent/native_consumer.py"
+    },
+    {
+      "boundary": "Owned stores with immutable keys and resumable reconciliation; not distributed atomic commit or hostile same-UID isolation",
+      "id": "A-STATE",
+      "source": "braink_agent/manager.py",
+      "statePaths": [
+        "manager.sqlite3",
+        "memory/",
+        "family.sqlite3",
+        "teams/"
+      ]
+    },
+    {
+      "boundary": "Existing loopback public/read-only versus authenticated owner control",
+      "id": "A-OWNER-HTTP",
+      "source": "braink_agent/server.py"
+    },
+    {
+      "boundary": "Fixed existing authenticated SERVERSPACE endpoint; sanitized read facts",
+      "id": "A-HOST-READ",
+      "source": "braink_agent/host_adapter.py"
+    }
+  ],
+  "capacityModel": {
+    "classification": "PROPOSED_CALIBRATION_CONTRACT; no runtime provisioning",
+    "limitations": [
+      "Aggregate rho can conceal a saturated partition",
+      "rho below1 alone does not prove a latency or availability SLO",
+      "250 and200 in the supplied example have no verified native calibration",
+      "tolerance_index must be finite and positive; if it is a headroom fraction it must not exceed1",
+      "Zero arrivals are a valid idle condition",
+      "Recommendations do not authorize creating pods, paid resources or changing grants"
+    ],
+    "requiredMeasurements": [
+      "arrival rate in jobs/second per routed queue",
+      "completed jobs/second per worker for the actual workload",
+      "service-time distribution",
+      "queue wait and end-to-end p95/p99 latency",
+      "queue occupancy and rejected work",
+      "recovery behavior under saturation"
+    ],
+    "utilization": "rho_i = arrivalRate_i / measuredServiceCapacity_i; values require common units and measurement window"
+  },
+  "modelSeparation": {
+    "architecture": "Existing runtime elements and owned state paths",
+    "requirements": "Observable obligations and acceptance conditions",
+    "traceability": "Explicit requirement-to-element-to-evidence relations; not a claim of universal isolation"
+  },
+  "qualification": {
+    "absoluteBoundaryIsolation": "NOT_CLAIMED",
+    "highAssuranceCertification": "NOT_CLAIMED",
+    "modelAssessmentReceipt": null
+  },
+  "references": {
+    "jsonRpc": "https://www.jsonrpc.org/specification",
+    "mcpProtocolAndExecutionErrors": "https://modelcontextprotocol.io/specification/2025-03-26/server/tools",
+    "requirementsArchitectureSeparation": "https://www.dorsethouse.com/books/psare.html"
+  },
+  "requirements": [
+    {
+      "acceptance": "Invalid request -32600; invalid tool/arguments -32602; unknown method -32601; actual tool execution errors retain isError:true; MCP IDs are string/integer, excluding bool/null/fractional IDs; batch admission is1..64 requests, notifications receive no response.",
+      "id": "R-PROTOCOL",
+      "obligation": "Reject malformed request envelopes and declared tool arguments before actor execution"
+    },
+    {
+      "acceptance": "Changed source or digest cannot replay the same key",
+      "id": "R-IDENTITY",
+      "obligation": "Fence native command identity to the owner VFS object ID and exact UTF-8 content digest before effects"
+    },
+    {
+      "acceptance": "Timeout/binding/transport/protocol failures have immutable attempt custody, never a completed health result",
+      "id": "R-OUTCOME",
+      "obligation": "Preserve failed observation separately from completed command receipt"
+    },
+    {
+      "acceptance": "Exact result readback after restart; attempt counter unchanged",
+      "id": "R-RECOVERY",
+      "obligation": "Successful retained receipt survives manager process restart without re-execution"
+    },
+    {
+      "acceptance": "Namespace and foundry attribution do not imply separate credential tenancy; public and owner interfaces remain distinct",
+      "id": "R-AUTHORITY",
+      "obligation": "Use existing owner identity and OS execution authority without granting new access"
+    },
+    {
+      "acceptance": "No production capacity or scaling guarantee from arbitrary coefficients or aggregate node count",
+      "id": "R-CAPACITY",
+      "obligation": "Qualify load and latency from measurements for each independently routed queue"
+    }
+  ],
+  "schema": "braink.engineering-invariants.v1",
+  "traceability": [
+    {
+      "elements": [
+        "A-MCP"
+      ],
+      "evidence": [
+        "tests/test_mcp_protocol_boundary.py",
+        "tests/test_mcp.py"
+      ],
+      "requirement": "R-PROTOCOL"
+    },
+    {
+      "elements": [
+        "A-CONSUMER",
+        "A-STATE"
+      ],
+      "evidence": [
+        "tests/test_native_consumer.py"
+      ],
+      "requirement": "R-IDENTITY"
+    },
+    {
+      "elements": [
+        "A-CONSUMER",
+        "A-HOST-READ",
+        "A-STATE"
+      ],
+      "evidence": [
+        "tests/test_native_consumer.py",
+        "evidence/native-health-recovery.json"
+      ],
+      "requirement": "R-OUTCOME"
+    },
+    {
+      "elements": [
+        "A-CONSUMER",
+        "A-STATE"
+      ],
+      "evidence": [
+        "tests/test_native_consumer.py"
+      ],
+      "liveEvidence": "Owner-private request braink-host-activation-27881a3-evidence-v1; applies to existing task host, not permanent-host attestation",
+      "requirement": "R-RECOVERY"
+    },
+    {
+      "elements": [
+        "A-MCP",
+        "A-OWNER-HTTP",
+        "A-HOST-READ"
+      ],
+      "evidence": [
+        "docs/SECURITY.md"
+      ],
+      "limit": "Existing owner credential covers its estate; no separate tenancy asserted",
+      "requirement": "R-AUTHORITY"
+    },
+    {
+      "elements": [
+        "A-CONSUMER",
+        "A-STATE"
+      ],
+      "evidence": [],
+      "requirement": "R-CAPACITY",
+      "status": "NOT_QUALIFIED"
+    }
+  ]
+}
