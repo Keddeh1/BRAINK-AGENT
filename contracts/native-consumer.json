@@ -4,6 +4,7 @@
     "localHealth": "EXISTING_PRIVATE_BRAINK_HOST_SERVICE_BINDING_FILE; installed HostStatusAdapter uses its existing bearer file",
     "nativeInvocation": "EXISTING_OS_ACCOUNT_AUTHORITY"
   },
+  "healthFailure": "Non-observation records cloud-failure-KEY-ATTEMPT and rejects completion; retry same identity up to3 attempts. Legacy failed completion receipts remain immutable and require a new key after repair.",
   "identity": "Stable key is fenced to source object ID and exact UTF-8 content SHA-256 before effects",
   "limits": {
     "attemptsPerCommand": 3,

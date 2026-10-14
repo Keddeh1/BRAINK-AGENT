@@ -29,6 +29,7 @@ CONTRACT={
               'keyCharacters':48,'intents':128,'attemptsPerCommand':3,'resultBytes':65536,'healthProcessSeconds':8},
     'identity':'Stable key is fenced to source object ID and exact UTF-8 content SHA-256 before effects',
     'receipt':'cloud-service-KEY in existing private Manager VFS; immutable result with sourceObjectId and sourceDigest',
+    'healthFailure':'Non-observation records cloud-failure-KEY-ATTEMPT and rejects completion; retry same identity up to3 attempts. Legacy failed completion receipts remain immutable and require a new key after repair.',
     'persistentConsumer':'NOT_INSTALLED','networkListeners':'NONE',
 }
 
@@ -43,7 +44,16 @@ def health():
 def read_result(manager,key):
     bounded_id(key)
     if len(key)>48:raise ValueError('COMMAND_KEY_BOUND')
-    return manager.recall('cloud-service-'+key)
+    result=manager.recall('cloud-service-'+key)
+    if result.get('operation')=='service_health':
+        require_observed_health(result)
+    return result
+
+def require_observed_health(result):
+    value=result.get('observation')
+    observed=value.get('observation') if isinstance(value,dict) else None
+    if not isinstance(observed,dict) or observed.get('classification')!='OBSERVED' or observed.get('httpStatus')!=200:
+        raise ValueError('LEGACY_FAILED_HEALTH_RECEIPT; retain evidence and use a new command key after binding repair')
 
 def consume(manager, envelope):
     if not isinstance(envelope,dict) or envelope.get('verified') is not True:
@@ -104,6 +114,8 @@ def consume(manager, envelope):
             if prior is not None:
                 if prior['sourceObjectId']!=source_id or prior['sourceDigest']!=digest:
                     raise ValueError('COMMAND_RECEIPT_SCOPE_REJECTED')
+                if operation=='service_health':
+                    require_observed_health(prior)
                 return prior
             with manager.database() as db:
                 db.execute('BEGIN IMMEDIATE')
@@ -112,12 +124,29 @@ def consume(manager, envelope):
                     db.execute('ROLLBACK');raise ValueError('NATIVE_COMMAND_ATTEMPT_BOUND')
                 db.execute('UPDATE native_cloud_intents SET attempts=attempts+1 WHERE id=?',(key,))
                 db.execute('COMMIT')
-            return execute(manager,request,operation,arguments,envelope,digest,custody_key,legacy)
+            return execute(manager,request,operation,arguments,envelope,digest,custody_key,legacy,attempts+1)
         finally:fcntl.flock(lock,fcntl.LOCK_UN)
 
-def execute(manager,request,operation,arguments,envelope,digest,custody_key,legacy):
+def execute(manager,request,operation,arguments,envelope,digest,custody_key,legacy,attempt):
     key=request['key']
-    observation=health() if operation=='service_health' else observe(manager,key,arguments['service'])
+    if operation=='service_health':
+        try:observation=health()
+        except Exception as error:
+            # Never persist exception text or subprocess output: either may contain private data.
+            classification='ADAPTER_TIMEOUT' if isinstance(error,subprocess.TimeoutExpired) else 'ADAPTER_PROTOCOL_FAILURE' if isinstance(error,json.JSONDecodeError) else 'ADAPTER_EXECUTION_FAILURE'
+            observation={'observation':{'classification':classification,'httpStatus':None}}
+    else:observation=observe(manager,key,arguments['service'])
+    if operation=='service_health':
+        observed=observation.get('observation',{}) if isinstance(observation,dict) else {}
+        if not isinstance(observed,dict) or observed.get('classification')!='OBSERVED' or observed.get('httpStatus')!=200:
+            failure={'schema':'braink.native-service-failure.v1','key':key,'attempt':attempt,
+                'sourceObjectId':envelope['id'],'sourceDigest':digest,
+                'operation':operation,'observation':observation,
+                'execution':'SERVICE_OBSERVATION_FAILED','completion':False}
+            failure_key='cloud-failure-'+key+'-'+str(attempt)
+            manager.remember(failure_key,failure)
+            if manager.recall(failure_key)!=failure:raise RuntimeError('FAILURE_READBACK_REJECTED')
+            raise RuntimeError('SERVICE_OBSERVATION_FAILED; durable failure '+failure_key)
     result={'schema':'braink.native-browser-command-result.v1' if legacy else 'braink.native-service-command-result.v1','key':key,
         'sourceObjectId':envelope['id'],'sourceDigest':digest,'observation':observation,
         'cloudAuthentication':'EXISTING_OWNER_CONNECTOR_READ; not independently attested by local parser',

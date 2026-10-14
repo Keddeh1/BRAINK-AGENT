@@ -1,6 +1,7 @@
 import hashlib
 import json
 import os
+import subprocess
 from pathlib import Path
 import tempfile
 import unittest
@@ -45,12 +46,61 @@ class NativeConsumerTests(unittest.TestCase):
     def test_bounded_service_health_and_read_without_reexecution(self):
         content=json.dumps({'schema':'braink.native-service-command.v1','key':'health','operation':'service_health','arguments':{'serviceId':'serverspace'}})
         e={'id':'fixture-health','content':content,'digest':hashlib.sha256(content.encode()).hexdigest(),'verified':True}
-        with tempfile.TemporaryDirectory() as root,patch('braink_agent.native_consumer.health',return_value={'synthetic':True}) as actor:
+        with tempfile.TemporaryDirectory() as root,patch('braink_agent.native_consumer.health',return_value={'observation':{'classification':'OBSERVED','httpStatus':200},'synthetic':True}) as actor:
             m=Manager(Path(root));r=consume(m,e)
             self.assertEqual(r['operation'],'service_health')
             self.assertEqual(consume(Manager(Path(root)),e),r)
             self.assertEqual(read_result(Manager(Path(root)),'health'),r)
             actor.assert_called_once()
+
+    def test_health_binding_failure_recovers_after_reopening(self):
+        content=json.dumps({'schema':'braink.native-service-command.v1','key':'recover','operation':'service_health','arguments':{'serviceId':'serverspace'}})
+        e={'id':'fixture-recover','content':content,'digest':hashlib.sha256(content.encode()).hexdigest(),'verified':True}
+        failed={'observation':{'classification':'BINDING_REQUIRED','httpStatus':None}}
+        observed={'observation':{'classification':'OBSERVED','httpStatus':200}}
+        with tempfile.TemporaryDirectory() as root:
+            with patch('braink_agent.native_consumer.health',return_value=failed):
+                with self.assertRaisesRegex(RuntimeError,'SERVICE_OBSERVATION_FAILED'):consume(Manager(Path(root)),e)
+            reopened=Manager(Path(root))
+            self.assertFalse(reopened.recall('cloud-failure-recover-1')['completion'])
+            with self.assertRaises(KeyError):read_result(reopened,'recover')
+            with patch('braink_agent.native_consumer.health',return_value=observed) as actor:
+                result=consume(reopened,e)
+                self.assertEqual(consume(Manager(Path(root)),e),result)
+                actor.assert_called_once()
+
+    def test_health_failure_bound_persists_without_completion(self):
+        content=json.dumps({'schema':'braink.native-service-command.v1','key':'down','operation':'service_health','arguments':{'serviceId':'serverspace'}})
+        e={'id':'fixture-down','content':content,'digest':hashlib.sha256(content.encode()).hexdigest(),'verified':True}
+        with tempfile.TemporaryDirectory() as root,patch('braink_agent.native_consumer.health',return_value={'observation':{'classification':'TRANSPORT_UNAVAILABLE','httpStatus':None}}) as actor:
+            for attempt in range(1,4):
+                with self.assertRaisesRegex(RuntimeError,'SERVICE_OBSERVATION_FAILED'):consume(Manager(Path(root)),e)
+                self.assertEqual(Manager(Path(root)).recall('cloud-failure-down-'+str(attempt))['attempt'],attempt)
+            with self.assertRaisesRegex(ValueError,'ATTEMPT_BOUND'):consume(Manager(Path(root)),e)
+            with self.assertRaises(KeyError):read_result(Manager(Path(root)),'down')
+            self.assertEqual(actor.call_count,3)
+
+    def test_health_exception_is_durable_and_sanitized(self):
+        content=json.dumps({'schema':'braink.native-service-command.v1','key':'exception','operation':'service_health','arguments':{'serviceId':'serverspace'}})
+        e={'id':'fixture-exception','content':content,'digest':hashlib.sha256(content.encode()).hexdigest(),'verified':True}
+        for error,classification in [(subprocess.TimeoutExpired('private-command',8,output=b'private-token'),'ADAPTER_TIMEOUT'),(RuntimeError('private-token'),'ADAPTER_EXECUTION_FAILURE'),(json.JSONDecodeError('private-token','secret-document',0),'ADAPTER_PROTOCOL_FAILURE')]:
+            with tempfile.TemporaryDirectory() as root,patch('braink_agent.native_consumer.health',side_effect=error):
+                with self.assertRaisesRegex(RuntimeError,'SERVICE_OBSERVATION_FAILED'):consume(Manager(Path(root)),e)
+                receipt=Manager(Path(root)).recall('cloud-failure-exception-1')
+                self.assertEqual(receipt['observation']['observation']['classification'],classification)
+                self.assertNotIn('private-token',json.dumps(receipt))
+                self.assertNotIn('secret-document',json.dumps(receipt))
+
+    def test_legacy_failed_health_receipt_is_not_claimed_as_completion(self):
+        content=json.dumps({'schema':'braink.native-service-command.v1','key':'old','operation':'service_health','arguments':{'serviceId':'serverspace'}})
+        e={'id':'fixture-old','content':content,'digest':hashlib.sha256(content.encode()).hexdigest(),'verified':True}
+        with tempfile.TemporaryDirectory() as root,patch('braink_agent.native_consumer.health') as actor:
+            m=Manager(Path(root))
+            old={'sourceObjectId':e['id'],'sourceDigest':e['digest'],'observation':{'observation':{'classification':'BINDING_REQUIRED','httpStatus':None}}}
+            m.remember('cloud-service-old',old)
+            with self.assertRaisesRegex(ValueError,'LEGACY_FAILED_HEALTH_RECEIPT'):consume(m,e)
+            self.assertEqual(m.recall('cloud-service-old'),old)
+            actor.assert_not_called()
 
     def test_failure_attempt_bound(self):
         with tempfile.TemporaryDirectory() as root,patch('braink_agent.native_consumer.observe',side_effect=RuntimeError('fixture failure')) as actor:

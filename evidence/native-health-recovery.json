@@ -1,0 +1,29 @@
+{
+  "activation": "NOT_PERFORMED; existing release ownership preserved",
+  "baseCommit": "02c8ec22fc916d1418e11694fe0410f0efa1341d",
+  "change": "Failed health observations cannot occupy completed command receipts; sanitized failures are retained per attempt, retries remain bounded and identity-fenced.",
+  "deploymentCheck": {
+    "command": "python scripts/native-binding-check.py",
+    "exitCode": 2,
+    "readOnly": true,
+    "reason": "Active existing container has no native_consumer module; separately installed release is not active."
+  },
+  "independentReview": {
+    "assessmentReceipt": null,
+    "consumerTestsPassed": 12,
+    "findingHR1": "RESOLVED; independently retested exception custody, attempt bounds and malformed observations"
+  },
+  "permanentHostRestartRecovery": "NOT_VERIFIED",
+  "schema": "braink.native-health-recovery-evidence.v1",
+  "tests": {
+    "browser": {
+      "kind": "existing regression fixtures",
+      "passed": 5
+    },
+    "consumer": {
+      "kind": "isolated fixtures and child import",
+      "passed": 12
+    }
+  },
+  "unattendedDelivery": "UNBOUND"
+}
